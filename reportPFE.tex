@@ -1,0 +1,5051 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[12pt,a4paper,twoside]{report}
+
+% Packages essentiels pour un rapport professionnel
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+
+% Mise en page et géométrie
+\usepackage[top=2.5cm, bottom=2.5cm, left=3cm, right=2.5cm]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+
+% En-têtes et pieds de page
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[LO]{\nouppercase{\rightmark}}
+\fancyhead[RE]{\nouppercase{\leftmark}}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% Formatage des titres
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+\titlespacing*{\chapter}{0pt}{50pt}{40pt}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage{longtable,booktabs,array}
+\usepackage{multirow}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\usepackage[normalem]{ulem}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+% Informations du document
+\title{\textbf{RAPPORT DE STAGE DE FIN D'ÉTUDES} \\
+       \large{5ème Année en Ingénierie Informatique et Réseaux} \\
+       \vspace{0.5cm}
+       \textbf{FILIÈRE : MIAGE | MBDS}}
+\author{ANIBA Soufiane}
+\date{\today}
+
+\begin{document}
+
+% Page de titre personnalisée
+\begin{titlepage}
+    \centering
+    
+    % Logo EMSI
+    \includegraphics[width=0.6\textwidth]{latex_media/media/image1.png}
+    
+    \vspace{1cm}
+    
+    {\huge\bfseries RAPPORT DE STAGE DE FIN D'ÉTUDES \par}
+    
+    \vspace{0.5cm}
+    {\Large 5ème Année en Ingénierie Informatique et Réseaux \par}
+    
+    \vspace{0.5cm}
+    {\Large\bfseries FILIÈRE : MIAGE | MBDS \par}
+    
+    \vspace{2cm}
+    
+    {\Large\textbf{Réalisé par :} \par}
+    \vspace{0.3cm}
+    {\Large ANIBA Soufiane \par}
+    
+    \vspace{2cm}
+    
+    {\Large\textbf{Tuteurs :} \par}
+    \vspace{0.3cm}
+    {\large Encadrant Professionnel : Pr. OUATIQ, Amina \par}
+    \vspace{0.2cm}
+    {\large Encadrant Pédagogique : Mme. ASSALI, Fatima \par}
+    
+    \vspace{2cm}
+    
+    {\Large\textbf{Au sein de l'entreprise :} \par}
+    \vspace{0.5cm}
+    \includegraphics[width=0.5\textwidth]{latex_media/media/image2.png}
+    
+    \vfill
+    
+    {\large Année universitaire 2024-2025 \par}
+\end{titlepage}
+
+% Table des matières
+\tableofcontents
+\newpage
+
+\chapter{Dédicaces}
+
+\textbf{À ma chère mère,}
+
+Pour ton amour inestimable, ton soutien sans faille et tous les
+sacrifices que tu as faits pour moi. Merci pour ta patience, ta sagesse
+et ta présence réconfortante à chaque étape de ma vie.
+
+\textbf{À ma grande famille,}
+
+Pour votre soutien moral, vos prières et votre amour constant. Vous avez
+toujours cru en moi.
+
+\textbf{À mes amies,}
+
+Pour votre amitié sincère, vos sourires, votre écoute et votre soutien
+constant. Vous êtes une source précieuse de motivation et de bonheur.
+
+Remerciements
+
+Avant toute chose, je remercie DIEU Grand et Puissant de
+m\textquotesingle avoir donné la volonté et le courage de mener ce
+travail à son terme, malgré les difficultés rencontrées.
+
+Je souhaite exprimer ma profonde gratitude à toutes les personnes qui
+ont contribué à la réalisation de ce projet. Tout
+d\textquotesingle abord, un grand merci à mon encadrant en entreprise,
+Mme \textbf{ASSALI Fatima}, pour son soutien inestimable et ses conseils
+avisés tout au long de mon parcours. Sa disponibilité et son engagement
+ont été des atouts précieux pour l'avancement de mon travail.
+
+Je tiens également à remercier mon encadrante scolaire, Mme
+\textbf{Amina OUATIQ}, pour son accompagnement et ses précieuses
+instructions concernant le cheminement du rapport. Sa patience et sa
+réactivité à mes questions ont été d'un grand secours.
+
+Un remerciement spécial à l'équipe \textbf{DigiCamp} en général et à
+l'équipe \textbf{QUIZ AGILE} en particulier. Je suis fier d'avoir fait
+partie d'une équipe aussi enthousiaste et performante, qui retrouve le
+plaisir d'apprendre. Merci pour votre professionnalisme et votre esprit
+d'équipe.
+
+Mes remerciements s\textquotesingle adressent également à
+l\textquotesingle ensemble du corps professoral et administratif de
+\textbf{l\textquotesingle EMSI}, pour leur soutien et leurs conseils
+précieux durant la période de la formation.
+
+Enfin, je souhaite adresser mes remerciements à mes parents et ma
+famille pour leur soutien indéfectible. Je remercie également mes amis
+de \textbf{l\textquotesingle EMSI}, ainsi que tous ceux qui m'ont
+soutenu et me soutiennent encore. Du fond du cœur, merci, et que Dieu
+vous protège.
+
+\hypertarget{liste-des-abruxe9viations}{%
+\section{Liste des Abréviations}\label{liste-des-abruxe9viations}}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2289}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.7711}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+API
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Application Programming Interface
+\end{minipage} \\
+\midrule()
+\endhead
+CRUD & Create, Read, Update et Delete \\
+DAO & Data Access Object \\
+DTO & Data Transfer Object \\
+HTML & HyperText Markup Language \\
+IDE & Integrated development environment \\
+JDBC & Java Database Connectivity \\
+JSON & JavaScript Object Notation \\
+MVC & Model View Controller \\
+NPM & Node Package Manager \\
+RBAC & Role-Based Access Control \\
+REST &
+\href{https://en.wikipedia.org/wiki/Representational_state_transfer}{Representational
+state transfer} \\
+QUIZ MANAGER & Sexual awareness and Guidance for autistics \\
+SDLC & Software Development Life Cycle \\
+SGBDR & Système de gestion de bases de données relationnelles \\
+UML & Unified Modeling Language \\
+\bottomrule()
+\end{longtable}
+
+\hypertarget{ruxe9sumuxe9}{%
+\section{Résumé}\label{ruxe9sumuxe9}}
+
+Le présent rapport est l\textquotesingle aboutissement du travail
+effectué dans le cadre du projet de fin d\textquotesingle études au sein
+de \textbf{Capgemini} pour l\textquotesingle obtention du diplôme
+d\textquotesingle Ingénieur en Informatique. L\textquotesingle objectif
+principal du projet consiste en la conception et le développement
+d\textquotesingle une application de gestion de quiz pour
+l\textquotesingle évaluation des compétences en agilité des
+collaborateurs.
+
+Dans un monde où l\textquotesingle apprentissage continu est essentiel,
+\textbf{QUIZ AGILE} permet aux entreprises d\textquotesingle évaluer et
+de suivre les compétences de leurs collaborateurs. Intégrée à la
+plateforme de formation \textbf{NEXT}, cette solution facilite
+l\textquotesingle auto-évaluation, personnalise les parcours de
+formation et offre des analyses précises aux managers.
+
+L\textquotesingle évaluation des compétences en agilité représente un
+défi majeur pour les entreprises modernes. Les méthodes traditionnelles
+sont souvent chronophages, subjectives et difficiles à standardiser.
+\textbf{QUIZ AGILE} répond à cette problématique en proposant une
+plateforme flexible et évolutive, permettant la création et la gestion
+de questions de type QCM, la génération de quiz personnalisés, et
+l\textquotesingle analyse détaillée des résultats.
+
+Durant le déroulement du projet, nous avons commencé par une analyse
+fonctionnelle et technique des spécifications afin de bien saisir la
+problématique, puis nous avons entamé l\textquotesingle étape de
+conception pour finir avec la mise en œuvre.
+L\textquotesingle application a été développée avec une stack technique
+moderne comprenant React pour le frontend et Spring Boot pour le
+backend, avec une approche DevOps intégrant GitLab, Jenkins et Docker.
+
+Pour la mise en place du projet \textbf{QUIZ AGILE}, et pour assurer
+l\textquotesingle agilité, le choix est tombé sur Scrum comme
+méthodologie de gestion de projet, avec un cycle de développement
+itératif et incrémental. Cette approche nous a permis de livrer
+régulièrement des fonctionnalités à valeur ajoutée et
+d\textquotesingle adapter le développement aux retours des utilisateurs.
+
+\textbf{Mots clés} : Gestion de quiz, évaluation des compétences,
+agilité, formation continue, Spring Boot, React, analyse fonctionnelle,
+conception, mise en œuvre, Scrum.
+
+\hypertarget{abstract}{%
+\section{\texorpdfstring{\hfill\break
+Abstract}{ Abstract}}\label{abstract}}
+
+This report is the result of the work carried out as part of the
+end-of-study project at Capgemini, aiming to obtain the Engineering
+degree in Computer Science. The main objective of the project is the
+design and development of a quiz management application for assessing
+employees\textquotesingle{} agility-related skills.
+
+In a world where continuous learning is essential, \textbf{QUIZ AGILE}
+enables companies to evaluate and monitor the competencies of their
+employees. Integrated with the \textbf{NEXT} training platform, this
+solution facilitates self-assessment, personalizes learning paths, and
+provides managers with accurate performance analytics.
+
+Assessing agility skills is a major challenge for modern companies.
+Traditional methods are often time-consuming, subjective, and difficult
+to standardize. QUIZ AGILE addresses this issue by offering a flexible
+and scalable platform that allows the creation and management of
+multiple-choice questions (MCQs), the generation of personalized
+quizzes, and the detailed analysis of results.
+
+Throughout the project, we began with a functional and technical
+analysis of the specifications to fully understand the problem. Then, we
+moved on to the design phase and finally to the implementation. The
+application was developed using a modern technical stack including
+\textbf{React} for the frontend and \textbf{Spring Boot} for the
+backend, following a \textbf{DevOps} approach integrating
+\textbf{GitLab}, \textbf{Jenkins}, and \textbf{Docker}.
+
+To ensure agility in the development process, the \textbf{Scrum}
+methodology was adopted, enabling an iterative and incremental
+development cycle. This approach allowed us to deliver value-added
+features regularly and to adapt development based on user feedback.
+
+\textbf{Keywords}: Quiz management, skills assessment, agility,
+continuous training, Spring Boot, React, functional analysis, design,
+implementation, Scrum
+
+\hypertarget{table-des-matiuxe8res}{%
+\section{Table des matières}\label{table-des-matiuxe8res}}
+
+\protect\hyperlink{introduction-guxe9nuxe9rale}{Introduction Générale
+\protect\hyperlink{introduction-guxe9nuxe9rale}{1}}
+
+\protect\hyperlink{section}{CHAPITRE 1~: Contexte Général du projet
+\protect\hyperlink{section}{4}}
+
+\protect\hyperlink{pruxe9sentation-dorganisme-daccueil}{I. Présentation
+d'organisme d'accueil~:
+\protect\hyperlink{pruxe9sentation-dorganisme-daccueil}{5}}
+
+\protect\hyperlink{groupe-capgemini}{1. Groupe Capgemini
+\protect\hyperlink{groupe-capgemini}{5}}
+
+\protect\hyperlink{_Toc204179669}{2. Historique du groupe Capgemini :
+\protect\hyperlink{_Toc204179669}{5}}
+
+\protect\hyperlink{fiche-didentituxe9-du-groupe-capgemini}{3. Fiche
+d'identité du groupe Capgemini :
+\protect\hyperlink{fiche-didentituxe9-du-groupe-capgemini}{6}}
+
+\protect\hyperlink{muxe9tiers-du-groupe-capgemini}{4. Métiers du groupe
+Capgemini : \protect\hyperlink{muxe9tiers-du-groupe-capgemini}{6}}
+
+\protect\hyperlink{capgemini-ts-maroc}{5. Capgemini TS Maroc~:
+\protect\hyperlink{capgemini-ts-maroc}{7}}
+
+\protect\hyperlink{fiche-didentituxe9-de-capgemini-ts-maroc}{6. Fiche
+d'identité de Capgemini TS Maroc~:
+\protect\hyperlink{fiche-didentituxe9-de-capgemini-ts-maroc}{8}}
+
+\protect\hyperlink{organigramme-de-capgemini-ts-maroc}{7. Organigramme
+de Capgemini TS Maroc
+\protect\hyperlink{organigramme-de-capgemini-ts-maroc}{8}}
+
+\protect\hyperlink{pruxe9sentation-du-digicamp}{II. Présentation du
+DigiCamp~: \protect\hyperlink{pruxe9sentation-du-digicamp}{9}}
+
+\protect\hyperlink{pruxe9sentation-du-projet}{III. Présentation du
+Projet~: \protect\hyperlink{pruxe9sentation-du-projet}{10}}
+
+\protect\hyperlink{contexte-du-projet}{1. Contexte du projet~:
+\protect\hyperlink{contexte-du-projet}{10}}
+
+\protect\hyperlink{probluxe9matique}{2. Problématique~:
+\protect\hyperlink{probluxe9matique}{10}}
+
+\protect\hyperlink{objectif-du-projet}{3. Objectif du Projet~:
+\protect\hyperlink{objectif-du-projet}{11}}
+
+\protect\hyperlink{population-concernuxe9e}{4. Population concernée~:
+\protect\hyperlink{population-concernuxe9e}{11}}
+
+\protect\hyperlink{solution-proposuxe9e}{5. Solution proposée~:
+\protect\hyperlink{solution-proposuxe9e}{12}}
+
+\protect\hyperlink{conduite-et-planification-du-projet}{6. Conduite et
+planification du projet~:
+\protect\hyperlink{conduite-et-planification-du-projet}{13}}
+
+\protect\hyperlink{muxe9thodologie-du-travail-agile-scrum}{7.
+Méthodologie du travail\,: Agile \& Scrum
+\protect\hyperlink{muxe9thodologie-du-travail-agile-scrum}{14}}
+
+\protect\hyperlink{diagramme-de-gantt}{8. Diagramme de GANTT~:
+\protect\hyperlink{diagramme-de-gantt}{16}}
+
+\protect\hyperlink{synthuxe8se}{9. Synthèse
+\protect\hyperlink{synthuxe8se}{17}}
+
+\protect\hyperlink{conclusion}{10. Conclusion
+\protect\hyperlink{conclusion}{17}}
+
+\protect\hyperlink{section-2}{CHAPITRE 2~: Analyse et Spécification des
+besoins \protect\hyperlink{section-2}{19}}
+
+\protect\hyperlink{spuxe9cifications-fonctionnelles}{I. Spécifications
+Fonctionnelles \protect\hyperlink{spuxe9cifications-fonctionnelles}{20}}
+
+\protect\hyperlink{exigences-fonctionnelles}{1. Exigences fonctionnelles
+\protect\hyperlink{exigences-fonctionnelles}{20}}
+
+\protect\hyperlink{cartographie-fonctionnelle}{II. Cartographie
+fonctionnelle \protect\hyperlink{cartographie-fonctionnelle}{21}}
+
+\protect\hyperlink{spuxe9cifications-non-fonctionnelles}{III.
+Spécifications Non Fonctionnelles~:
+\protect\hyperlink{spuxe9cifications-non-fonctionnelles}{22}}
+
+\protect\hyperlink{analyse-des-acteurs-et-des-cas-dutilisation}{IV.
+Analyse des Acteurs et des Cas d\textquotesingle Utilisation :
+\protect\hyperlink{analyse-des-acteurs-et-des-cas-dutilisation}{23}}
+
+\protect\hyperlink{identification-des-acteurs}{1. Identification des
+acteurs~: \protect\hyperlink{identification-des-acteurs}{24}}
+
+\protect\hyperlink{diagramme-de-cas-dutilisation}{2. Diagramme de Cas
+d\textquotesingle Utilisation :
+\protect\hyperlink{diagramme-de-cas-dutilisation}{25}}
+
+\protect\hyperlink{description-duxe9tailluxe9e-des-domaines-fonctionnels}{3.
+Description Détaillée des Domaines Fonctionnels
+\protect\hyperlink{description-duxe9tailluxe9e-des-domaines-fonctionnels}{28}}
+
+\protect\hyperlink{description-duxe9tailluxe9e-des-principaux-cas-dutilisation}{4.
+Description détaillée des principaux cas d\textquotesingle utilisation :
+\protect\hyperlink{description-duxe9tailluxe9e-des-principaux-cas-dutilisation}{29}}
+
+\protect\hyperlink{architecture-monolithique}{5. Architecture
+monolithique~: \protect\hyperlink{architecture-monolithique}{32}}
+
+\protect\hyperlink{conclusion-1}{6. Conclusion
+\protect\hyperlink{conclusion-1}{33}}
+
+\protect\hyperlink{section-3}{CHAPITRE 3~: Conception et Mise en place
+du projet \protect\hyperlink{section-3}{34}}
+
+\protect\hyperlink{diagramme-de-classes}{I. Diagramme de classes :
+\protect\hyperlink{diagramme-de-classes}{35}}
+
+\protect\hyperlink{package-user}{1. Package User
+\protect\hyperlink{package-user}{37}}
+
+\protect\hyperlink{package-question}{2. Package Question
+\protect\hyperlink{package-question}{37}}
+
+\protect\hyperlink{package-quiz}{3. Package Quiz
+\protect\hyperlink{package-quiz}{37}}
+
+\protect\hyperlink{package-attempt}{4. Package Attempt
+\protect\hyperlink{package-attempt}{38}}
+
+\protect\hyperlink{cluxe9-quizresult}{5. Clé QuizResult~:
+\protect\hyperlink{cluxe9-quizresult}{38}}
+
+\protect\hyperlink{package-notification}{6. Package Notification
+\protect\hyperlink{package-notification}{38}}
+
+\protect\hyperlink{relations-transverses}{7. Relations Transverses
+\protect\hyperlink{relations-transverses}{39}}
+
+\protect\hyperlink{diagrammes-de-paquetages}{II. Diagrammes de
+Paquetages~: \protect\hyperlink{diagrammes-de-paquetages}{40}}
+
+\protect\hyperlink{duxe9tail-des-packages}{1. Détail des Packages
+\protect\hyperlink{duxe9tail-des-packages}{41}}
+
+\protect\hyperlink{flux-des-duxe9pendances}{2. Flux des Dépendances
+\protect\hyperlink{flux-des-duxe9pendances}{42}}
+
+\protect\hyperlink{diagrammes-de-suxe9quence-tentative-de-quiz}{III.
+Diagrammes de séquence~Tentative de Quiz :
+\protect\hyperlink{diagrammes-de-suxe9quence-tentative-de-quiz}{43}}
+
+\protect\hyperlink{diagrammes-dactivituxe9s--processus-de-passage-dun-quiz}{IV.
+Diagrammes d'activités- Processus de Passage d\textquotesingle un Quiz
+\protect\hyperlink{diagrammes-dactivituxe9s--processus-de-passage-dun-quiz}{45}}
+
+\protect\hyperlink{diagramme-duxe9tat---tentative-de-quiz}{V. Diagramme
+d\textquotesingle État - Tentative de Quiz
+\protect\hyperlink{diagramme-duxe9tat---tentative-de-quiz}{46}}
+
+\protect\hyperlink{diagramme-duxe9tat---statut-du-quiz}{VI. Diagramme
+d\textquotesingle État - Statut du Quiz
+\protect\hyperlink{diagramme-duxe9tat---statut-du-quiz}{46}}
+
+\protect\hyperlink{conclusion-2}{VII. Conclusion~:
+\protect\hyperlink{conclusion-2}{47}}
+
+\protect\hyperlink{section-5}{CHAPITRE 4~: Etude Technique du projet
+\protect\hyperlink{section-5}{49}}
+
+\protect\hyperlink{outils-et-technologies}{I. Outils et technologies :
+\protect\hyperlink{outils-et-technologies}{50}}
+
+\protect\hyperlink{technologies-et-framework-utilisuxe9es}{1.
+Technologies et Framework utilisées~:
+\protect\hyperlink{technologies-et-framework-utilisuxe9es}{50}}
+
+\protect\hyperlink{authentification-et-suxe9curituxe9}{2.
+Authentification et Sécurité
+\protect\hyperlink{authentification-et-suxe9curituxe9}{51}}
+
+\protect\hyperlink{base-de-donnuxe9es}{3. Base de données
+\protect\hyperlink{base-de-donnuxe9es}{52}}
+
+\protect\hyperlink{_Toc204179721}{4. Système de gestion de dépendances
+\protect\hyperlink{_Toc204179721}{53}}
+
+\protect\hyperlink{_Toc204179722}{5. Système de contrôle de version~:
+\protect\hyperlink{_Toc204179722}{54}}
+
+\protect\hyperlink{ide-et-outils-de-test}{6. IDE et outils de Test~:
+\protect\hyperlink{ide-et-outils-de-test}{56}}
+
+\protect\hyperlink{outils-de-conception}{7. Outils de conception~:
+\protect\hyperlink{outils-de-conception}{58}}
+
+\protect\hyperlink{containerisation-et-duxe9ploiement}{8.
+Containerisation et Déploiement
+\protect\hyperlink{containerisation-et-duxe9ploiement}{59}}
+
+\protect\hyperlink{tests-et-qualituxe9-avec-sonarqube}{9. Tests et
+Qualité avec SonarQube
+\protect\hyperlink{tests-et-qualituxe9-avec-sonarqube}{61}}
+
+\protect\hyperlink{documentation-et-api}{II. Documentation et API
+\protect\hyperlink{documentation-et-api}{63}}
+
+\protect\hyperlink{architecture-technique}{III. Architecture technique :
+\protect\hyperlink{architecture-technique}{64}}
+
+\protect\hyperlink{architecture-guxe9nuxe9rale}{IV. Architecture
+générale~: \protect\hyperlink{architecture-guxe9nuxe9rale}{65}}
+
+\protect\hyperlink{introduction}{1. Introduction~:
+\protect\hyperlink{introduction}{65}}
+
+\protect\hyperlink{structure-et-impluxe9mentation-du-projet-backend}{2.
+Structure et implémentation du projet Backend~:
+\protect\hyperlink{structure-et-impluxe9mentation-du-projet-backend}{66}}
+
+\protect\hyperlink{main-tests-et-ressources}{Main, Tests et Ressources
+\protect\hyperlink{main-tests-et-ressources}{66}}
+
+\protect\hyperlink{_Toc204179733}{3. Synthèse~:
+\protect\hyperlink{_Toc204179733}{74}}
+
+\protect\hyperlink{conclusion-3}{V. Conclusion
+\protect\hyperlink{conclusion-3}{75}}
+
+\protect\hyperlink{section-7}{CHAPITRE 5~: Réalisation du projet
+\protect\hyperlink{section-7}{77}}
+
+\protect\hyperlink{conception-de-lapplication-web}{I. Conception de
+l'Application Web
+\protect\hyperlink{conception-de-lapplication-web}{78}}
+
+\protect\hyperlink{interface-de-connexion}{1. Interface de Connexion
+\protect\hyperlink{interface-de-connexion}{78}}
+
+\protect\hyperlink{interface-du-tableau-de-bord}{2. Interface du Tableau
+de Bord : \protect\hyperlink{interface-du-tableau-de-bord}{78}}
+
+\protect\hyperlink{interface-de-gestion-des-utilisateurs}{3. Interface
+de gestion des utilisateurs :
+\protect\hyperlink{interface-de-gestion-des-utilisateurs}{79}}
+
+\protect\hyperlink{interface-de-cruxe9ation-dun-utilisateur}{4.
+Interface de Création d'un utilisateur :
+\protect\hyperlink{interface-de-cruxe9ation-dun-utilisateur}{80}}
+
+\protect\hyperlink{interface-de-cruxe9ation-dune-nouvelle-question}{5.
+Interface de création d'une nouvelle question :
+\protect\hyperlink{interface-de-cruxe9ation-dune-nouvelle-question}{81}}
+
+\protect\hyperlink{interface-de-cruxe9ation-dun-nouveau-quiz}{6.
+Interface de création d'un nouveau quiz :
+\protect\hyperlink{interface-de-cruxe9ation-dun-nouveau-quiz}{82}}
+
+\protect\hyperlink{interface-de-paramuxe9trage-et-publication-de-quiz}{7.
+Interface de Paramétrage et Publication de Quiz~:
+\protect\hyperlink{interface-de-paramuxe9trage-et-publication-de-quiz}{84}}
+
+\protect\hyperlink{interface-de-duxe9tail-et-gestion-de-quiz}{8.
+Interface de Détail et Gestion de Quiz
+\protect\hyperlink{interface-de-duxe9tail-et-gestion-de-quiz}{86}}
+
+\protect\hyperlink{processus-daccuxe8s-et-dauthentification-pour-les-quiz}{9.
+Processus d\textquotesingle Accès et d\textquotesingle Authentification
+pour les Quiz
+\protect\hyperlink{processus-daccuxe8s-et-dauthentification-pour-les-quiz}{88}}
+
+\protect\hyperlink{interface-des-ruxe9sultats-de-quiz}{10. Interface des
+Résultats de Quiz
+\protect\hyperlink{interface-des-ruxe9sultats-de-quiz}{90}}
+
+\protect\hyperlink{interface-de-duxe9tail-des-ruxe9sultats-de-quiz}{11.
+Interface de Détail des Résultats de Quiz
+\protect\hyperlink{interface-de-duxe9tail-des-ruxe9sultats-de-quiz}{91}}
+
+\protect\hyperlink{conclusion-4}{II. Conclusion
+\protect\hyperlink{conclusion-4}{93}}
+
+\protect\hyperlink{conclusion-guxe9nuxe9rale-1}{III. Conclusion Générale
+\protect\hyperlink{conclusion-guxe9nuxe9rale-1}{94}}
+
+\protect\hyperlink{_Toc204179750}{IV. Bibliographie
+\protect\hyperlink{_Toc204179750}{94}}
+
+\hypertarget{liste-des-figures}{%
+\section{\texorpdfstring{Liste des figures
+}{Liste des figures }}\label{liste-des-figures}}
+
+Figure 1 : Logo \textbf{CAPGEMINI} \protect\hyperlink{_Toc203823413}{5}
+
+Figure 2~: Organigramme de \textbf{Capgemini} TS Maroc :
+\protect\hyperlink{_Toc203823414}{8}
+
+Figure 3~: Comment adopter la méthode Agile appropriée à vos projets
+\protect\hyperlink{_Toc203823415}{11}
+
+Figure 4 : La méthodologie Scrum Agile
+\protect\hyperlink{_Toc203823416}{14}
+
+Figure 5:Réunion quotidienne d\textquotesingle une heure de
+l\textquotesingle équipe QUIZ MANAGER
+\protect\hyperlink{_Toc203823417}{15}
+
+Figure 6 : Diagramme de Gantt \protect\hyperlink{_Toc203823418}{17}
+
+Figure 7: Cartographie fonctionnelle
+\protect\hyperlink{_Toc203823419}{21}
+
+Figure 8: Exigences non fonctionnelles
+\protect\hyperlink{_Toc203823420}{23}
+
+Figure 9~: Diagramme de Rôle de Quiz Manager
+\protect\hyperlink{_Toc203823421}{24}
+
+Figure 10 : diagramme de cas d\textquotesingle utilisation
+\protect\hyperlink{_Toc203823422}{26}
+
+Figure 13: Architecture Monolithique Vs Architecture Micro-services
+\protect\hyperlink{_Toc203823423}{33}
+
+Figure 14:Diagramme de classes \protect\hyperlink{_Toc203823424}{36}
+
+Figure 15~: Diagrammes de Paquetages
+\protect\hyperlink{_Toc203823425}{40}
+
+Figure 16 : Diagramme entité-relation
+\protect\hyperlink{_Toc203823426}{42}
+
+Figure 17: Diagramme de séquence \protect\hyperlink{_Toc203823427}{44}
+
+Figure 18 : Diagrammes d'activités- Processus de Passage
+d\textquotesingle un Quiz \protect\hyperlink{_Toc203823428}{45}
+
+Figure 19: Spring Boot \protect\hyperlink{_Toc203823429}{50}
+
+Figure 20~: React \protect\hyperlink{_Toc203823430}{51}
+
+Figure 21: JWT \protect\hyperlink{_Toc203823431}{52}
+
+Figure 22 :PostgresSQL \protect\hyperlink{_Toc203823432}{52}
+
+Figure 23 : Maven \protect\hyperlink{_Toc203823433}{53}
+
+Figure 24: NPM \protect\hyperlink{_Toc203823434}{54}
+
+Figure 25: GIT \protect\hyperlink{_Toc203823435}{55}
+
+Figure 26 : GitLab \protect\hyperlink{_Toc203823436}{55}
+
+Figure 27 : IntelliJ IDEA \protect\hyperlink{_Toc203823437}{56}
+
+Figure 28 : Visual Studio Code \protect\hyperlink{_Toc203823438}{56}
+
+Figure 29 : Postman \protect\hyperlink{_Toc203823439}{57}
+
+Figure 30 : JUnit \protect\hyperlink{_Toc203823440}{57}
+
+Figure 31: Mockito \protect\hyperlink{_Toc203823441}{58}
+
+Figure 32: Jest \protect\hyperlink{_Toc203823442}{58}
+
+Figure 33 : PlantUML \protect\hyperlink{_Toc203823443}{58}
+
+Figure 34: Docker \protect\hyperlink{_Toc203823444}{59}
+
+Figure 35: SonarQube \protect\hyperlink{_Toc203823445}{61}
+
+Figure 36: Workflow CI/CD \protect\hyperlink{_Toc203823446}{62}
+
+Figure 37: Analyse de code avec SonarQube
+\protect\hyperlink{_Toc203823447}{63}
+
+Figure 38 : Architecture technique de l\textquotesingle application
+\protect\hyperlink{_Toc203823448}{65}
+
+Figure 39:Architecture globale de l'application
+\protect\hyperlink{_Toc203823449}{65}
+
+Figure 40:Arborescence du code \textquotesingle Ressources et Tests
+\protect\hyperlink{_Toc203823450}{66}
+
+Figure 41 Arborescence du code \textquotesingle Main"
+\protect\hyperlink{_Toc203823451}{67}
+
+Figure 42:Architecture Backend détaillée
+\protect\hyperlink{_Toc203823452}{68}
+
+Figure 43:Diagramme de séquence - flux de création de quiz
+\protect\hyperlink{_Toc203823453}{69}
+
+Figure 44:Organisation modulaire SCSS
+\protect\hyperlink{_Toc203823454}{72}
+
+Figure 45:Interface de Connexion \protect\hyperlink{_Toc203823455}{78}
+
+Figure 46: Interface du tableau de bord
+\protect\hyperlink{_Toc203823456}{79}
+
+Figure 47: Interface de Gestion des utilisateurs
+\protect\hyperlink{_Toc203823457}{80}
+
+Figure 48: Ajouter d'un utilisateur
+\protect\hyperlink{_Toc203823458}{81}
+
+Figure 49: Création d'une nouvelle question
+\protect\hyperlink{_Toc203823459}{82}
+
+Figure 50: Création d\textquotesingle un nouveau quiz
+\protect\hyperlink{_Toc203823460}{83}
+
+Figure 51:Ajouter des questions \protect\hyperlink{_Toc203823461}{84}
+
+Figure 52:Quiz publié \protect\hyperlink{_Toc203823462}{85}
+
+Figure 53:Paramètre d\textquotesingle un quiz
+\protect\hyperlink{_Toc203823463}{86}
+
+Figure 54: Détail et Gestion de Quiz
+\protect\hyperlink{_Toc203823464}{88}
+
+Figure 55: Question du quizz \protect\hyperlink{_Toc203823465}{90}
+
+Figure 56:Page d'authentification pour accéder au quiz
+\protect\hyperlink{_Toc203823466}{90}
+
+Figure 57:Le lien généré pour accéder au quiz
+\protect\hyperlink{_Toc203823467}{90}
+
+Figure 58:Interface des Résultats de Quiz
+\protect\hyperlink{_Toc203823468}{91}
+
+Figure 59:Interface de Détail des Résultats de Quiz
+\protect\hyperlink{_Toc203823469}{92}
+
+\hypertarget{liste-des-tableaux}{%
+\section{Liste des tableaux}\label{liste-des-tableaux}}
+
+\protect\hyperlink{_Toc203823475}{Tableau 1: Fiche
+d\textquotesingle identité du groupe \textbf{Capgemini}
+\protect\hyperlink{_Toc203823475}{6}}
+
+\protect\hyperlink{_Toc203823476}{Tableau 2 : : Les différents métiers
+de \textbf{Capgemini} \protect\hyperlink{_Toc203823476}{7}}
+
+\protect\hyperlink{_Toc203823477}{Tableau 3~: Fiche d'identité de
+\textbf{Capgemini} TS \protect\hyperlink{_Toc203823477}{8}}
+
+\protect\hyperlink{_Toc203823478}{Tableau 4 : Organigramme de
+\textbf{Capgemini} TS Maroc : \protect\hyperlink{_Toc203823478}{8}}
+
+\protect\hyperlink{_Toc203823479}{Tableau 5 : Description du campus
+\protect\hyperlink{_Toc203823479}{9}}
+
+\protect\hyperlink{_Toc203823480}{Tableau 6 : Tableau récapitulatif des
+cas d\textquotesingle utilisation \protect\hyperlink{_Toc203823480}{28}}
+
+\protect\hyperlink{_Toc203823481}{Tableau 7: Cas
+d\textquotesingle utilisation : Créer un quiz
+\protect\hyperlink{_Toc203823481}{30}}
+
+\protect\hyperlink{_Toc203823482}{Tableau 8: Cas
+d\textquotesingle utilisation passer un quiz
+\protect\hyperlink{_Toc203823482}{32}}
+
+\protect\hyperlink{_Toc203823483}{Tableau 9 : Diagramme
+d\textquotesingle État - Statut du Quiz
+\protect\hyperlink{_Toc203823483}{47}}
+
+\hypertarget{introduction-guxe9nuxe9rale}{%
+\section{Introduction Générale}\label{introduction-guxe9nuxe9rale}}
+
+Dans un contexte professionnel en constante évolution, les entreprises
+font face à un défi majeur : assurer le développement continu des
+compétences de leurs collaborateurs. L\textquotesingle agilité, en
+particulier, s\textquotesingle est imposée comme une compétence
+fondamentale dans le secteur informatique, transformant profondément les
+méthodes de travail et la gestion de projets. Cette approche, qui
+privilégie l\textquotesingle adaptabilité, la collaboration et
+l\textquotesingle amélioration continue, nécessite une maîtrise précise
+de concepts et de pratiques spécifiques.
+
+Cependant, l\textquotesingle évaluation des compétences en agilité
+demeure un exercice complexe. Les méthodes traditionnelles
+d\textquotesingle évaluation présentent plusieurs limitations : elles
+sont souvent chronophages, subjectives, difficiles à standardiser à
+l\textquotesingle échelle d\textquotesingle une organisation et ne
+permettent pas toujours d\textquotesingle identifier avec précision les
+lacunes à combler. De plus, la collecte et l\textquotesingle analyse des
+résultats peuvent s\textquotesingle avérer fastidieuses, limitant ainsi
+la capacité des entreprises à adapter rapidement leurs parcours de
+formation aux besoins réels de leurs collaborateurs
+
+Face à ces enjeux, \textbf{Capgemini} a identifié le besoin de
+développer une solution innovante permettant d\textquotesingle évaluer
+et de suivre efficacement les compétences en agilité de ses
+collaborateurs. C\textquotesingle est dans ce cadre que
+s\textquotesingle inscrit le projet \textbf{QUIZ AGILE}, une application
+de gestion de quiz conçue pour standardiser l\textquotesingle évaluation
+des compétences, faciliter l\textquotesingle analyse des résultats et
+optimiser les parcours de formation.
+
+\textbf{QUIZ AGILE} vise à répondre à plusieurs objectifs stratégiques :
+
+\begin{itemize}
+\item
+  Standardiser l\textquotesingle évaluation des compétences en agilité
+  au sein de l\textquotesingle entreprise
+\item
+  Adapter les formations selon les besoins spécifiques identifiés
+\item
+  Favoriser l\textquotesingle auto-apprentissage des collaborateurs
+\item
+  Fournir aux managers des tableaux de bord détaillés sur les
+  compétences de leurs équipes
+\item
+  Créer une base de connaissances évolutive pouvant
+  s\textquotesingle étendre à d\textquotesingle autres domaines de
+  compétences
+\end{itemize}
+
+Pour atteindre ces objectifs, l\textquotesingle application propose un
+ensemble de fonctionnalités clés : création et gestion de questions de
+type QCM, génération de quiz personnalisés, diffusion via des URL
+uniques, analyse détaillée des résultats, et intégration avec la
+plateforme de formation NEXT existante. Cette intégration est
+particulièrement importante car elle permet de créer un écosystème
+complet allant de l\textquotesingle évaluation des compétences à la
+formation ciblée.
+
+Le présent rapport expose de manière exhaustive le processus de
+développement de notre plateforme, mettant en exergue les diverses
+phases ayant jalonné sa conception. Il se compose de cinq chapitres
+distincts. Le premier chapitre décrit les objectifs du projet ainsi que
+la vision qui l\textquotesingle a guidé. Le second chapitre entre dans
+les détails techniques et technologiques de la plateforme, en spécifiant
+aussi bien les besoins fonctionnels que non fonctionnels. Quant au
+troisième chapitre, il traite de la conception générale et de la mise en
+place du projet. Le quatrième chapitre présente les différents outils et
+technologies mobilisés pour la construction de notre plateforme ainsi
+que l'architecture globale de l'application et de la fonctionnalité de
+planification des séances. Enfin, le dernier chapitre met en lumière
+l\textquotesingle ensemble des interfaces et fonctionnalités offertes
+par l\textquotesingle application \textbf{Quiz Agile}.
+
+\hfill\break
+Conclusion Générale
+
+Le projet \textbf{QUIZ AGILE} répond à un besoin majeur dans le contexte
+professionnel actuel : celui d'assurer le développement continu et
+précis des compétences en agilité au sein des collaborateurs. Face aux
+limites des méthodes traditionnelles d'évaluation, notre application
+apporte une solution innovante, standardisée et facile à utiliser, qui
+facilite l'analyse des résultats et l'adaptation des parcours de
+formation.
+
+Pour cela, nous avons choisi des technologies robustes et modernes, à
+savoir \textbf{Spring Boot} pour la conception du backend, assurant une
+architecture sécurisée, performante et évolutive, et \textbf{React JS}
+pour le frontend, garantissant une interface utilisateur dynamique,
+intuitive et réactive. Ces choix technologiques ont permis de construire
+une plateforme complète, intégrée et adaptée aux besoins des
+utilisateurs.
+
+Par ailleurs, une attention particulière a été portée à la qualité du
+code et à la fiabilité de l'application grâce à l'intégration des tests
+automatisés tout au long du développement. L'utilisation de
+\textbf{SonarQube} a permis d'assurer une analyse continue de la qualité
+du code, favorisant la maintenance, la sécurité et la robustesse de la
+solution.
+
+Ainsi, le projet \textbf{QUIZ AGILE} constitue un outil performant qui
+facilite non seulement l'évaluation et le suivi des compétences, mais
+aussi l'auto-apprentissage et la prise de décision pour les managers. Il
+pose les bases d'un système évolutif et adaptable, avec de nombreuses
+perspectives d'enrichissement à venir, notamment en matière d'analyse
+des données et d'intégration avec d'autres plateformes.
+
+En définitive, cette expérience démontre comment une approche
+technologique bien choisie et une méthodologie rigoureuse peuvent
+contribuer efficacement à la transformation digitale des pratiques de
+formation en entreprise, au bénéfice de la performance individuelle et
+collective.
+
+\hypertarget{section}{%
+\section{}\label{section}}
+
+\hypertarget{chapitre-1-contexte-guxe9nuxe9ral-du-projet}{%
+\section{CHAPITRE 1~: Contexte Général du
+projet}\label{chapitre-1-contexte-guxe9nuxe9ral-du-projet}}
+
+Ce chapitre a pour objectif de présenter le cadre dans lequel notre
+projet de fin d\textquotesingle études a été effectué. Nous y trouverons
+des détails concernant l\textquotesingle entreprise
+d\textquotesingle accueil, son organisation ainsi que ses activités.
+
+Dans la deuxième partie, nous introduirons le projet \textbf{Quiz Agile}
+en décrivant brièvement sa raison d\textquotesingle être et ses
+objectifs. Cette mise en contexte permettra de mieux comprendre les
+enjeux et les défis auxquels le projet répond, ainsi que son importance
+stratégique pour \textbf{Capgemini.}
+
+\hypertarget{pruxe9sentation-dorganisme-daccueil}{%
+\subsubsection{Présentation d'organisme
+d'accueil~:}\label{pruxe9sentation-dorganisme-daccueil}}
+
+\hypertarget{groupe-capgemini}{%
+\subsection{Groupe Capgemini ~}\label{groupe-capgemini}}
+
+\includegraphics[width=3.37778in,height=0.75347in]{latex_media/media/image3.png}\textbf{Capgemini}
+est un leader mondial des services de conseil, de transformation
+numérique, de technologie et d'ingénierie. Le Groupe est à la pointe de
+l'innovation pour répondre à l'ensemble des opportunités des clients
+dans le monde en évolution du cloud, du numérique et des plateformes. Le
+premier en France et le 6ème à l'échelle mondiale conduisant une
+stratégie de développement et de diversification qui a donné naissance à
+une croissance interne et externe. \textbf{Capgemini} est responsable de
+325 000 personnes dans près de 50 pays. Partenaire stratégique des
+entreprises pour la transformation de leurs activités en tirant profit
+de toute la puissance de la technologie, le Groupe est guidé au
+quotidien par sa raison d'être ; libérer les énergies humaines par la
+technologie pour un avenir inclusif et durable. Fort de plus de 55 ans
+d'expérience et d'une grande expertise des différents secteurs
+d'activité, \textbf{Capgemini} est reconnu par ses clients pour répondre
+à l'ensemble de leurs besoins, de la stratégie et du design jusqu'au
+management des opérations, en tirant parti des innovations dans les
+domaines en perpétuelle évolution du cloud, de la data, de
+l'Intelligence Artificielle, de la connectivité, des logiciels, de
+l'ingénierie digitale et des plateformes. Le Groupe a réalisé un chiffre
+d'affaires de 17 milliards d'euros en 2022.
+
+\hypertarget{section-1}{%
+\section{}\label{section-1}}
+
+\hypertarget{historique-du-groupe-capgemini}{%
+\subsection{Historique du groupe Capgemini
+:}\label{historique-du-groupe-capgemini}}
+
+L'entreprise \textbf{Capgemini} a été créée en 1967 à Grenoble sous le
+nom de Sogeti par Serge Kampf. L'entreprise devient un des leaders
+européens en 1975 à la suite de l'acquisition des entreprises de
+services informatiques CAP et Gemini Computer Systems. Sogeti devient
+alors \textbf{Capgemini} Sogeti (CGS). \textbf{Capgemini} connaît une
+phase d'expansion entre 1975 et 1979. La restructuration interne de
+1989, l'arrivée de l'entreprise sur le marché américain et l'expansion
+européenne de l'entreprise lui permettent de devenir un des leaders
+mondiaux de son secteur d'activité. L'entreprise entreprend des
+stratégies de croissance ambitieuses.
+
+Entre 1990 et 1997. \textbf{Capgemini} acquière notamment United
+Research en 1990, ainsi que le groupe Mac en 1991, poursuivant ainsi son
+expansion sur le marché américain. Le groupe se développe en parallèle
+en Europe, au travers de multiples acquisitions : \textbf{Capgemini}
+acquière l'entreprise Data Logic en Scandinavie et Hoskyns au
+Royaume-Uni en 1990, puis l'entreprise Volmac aux Pays Bas en 1992,
+ainsi que Gruber Titze Partners en Allemagne en 1993, enfin
+\textbf{Capgemini} fait l'acquisition de Bossard en France en 1997. En
+2000, le groupe \textbf{Capgemini} franchit une nouvelle étape dans son
+internationalisation avec l'acquisition d'Ernst Young Consulting.
+2022/2023 13 En raison des difficultés rencontrées par le secteur des
+services informatiques, \textbf{Capgemini} choisit d'accorder une part
+plus importante à ses activités d'assistance technique de proximité et
+d'infogérance. Le groupe acquière en 2003 l'entreprise Transiciel, ce
+qui lui permet de doubler la taille de Sogeti, la division dédiée à
+l'assistance technique.
+
+\hypertarget{fiche-didentituxe9-du-groupe-capgemini}{%
+\subsection{Fiche d'identité du groupe Capgemini
+:}\label{fiche-didentituxe9-du-groupe-capgemini}}
+
+\textbf{Capgemini,} fondée en 1967, est un leader mondial dans le
+domaine des services de conseil et de technologie. Avec une forte
+présence internationale, l\textquotesingle entreprise continue de
+transformer les industries grâce à ses solutions innovantes et son
+expertise reconnue.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule()
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{1.0000} + 2\tabcolsep}@{}}{%
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Groupe Capgemini}
+\end{minipage}} \\
+\midrule()
+\endhead
+\textbf{Année de création} & 1967 \\
+\textbf{Fondateur} & Serge KAMPFF \\
+\textbf{Forme juridique} & Société anonyme \\
+\textbf{PDG} & Aiman EZZAT \\
+\textbf{Effectif} & Plus 340 000\,(2022) \\
+\textbf{Chiffre d'affaires} & 18 Milliards d'Euros (2021) \\
+\bottomrule()
+\end{longtable}
+
+\protect\hypertarget{_Toc203823475}{}{}Tableau 1: Fiche
+d\textquotesingle identité du groupe \textbf{Capgemini}
+
+\hypertarget{muxe9tiers-du-groupe-capgemini}{%
+\subsection{Métiers du groupe Capgemini
+:}\label{muxe9tiers-du-groupe-capgemini}}
+
+\textbf{Capgemini} est un leader mondial dans le domaine des services
+informatiques, offrant une gamme complète de solutions pour répondre aux
+besoins diversifiés de ses clients. La société propose une expertise
+approfondie dans plusieurs domaines clés, permettant aux entreprises de
+maximiser leur performance et de s'adapter aux évolutions
+technologiques.
+
+Voici un aperçu des principaux services offerts par \textbf{Capgemini} :
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3107}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.6893}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+\textbf{Les services de Capgemini}
+\end{quote}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+\textbf{Les informations sur les services}
+\end{quote}
+\end{minipage} \\
+\midrule()
+\endhead
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+\textbf{Consulting Services} (\textbf{Capgemini} Consulting)~
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Aide à améliorer la performance des organisations, en
+s\textquotesingle appuyant sur une connaissance approfondie des
+industries et des processus clients.~
+\end{quote}
+\end{minipage} \\
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+\textbf{Application Services}~
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Conçoit, développe, met en œuvre et maintien des applications
+informatiques couvrant les activités d\textquotesingle intégration
+système et de maintenance des applications de Groupe.~
+\end{quote}
+\end{minipage} \\
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+\textbf{Services de technologie} ~\\
+\textbf{et d\textquotesingle ingénierie} (Sogeti)~
+\end{quote}\strut
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Fournissent une assistance et un soutien aux équipes informatiques
+internes des entreprises clientes.~
+\end{quote}
+\end{minipage} \\
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+\textbf{L\textquotesingle intégration de systèmes} (Technology
+Services)~
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Le pôle "Intégration de systèmes" comprend
+l\textquotesingle architecture des systèmes
+d\textquotesingle information (conception /design),
+l\textquotesingle intégration de systèmes, les développements
+applicatifs, le pilotage et l\textquotesingle optimisation des systèmes,
+des réseaux et des données.~
+\end{quote}
+\end{minipage} \\
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+\textbf{L\textquotesingle Infogérance}~
+
+(Outsourcing Services)~
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Il s\textquotesingle agit de la prise en charge totale ou partielle du
+système d\textquotesingle information d\textquotesingle un client (ou
+d\textquotesingle un regroupement de plusieurs clients) et des activités
+métiers s\textquotesingle y rattachant pour une durée moyenne de cinq
+ans, mais qui peut aller jusqu\textquotesingle à dix ans, voire
+davantage.~
+\end{quote}
+\end{minipage} \\
+\bottomrule()
+\end{longtable}
+
+\protect\hypertarget{_Toc203823476}{}{}Tableau 2 : Les différents
+métiers de \textbf{Capgemini}
+
+\hypertarget{capgemini-ts-maroc}{%
+\subsection{Capgemini TS Maroc~:}\label{capgemini-ts-maroc}}
+
+\textbf{Capgemini Technology Services} Maroc a été créée en 2007 avec
+une première agence, pour déménager en janvier 2010 vers les nouveaux
+locaux de `\textbf{Casanearshore'} avant de lancer en juillet de la même
+année son activité Infrastructure Management (activité Sogeti). Le choix
+est justifié par la proximité géographique du Maroc, la qualité reconnue
+de ses compétences et pour accompagner le pays dans sa stratégie de
+développement dans le domaine des Nouvelles Technologies de
+l'Information et de la Communication (TIC). \textbf{Capgemini Maroc} est
+une filiale `\textbf{Nearshore'} ayant le statut de Société Anonyme (SA)
+est dont le capital s'élève à hauteur de 33 000 000 MAD. Elle est située
+dans le parc technologique `\textbf{CasaNearshore'} qui a été créé par
+le gouvernement marocain dans le but d'accueillir des entreprises
+étrangères et d'y faire travailler la main d'œuvre marocaine issue des
+meilleures écoles et instituts supérieurs marocains.
+
+\hypertarget{fiche-didentituxe9-de-capgemini-ts-maroc}{%
+\subsection{Fiche d'identité de Capgemini TS
+Maroc~:}\label{fiche-didentituxe9-de-capgemini-ts-maroc}}
+
+\includegraphics[width=4.03056in,height=1.58056in]{latex_media/media/image4.png}\textbf{Capgemini
+Technology} Services Maroc est une entité spécialisée dans la fourniture
+de services technologiques et d'ingénierie. Depuis sa création,
+l'entreprise s'est imposée comme un partenaire incontournable pour de
+nombreuses organisations, grâce à son expertise et à son engagement
+envers l'innovation et la qualité des services.
+
+\hypertarget{organigramme-de-capgemini-ts-maroc}{%
+\subsection{Organigramme de Capgemini TS
+Maroc}\label{organigramme-de-capgemini-ts-maroc}}
+
+Cette fiche présente l\textquotesingle organigramme de
+\textbf{Capgemini} TS Maroc, mettant en avant les rôles clés et les
+responsabilités au sein de notre structure. Elle illustre la hiérarchie
+et les interactions entre les différents départements, tout en
+soulignant l\textquotesingle importance de la collaboration pour
+atteindre nos objectifs.
+
+\includegraphics[width=5.4in,height=3.17361in]{latex_media/media/image5.jpeg}Chaque
+membre joue un rôle crucial dans le succès de nos projets, et cette
+représentation visuelle facilite la compréhension de notre
+organisation~:
+
+\hypertarget{pruxe9sentation-du-digicamp}{%
+\subsubsection{Présentation du
+DigiCamp~:}\label{pruxe9sentation-du-digicamp}}
+
+\includegraphics[width=4.85208in,height=2.37778in]{latex_media/media/image6.png}Dans
+un contexte où l'évaluation précise des compétences techniques des
+candidats est cruciale pour le recrutement efficace de talents, la
+plateforme Coding Challenge de \textbf{Capgemini} représente une réponse
+stratégique aux défis actuels. Cette plateforme innovante offre aux
+recruteurs un outil puissant pour évaluer objectivement les capacités
+des candidats à travers des tests techniques rigoureux. En automatisant
+une partie du processus de présélection, Coding Challenge permet non
+seulement de réduire les biais subjectifs associés aux méthodes
+traditionnelles, mais également d'accélérer significativement le temps
+nécessaire pour identifier les meilleurs talents. Cet outil s'inscrit
+dans une stratégie plus large visant à renforcer l'attrait de
+\textbf{Capgemini} en tant qu'employeur de choix, capable d'attirer et
+de retenir les profils les plus qualifiés dans le domaine de
+l'informatique.
+
+DigiCamp a démarré en 2019 avec 39 collaborateurs qui travaillent sur 13
+projets en utilisant diverses technologies. Le but est de permettre au
+talent de prendre son vol vers le staffing dans les projets en passant
+par les 3 principaux étapes :
+
+\begin{itemize}
+\item
+  Cap Immersion.
+\item
+  Conditionnement en mode projet.
+\item
+  Formation L\&D et accompagnement dans les soft skills, technologies et
+  méthodologie de travail.
+\end{itemize}
+
+Un portfolio ambitieux avec des technologies alignées aux besoins et
+contenant plus de 23 projets dont 15 applications en développement en
+2020.
+
+\hypertarget{pruxe9sentation-du-projet}{%
+\subsubsection{Présentation du
+Projet~:}\label{pruxe9sentation-du-projet}}
+
+\hypertarget{contexte-du-projet}{%
+\subsection{Contexte du projet~:}\label{contexte-du-projet}}
+
+Dans un environnement professionnel où l\textquotesingle agilité est
+devenue un facteur clé de succès, \textbf{Capgemini} a identifié le
+besoin de standardiser et d\textquotesingle optimiser
+l\textquotesingle évaluation des compétences de ses collaborateurs dans
+ce domaine. Ce besoin s\textquotesingle inscrit dans une stratégie plus
+large visant à renforcer la culture agile au sein de
+l\textquotesingle entreprise et à assurer l\textquotesingle excellence
+opérationnelle des équipes.
+
+L\textquotesingle agilité, avec ses différentes méthodologies (Scrum,
+Kanban, SAFe, etc.), ses rôles spécifiques (Scrum Master, Product Owner)
+et ses pratiques (daily stand-up, sprint planning, retrospectives),
+représente un corpus de connaissances complexe dont la maîtrise est
+essentielle pour la réussite des projets informatiques modernes.
+
+Jusqu\textquotesingle à présent, l\textquotesingle évaluation des
+compétences en agilité au sein de \textbf{Capgemini} reposait sur des
+approches variées et non standardisées : entretiens individuels,
+observations sur le terrain, ou questionnaires adhoc. Cette diversité
+d\textquotesingle approches rendait difficile la comparaison des niveaux
+de compétence entre équipes et limitait la capacité à identifier
+précisément les besoins de formation.
+
+Par ailleurs, l\textquotesingle entreprise dispose déjà
+d\textquotesingle une plateforme de formation nommée NEXT, qui propose
+divers contenus pédagogiques mais ne dispose pas d\textquotesingle un
+module d\textquotesingle évaluation des compétences intégré.
+L\textquotesingle articulation entre évaluation et formation représente
+donc un enjeu majeur pour optimiser les parcours
+d\textquotesingle apprentissage.
+
+\hypertarget{probluxe9matique}{%
+\subsection{Problématique~:}\label{probluxe9matique}}
+
+Dans le contexte spécifique de l\textquotesingle évaluation des
+compétences en agilité, le projet \textbf{QUIZ AGILE} vise à répondre à
+plusieurs problématiques interconnectées :
+
+\begin{itemize}
+\item
+  \textbf{Comment standardiser l\textquotesingle évaluation des
+  compétences en agilité à l\textquotesingle échelle de
+  l\textquotesingle entreprise ?} L\textquotesingle absence
+  d\textquotesingle un référentiel commun et d\textquotesingle outils
+  standardisés rend difficile la comparaison des niveaux de compétence
+  entre collaborateurs et entre équipes.
+\item
+  \textbf{Comment identifier avec précision les lacunes à combler ?} Les
+  méthodes actuelles ne permettent pas toujours
+  d\textquotesingle analyser finement les domaines spécifiques dans
+  lesquels les collaborateurs ont besoin de renforcer leurs
+  connaissances.
+\item
+  \textbf{Comment optimiser les parcours de formation en fonction des
+  résultats d\textquotesingle évaluation ?} Sans lien direct entre
+  évaluation et formation, il est difficile de proposer des parcours
+  d\textquotesingle apprentissage véritablement personnalisés.
+\item
+  \includegraphics[width=5.29167in,height=3.53061in]{latex_media/media/image7.jpeg}\textbf{Comment
+  faciliter le suivi de l\textquotesingle évolution des compétences dans
+  le temps ?} L\textquotesingle absence d\textquotesingle historisation
+  des résultats limite la capacité à mesurer les progrès réalisés par
+  les collaborateurs.
+\end{itemize}
+
+\hypertarget{objectif-du-projet}{%
+\subsection{Objectif du Projet~:~}\label{objectif-du-projet}}
+
+Le projet \textbf{QUIZ AGILE} poursuit plusieurs objectifs stratégiques
+:
+
+\begin{itemize}
+\item
+  \textbf{Standardiser l\textquotesingle évaluation des compétences en
+  agilité} en proposant un référentiel commun et des outils
+  d\textquotesingle évaluation uniformisés.
+\item
+  \textbf{Adapter la formation selon les besoins identifiés} grâce à une
+  analyse précise des résultats et une intégration avec la plateforme de
+  formation NEXT.
+\item
+  \textbf{Favoriser l\textquotesingle auto-apprentissage des
+  collaborateurs} en leur permettant d\textquotesingle identifier leurs
+  propres lacunes et de suivre leur progression.
+\item
+  \textbf{Fournir aux managers des tableaux de bord détaillés} sur les
+  compétences de leurs équipes pour faciliter la prise de décision.
+\item
+  \textbf{Créer une base de connaissances évolutive} pouvant
+  s\textquotesingle étendre à d\textquotesingle autres domaines de
+  compétences au-delà de l\textquotesingle agilité.
+\item
+  \textbf{Préparer l\textquotesingle infrastructure pour une future
+  intégration avec des fonctionnalités d\textquotesingle IA} qui
+  permettront d\textquotesingle adapter dynamiquement les quiz en
+  fonction des réponses précédentes.
+\end{itemize}
+
+\hypertarget{population-concernuxe9e}{%
+\subsection{Population concernée~:}\label{population-concernuxe9e}}
+
+Aujourd\textquotesingle hui, dans le contexte de la transformation
+digitale, le projet \textbf{QUIZ AGILE} s\textquotesingle adresse à un
+écosystème professionnel diversifié au sein de \textbf{Capgemini,}
+articulé autour de plusieurs catégories de professionnels stratégiques.
+Les collaborateurs techniques constituent le premier cercle de la
+population cible, comprenant :
+
+\begin{itemize}
+\item
+  Les ingénieurs et développeurs impliqués dans les processus de
+  développement logiciel
+\item
+  Les architectes systèmes et les experts en technologies émergentes
+\item
+  Les consultants spécialisés en transformation numérique
+\item
+  Les professionnels en management représentent un second périmètre
+  crucial, intégrant
+\item
+  Les responsables d\textquotesingle unités opérationnelles
+\item
+  Les directeurs de projets technologiques
+\item
+  Les leaders en charge du développement organisationnel
+\item
+  Les responsables de pratiques métiers
+\end{itemize}
+
+L\textquotesingle écosystème de formation et de développement des
+compétences constitue un troisième groupe stratégique :
+
+\begin{itemize}
+\item
+  Les formateurs spécialisés en méthodologies agiles
+\item
+  Les responsables du learning \& development
+\item
+  Les coaches certifiés en agilité
+\item
+  Les experts en gestion des compétences
+\end{itemize}
+
+\hypertarget{solution-proposuxe9e}{%
+\subsection{Solution proposée~:}\label{solution-proposuxe9e}}
+
+Aujourd\textquotesingle hui, face aux défis de
+l\textquotesingle évolution continue des compétences professionnelles,
+Quiz Agile émerge comme une solution technologique innovante
+d\textquotesingle évaluation et de développement des compétences en
+agilité.
+
+La plateforme se caractérise par une approche méthodologique rigoureuse,
+articulée autour de plusieurs axes stratégiques :
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Évaluation standardisée des compétences Aujourd\textquotesingle hui,
+  Quiz Agile propose un dispositif d\textquotesingle évaluation
+  scientifique et objectif, reposant sur :
+\end{enumerate}
+
+\begin{itemize}
+\item
+  Des questionnaires à choix multiples hautement paramétrables
+\item
+  Un référentiel de compétences normalisé
+\item
+  Une approche d\textquotesingle évaluation multicritères
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\item
+  Architecture fonctionnelle innovante~\\
+  La solution intègre des fonctionnalités technologiquement avancées :
+\end{enumerate}
+
+\begin{itemize}
+\item
+  Création de quiz par des experts métiers
+\item
+  Passation de tests en environnement numérique sécurisé
+\item
+  Analyse approfondie et contextualisation des résultats
+\item
+  Recommandations de parcours de formation personnalisés
+\item
+  Tableaux de bord décisionnels pour les managers
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\item
+  Intégration technologique et écosystémique.
+\end{enumerate}
+
+Aujourd\textquotesingle hui, Quiz Agile se distingue par sa capacité
+d\textquotesingle intégration :
+
+\begin{itemize}
+\item
+  Interconnexion native avec la plateforme de formation NEXT
+\item
+  Mécanisme d\textquotesingle authentification unique sécurisé
+\item
+  Synchronisation dynamique des données
+\item
+  Compatibilité multiplateforme et multiappareils
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\item
+  Approche technologique et méthodologique La solution repose sur une
+  architecture technologique moderne :
+\end{enumerate}
+
+\begin{itemize}
+\item
+  Technologies frontend et backend innovantes
+\item
+  Paradigme architectural modulaire
+\item
+  Approche DevOps et CI/CD
+\item
+  Conformité aux standards de sécurité et de confidentialité
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\item
+  Bénéfices organisationnels stratégiques Quiz Agile vise à générer une
+  valeur ajoutée significative :
+\end{enumerate}
+
+\begin{itemize}
+\item
+  Identification précise et objective des compétences
+\item
+  Personnalisation des trajectoires de développement professionnel
+\item
+  Optimisation des investissements en formation
+\item
+  Accélération de la transformation culturelle et méthodologique
+\end{itemize}
+
+\hypertarget{conduite-et-planification-du-projet}{%
+\subsection{Conduite et planification du
+projet~:}\label{conduite-et-planification-du-projet}}
+
+La planification est cruciale pour le succès du projet. Elle commence
+par la conception, où les objectifs et les besoins des utilisateurs sont
+identifiés. Ensuite, le cadrage fonctionnel et technique établit les
+fonctionnalités requises et les technologies à utiliser. La phase de
+codage suit, durant laquelle les développeurs créent le produit selon
+les spécifications. Ensuite, des tests internes sont effectués pour
+détecter et corriger les erreurs. Une fois ces tests complétés, le
+produit est soumis à une validation avec le client pour
+s\textquotesingle assurer qu\textquotesingle il répond aux attentes.
+Cette approche structurée garantit un développement efficace et réduit
+les risques de dérives.
+
+\hypertarget{intuxe9gration-et-formation-continue}{%
+\subparagraph{Intégration et formation
+continue~:}\label{intuxe9gration-et-formation-continue}}
+
+Lors de mon intégration chez \textbf{Capgemini,} j\textquotesingle ai
+rejoint l\textquotesingle équipe de développement du projet Quiz Agile
+en tant que Software Engineer Intern. Cette expérience
+m\textquotesingle a permis de participer activement aux différentes
+phases de développement de l\textquotesingle application, qui repose sur
+un écosystème technologique moderne.
+
+Parallèlement, j\textquotesingle ai suivi des formations ciblées sur ces
+technologies via :
+
+\begin{itemize}
+\item
+  La plateforme NEXT de \textbf{Capgemini}
+\item
+  La plateforme Udemy
+\item
+  Des sessions de formation internes
+\end{itemize}
+
+J\textquotesingle ai également complété des formations obligatoires sur
+:
+
+\begin{itemize}
+\item
+  L\textquotesingle éthique professionnelle
+\item
+  Le code de conduite de \textbf{Capgemini}
+\item
+  La sécurité informatique
+\item
+  Les politiques de propriété intellectuelle
+\end{itemize}
+
+\hypertarget{muxe9thodologie-du-travail-agile-scrum}{%
+\subsection{Méthodologie du travail\,: Agile \&
+Scrum}\label{muxe9thodologie-du-travail-agile-scrum}}
+
+Le projet \textbf{Quiz Agile} a été développé en suivant rigoureusement
+la méthodologie Agile Scrum, permettant :
+
+\begin{itemize}
+\item
+  Un développement itératif et incrémental
+\item
+  Une adaptation continue aux besoins
+\item
+  Une livraison rapide de valeur métier
+\end{itemize}
+
+\hypertarget{caractuxe9ristiques-de-notre-impluxe9mentation-scrum}{%
+\paragraph{Caractéristiques de notre implémentation Scrum
+:}\label{caractuxe9ristiques-de-notre-impluxe9mentation-scrum}}
+
+\begin{itemize}
+\item
+  Sprints de 2 semaines
+\item
+  Cérémonies régulières :
+\end{itemize}
+
+\begin{itemize}
+\item
+  Sprint Planning
+\item
+  Daily Meetings
+\item
+  Sprint Review
+\item
+  Sprint Retrospective
+\end{itemize}
+
+\hypertarget{principaux-objectifs-muxe9thodologiques}{%
+\paragraph{Principaux objectifs méthodologiques
+:}\label{principaux-objectifs-muxe9thodologiques}}
+
+\begin{itemize}
+\item
+  Garantir la flexibilité du développement
+\item
+  Optimiser la communication d\textquotesingle équipe
+\item
+  Réduire les risques projet
+\item
+  \includegraphics[width=5.09471in,height=2.61538in]{latex_media/media/image8.png}Favoriser
+  l\textquotesingle amélioration continue
+\end{itemize}
+
+Du fait que notre projet suivait la méthodologie du Scrum Agile, on
+était amené à participer aux cérémonies mentionnées précédemment. En
+fait, pour notre cas particulier un sprint s'étalait généralement sur
+une durée de \textasciitilde2semaines, se précédait par un sprint
+planning et se suivait par un sprint review et puis une
+rétrospective.~Le product owner commence par tracer une vision du projet
+en définissant les US (fonctionnalités à développer) qui forment notre
+backlog.~~
+
+\hypertarget{sprint-planning}{%
+\subparagraph{Sprint planning\,:}\label{sprint-planning}}
+
+Lors de cette réunion, l'équipe de développement\,sélectionne les
+éléments prioritaires du Product Backlog\,qu'elle pense pouvoir réaliser
+au cours du sprint. Cette planification aboutit à la création d'un\,plan
+de sprint. C'est un travail collaboratif de toute l'équipe Scrum.~~
+
+\hypertarget{daily-meetings}{%
+\subparagraph{Daily meetings\,:}\label{daily-meetings}}
+
+Le Daily Scrum ou Stand up meeting, est une réunion de synchronisation
+quotidienne. Elle permet de discuter de l'avancement des tâches,
+d'éventuels problèmes, de faire marcher l'entraide et résoudre les
+blocages possibles.\,~
+
+\includegraphics[width=5.78194in,height=3.10069in]{latex_media/media/image9.png}Pour
+notre équipe de développement une réunion quotidienne d'une durée 60
+minutes maximum est organisée à 15h00. La figure ci-dessous montre le
+Daily planifié quotidiennement\,:~
+
+\hypertarget{sprint-review}{%
+\subparagraph{Sprint Review\,:}\label{sprint-review}}
+
+La\,\href{https://www.appvizer.fr/magazine/operations/gestion-de-projet/sprint-review}{Sprint-Review}\,est
+une réunion où l'équipe projet présente aux parties prenantes les
+différents\,livrables terminés. Plus qu'une simple présentation, c'est
+l'occasion de faire une démonstration en conditions réelles afin de
+s'assurer que le produit réponde aux besoins exprimés par le client.~
+
+\hypertarget{sprint-ruxe9trospective}{%
+\subparagraph{Sprint Rétrospective\,:~}\label{sprint-ruxe9trospective}}
+
+La rétrospective de Sprint est certainement celle qui peut être le
+principal vecteur d'amélioration continue. Il s'agit d'une cérémonie qui
+s'effectue avec l'ensemble de l'équipe de développement une fois le
+sprint terminé.\,
+
+\hypertarget{diagramme-de-gantt}{%
+\subsection{Diagramme de GANTT~:}\label{diagramme-de-gantt}}
+
+La planification du projet est une phase importante
+d\textquotesingle avant-projet. Elle consiste à prévoir le déroulement
+de ce dernier tout au long des phases constituant le cycle de
+développement à savoir la conception, le cadrage fonctionnel et
+technique, le codage, les tests internes et enfin la validation avec le
+client. Le diagramme de GANTT représente les fonctionnalités développées
+ou qui restent à développer selon la demande du client dès le début du
+projet jusqu'à sa fin.~
+
+\includegraphics[width=6.3in,height=4.29077in]{latex_media/media/image10.png}Le
+planning général de notre projet est représenté ci-dessous par le
+diagramme de Gantt, qui fait la répartition des tâches sur la période du
+projet. La réalisation du projet suit la méthode agile Scrum.~
+
+\hypertarget{synthuxe8se}{%
+\subsection{Synthèse}\label{synthuxe8se}}
+
+Le projet Quiz Agile répond aux besoins stratégiques de
+\textbf{Capgemini} en matière d\textquotesingle évaluation et de
+développement des compétences. Face à un contexte de transformation
+digitale rapide, la solution propose une plateforme innovante
+d\textquotesingle évaluation des compétences agiles, destinée à :
+
+\begin{itemize}
+\item
+  Standardiser l\textquotesingle évaluation
+\item
+  Personnaliser les parcours de formation
+\item
+  Optimiser le développement des talents
+\end{itemize}
+
+La population cible inclut les collaborateurs techniques, les managers
+et les équipes de développement, avec un périmètre initial de 300
+professionnels.
+
+\hypertarget{conclusion}{%
+\subsection{Conclusion}\label{conclusion}}
+
+Dans ce premier chapitre, nous avons exploré le contexte général du
+projet Quiz Agile, en mettant en avant plusieurs éléments clés. Dans un
+premier temps, nous avons décrit l\textquotesingle organisme
+d\textquotesingle accueil, \textbf{Capgemini,} qui joue un rôle crucial
+dans la mise en œuvre du projet. Cette présentation a permis de
+comprendre les valeurs et la mission de l\textquotesingle entreprise,
+ainsi que son engagement envers la transformation digitale et le
+développement des compétences.
+
+Nous avons également abordé le stage réalisé, qui a servi de tremplin
+pour identifier les besoins spécifiques en matière
+d\textquotesingle évaluation et de développement des compétences. Cette
+expérience sur le terrain a mis en évidence les lacunes dans les
+processus d\textquotesingle évaluation traditionnels, soulignant
+l\textquotesingle importance d\textquotesingle une approche agile et
+personnalisée.
+
+En parallèle, nous avons introduit le projet Quiz Agile, en exposant les
+raisons qui ont motivé son développement. Loin d\textquotesingle être
+une simple application de quiz, Quiz Agile se positionne comme une
+solution innovante visant à améliorer la gestion des compétences
+professionnelles. Nous avons discuté de son objectif principal :
+standardiser l\textquotesingle évaluation, personnaliser les parcours de
+formation et optimiser le développement des talents.
+
+Ce chapitre a donc permis de poser un socle solide pour la suite de
+notre étude, en clarifiant les enjeux, les motivations et les
+implications du projet. En établissant ce contexte, nous avons préparé
+le terrain pour les développements futurs, qui approfondiront les
+solutions techniques proposées et la conduite du projet. Ainsi, ce
+chapitre constitue une première étape essentielle pour comprendre
+l\textquotesingle impact potentiel de Quiz Agile sur la transformation
+digitale et le développement professionnel au sein de
+\textbf{Capgemini.}
+
+\hypertarget{section-2}{%
+\section{}\label{section-2}}
+
+\hypertarget{chapitre-2-analyse-et-spuxe9cification-des-besoins}{%
+\section{CHAPITRE 2~: Analyse et Spécification des
+besoins}\label{chapitre-2-analyse-et-spuxe9cification-des-besoins}}
+
+La phase de conception et de modélisation constitue une étape cruciale
+dans le cycle de développement du projet Quiz Agile. Elle permet de
+traduire les besoins identifiés lors de l\textquotesingle analyse
+préliminaire en une architecture technique et fonctionnelle cohérente.
+Ce chapitre présente de manière détaillée l\textquotesingle ensemble des
+travaux de conception réalisés, depuis l\textquotesingle analyse des
+besoins jusqu\textquotesingle aux choix d\textquotesingle architecture
+technique. Nous y aborderons successivement l\textquotesingle analyse
+des exigences fonctionnelles et non fonctionnelles,
+l\textquotesingle identification des acteurs du système, la modélisation
+conceptuelle à travers différents diagrammes UML, et enfin les choix
+techniques qui ont guidé l\textquotesingle implémentation du projet.
+Cette démarche méthodique vise à garantir que le système final réponde
+parfaitement aux attentes des utilisateurs tout en
+s\textquotesingle inscrivant dans une architecture évolutive et
+maintenable.
+
+\hypertarget{spuxe9cifications-fonctionnelles}{%
+\subsubsection{Spécifications
+Fonctionnelles}\label{spuxe9cifications-fonctionnelles}}
+
+\hypertarget{exigences-fonctionnelles}{%
+\subsection{Exigences fonctionnelles}\label{exigences-fonctionnelles}}
+
+Les exigences fonctionnelles du projet Quiz Agile ont été établies à
+partir des besoins exprimés par les parties prenantes et des objectifs
+stratégiques de l\textquotesingle entreprise. Ces exigences définissent
+les fonctionnalités que le système doit offrir pour répondre aux
+attentes des utilisateurs.
+
+\hypertarget{gestion-des-utilisateurs}{%
+\subparagraph{Gestion des utilisateurs
+:}\label{gestion-des-utilisateurs}}
+
+\begin{itemize}
+\item
+  Authentification des utilisateurs avec différents rôles
+  (Administrateur, Coach, Collaborateur)
+\item
+  Gestion des profils utilisateurs (création, modification, suppression)
+\item
+  Attribution et gestion des droits d\textquotesingle accès selon les
+  rôles
+\end{itemize}
+
+\hypertarget{gestion-des-quiz}{%
+\subparagraph{Gestion des quiz :}\label{gestion-des-quiz}}
+
+\begin{itemize}
+\item
+  Création de quiz par les coachs avec titre, description et paramètres
+\item
+  Configuration des quiz (durée, nombre de tentatives autorisées, seuil
+  de réussite)
+\item
+  Importation et exportation de questions au format standardisé
+\item
+  Catégorisation des quiz par thématique et niveau de difficulté
+\item
+  Génération d\textquotesingle URL de partage pour diffusion aux
+  collaborateurs
+\end{itemize}
+
+\hypertarget{gestion-des-questions}{%
+\subparagraph{Gestion des questions :}\label{gestion-des-questions}}
+
+\begin{itemize}
+\item
+  Création de questions de différents types (QCM, vrai/faux, réponses
+  multiples)
+\item
+  Association d\textquotesingle options de réponse avec indication des
+  réponses correctes
+\item
+  Attribution d\textquotesingle un niveau de difficulté et de mots-clés
+  aux questions
+\item
+  Réutilisation des questions dans différents quiz
+\item
+  Suggestion intelligente de questions basée sur
+  l\textquotesingle historique et les thématiques
+\end{itemize}
+
+\hypertarget{passage-des-quiz}{%
+\subparagraph{Passage des quiz :}\label{passage-des-quiz}}
+
+\begin{itemize}
+\item
+  Interface intuitive pour répondre aux questions
+\item
+  Chronomètre pour respecter la durée impartie
+\item
+  Navigation entre les questions
+\item
+  Possibilité de marquer des questions pour y revenir plus tard
+\end{itemize}
+
+\hypertarget{uxe9valuation-et-ruxe9sultats}{%
+\subparagraph{Évaluation et résultats
+:}\label{uxe9valuation-et-ruxe9sultats}}
+
+\begin{itemize}
+\item
+  Calcul automatique des scores
+\item
+  Affichage des réponses correctes et des explications après soumission
+\item
+  Génération de rapports détaillés pour les participants
+\item
+  Attribution de badges et récompenses selon les performances
+\item
+  Historique des tentatives et progression dans le temps
+\end{itemize}
+
+\hypertarget{analyse-et-reporting}{%
+\subparagraph{Analyse et reporting :}\label{analyse-et-reporting}}
+
+\begin{itemize}
+\item
+  Tableau de bord pour les coachs avec statistiques globales
+\item
+  Analyse des performances par équipe, thématique ou question
+\item
+  Identification des points forts et des axes
+  d\textquotesingle amélioration
+\item
+  Exportation des résultats pour analyse externe
+\item
+  Recommandations personnalisées de formation
+\end{itemize}
+
+\hypertarget{intuxe9gration-avec-la-plateforme-next}{%
+\subparagraph{Intégration avec la plateforme NEXT
+:}\label{intuxe9gration-avec-la-plateforme-next}}
+
+\begin{itemize}
+\item
+  Authentification unique (SSO) entre Quiz Agile et NEXT
+\item
+  Synchronisation des données utilisateurs
+\item
+  Intégration des quiz dans les parcours de formation NEXT
+\item
+  Partage des résultats avec la plateforme NEXT
+\end{itemize}
+
+\hypertarget{cartographie-fonctionnelle}{%
+\subsubsection{Cartographie
+fonctionnelle}\label{cartographie-fonctionnelle}}
+
+\includegraphics[width=5.17292in,height=2.56944in]{latex_media/media/image11.png}La
+cartographie fonctionnelle ci-dessous présente une vue
+d\textquotesingle ensemble des principales fonctionnalités du système
+Quiz Agile et leurs relations :
+
+Cette cartographie met en évidence les quatre grands modules
+fonctionnels du système :
+
+\begin{itemize}
+\item
+  Module de gestion des utilisateurs et des droits
+\item
+  Module de création et gestion des quiz
+\item
+  Module de passage des quiz et évaluation
+\item
+  Module d\textquotesingle analyse et de reporting
+\end{itemize}
+
+\hypertarget{spuxe9cifications-non-fonctionnelles}{%
+\subsubsection{Spécifications Non
+Fonctionnelles~:}\label{spuxe9cifications-non-fonctionnelles}}
+
+Les exigences non fonctionnelles définissent les critères de qualité et
+les contraintes techniques que le système doit respecter.
+
+\hypertarget{performance}{%
+\subparagraph{Performance :}\label{performance}}
+
+\begin{itemize}
+\item
+  Temps de réponse inférieur à 2 secondes pour les opérations courantes
+\item
+  Capacité à gérer simultanément jusqu\textquotesingle à 200
+  utilisateurs actifs
+\item
+  Optimisation des requêtes de base de données pour minimiser la latence
+\item
+  Mise en cache des données fréquemment accédées
+\end{itemize}
+
+\hypertarget{suxe9curituxe9}{%
+\subparagraph{Sécurité :}\label{suxe9curituxe9}}
+
+\begin{itemize}
+\item
+  Protection des données personnelles conformément au RGPD
+\item
+  Authentification sécurisée avec support de
+  l\textquotesingle authentification à deux facteurs
+\item
+  Chiffrement des données sensibles en transit et au repos
+\item
+  Journalisation des actions critiques pour audit
+\item
+  Protection contre les attaques courantes (injection SQL, XSS, CSRF)
+\end{itemize}
+
+\hypertarget{disponibilituxe9-et-fiabilituxe9}{%
+\subparagraph{Disponibilité et fiabilité
+:}\label{disponibilituxe9-et-fiabilituxe9}}
+
+\begin{itemize}
+\item
+  Disponibilité du système 99,9\% du temps (hors maintenance planifiée)
+\item
+  Sauvegarde quotidienne des données avec rétention de 30 jours
+\item
+  Plan de reprise d\textquotesingle activité avec un RTO (Recovery Time
+  Objective) de 4 heures
+\item
+  Mécanismes de détection et de notification des erreurs
+\end{itemize}
+
+\hypertarget{maintenabilituxe9}{%
+\subparagraph{Maintenabilité :}\label{maintenabilituxe9}}
+
+\begin{itemize}
+\item
+  Architecture modulaire facilitant l\textquotesingle évolution du
+  système
+\item
+  Documentation complète du code et de l\textquotesingle architecture
+\item
+  Tests automatisés couvrant au moins 80\% du code
+\item
+  Respect des standards de codage et des bonnes pratiques
+\end{itemize}
+
+\hypertarget{scalabilituxe9}{%
+\subparagraph{Scalabilité :}\label{scalabilituxe9}}
+
+\begin{itemize}
+\item
+  Architecture permettant une montée en charge horizontale
+\item
+  Conception adaptée à une future migration vers les microservices
+\item
+  Séparation claire des responsabilités pour faciliter la distribution
+\end{itemize}
+
+\hypertarget{utilisabilituxe9}{%
+\subparagraph{Utilisabilité :}\label{utilisabilituxe9}}
+
+\begin{itemize}
+\item
+  Interface utilisateur intuitive et responsive
+\item
+  Support multilingue (français et anglais dans un premier temps)
+\item
+  Accessibilité conforme aux normes WCAG 2.1 niveau AA
+\item
+  Compatibilité avec les principaux navigateurs (Chrome, Firefox,
+  Safari, Edge)
+\item
+  Support des appareils mobiles et tablettes
+\end{itemize}
+
+\hypertarget{interopuxe9rabilituxe9}{%
+\subparagraph{Interopérabilité :}\label{interopuxe9rabilituxe9}}
+
+\begin{itemize}
+\item
+  API RESTful documentée pour l\textquotesingle intégration avec des
+  systèmes tiers
+\item
+  Support des formats d\textquotesingle échange standards (JSON, XML)
+\item
+  \includegraphics[width=6.72639in,height=2.88611in]{latex_media/media/image12.png}Mécanismes
+  d\textquotesingle import/export de données
+\end{itemize}
+
+\hypertarget{analyse-des-acteurs-et-des-cas-dutilisation}{%
+\subsubsection{Analyse des Acteurs et des Cas
+d\textquotesingle Utilisation
+:}\label{analyse-des-acteurs-et-des-cas-dutilisation}}
+
+L\textquotesingle identification des acteurs et de leurs rôles est une
+étape cruciale dans la conception d\textquotesingle une application.
+Elle permet de comprendre les besoins spécifiques de chaque utilisateur
+et de créer une expérience utilisateur optimale. En définissant
+clairement les rôles et les fonctionnalités associées à chaque type
+d\textquotesingle utilisateur, on peut garantir que
+l\textquotesingle application répond aux attentes de chacun et facilite
+les interactions entre les différents acteurs.
+
+\hypertarget{identification-des-acteurs}{%
+\subsection{Identification des
+acteurs~:}\label{identification-des-acteurs}}
+
+Un acteur est l\textquotesingle idéalisation d\textquotesingle un rôle
+joué par une personne, un matériel ou un logiciel qui interagit
+directement avec le système en question. Il peut consulter et / ou
+modifier directement l'état du système en émettant ou recevant des
+messages susceptibles d'être porteurs de données.~~
+
+\includegraphics[width=6.3in,height=2.30477in]{latex_media/media/image13.png}Dans
+le cadre du projet QUIZ AGILE, plusieurs acteurs clés interagissent avec
+l\textquotesingle application mobile et la plateforme web. Voici une
+description de chacun d\textquotesingle eux :
+
+\hypertarget{administrateur}{%
+\subparagraph{Administrateur :}\label{administrateur}}
+
+\begin{itemize}
+\item
+  Responsable de la configuration globale du système
+\item
+  Gère les utilisateurs et leurs droits
+\item
+  Supervise l\textquotesingle ensemble des activités sur la plateforme
+\item
+  Accède aux statistiques globales et aux journaux
+  d\textquotesingle audit
+\end{itemize}
+
+\hypertarget{coach}{%
+\subparagraph{Coach :}\label{coach}}
+
+\begin{itemize}
+\item
+  Crée et gère les quiz et les questions
+\item
+  Configure les paramètres des évaluations
+\item
+  Analyse les résultats des collaborateurs
+\item
+  Identifie les besoins en formation
+\item
+  Génère des rapports d\textquotesingle analyse
+\end{itemize}
+
+\hypertarget{collaborateur}{%
+\subparagraph{Collaborateur :}\label{collaborateur}}
+
+\begin{itemize}
+\item
+  Passe les quiz d\textquotesingle évaluation
+\item
+  Consulte ses résultats et son historique
+\item
+  Suit sa progression dans le temps
+\item
+  Reçoit des recommandations personnalisées
+\end{itemize}
+
+\hypertarget{systuxe8me-next}{%
+\subparagraph{Système NEXT}\label{systuxe8me-next}}
+
+\begin{itemize}
+\item
+  Échange des données avec Quiz Agile
+\item
+  Authentifie les utilisateurs via SSO
+\item
+  Intègre les quiz dans les parcours de formation
+\item
+  Récupère les résultats des évaluations
+\end{itemize}
+
+\hypertarget{diagramme-de-cas-dutilisation}{%
+\subsection{Diagramme de Cas d\textquotesingle Utilisation
+:}\label{diagramme-de-cas-dutilisation}}
+
+Le diagramme de cas d\textquotesingle utilisation est un outil
+d\textquotesingle analyse puissant qui permet de visualiser les
+différents cas d\textquotesingle utilisation de
+l\textquotesingle application et les fonctionnalités associées aux
+interactions avec les acteurs, offrant ainsi une compréhension globale
+des besoins des utilisateurs et des objectifs du système.
+
+\includegraphics[width=4.30069in,height=4.50069in]{latex_media/media/image14.png}Le
+diagramme de cas d\textquotesingle utilisation ci-dessous illustre les
+principales interactions entre les acteurs et le système Quiz Agile :
+
+Le diagramme de cas d\textquotesingle utilisation met en évidence les
+actions principales accessibles aux différents acteurs après
+authentification.
+
+Cette modélisation permet de comprendre les interactions et les
+périmètres de responsabilité au sein de l\textquotesingle application
+Quiz Agile.
+
+\hypertarget{tableau-ruxe9capitulatif-des-cas-dutilisation}{%
+\subparagraph{Tableau Récapitulatif des Cas
+d\textquotesingle Utilisation}\label{tableau-ruxe9capitulatif-des-cas-dutilisation}}
+
+Ce tableau récapitulatif présente les principaux cas
+d\textquotesingle utilisation du système~\textbf{Quiz Agile}, organisés
+par domaine fonctionnel. Il détaille les actions clés, les acteurs
+impliqués (Administrateur, Coach, Collaborateur), et une brève
+description de chaque fonctionnalité. Cette synthèse permet de
+visualiser l\textquotesingle étendue des capacités du système, depuis la
+gestion des utilisateurs jusqu\textquotesingle à
+l\textquotesingle analyse des résultats des quiz.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2898}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2367}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2367}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2367}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+Domaine
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Cas d\textquotesingle Utilisation
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Acteurs Principaux
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Description
+\end{minipage} \\
+\midrule()
+\endhead
+\multirow{3}{*}{Gestion des Utilisateurs} & Créer des comptes &
+Administrateur & Permettre la création et
+l\textquotesingle initialisation de nouveaux comptes utilisateurs \\
+& Gérer les rôles & Administrateur & Attribuer et modifier les
+permissions des utilisateurs \\
+& Désactiver des comptes & Administrateur & Gérer
+l\textquotesingle accès et la sécurité du système \\
+\multirow{4}{*}{Création de Quiz} & Créer un quiz & Coach & Développer
+de nouveaux questionnaires \\
+& Modifier un quiz & Coach & Mettre à jour le contenu existant \\
+& Supprimer un quiz & Coach & Retirer des questionnaires obsolètes \\
+& Publier un quiz & Coach & Rendre un quiz accessible aux
+collaborateurs \\
+\multirow{3}{*}{Passage de Quiz} & Passer un quiz & Collaborateur &
+Réaliser un questionnaire \\
+& Répondre aux questions & Collaborateur & Compléter les différentes
+étapes du quiz \\
+& Consulter ses scores & Collaborateur & Visualiser ses performances \\
+\multirow{2}{*}{Analyse des Résultats} & Analyser les résultats &
+Coach/Administrateur & Examiner les performances globales \\
+& Générer des rapports & Coach/Administrateur & Produire des analyses
+détaillées \\
+\bottomrule()
+\end{longtable}
+
+\protect\hypertarget{_Toc203823480}{}{}Tableau 6 : Tableau récapitulatif
+des cas d\textquotesingle utilisation
+
+\hypertarget{description-duxe9tailluxe9e-des-domaines-fonctionnels}{%
+\subsection{Description Détaillée des Domaines
+Fonctionnels}\label{description-duxe9tailluxe9e-des-domaines-fonctionnels}}
+
+\hypertarget{gestion-des-utilisateurs-1}{%
+\subparagraph{\texorpdfstring{ Gestion des
+Utilisateurs}{ Gestion des Utilisateurs}}\label{gestion-des-utilisateurs-1}}
+
+La gestion des utilisateurs est un élément crucial de la sécurité et de
+l\textquotesingle organisation. L\textquotesingle administrateur dispose
+de capacités complètes pour :
+
+\begin{itemize}
+\item
+  Créer de nouveaux comptes
+\item
+  Attribuer des rôles spécifiques
+\item
+  Gérer les accès et les permissions
+\item
+  Désactiver des comptes si nécessaire
+\end{itemize}
+
+\hypertarget{cruxe9ation-de-quiz}{%
+\subparagraph{\texorpdfstring{ Création de
+Quiz}{ Création de Quiz}}\label{cruxe9ation-de-quiz}}
+
+Les coachs bénéficient d\textquotesingle une autonomie complète dans la
+création et la gestion des quiz :
+
+\begin{itemize}
+\item
+  Création de nouveaux questionnaires
+\item
+  Personnalisation des questions
+\item
+  Configuration des paramètres
+\item
+  Publication et partage
+\end{itemize}
+
+\hypertarget{passage-de-quiz}{%
+\subparagraph{Passage de Quiz}\label{passage-de-quiz}}
+
+Les collaborateurs interagissent directement avec les quiz :
+
+\begin{itemize}
+\item
+  Accès aux questionnaires disponibles
+\item
+  Réponse aux questions
+\item
+  Suivi de leurs performances
+\item
+  Consultation des résultats
+\end{itemize}
+
+\hypertarget{analyse-des-ruxe9sultats}{%
+\subparagraph{Analyse des Résultats}\label{analyse-des-ruxe9sultats}}
+
+Les coachs et administrateurs peuvent :
+
+\begin{itemize}
+\item
+  Générer des rapports détaillés
+\item
+  Analyser les performances globales
+\item
+  Identifier des tendances et des axes d\textquotesingle amélioration
+\end{itemize}
+
+\hypertarget{architecture-et-interactions}{%
+\subparagraph{Architecture et
+Interactions}\label{architecture-et-interactions}}
+
+Le système repose sur une hiérarchie claire :
+
+\begin{itemize}
+\item
+  L\textquotesingle administrateur a un accès complet
+\item
+  Le coach supervise les collaborateurs
+\item
+  Chaque acteur dispose de périmètres de responsabilité définis
+\end{itemize}
+
+\hypertarget{description-duxe9tailluxe9e-des-principaux-cas-dutilisation}{%
+\subsection{Description détaillée des principaux cas
+d\textquotesingle utilisation
+:}\label{description-duxe9tailluxe9e-des-principaux-cas-dutilisation}}
+
+\hypertarget{cas-dutilisation-cruxe9er-un-quiz}{%
+\subparagraph{Cas d\textquotesingle utilisation : Créer un
+quiz}\label{cas-dutilisation-cruxe9er-un-quiz}}
+
+Le tableau ci-dessous détaille le processus complet de création
+d\textquotesingle un quiz, depuis l\textquotesingle initiation par
+l\textquotesingle administrateur jusqu\textquotesingle à la génération
+de l\textquotesingle URL partageable, en incluant les scénarios
+d\textquotesingle erreur et les contraintes techniques~:
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3329}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.6671}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+Élément
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Description Détaillée
+\end{minipage} \\
+\midrule()
+\endhead
+Titre & \textbf{Création d\textquotesingle un Quiz en Ligne} \\
+Acteur Principal & \textbf{Administrateur/Créateur de Quiz} \\
+Objectif & \textbf{Créer un quiz interactif} \\
+Préconditions & \textbf{- Compte administrateur valide} \\
+& \textbf{- Accès à l\textquotesingle outil de création de quiz} \\
+Flux Principal & \textbf{1. Initiation de la création de quiz} \\
+& \textbf{2. Remplissage des détails de base (titre, description)} \\
+& \textbf{3. Sélection de la méthode de question} \\
+& \textbf{4. Définition des paramètres du quiz} \\
+& \textbf{5. Validation du quiz} \\
+& \textbf{6. Création d\textquotesingle une URL partageable} \\
+Actions du Système & \textbf{- Authentification} \\
+& \textbf{- Enregistrement des détails du quiz} \\
+& \textbf{- Génération des questions selon la méthode choisie} \\
+& \textbf{- Validation des questions et des options} \\
+& \textbf{- Création de l\textquotesingle URL de partage} \\
+Scénarios Alternatifs & \textbf{- Échec de validation du quiz} \\
+& \textbf{- Modification des questions après validation} \\
+Gestion des Erreurs & \textbf{- Messages d\textquotesingle erreur en cas
+de problèmes} \\
+& \textbf{- Sauvegarde des données en cas de déconnexion} \\
+Postconditions & \textbf{- Quiz créé et prêt à être partagé} \\
+Règles et Contraintes & \textbf{- Vérification des droits
+d\textquotesingle accès} \\
+& \textbf{- Respect des délais de création} \\
+Résultat Final & \textbf{- Quiz enregistré dans la base de données} \\
+& \textbf{- Notification de création réussie} \\
+Interactions Additionnelles & \textbf{- Possibilité de prévisualiser le
+quiz} \\
+& \textbf{- Consultation des statistiques de création} \\
+Critères de Succès & \textbf{- Quiz créé avec succès} \\
+& \textbf{- Validation des paramètres du quiz} \\
+\bottomrule()
+\end{longtable}
+
+\protect\hypertarget{_Toc203823481}{}{}Tableau 7: Cas
+d\textquotesingle utilisation : Créer un quiz
+
+\hypertarget{cas-dutilisation-passer-un-quiz}{%
+\subparagraph{Cas d\textquotesingle utilisation : Passer un
+quiz}\label{cas-dutilisation-passer-un-quiz}}
+
+Le Tableau ci-dessous présente le déroulement optimisé pour le passage
+d\textquotesingle un quiz par un collaborateur, mettant
+l\textquotesingle accent sur l\textquotesingle expérience utilisateur,
+les mécanismes de sauvegarde et l\textquotesingle analyse des
+performances post-quiz~:
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3684}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.6316}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+Élément
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Description Détaillée
+\end{minipage} \\
+\midrule()
+\endhead
+Titre & Réalisation d\textquotesingle un Quiz en Ligne \\
+Acteur Principal & Collaborateur \\
+Objectif & Compléter un quiz interactivement \\
+Préconditions & \begin{minipage}[t]{\linewidth}\raggedright
+- Compte utilisateur valide\\
+- Quiz accessible\\
+- Connexion internet stable\strut
+\end{minipage} \\
+Flux Principal & \begin{minipage}[t]{\linewidth}\raggedright
+1. Accès via URL partagée\\
+2. Lecture des instructions\\
+3. Démarrage du quiz\\
+4. Navigation entre questions\\
+5. Réponse aux questions\\
+6. Soumission des réponses\strut
+\end{minipage} \\
+Actions du Système & \begin{minipage}[t]{\linewidth}\raggedright
+- Authentification\\
+- Initialisation du chronomètre\\
+- Enregistrement des réponses\\
+- Calcul du score\\
+- Génération du feedback\strut
+\end{minipage} \\
+Scénarios Alternatifs & \begin{minipage}[t]{\linewidth}\raggedright
+- Expiration du temps\\
+- Soumission automatique\\
+- Feedback immédiat possible\\
+- Réponses partielles acceptées\strut
+\end{minipage} \\
+Gestion des Erreurs & \begin{minipage}[t]{\linewidth}\raggedright
+- Sauvegarde partielle en cas de déconnexion\\
+- Blocage en cas d\textquotesingle accès non autorisé\\
+- Messages explicatifs d\textquotesingle erreur\strut
+\end{minipage} \\
+Postconditions & \begin{minipage}[t]{\linewidth}\raggedright
+- Réponses enregistrées\\
+- Score calculé\\
+- Résultats disponibles\\
+- Analyse détaillée générée\strut
+\end{minipage} \\
+Règles et Contraintes & \begin{minipage}[t]{\linewidth}\raggedright
+- Temps limité\\
+- Une seule tentative\\
+- Pas de retour arrière après soumission\\
+- Vérification des droits d\textquotesingle accès\strut
+\end{minipage} \\
+Résultat Final & \begin{minipage}[t]{\linewidth}\raggedright
+- Affichage du score\\
+- Présentation du feedback\\
+- Analyse des performances\strut
+\end{minipage} \\
+Interactions Additionnelles &
+\begin{minipage}[t]{\linewidth}\raggedright
+- Possibilité de voir les détails du quiz\\
+- Consultation du rapport détaillé\\
+- Comparaison éventuelle avec d\textquotesingle autres
+participants\strut
+\end{minipage} \\
+Critères de Succès & \begin{minipage}[t]{\linewidth}\raggedright
+- Complétion du quiz\\
+- Compréhension des résultats\\
+- Expérience utilisateur fluide\strut
+\end{minipage} \\
+\bottomrule()
+\end{longtable}
+
+\protect\hypertarget{_Toc203823482}{}{}Tableau 8: Cas
+d\textquotesingle utilisation passer un quiz
+
+\hypertarget{architecture-monolithique}{%
+\subsection{Architecture
+monolithique~:}\label{architecture-monolithique}}
+
+Dans les projets informatiques, une des premières grandes étapes
+techniques est de faire des choix architecturaux : « Comment organiser
+l\textquotesingle application ? » Deux solutions architecturales
+principales se présentent : l\textquotesingle architecture monolithique
+et l\textquotesingle architecture micro-services.
+
+L\textquotesingle architecture monolithique consiste à développer
+l\textquotesingle application comme une unité unique, où tous les
+composants sont interconnectés et déployés ensemble. Cette approche peut
+simplifier le développement initial et la gestion des déploiements, mais
+elle peut devenir difficile à maintenir et à faire évoluer à mesure que
+l\textquotesingle application croît.
+
+En revanche, l\textquotesingle architecture micro-services divise
+l\textquotesingle application en services indépendants, chacun
+responsable d\textquotesingle une fonctionnalité spécifique. Cela permet
+une plus grande flexibilité, une scalabilité améliorée et une meilleure
+gestion des équipes, car chaque service peut être développé, déployé et
+mis à jour indépendamment.
+
+Cependant, cette approche nécessite une gestion plus complexe des
+communications entre services et une attention particulière à la
+sécurité et à la résilience globale du système.
+
+\includegraphics[width=5.81739in,height=2.81077in]{latex_media/media/image15.jpeg}Le
+choix entre ces deux architectures dépendra des besoins spécifiques du
+projet, de l\textquotesingle équipe en place et des objectifs à long
+terme.
+
+Pour le cas de la solution QUIZ AGILE, nous avons opté pour
+l\textquotesingle architecture monolithique. Ce choix nous permet,
+durant les premières phases du projet, de simplifier la charge cognitive
+liée à la gestion du code et au déploiement. En structurant
+l\textquotesingle application comme une unité unique, nous pouvons
+livrer tout le contenu du monolithe à la fois, ce qui facilite le
+processus de développement et réduit les complexités associées à
+l\textquotesingle intégration continue.
+
+Cette approche initiale nous offre également une vue
+d\textquotesingle ensemble cohérente du projet, permettant aux équipes
+de se concentrer sur l\textquotesingle implémentation des
+fonctionnalités sans se soucier des défis d\textquotesingle architecture
+distribuée. À mesure que le projet évolue et que les besoins se
+précisent, nous pourrons envisager une transition vers une architecture
+micro-services, si nécessaire, pour répondre à des exigences de
+scalabilité ou de maintenance plus stricte.
+
+\hypertarget{conclusion-1}{%
+\subsection{Conclusion~}\label{conclusion-1}}
+
+Le choix d'une architecture monolithique pour cette première phase du
+projet se justifie par sa simplicité de déploiement et de maintenance,
+tout en restant compatible avec une éventuelle migration vers une
+architecture micro-services si les besoins évoluent (scalabilité,
+modularité accrue).
+
+\hypertarget{section-3}{%
+\section{}\label{section-3}}
+
+\hypertarget{chapitre-3-conception-et-mise-en-place-du-projet}{%
+\section{CHAPITRE 3~: Conception et Mise en place du
+projet}\label{chapitre-3-conception-et-mise-en-place-du-projet}}
+
+Avant de plonger dans le développement de l\textquotesingle application
+QUIZ AGILE, une planification rigoureuse et une conception méticuleuse
+sont essentielles. Cette phase préparatoire, loin d\textquotesingle être
+une simple formalité, constitue le fondement sur lequel repose le succès
+du projet. Elle permet de minimiser les risques,
+d\textquotesingle optimiser les ressources et de garantir que le produit
+final répondra aux attentes spécifiques des utilisateurs, notamment des
+enfants autistes et de leurs accompagnateurs.
+
+La modélisation joue un rôle crucial dans ce processus, transformant des
+concepts abstraits en représentations concrètes. Elle permet de
+visualiser les fonctionnalités à réaliser, de clarifier les interactions
+entre les différents éléments et d\textquotesingle offrir une
+compréhension globale du système. Ce processus est le pont qui relie
+l\textquotesingle idée initiale à l'application finale, permettant de
+concrétiser les aspirations en un outil tangible et fonctionnel.
+
+Ce chapitre explore la méthodologie et la réalisation du projet QUIZ
+AGILE, en mettant l\textquotesingle accent sur les éléments clés de la
+conception, tels que les diagrammes de cas
+d\textquotesingle utilisation, les diagrammes de classes et de
+séquences, ainsi que la structure de la base de données. De plus, nous
+aborderons les algorithmes d\textquotesingle intelligence artificielle
+qui constituent une fonctionnalité majeure de notre application,
+facilitant l\textquotesingle interaction et l\textquotesingle engagement
+des utilisateurs.
+
+\hypertarget{diagramme-de-classes}{%
+\subsubsection{\texorpdfstring{Diagramme de classes :
+}{Diagramme de classes : }}\label{diagramme-de-classes}}
+
+Le diagramme de classes, véritable pierre angulaire de la modélisation
+objet, se positionne comme un outil incontournable pour la conception et
+la planification d\textquotesingle architectures logicielles robustes.
+Il offre une représentation visuelle des classes, de leurs attributs, de
+leurs méthodes et des relations qui les lient, permettant ainsi une
+compréhension approfondie de la structure interne du code et de ses
+interactions complexes.
+
+Le diagramme présenté a joué un rôle crucial dans la communication entre
+les membres de l\textquotesingle équipe, favorisant une vision commune
+de l\textquotesingle architecture logicielle et réduisant les risques
+d\textquotesingle erreurs lors de l\textquotesingle implémentation :
+
+\includegraphics[width=6.3in,height=8.85764in]{latex_media/media/image16.png}
+
+Le diagramme représente un système de quiz en ligne avec 6 packages
+principaux organisés en cadre "\textbf{Agile Quiz} " :
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{User}~- Gestion des utilisateurs et rôles
+\item
+  \textbf{Question}~- Gestion des questions et options
+\item
+  \textbf{Quiz}~- Gestion des questionnaires
+\item
+  \textbf{Attempt}~- Suivi des tentatives de quiz
+\item
+  \textbf{Result}~- Résultats des quiz
+\item
+  \textbf{Notification}~- Notifications système
+\end{enumerate}
+
+\hypertarget{package-user}{%
+\subsection{Package User}\label{package-user}}
+
+\textbf{Éléments clés :}
+
+\begin{itemize}
+\item
+  \textbf{Enum Role}~: Définit les rôles des utilisateurs (ADMIN, COACH,
+  etc.)
+\item
+  \textbf{Classe User}~:
+
+  \begin{itemize}
+  \item
+    Attributs : email, mot de passe, noms, statut actif, dates de
+    création/modification
+  \item
+    Méthodes : gestion des rôles (addRole,~hasRole)
+  \item
+    Relation : Un utilisateur peut avoir plusieurs rôles (association
+    many-to-many)
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{package-question}{%
+\subsection{Package Question}\label{package-question}}
+
+\textbf{Éléments clés :}
+
+\begin{itemize}
+\item
+  \textbf{Enum QuestionType}~: Types de questions (choix
+  unique/multiple, vrai/faux)
+\item
+  \textbf{Enum DifficultyLevel}~: Niveaux de difficulté
+\item
+  \textbf{Classe Question}~:
+
+  \begin{itemize}
+  \item
+    Contient le texte, explication, tags et options
+  \item
+    Méthode~isCorrectAnswer~pour validation
+  \item
+    Relation avec User (créateur) et Option (1-to-many)
+  \end{itemize}
+\item
+  \textbf{Classe Option}~: Texte et indicateur de correction
+\end{itemize}
+
+\hypertarget{package-quiz}{%
+\subsection{Package Quiz}\label{package-quiz}}
+
+\textbf{Éléments clés :}
+
+\begin{itemize}
+\item
+  \textbf{Enum QuizStatus}~: États possibles (BROUILLON, PUBLIÉ, etc.)
+\item
+  \textbf{Classe Quiz}~:
+
+  \begin{itemize}
+  \item
+    Attributs : titre, durée limite, score de passage, etc.
+  \item
+    Fonctionnalités : URL partageable, vérification
+    d\textquotesingle activité
+  \item
+    Relations :
+
+    \begin{itemize}
+    \item
+      Contient des questions (1-to-many)
+    \item
+      Référence à User (créateur)
+    \end{itemize}
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{package-attempt}{%
+\subsection{Package Attempt}\label{package-attempt}}
+
+\textbf{Éléments clés :}
+
+\begin{itemize}
+\item
+  \textbf{Enum AttemptStatus}~: Statut de la tentative (en cours,
+  soumise, etc.)
+\item
+  \textbf{Classe QuizAttempt}~:
+
+  \begin{itemize}
+  \item
+    Suivi temps/dates, score calculé
+  \item
+    Méthodes :~calculateScore,~addQuestionAttempt
+  \item
+    Relations :
+
+    \begin{itemize}
+    \item
+      Lie à Quiz et User
+    \item
+      Contient des QuestionAttempt (1-to-many)
+    \end{itemize}
+  \end{itemize}
+\item
+  \textbf{Classe QuestionAttempt}~:
+
+  \begin{itemize}
+  \item
+    Enregistre les réponses utilisateur et temps passé
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{cluxe9-quizresult}{%
+\subsection{Clé QuizResult~:}\label{cluxe9-quizresult}}
+
+\begin{itemize}
+\item
+  Agrège les données de résultat (score, réussite, durée)
+\item
+  Méthode~isPassed~pour évaluer la réussite
+\item
+  Relations avec Quiz, User et QuizAttempt
+\end{itemize}
+
+\hypertarget{package-notification}{%
+\subsection{\texorpdfstring{ Package
+Notification}{ Package Notification}}\label{package-notification}}
+
+\textbf{Clé Notification}~:
+
+\begin{itemize}
+\item
+  Contient type/message de notification et statut de lecture
+\item
+  Liée à User (destinataire) et QuizResult
+\end{itemize}
+
+\hypertarget{relations-transverses}{%
+\subsection{Relations Transverses}\label{relations-transverses}}
+
+\begin{itemize}
+\item
+  \textbf{User}~est le centre :
+
+  \begin{itemize}
+  \item
+    Crée des Questions/Quiz
+  \item
+    Est associé aux Attempts/Results
+  \item
+    Reçoit des Notifications
+  \end{itemize}
+\end{itemize}
+
+\begin{itemize}
+\item
+  \textbf{Workflow principal}~:
+\end{itemize}
+
+User → Crée Quiz/Questions → Tentative (Attempt) → Génère Result →
+Déclenche Notification
+
+\begin{itemize}
+\item
+  \textbf{Validations}~:
+
+  \begin{itemize}
+  \item
+    Questions valident les réponses
+  \item
+    Results vérifient la réussite
+  \end{itemize}
+\end{itemize}
+
+\begin{itemize}
+\item
+  \textbf{Design Patterns Visibles}
+\end{itemize}
+
+\begin{itemize}
+\item
+  \textbf{Stratégie}~: Différents types de questions
+\item
+  \textbf{Observer}~: Notifications sur résultats
+\item
+  \textbf{Composite}~: Quiz agrège des Questions
+\end{itemize}
+
+Ce diagramme montre une architecture modulaire avec une séparation
+claire des responsabilités, idéale pour une application éducative
+scalable.
+
+\hypertarget{diagrammes-de-paquetages}{%
+\subsubsection{Diagrammes de
+Paquetages~:}\label{diagrammes-de-paquetages}}
+
+\includegraphics[width=6.3in,height=6.64399in]{latex_media/media/image17.png}Le
+diagramme présente une architecture en couches avec un package
+racine~com.quizapp.domain~contenant 6 sous-packages spécialisés :
+
+\begin{itemize}
+\item
+  User~- Gestion des utilisateurs
+\item
+  Question~- Gestion du contenu pédagogique
+\item
+  Quiz~- Configuration des questionnaires
+\item
+  Attempt~- Suivi des tentatives
+\item
+  Result~- Traitement des résultats
+\item
+  Notification~- Système de notifications
+\end{itemize}
+
+\hypertarget{duxe9tail-des-packages}{%
+\subsection{Détail des Packages}\label{duxe9tail-des-packages}}
+
+\hypertarget{user}{%
+\subparagraph{User}\label{user}}
+
+\begin{itemize}
+\item
+  \textbf{Éléments}~:
+
+  \begin{itemize}
+  \item
+    User~: Classe principale pour les comptes utilisateurs
+  \item
+    Rôle~: Enumération définissant les rôles (ADMIN, COACH, etc.)
+  \end{itemize}
+\item
+  \textbf{Responsabilité}~: Authentification et autorisation
+\end{itemize}
+
+\hypertarget{question}{%
+\subparagraph{Question}\label{question}}
+
+\begin{itemize}
+\item
+  \textbf{Éléments}~:
+
+  \begin{itemize}
+  \item
+    Question~: Entité centrale avec texte et métadonnées
+  \item
+    Option~: Réponses possibles associées
+  \item
+    QuestionType~: Enumération (SINGLE\_CHOICE, TRUE\_FALSE...)
+  \item
+    DifficultyLevel~: Enumération (EASY, MEDIUM...)
+  \end{itemize}
+\item
+  \textbf{Responsabilité}~: Gestion du contenu des questions
+\end{itemize}
+
+\hypertarget{quiz}{%
+\subparagraph{Quiz}\label{quiz}}
+
+\begin{itemize}
+\item
+  \textbf{Éléments}~:
+
+  \begin{itemize}
+  \item
+    Quiz~: Classe principale des questionnaires
+  \item
+    QuizStatus~: Enumération (DRAFT, PUBLISHED...)
+  \end{itemize}
+\item
+  \textbf{Responsabilité}~: Organisation des évaluations
+\end{itemize}
+
+\hypertarget{attempt}{%
+\subparagraph{Attempt}\label{attempt}}
+
+\begin{itemize}
+\item
+  \textbf{Éléments}~:
+
+  \begin{itemize}
+  \item
+    QuizAttempt~: Suivi d\textquotesingle une tentative utilisateur
+  \item
+    QuestionAttempt~: Réponses à une question spécifique
+  \item
+    AttemptStatus~: Enumération (IN\_PROGRESS, SUBMITTED...)
+  \end{itemize}
+\item
+  \textbf{Responsabilité}~: Enregistrement des interactions utilisateur
+\end{itemize}
+
+\hypertarget{result}{%
+\subparagraph{Result}\label{result}}
+
+\begin{itemize}
+\item
+  \textbf{Éléments}~:
+
+  \begin{itemize}
+  \item
+    QuizResult~: Agrégation des scores et statistiques
+  \end{itemize}
+\item
+  \textbf{Responsabilité}~: Analyse des performances
+\end{itemize}
+
+\hypertarget{notification}{%
+\subparagraph{Notification}\label{notification}}
+
+\begin{itemize}
+\item
+  \textbf{Éléments}~:
+
+  \begin{itemize}
+  \item
+    Notification~: Messages système aux utilisateurs
+  \end{itemize}
+\item
+  \textbf{Responsabilité}~: Communication des résultats/événements
+\end{itemize}
+
+\hypertarget{flux-des-duxe9pendances}{%
+\subsection{Flux des Dépendances}\label{flux-des-duxe9pendances}}
+
+\includegraphics[width=4.20833in,height=4.90069in]{latex_media/media/image18.png}Les
+relations entre packages suivent un flux logique :
+
+\hypertarget{explications}{%
+\subparagraph{Explications~}\label{explications}}
+
+\hypertarget{quiz-duxe9pend-de}{%
+\paragraph{Quiz~dépend de :}\label{quiz-duxe9pend-de}}
+
+\begin{itemize}
+\item
+  User~(pour le créateur du quiz)
+\item
+  Question~(pour les questions incluses)
+\end{itemize}
+
+\hypertarget{attempt-duxe9pend-de}{%
+\paragraph{Attempt~dépend de :}\label{attempt-duxe9pend-de}}
+
+\begin{itemize}
+\item
+  Quiz~(quel quiz est tenté)
+\item
+  User~(qui tente)
+\item
+  Question~(pour validation)
+\end{itemize}
+
+\hypertarget{result-agruxe8ge-les-donnuxe9es-de}{%
+\paragraph{Result~agrège les données de
+:}\label{result-agruxe8ge-les-donnuxe9es-de}}
+
+\begin{itemize}
+\item
+  Quiz~(paramètres)
+\item
+  User~(participant)
+\item
+  Attempt~(détails)
+\end{itemize}
+
+\hypertarget{notification-utilise}{%
+\paragraph{Notification~utilise :}\label{notification-utilise}}
+
+\begin{itemize}
+\item
+  User~(destinataire)
+\item
+  Result~(contenu)
+\end{itemize}
+
+\hypertarget{analyse-architecturale}{%
+\paragraph{Analyse Architecturale}\label{analyse-architecturale}}
+
+\begin{itemize}
+\item
+  \textbf{Architecture}~: Hexagonale (Domain-Centric)
+\item
+  \textbf{Niveau de couplage}~: Modulaire
+\end{itemize}
+
+\hypertarget{diagrammes-de-suxe9quence-tentative-de-quiz}{%
+\subsubsection{Diagrammes de séquence~Tentative de Quiz
+:}\label{diagrammes-de-suxe9quence-tentative-de-quiz}}
+
+Le diagramme de séquence est un diagramme d\textquotesingle interaction
+qui expose en détail la façon dont les opérations sont effectuées\,:
+quels messages sont envoyés et quand ils le sont.~~
+
+Les diagrammes de séquence sont organisés en fonction du temps. Le temps
+s\textquotesingle écoule au fur et à mesure que vous parcourez la page.
+Les objets impliqués dans l\textquotesingle opération sont répertoriés
+de gauche à droite en fonction du moment où ils prennent part dans la
+séquence de messages.~
+
+En fait, chaque cas d'utilisation est associé à son propre diagramme de
+séquence vue qu'en général différents acteurs interagissent de manière
+différente selon le cas d'utilisation.~~
+
+\includegraphics[width=6.3in,height=5.4916in]{latex_media/media/image19.png}
+
+\protect\hypertarget{_Toc203823427}{}{}Figure 15: Diagramme de séquence
+
+\hypertarget{diagrammes-dactivituxe9s--processus-de-passage-dun-quiz}{%
+\subsubsection{Diagrammes d'activités- Processus de Passage
+d\textquotesingle un
+Quiz}\label{diagrammes-dactivituxe9s--processus-de-passage-dun-quiz}}
+
+Le diagramme suivant illustre le processus d'exécution d'un quiz du
+point de vue de l'utilisateur. Il décrit, étape par étape, le
+déroulement logique depuis la sélection d'un quiz jusqu'à l'affichage
+des résultats, en passant par la validation des réponses, le calcul des
+scores et la gestion des statuts de réussite ou d'échec. Ce diagramme
+d'activité permet de visualiser clairement le flux de contrôle et les
+principales décisions prises au cours d'une session de quiz.
+
+\includegraphics[width=4.53403in,height=7.32986in]{latex_media/media/image20.png}
+
+\hypertarget{diagramme-duxe9tat---tentative-de-quiz}{%
+\subsubsection{Diagramme d\textquotesingle État - Tentative de
+Quiz}\label{diagramme-duxe9tat---tentative-de-quiz}}
+
+Le diagramme suivant représente les différents états d'une tentative de
+quiz. Il met en évidence les transitions possibles selon les actions de
+l'utilisateur et le temps imparti~:
+
+\hypertarget{section-4}{%
+\subsubsection{}\label{section-4}}
+
+\includegraphics[width=6.82708in,height=4.57361in]{latex_media/media/image21.png}
+
+\hypertarget{diagramme-duxe9tat---statut-du-quiz}{%
+\subsubsection{Diagramme d\textquotesingle État - Statut du
+Quiz}\label{diagramme-duxe9tat---statut-du-quiz}}
+
+Le diagramme suivant représente les différents états
+d\textquotesingle un quiz et leurs transitions. Il met en évidence les
+actions possibles ainsi que leur impact sur la disponibilité du quiz
+pour les participants. Cette modélisation clarifie le cycle de vie
+complet d\textquotesingle un quiz au sein de la plateforme.
+
+\includegraphics[width=6.27607in,height=4.4375in]{latex_media/media/image22.png}
+
+\protect\hypertarget{_Toc203823483}{}{}Tableau 9 : Diagramme
+d\textquotesingle État - Statut du Quiz
+
+\hypertarget{conclusion-2}{%
+\subsubsection{\texorpdfstring{\textbf{Conclusion}~:}{Conclusion~:}}\label{conclusion-2}}
+
+La phase de conception et de mise en place de notre projet \textbf{QUIZ
+AGILE} a été essentielle pour garantir son succès.
+
+Grâce à une planification rigoureuse et une conception réfléchie, nous
+avons établi une vision claire de notre plateforme
+d\textquotesingle assistance pour les enfants autistes et leurs
+accompagnateurs, identifiant les étapes nécessaires à sa réalisation.
+
+L\textquotesingle utilisation de diagrammes de cas
+d\textquotesingle utilisation, de classes, et de séquences, ainsi que la
+mise en place d\textquotesingle une base de données robuste, a joué un
+rôle central dans le développement de notre application. Ces éléments de
+conception ont servi de référence tout au long du processus, nous
+permettant de rester sur la bonne voie et d\textquotesingle ajuster
+notre plan en fonction des besoins spécifiques de nos utilisateurs et
+des contraintes rencontrées.
+
+Enfin, notre plateforme \textbf{QUIZ AGILE} s\textquotesingle appuie sur
+des technologies avancées pour offrir des fonctionnalités adaptées aux
+besoins des enfants et à leurs accompagnateurs. La conception solide que
+nous avons réalisée pave la voie à de futures améliorations et
+extensions, visant à répondre aux besoins changeants de nos
+utilisateurs.
+
+En somme, cette approche méthodique nous a permis de livrer une
+application fonctionnelle qui répond aux attentes. Nous sommes
+impatients d\textquotesingle explorer de nouvelles pistes pour continuer
+à faire évoluer \textbf{QUIZ AGILE} et enrichir
+l\textquotesingle expérience de tous ses utilisateurs.
+
+\hypertarget{section-5}{%
+\section{}\label{section-5}}
+
+\hypertarget{chapitre-4-etude-technique-du-projet}{%
+\section{CHAPITRE 4~: Etude Technique du
+projet}\label{chapitre-4-etude-technique-du-projet}}
+
+Ce chapitre se concentre sur les outils et les bibliothèques essentiels
+qui sous-tendent notre projet \textbf{QUIZ AGILE,} offrant ainsi un
+aperçu détaillé des ressources technologiques et conceptuelles
+nécessaires à sa mise en œuvre. Dans cette section, nous explorerons les
+différents outils logiciels, frameworks et bibliothèques utilisées pour
+développer notre plateforme de gestion de quiz révolutionnaire. Nous
+examinerons également les principaux concepts et techniques associés à
+ces outils, offrant ainsi une compréhension approfondie de leur
+fonctionnement et de leur pertinence pour notre projet.
+
+En parallèle, nous plongerons dans l\textquotesingle architecture
+générale de notre projet, en mettant en lumière la structure et les
+composants clés des parties backend et frontend. Une attention
+particulière sera portée à l\textquotesingle architecture de la
+fonctionnalité de gestion des quiz, un module central dans
+l\textquotesingle organisation des évaluations éducatives. Cette analyse
+détaillée nous permettra de mieux comprendre la manière dont notre
+application est conçue et organisée, ainsi que les technologies
+mobilisées pour garantir son bon fonctionnement, sa sécurité et son
+évolutivité.
+
+\hypertarget{outils-et-technologies}{%
+\subsubsection{Outils et technologies :}\label{outils-et-technologies}}
+
+\hypertarget{technologies-et-framework-utilisuxe9es}{%
+\subsection{Technologies et Framework
+utilisées~:}\label{technologies-et-framework-utilisuxe9es}}
+
+\hypertarget{spring-boot}{%
+\subparagraph{Spring Boot~:}\label{spring-boot}}
+
+Le « Spring » Framework est un cadre d\textquotesingle application et un
+conteneur d\textquotesingle inversion de contrôle pour la plate-forme
+Java. Les fonctionnalités de base du framework peuvent être utilisées
+par n\textquotesingle importe quelle application Java, mais il existe
+des extensions pour la création d\textquotesingle applications Web
+au-dessus de la plate-forme Java EE (Enterprise Edition).
+
+Plus particulièrement, Spring Boot est un framework web Java open
+source, basé sur les microservices. Le framework Spring Boot crée un
+environnement entièrement prêt pour la production et entièrement
+configurable grâce à son code préconstruit au sein de sa base de code.
+L\textquotesingle architecture de microservices fournit aux développeurs
+une application entièrement fermée, y compris des serveurs
+d\textquotesingle applications intégrés.
+
+\includegraphics[width=3.66042in,height=1.15069in]{latex_media/media/image23.png}
+
+\hypertarget{configuration-technique-du-projet}{%
+\paragraph{Configuration technique du projet
+:}\label{configuration-technique-du-projet}}
+
+\begin{itemize}
+\item
+  \textbf{Version} : Spring Boot 3.2.4
+\item
+  \textbf{Java} : Version 17
+\item
+  \textbf{Modules principaux} :
+
+  \begin{itemize}
+  \item
+    Spring Boot Starter Web : API REST
+  \item
+    Spring Boot Starter Data JPA : Persistance des données
+  \item
+    Spring Boot Starter Security : Sécurité et authentification
+  \item
+    Spring Boot Starter Validation : Validation des données
+  \item
+    Spring Boot Starter Actuator : Monitoring et santé applicative
+  \item
+    Spring Boot Starter Cache : Mise en cache
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{react}{%
+\subparagraph{React}\label{react}}
+
+React est un cadre logiciel d\textquotesingle interface utilisateur
+open-source créé par Meta Platforms, Inc. Il est utilisé pour développer
+des applications pour Android, Android TV, iOS, macOS, tvOS, Web,
+Windows et UWP en permettant aux développeurs d\textquotesingle utiliser
+le framework React avec les capacités de la plateforme native.
+
+\includegraphics[width=2.74792in,height=1.54583in]{latex_media/media/image24.png}
+
+\hypertarget{configuration-technique-du-projet-1}{%
+\paragraph{\texorpdfstring{\textbf{Configuration technique du projet
+:}}{Configuration technique du projet :}}\label{configuration-technique-du-projet-1}}
+
+\begin{itemize}
+\item
+  \textbf{Version} : React 19.0.0
+\item
+  \textbf{Bibliothèques principales} :
+
+  \begin{itemize}
+  \item
+    Material-UI (MUI) 5.15.11 : Composants UI modernes
+  \item
+    Redux Toolkit 2.8.2 : Gestion d\textquotesingle état centralisée
+  \item
+    React Router DOM 6.22.2 : Navigation côté client
+  \item
+    React Redux 9.2.0 : Intégration React-Redux
+  \item
+    Axios 1.6.7 : Communication http
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{authentification-et-suxe9curituxe9}{%
+\subsection{Authentification et
+Sécurité}\label{authentification-et-suxe9curituxe9}}
+
+Notre projet utilise une approche moderne de sécurité avec JWT (JSON Web
+Tokens) intégré à Spring Security :
+
+\hypertarget{jwt-json-web-token}{%
+\subparagraph{\texorpdfstring{\textbf{JWT} \textbf{(JSON Web
+Token)}}{JWT (JSON Web Token)}}\label{jwt-json-web-token}}
+
+Le JWT (JSON Web Token) est un jeton sécurisé utilisé pour authentifier
+un utilisateur dans une application web. Il contient des informations
+codées (comme l'identifiant de l'utilisateur) et permet de vérifier
+l'identité de l'utilisateur sans avoir à stocker une session côté
+serveur.
+
+\hypertarget{configuration-technique-du-projet-2}{%
+\paragraph{\texorpdfstring{\textbf{Configuration technique du projet
+:}}{Configuration technique du projet :}}\label{configuration-technique-du-projet-2}}
+
+\begin{itemize}
+\item
+  \textbf{Version} : jjwt 0.12.5
+\item
+  \textbf{Fonctionnalités} :
+
+  \begin{itemize}
+  \item
+    Authentification stateless
+  \item
+    Gestion des rôles et permissions
+  \item
+    Tokens sécurisés avec signature
+  \item
+    Expiration automatique des sessions
+  \end{itemize}
+\end{itemize}
+
+\includegraphics[width=4.44306in,height=1.30208in]{latex_media/media/image25.png}
+
+\hypertarget{base-de-donnuxe9es}{%
+\subsection{\texorpdfstring{Base de données
+}{Base de données }}\label{base-de-donnuxe9es}}
+
+\hypertarget{postgressql}{%
+\subparagraph{\texorpdfstring{\textbf{PostgresSQL}~}{PostgresSQL~}}\label{postgressql}}
+
+\textbf{PostgreSQL} est un système de gestion de base de données
+relationnelle (SGBDR) open-source avancé. Une base de données
+relationnelle organise les données en une ou plusieurs tables de données
+dans lesquelles les données peuvent être reliées les unes aux autres ;
+ces relations aident à structurer les données.
+
+\hypertarget{configuration-technique-du-projet-3}{%
+\paragraph{\texorpdfstring{\textbf{Configuration technique du projet
+:}}{Configuration technique du projet :}}\label{configuration-technique-du-projet-3}}
+
+\begin{itemize}
+\item
+  \textbf{Version} : PostgreSQL 16-alpine
+\item
+  \textbf{Migration} : Flyway pour la gestion des schémas
+\item
+  \textbf{Connexion} : Pool de connexions optimisé
+\item
+  \textbf{Tests} : H2 Database pour les tests unitaires
+\end{itemize}
+
+\includegraphics[width=4.02153in,height=2.11597in]{latex_media/media/image26.png}
+
+\hypertarget{systuxe8me-de-gestion-de-duxe9pendances}{%
+\subsection{Système de gestion de
+dépendances}\label{systuxe8me-de-gestion-de-duxe9pendances}}
+
+Aujourd\textquotesingle hui des milliers, si pas des billions de
+packages sont publiés chaque jour par des développeurs passionnés
+partout dans le monde et dans différents langages de programmation. Ces
+packages ou modules sont tout simplement des lignes de codes qui
+permettent de remplir une certaine fonctionnalité et qui peuvent être
+importées et utilisées répétitivement. Et comme c\textquotesingle est le
+cas pour tous les projets de logiciel, on n\textquotesingle allait pas
+réinventer la roue, et on faisait appel à ces dépendances. Le problème
+qui se pose alors est dans la gestion de ces derniers, et de leurs
+différentes versions.
+
+C'est pourquoi on fait recours à des outils de gestion de
+paquets/dépendances notamment npm pour JavaScript, et maven pour java.~
+
+\hypertarget{maven}{%
+\subparagraph{\texorpdfstring{\textbf{Maven}}{Maven}}\label{maven}}
+
+\emph{\textbf{Maven}} est un outil d\textquotesingle automatisation de
+la construction utilisé principalement pour les projets Java. Maven
+aborde deux aspects de la création de logiciels : la manière dont les
+logiciels sont créés et leurs dépendances.
+
+\includegraphics[width=2.16042in,height=0.94167in]{latex_media/media/image27.png}
+
+\hypertarget{configuration-du-projet}{%
+\paragraph{. Configuration du projet :}\label{configuration-du-projet}}
+
+\textless parent\textgreater{}
+
+\textless groupId\textgreater org.springframework.boot\textless/groupId\textgreater{}
+
+\textless artifactId\textgreater spring-boot-starter-parent\textless/artifactId\textgreater{}
+
+\textless version\textgreater3.2.4\textless/version\textgreater{}
+
+\textless/parent\textgreater{}
+
+\hypertarget{gestion-des-duxe9pendances-principales}{%
+\paragraph{Gestion des dépendances principales
+:}\label{gestion-des-duxe9pendances-principales}}
+
+MapStruct 1.5.5 : Mapping automatique entre objets
+
+Lombok 1.18.30 : Réduction du code boilerplate
+
+Apache POI 5.2.5 : Génération de fichiers Excel
+
+iText PDF 5.5.13.3 : Génération de documents PDF
+
+Apache Commons CSV 1.10.0 : Traitement de fichiers CSV
+
+\hypertarget{npm}{%
+\subparagraph{Npm}\label{npm}}
+
+Npm (abréviation initiale de Node Package Manager) est un gestionnaire
+de paquets pour le langage de programmation JavaScript maintenu par npm,
+Inc. npm est le gestionnaire de paquets par défaut pour
+l\textquotesingle environnement d\textquotesingle exécution JavaScript
+Node.js.
+
+\includegraphics[width=1.36319in,height=1.36319in]{latex_media/media/image28.png}
+
+\hypertarget{configuration-du-projet-1}{%
+\paragraph{Configuration du projet :}\label{configuration-du-projet-1}}
+
+\{
+
+"name": "quiz-agil-frontend",
+
+"version": "0.1.0",
+
+"type": "module"
+
+\}
+
+\hypertarget{duxe9pendances-de-duxe9veloppement}{%
+\paragraph{\texorpdfstring{\textbf{Dépendances de développement
+:}}{Dépendances de développement :}}\label{duxe9pendances-de-duxe9veloppement}}
+
+\begin{itemize}
+\item
+  Vite 6.2.0 : Build tool moderne et rapide
+\item
+  ESLint 9.21.0 : Analyse statique du code
+\item
+  Sass 1.86.3 : Préprocesseur CSS
+\end{itemize}
+
+\hypertarget{systuxe8me-de-contruxf4le-de-version}{%
+\subsection{Système de contrôle de
+version~:}\label{systuxe8me-de-contruxf4le-de-version}}
+
+Le contrôle de version, également appelé contrôle de source, désigne la
+pratique consistant à suivre et à gérer les changements apportés au code
+d\textquotesingle un logiciel. C\textquotesingle est un outil (logiciel)
+permettant d\textquotesingle enregistrer, de suivre et de gérer
+plusieurs versions d\textquotesingle un fichier ou d\textquotesingle un
+code source.
+
+\hypertarget{git}{%
+\subparagraph{Git~:}\label{git}}
+
+\textbf{Git} est un logiciel de suivi des modifications de
+n\textquotesingle importe quel ensemble de fichiers, généralement
+utilisé pour coordonner le travail des programmeurs développant en
+collaboration le code source pendant le développement de logiciels.
+
+Ses objectifs sont la rapidité, l\textquotesingle intégrité des données
+et la prise en charge des flux de travail distribués et non linéaires
+(des milliers de branches parallèles fonctionnant sur des systèmes
+différents). Il facilite la collaboration, permettant de fusionner les
+modifications apportées par plusieurs personnes en une seule source, de
+sorte que le risque d\textquotesingle écraser les modifications
+apportées par le collègue est négligeable.
+
+\includegraphics[width=2.32361in,height=0.97014in]{latex_media/media/image29.png}
+
+\hypertarget{gitlab}{%
+\subparagraph{GitLab~:}\label{gitlab}}
+
+\emph{\textbf{GitLab}} est une plateforme de développement collaborative
+open source éditée par la société américaine du même nom.\,Elle couvre
+l'ensemble des
+étapes\,\href{https://www.journaldunet.fr/web-tech/guide-de-l-entreprise-digitale/1443818-devops-tout-savoir-sur-la-demarche-des-outils-au-metier/}{du
+DevOps}. Se basant sur les fonctionnalités du logiciel Git, elle permet
+de piloter des dépôts de code source et de gérer leurs
+différentes\,versions. Son usage est particulièrement indiqué pour les
+développeurs qui souhaitent disposer d'un outil réactif et accessible.
+GitLab revendique plus de 100\,000\,organisations utilisant sa
+plateforme à travers le monde. Ce qui représente un total de plus de
+30\,millions d\textquotesingle utilisateurs enregistrés.~~
+
+\includegraphics[width=3.03542in,height=0.92639in]{latex_media/media/image30.png}Avec
+GitLab, nous avons pu simultanément créer du code, suivre les
+modifications et innover des solutions aux problèmes pouvant survenir au
+cours du processus de développement de notre application\textbf{.}~
+
+\hypertarget{ide-et-outils-de-test}{%
+\subsection{IDE et outils de Test~:}\label{ide-et-outils-de-test}}
+
+\hypertarget{intellij-idea}{%
+\subparagraph{IntelliJ IDEA :}\label{intellij-idea}}
+
+\emph{\textbf{IntelliJ IDEA}} est un environnement de développement
+intégré (IDE) prisé pour sa facilité d\textquotesingle utilisation et
+ses fonctionnalités avancées, notamment pour le développement Java. Il
+offre une autocomplétion intelligente, des outils de refactorisation
+puissants et une navigation efficace, simplifiant ainsi le processus de
+développement.
+
+De plus, il prend en charge une large gamme de frameworks et de
+technologies, permettant aux développeurs de travailler sur divers
+projets avec aisance. Son intégration avec des systèmes de contrôle de
+version facilite également la collaboration au sein des équipes, rendant
+le développement logiciel plus fluide et organisé.
+
+\includegraphics[width=1.76111in,height=1.54444in]{latex_media/media/image31.png}
+
+\hypertarget{visual-studio-code}{%
+\subparagraph{Visual Studio Code :}\label{visual-studio-code}}
+
+\emph{\textbf{Visual Studio Code}} est un éditeur de code source
+autonome qui s'exécute sur Windows, macOS et Linux. Le meilleur choix
+pour JavaScript et les développeurs web, avec des extensions pour
+prendre en charge à peu près n'importe quel langage de programmation. On
+a choisi cette technologie car est la capacité de déboguer les
+applications directement sur l\textquotesingle éditeur sans même avoir
+recours aux navigateurs, grâce à un système de points
+d\textquotesingle arrêt et une console de débogage intégrée qui permet
+de résoudre les problèmes directement dans l'éditeur.~
+
+\includegraphics[width=1.76177in,height=1.76177in]{latex_media/media/image32.png}
+
+\hypertarget{postman}{%
+\subparagraph{Postman~:}\label{postman}}
+
+\emph{\textbf{Postman}} est un outil de développement collaboratif conçu
+pour faciliter la création, le test et la gestion des APIs. Il permet
+aux développeurs d\textquotesingle envoyer des requêtes HTTP,
+d\textquotesingle analyser les réponses, et
+d\textquotesingle automatiser des tests, tout en offrant une interface
+intuitive pour organiser et documenter les APIs. Grâce à ses
+fonctionnalités avancées, Postman simplifie le processus de
+développement d\textquotesingle APIs, rendant la collaboration entre les
+équipes plus efficace.
+
+\includegraphics[width=3.43681in,height=1.03958in]{latex_media/media/image33.png}
+
+\hypertarget{junit}{%
+\subparagraph{JUnit~:}\label{junit}}
+
+\emph{\textbf{JUnit}} est un framework open source de tests unitaires
+pour le langage Java. Il permet aux développeurs de tester
+automatiquement des portions de code (souvent des méthodes) afin de
+vérifier qu'elles produisent les résultats attendus. JUnit est largement
+utilisé pour garantir la qualité du code, faciliter le débogage, et
+soutenir le développement agile grâce à l'intégration continue et aux
+tests automatisés.
+
+\includegraphics[width=3.78403in,height=1.48333in]{latex_media/media/image34.png}
+
+\hypertarget{mockito}{%
+\subparagraph{Mockito~:}\label{mockito}}
+
+\emph{\textbf{Mockito}} est un framework open source pour Java qui
+permet de créer facilement des objets simulés, appelés \emph{mocks},
+dans le but de tester des composants logiciels de manière isolée. Il est
+couramment utilisé en complément de JUnit pour simuler le comportement
+de dépendances (comme des services ou des bases de données) sans avoir à
+les exécuter réellement. Cela permet de tester la logique
+d\textquotesingle une classe sans dépendre de
+l\textquotesingle environnement externe, ce qui rend les tests plus
+rapides, fiables et faciles à écrire.
+
+\includegraphics[width=2.72569in,height=1.62222in]{latex_media/media/image35.png}
+
+\hypertarget{jest}{%
+\subparagraph{Jest~:}\label{jest}}
+
+\textbf{Jest} est un framework de test JavaScript développé par Meta,
+conçu pour tester facilement des applications web, en particulier celles
+développées avec \textbf{React}. Il permet de vérifier automatiquement
+le bon fonctionnement du code grâce à des tests unitaires, des tests de
+composants, et des tests de snapshots, tout en offrant une couverture de
+code intégrée.
+
+\includegraphics[width=2.47569in,height=1.53542in]{latex_media/media/image36.png}
+
+\hypertarget{outils-de-conception}{%
+\subsection{Outils de conception~:}\label{outils-de-conception}}
+
+Pour la conception, nous distinguons des outils utilisés pour la partie
+de conception au niveau UML, et d\textquotesingle autres pour la
+réalisation des prototypes de la partie frontend.
+
+\hypertarget{plantuml}{%
+\subparagraph{PlantUML~}\label{plantuml}}
+
+\includegraphics[width=1.72222in,height=1.11389in]{latex_media/media/image37.png}\textbf{PlantUML}
+est un générateur de diagrammes UML basé sur du texte. Il permet de
+créer des diagrammes tels que les diagrammes de séquence, de cas
+d'utilisation, de classes, d'activités ou encore de composants, à partir
+d'un langage de description simple. Il est souvent intégré dans des
+outils comme VS Code, IntelliJ, ou des plateformes de documentation
+comme Confluence.
+
+\hypertarget{containerisation-et-duxe9ploiement}{%
+\subsection{Containerisation et
+Déploiement}\label{containerisation-et-duxe9ploiement}}
+
+\hypertarget{docker}{%
+\subparagraph{Docker}\label{docker}}
+
+L\textquotesingle application utilise Docker pour :
+
+\begin{itemize}
+\item
+  \textbf{Isolation} : Environnements cohérents entre développement et
+  production
+\item
+  \textbf{Portabilité} : Déploiement simplifié sur différentes
+  plateformes
+\item
+  \textbf{Scalabilité} : Orchestration avec Docker Compose
+\end{itemize}
+
+\includegraphics[width=1.28125in,height=1.31126in]{latex_media/media/image38.png}
+
+\hypertarget{architecture-des-conteneurs}{%
+\paragraph{Architecture des conteneurs
+:}\label{architecture-des-conteneurs}}
+
+services:
+
+postgres: \emph{\# Base de données PostgreSQL}
+
+image: postgres:16-alpine
+
+ports: {[}"5432:5432"{]}
+
+backend: \emph{\# API Spring Boot}
+
+build: .
+
+ports: {[}"8080:8080"{]}
+
+depends\_on: {[}postgres{]}
+
+frontend: \emph{\# Interface React avec Nginx}
+
+build: ./frontend
+
+ports: {[}"80:80"{]}
+
+Le frontend utilise une approche multi-stage :
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{Build stage} : Compilation avec Node.js 20-alpine
+\item
+  \textbf{Production stage} : Serveur Nginx léger pour les fichiers
+  statiques
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\setcounter{enumi}{1}
+\item
+  \textbf{Jenkins}
+\end{enumerate}
+
+\includegraphics[width=2.30833in,height=1.20625in]{latex_media/media/image39.png}
+
+\begin{itemize}
+\item
+  \emph{\textbf{Définition :}}
+\end{itemize}
+
+Jenkins est un outil d'intégration continue (CI) open-source qui
+automatise les tâches de build, de test et de déploiement. Il a été
+utilisé pour mettre en place des pipelines CI/CD, permettant de valider
+automatiquement les modifications du code, exécuter les tests unitaires,
+et déployer les versions de l'application dans différents environnements
+(développement, recette, production).
+
+\includegraphics[width=5.45021in,height=3.41359in]{latex_media/media/image40.png}
+
+\begin{quote}
+Figure 34: Statut des Conteneurs
+\end{quote}
+
+\hypertarget{tests-et-qualituxe9-avec-sonarqube}{%
+\subsection{Tests et Qualité avec
+SonarQube}\label{tests-et-qualituxe9-avec-sonarqube}}
+
+\hypertarget{duxe9finition}{%
+\subparagraph{Définition}\label{duxe9finition}}
+
+SonarQube est un outil d'analyse statique de code qui évalue
+automatiquement la qualité, la fiabilité, la sécurité, et la
+maintenabilité d'un projet. Il prend en charge de nombreux langages
+(Java, JavaScript, TypeScript, C\#, etc.) et s'intègre dans la chaîne
+CI/CD pour fournir des rapports en temps réel à chaque build ou pull
+request.
+
+\includegraphics[width=2.17222in,height=1.36111in]{latex_media/media/image41.png}
+
+\hypertarget{objectifs}{%
+\paragraph{\texorpdfstring{ Objectifs}{ Objectifs}}\label{objectifs}}
+
+Détecter les bugs, code smells, duplications et vulnérabilités.
+
+Suivre la couverture de tests unitaires (via JaCoCo, Jest...).
+
+Définir des Quality Gates pour garantir un seuil de qualité minimal
+avant toute mise en production.
+
+Renforcer les bonnes pratiques de développement dans toute l'équipe.
+
+\hypertarget{flux-danalyse-type-backend-frontend}{%
+\subparagraph{Flux d'analyse type (Backend +
+Frontend)}\label{flux-danalyse-type-backend-frontend}}
+
+La figure suivante présente le \textbf{workflow CI/CD} utilisé dans
+notre projet. Ce pipeline permet d'automatiser toutes les étapes du
+développement logiciel, depuis l'ajout du code dans GitLab jusqu'au
+déploiement en production. Il comprend des phases de test automatique,
+d'analyse de qualité avec \textbf{SonarQube}, de conteneurisation avec
+Docker, et de déploiement via Jenkins. Cela permet de livrer plus
+rapidement des versions fiables de l'application, tout en assurant la
+qualité du code.
+
+\includegraphics[width=6.29921in,height=2.96457in]{latex_media/media/image42.png}
+
+\hypertarget{analyse-de-code-avec-sonarqube}{%
+\subparagraph{Analyse de code avec
+SonarQube}\label{analyse-de-code-avec-sonarqube}}
+
+La figure suivante présente le rapport d'analyse de qualité de code
+généré par SonarQube. Cet outil permet de mesurer la maintenabilité, la
+fiabilité, la sécurité, ainsi que la couverture des tests unitaires du
+projet. Dans cet exemple, le projet nommé \emph{Quiz Manager} a échoué
+au Quality Gate en raison de plusieurs problèmes détectés, notamment au
+niveau de la maintenabilité et d'un faible taux de couverture de tests
+(38 \%). Ce type d'analyse est essentiel pour garantir un code propre,
+sécurisé et facilement évolutif.
+
+\includegraphics[width=6.15694in,height=2.94861in]{latex_media/media/image43.png}
+
+\hypertarget{sonarqube-analyse}{%
+\paragraph{SonarQube analyse :}\label{sonarqube-analyse}}
+
+\begin{itemize}
+\item
+  \textbf{Couverture de code} : Pourcentage de code testé
+\item
+  \textbf{Qualité du code} : Détection des code smells
+\item
+  \textbf{Sécurité} : Identification des vulnérabilités
+\item
+  \textbf{Maintenabilité} : Complexité cyclomatique
+\end{itemize}
+
+\hypertarget{muxe9triques-de-qualituxe9-attendues}{%
+\paragraph{Métriques de qualité attendues
+:}\label{muxe9triques-de-qualituxe9-attendues}}
+
+\begin{itemize}
+\item
+  Couverture de code : \textgreater{} 80\%
+\item
+  Fiabilité : Grade A
+\item
+  Sécurité : Grade A
+\item
+  Maintenabilité : Grade A
+\end{itemize}
+
+\hypertarget{documentation-et-api}{%
+\subsubsection{Documentation et API}\label{documentation-et-api}}
+
+\hypertarget{springdoc-openapi}{%
+\subparagraph{SpringDoc OpenAPI}\label{springdoc-openapi}}
+
+\begin{itemize}
+\item
+  \textbf{Version} : 2.4.0
+\item
+  \textbf{Fonctionnalités} :
+\end{itemize}
+
+\begin{itemize}
+\item
+  Documentation API automatique
+\item
+  Interface Swagger UI interactive
+\item
+  Génération de schémas OpenAPI 3.0
+\item
+  Tests d\textquotesingle API intégrés
+\end{itemize}
+
+\hypertarget{monitoring-et-observabilituxe9}{%
+\subparagraph{Monitoring et
+Observabilité}\label{monitoring-et-observabilituxe9}}
+
+\hypertarget{spring-boot-actuator}{%
+\paragraph{Spring Boot Actuator}\label{spring-boot-actuator}}
+
+Spring Boot Actuator fournit :
+
+\begin{itemize}
+\item
+  \textbf{Health checks} : Vérification de l\textquotesingle état de
+  l\textquotesingle application
+\item
+  \textbf{Métriques} : Monitoring des performances
+\item
+  \textbf{Endpoints} : Points d\textquotesingle accès pour le monitoring
+\item
+  \textbf{Info} : Informations sur l\textquotesingle application
+\end{itemize}
+
+\hypertarget{caching}{%
+\paragraph{Caching}\label{caching}}
+
+\begin{itemize}
+\item
+  \textbf{Spring Cache} : Mise en cache des données fréquemment accédées
+\item
+  \textbf{Amélioration des performances} : Réduction des accès base de
+  données
+\end{itemize}
+
+\hypertarget{architecture-technique}{%
+\subsubsection{Architecture technique :}\label{architecture-technique}}
+
+En guise de conclusion, cette section présente globalement
+l\textquotesingle architecture technique que nous avons adoptée pour
+mettre en œuvre notre projet \textbf{QUIZ AGILE}. Nous avons choisi une
+architecture moderne et flexible qui répond aux exigences de
+performance, de scalabilité et de sécurité. Cette architecture repose
+sur des technologies éprouvées, intégrant des composants robustes pour
+le développement de notre backend avec Spring Boot, et un frontend
+dynamique grâce à React.
+
+L\textquotesingle utilisation de PostgreSQL comme base de données assure
+une gestion efficace et sécurisée des données, tandis que JWT est
+intégré pour gérer l\textquotesingle authentification et les
+autorisations, renforçant ainsi la sécurité globale de la plateforme.
+Grâce à ces choix technologiques, nous sommes en mesure de créer une
+solution cohérente et performante, facilitant la collaboration entre les
+équipes et améliorant l\textquotesingle expérience utilisateur.
+
+\includegraphics[width=6.03941in,height=3.29328in]{latex_media/media/image44.png}
+
+\protect\hypertarget{_Toc203823448}{}{}Figure 38 : Architecture
+technique de l\textquotesingle application
+
+\hypertarget{architecture-guxe9nuxe9rale}{%
+\subsubsection{Architecture
+générale~:}\label{architecture-guxe9nuxe9rale}}
+
+\hypertarget{introduction}{%
+\subsection{Introduction~:}\label{introduction}}
+
+La figure ci-dessous présente l\textquotesingle architecture générale de
+l\textquotesingle application \textbf{QUIZ AGILE}, mettant en lumière
+les interactions entre les différentes couches, notamment le front-end,
+le serveur jwt, ainsi que le back-end et la base de données. Cette
+architecture vise à garantir une communication fluide et sécurisée entre
+les différentes parties, tout en optimisant les performances globales de
+l\textquotesingle application~:
+
+\includegraphics[width=4.19167in,height=2.61667in]{latex_media/media/image45.png}
+
+\protect\hypertarget{_Toc203823449}{}{}Figure 39:Architecture globale de
+l'application
+
+\hypertarget{structure-et-impluxe9mentation-du-projet-backend}{%
+\subsection{Structure et implémentation du projet
+Backend~:}\label{structure-et-impluxe9mentation-du-projet-backend}}
+
+\hypertarget{architecture-domain-driven-design-ddd}{%
+\subparagraph{Architecture Domain-Driven Design
+(DDD)}\label{architecture-domain-driven-design-ddd}}
+
+Notre backend \textbf{QUIZ AGILE} suit rigoureusement les principes du
+Domain-Driven Design avec une architecture Clean. Cette approche nous
+permet de maintenir une séparation claire des responsabilités et une
+forte cohésion métier.
+
+\hypertarget{rganisation-des-couches}{%
+\subparagraph{rganisation des couches}\label{rganisation-des-couches}}
+
+\hypertarget{main-tests-et-ressources}{%
+\subsection{Main, Tests et Ressources}\label{main-tests-et-ressources}}
+
+\begin{quote}
+\includegraphics[width=5.44097in,height=4.22361in]{latex_media/media/image46.png}
+\end{quote}
+
+\includegraphics[width=2.25347in,height=4.90556in]{latex_media/media/image47.png}Cette
+architecture backend robuste garantit :
+
+- Séparation claire des responsabilités via DDD
+
+- Sécurité renforcée avec JWT et Spring Security
+
+- Performance optimisée avec PostgreSQL et indexation
+
+- Monitoring complet avec Actuator et Prometheus
+
+- Tests exhaustifs avec JUnit 5 et TestContainers
+
+- Exports professionnels PDF et Excel
+
+- Maintenabilité élevée grâce à Clean Architec
+
+\hypertarget{architecture-backend-duxe9tailluxe9e}{%
+\subparagraph{\texorpdfstring{\textbf{Architecture Backend
+détaillée}}{Architecture Backend détaillée}}\label{architecture-backend-duxe9tailluxe9e}}
+
+La figure suivante représente l'architecture logicielle du projet
+\textbf{Agile Quiz}, conçue selon les principes de la \emph{Clean
+Architecture} et du modèle \emph{DDD (Domain-Driven Design)}.
+L\textquotesingle application est organisée en plusieurs couches bien
+distinctes : la couche de présentation (controllers REST, sécurité,
+validation), la couche d'application (services, DTOs, mappers), la
+couche d'infrastructure (repositories JPA, configurations, services
+externes), et le cœur du domaine (entités, objets de valeur, règles
+métiers, interfaces). Cette séparation permet de garantir la modularité,
+la testabilité, ainsi qu'une meilleure maintenabilité du code. Le
+backend est développé avec Spring Boot et utilise PostgreSQL comme base
+de données, tandis que le frontend est construit avec React et Material
+UI.
+
+\includegraphics[width=5.80486in,height=3.92639in]{latex_media/media/image48.png}
+
+\hypertarget{section-6}{%
+\subparagraph{}\label{section-6}}
+
+\hypertarget{diagramme-de-suxe9quence---flux-de-cruxe9ation-de-quiz}{%
+\subparagraph{\texorpdfstring{Diagramme de séquence - flux de création
+de quiz
+}{Diagramme de séquence - flux de création de quiz }}\label{diagramme-de-suxe9quence---flux-de-cruxe9ation-de-quiz}}
+
+Ce diagramme illustre le flux de création des quizz et le flux de
+l'export en mettant en évidence les différents composants de notre
+solution, fondée sur l'architecture hexagonale, qui interagissent entre
+eux dans le cadre d'un cas d'usage donné.
+
+\includegraphics[width=6.3in,height=4.60318in]{latex_media/media/image49.png}
+
+\protect\hypertarget{_Toc203823453}{}{}Figure 43:Diagramme de séquence -
+flux de création de quiz
+
+\hypertarget{structure-du-backend-du-systuxe8me}{%
+\subparagraph{Structure du backend du
+système}\label{structure-du-backend-du-systuxe8me}}
+
+La partie backend de notre projet \textbf{QUIZ AGILE} est structurée en
+quatre couches principales, chacune ayant un rôle spécifique dans
+l\textquotesingle architecture :
+
+\begin{itemize}
+\item
+  \textbf{Couche de Sécurité :}~Cette couche est responsable de la
+  gestion des authentifications et des autorisations. En intégrant
+  Spring Security avec JWT, elle assure la protection des ressources et
+  le contrôle d\textquotesingle accès, garantissant que seuls les
+  utilisateurs autorisés peuvent interagir avec le système. Elle gère
+  également les rôles utilisateur (ADMIN, COACH, MODERATOR, USER) et les
+  permissions associées.
+\item
+  \textbf{Couche DAO (Data Access Object) :}~La couche DAO est chargée
+  de l\textquotesingle accès aux données. Elle encapsule la logique
+  nécessaire pour interagir avec la base de données PostgreSQL,
+  facilitant ainsi les opérations de création, lecture, mise à jour et
+  suppression (CRUD). Cette abstraction permet de séparer la logique
+  d\textquotesingle accès aux données de la logique métier et utilise
+  Spring Data JPA pour simplifier les opérations de persistance.
+\item
+  \textbf{Couche Service :}~La couche service contient la logique métier
+  de l\textquotesingle application. Elle traite les requêtes provenant
+  des contrôleurs, exécute les opérations nécessaires en utilisant les
+  DAOs, et renvoie les résultats. Cette couche assure également la
+  validation des données, la gestion des règles métier, et
+  l\textquotesingle orchestration des différents composants pour
+  répondre aux cas d\textquotesingle usage fonctionnels.
+\item
+  \textbf{Couche Contrôleur :}~La couche contrôleur agit comme un
+  intermédiaire entre le frontend React et le backend Spring Boot. Elle
+  reçoit les requêtes HTTP REST, les dirige vers les services
+  appropriés, et retourne les réponses au format JSON. Cette couche est
+  essentielle pour gérer le flux des données et assurer une
+  communication fluide entre les différentes parties de
+  l\textquotesingle application.
+\end{itemize}
+
+\hypertarget{enrichissement-de-larchitecture-backend}{%
+\paragraph{Enrichissement de l\textquotesingle architecture
+Backend}\label{enrichissement-de-larchitecture-backend}}
+
+Notre architecture backend est enrichie par
+l\textquotesingle intégration des couches et éléments supplémentaires
+suivants :
+
+\begin{itemize}
+\item
+  \textbf{Configs} :~Cette couche contient des fichiers de configuration
+  pour l\textquotesingle application Spring Boot. Elle définit les
+  paramètres globaux comme les connexions à la base de données
+  PostgreSQL, les configurations de sécurité JWT, les propriétés de
+  l\textquotesingle application, et les beans de configuration
+  nécessaire au bon fonctionnement du système.
+\item
+  \textbf{DTO} (Data Transfer Object) :~Les DTO sont utilisés pour
+  transporter des données entre les différentes couches de
+  l\textquotesingle application et avec le frontend React. Ils
+  permettent de réduire le nombre d\textquotesingle appels entre le
+  frontend et le backend en regroupant plusieurs attributs en un seul
+  objet, tout en offrant une couche d\textquotesingle abstraction pour
+  protéger les entités internes.
+\item
+  \textbf{Entities} :~Cette couche définit les entités JPA qui
+  correspondent aux tables de la base de données PostgreSQL. Chaque
+  entité (Quiz, User, Question, QuizAttempt, etc.) représente un modèle
+  de données et inclut des annotations JPA pour la validation et la
+  gestion des relations entre les entités.
+\item
+  \textbf{Exceptions} :~La gestion des exceptions est cruciale pour le
+  traitement des erreurs dans l\textquotesingle application. Cette
+  couche définit des classes d\textquotesingle exception personnalisées
+  pour gérer des cas d\textquotesingle erreurs spécifiques
+  (QuizNotFoundException, UserAlreadyExistsException, etc.), permettant
+  une gestion plus claire et centralisée des erreurs avec des messages
+  appropriés.
+\item
+  \textbf{Handlers} :~Les handlers traitent des requêtes spécifiques ou
+  des événements de l\textquotesingle application. Ils incluent les
+  gestionnaires d\textquotesingle exceptions globaux
+  (@ControllerAdvice), les handlers d\textquotesingle authentification,
+  et les gestionnaires d\textquotesingle événements pour des flux de
+  travail complexes comme la génération de rapports PDF.
+\item
+  \textbf{Mappers} :~Les mappers, implémentés avec MapStruct, sont
+  responsables de la conversion entre les entités JPA, les DTO et
+  d\textquotesingle autres représentations de données. Ils facilitent le
+  passage des données entre les différentes couches en
+  s\textquotesingle assurant que les structures de données sont
+  compatibles et en automatisant les conversions.
+\item
+  \textbf{Repositories} :~Les repositories encapsulent la logique
+  d\textquotesingle accès aux données et interagissent directement avec
+  la base de données PostgreSQL via Spring Data JPA. Ils fournissent une
+  interface pour des opérations CRUD sur les entités, séparant ainsi la
+  logique de persistance de la logique métier et offrant des requêtes
+  personnalisées.
+\item
+  \textbf{Responses} :~Les objets de réponse contiennent les données que
+  le serveur renvoie au client React. Ils structurent les informations
+  pour une communication claire et efficace, incluant les codes de
+  statut HTTP, les messages d\textquotesingle erreur, et les données de
+  réponse formatées.
+\end{itemize}
+
+\hypertarget{intuxe9gration-et-cohuxe9rence-architecturale}{%
+\paragraph{Intégration et cohérence
+architecturale}\label{intuxe9gration-et-cohuxe9rence-architecturale}}
+
+Ces couches et éléments travaillent ensemble pour créer une architecture
+backend robuste et maintenable. L\textquotesingle utilisation de Spring
+Boot comme framework principal assure une intégration fluide entre tous
+les composants, tandis que les annotations Spring facilitent la
+configuration et l\textquotesingle injection de dépendances.
+
+L\textquotesingle architecture suit les principes de séparation des
+responsabilités et de faible couplage, permettant une évolution et une
+maintenance aisées du système. Les tests unitaires et
+d\textquotesingle intégration sont intégrés à chaque couche pour
+garantir la qualité et la fiabilité du code.
+
+Cette structure facilite également la collaboration en équipe, chaque
+développeur pouvant travailler sur une couche spécifique sans impacter
+les autres, tout en maintenant une cohérence globale grâce aux
+interfaces bien définies entre les couches.
+
+\hypertarget{structure-et-impluxe9mentation-du-projet-frontend}{%
+\subparagraph{Structure et implémentation du projet
+Frontend}\label{structure-et-impluxe9mentation-du-projet-frontend}}
+
+\hypertarget{architecture-react-avec-material-ui}{%
+\paragraph{Architecture React avec
+Material-UI}\label{architecture-react-avec-material-ui}}
+
+Le frontend de notre application \textbf{QUIZ AGILE} est développé avec
+React 18 et utilise Material-UI (MUI) comme bibliothèque de composants
+UI. Cette combinaison offre une interface utilisateur moderne,
+responsive et accessible, parfaitement adaptée aux besoins de notre
+application de gestion de quiz.
+
+\hypertarget{organisation-modulaire-scss}{%
+\paragraph{\texorpdfstring{ Organisation modulaire
+SCSS}{ Organisation modulaire SCSS}}\label{organisation-modulaire-scss}}
+
+Notre frontend adopte une approche modulaire avec SCSS pour la gestion
+des styles. Cette architecture permet une maintenance facilitée et une
+réutilisabilité optimale des composants de style :
+
+\begin{itemize}
+\item
+  \textbf{Variables globales :}~Le système de variables SCSS centralise
+  toutes les valeurs de design (couleurs, espacements, tailles de
+  police, breakpoints responsive) dans des fichiers dédiés, assurant une
+  cohérence visuelle à travers toute l\textquotesingle application.
+\item
+  \textbf{Mixins utilitaires :}~Les mixins SCSS encapsulent les logiques
+  de style complexes comme les media queries responsive, les
+  transitions, et les effets visuels, permettant une réutilisation
+  efficace dans tous les composants.
+\item
+  \textbf{Architecture en Grid CSS :}~Le layout principal utilise CSS
+  Grid pour créer une structure flexible et responsive avec des zones
+  définies (drawer, header, main, footer) qui s\textquotesingle adaptent
+  automatiquement aux différentes tailles d\textquotesingle écran.
+\end{itemize}
+
+\includegraphics[width=6.29921in,height=3.1063in]{latex_media/media/image50.png}
+
+\hypertarget{systuxe8me-de-thuxe9matisation-avancuxe9}{%
+\paragraph{Système de thématisation
+avancé}\label{systuxe8me-de-thuxe9matisation-avancuxe9}}
+
+L\textquotesingle application intègre un système de thématisation
+complet supportant les modes clair et sombre :
+
+\begin{itemize}
+\item
+  \textbf{Thème clair :}~Utilise des gradients subtils et des couleurs
+  douces pour créer une interface moderne et professionnelle, avec des
+  effets de blur et des ombres portées pour la profondeur visuelle.
+\item
+  \textbf{Thème sombre :}~Propose une alternative sombre avec des
+  couleurs adaptées pour réduire la fatigue visuelle, tout en maintenant
+  une excellente lisibilité et un contraste approprié.
+\item
+  \textbf{Transitions fluides :}~Toutes les transitions entre les thèmes
+  sont animées avec des courbes de Bézier personnalisées pour une
+  expérience utilisateur fluide et professionnelle.
+\end{itemize}
+
+\hypertarget{responsive-design-et-adaptabilituxe9}{%
+\paragraph{Responsive Design et
+adaptabilité}\label{responsive-design-et-adaptabilituxe9}}
+
+Le frontend est conçu avec une approche "mobile-first" et
+s\textquotesingle adapte parfaitement à tous les types
+d\textquotesingle appareils :
+
+\begin{itemize}
+\item
+  \textbf{Breakpoints personnalisés :}~Définis dans les variables SCSS,
+  ils permettent une adaptation précise aux écrans small (mobile),
+  medium (tablette), large (desktop) et xl (grand écran).
+\item
+  \textbf{Navigation adaptative :}~Le drawer de navigation se transforme
+  automatiquement en menu mobile sur les petits écrans, avec des
+  animations de transition fluides et une expérience utilisateur
+  optimisée.
+\item
+  \textbf{Composants flexibles :}~Tous les composants sont conçus pour
+  s\textquotesingle adapter dynamiquement à l\textquotesingle espace
+  disponible, avec des grilles CSS flexibles et des tailles relatives.
+\end{itemize}
+
+\hypertarget{composants-et-layout}{%
+\paragraph{Composants et Layout}\label{composants-et-layout}}
+
+\begin{itemize}
+\item
+  \textbf{Layout principal :}~Le composant Layout utilise une grille CSS
+  avec des zones nommées pour organiser l\textquotesingle interface en
+  sections distinctes. Cette approche permet une flexibilité maximale et
+  une maintenance simplifiée.
+\item
+  \textbf{Drawer de navigation :}~Le drawer intègre des informations
+  utilisateur, une navigation hiérarchique avec icônes, et des effets
+  visuels avancés comme le backdrop-filter pour un rendu moderne.
+\item
+  \textbf{Header dynamique :}~L\textquotesingle AppBar inclut un système
+  de breadcrumbs, des actions utilisateur (notifications, changement de
+  thème), et s\textquotesingle adapte automatiquement à
+  l\textquotesingle état du drawer.
+\item
+  \textbf{Gestion d\textquotesingle état :}~Utilisation de Redux Toolkit
+  pour la gestion centralisée de l\textquotesingle état de
+  l\textquotesingle application, avec des slices dédiés pour les
+  différents domaines (auth, quiz, theme, notifications).
+\end{itemize}
+
+\hypertarget{optimisations-et-accessibilituxe9}{%
+\paragraph{Optimisations et
+accessibilité}\label{optimisations-et-accessibilituxe9}}
+
+\begin{itemize}
+\item
+  \textbf{Performance :}~Le code SCSS est optimisé avec des sélecteurs
+  efficaces, des animations hardware-accelerated, et une gestion
+  intelligente des re-renders.
+\item
+  \textbf{Accessibilité :}~Support complet des technologies
+  d\textquotesingle assistance avec des focus visibles, des contrastes
+  respectant les standards WCAG, et une navigation au clavier optimisée.
+\item
+  \textbf{Responsive Media Queries :}~Adaptation automatique aux
+  préférences système (prefers-reduced-motion, prefers-contrast) pour
+  une expérience utilisateur inclusive.
+\end{itemize}
+
+Cette architecture frontend moderne assure une expérience utilisateur
+exceptionnelle tout en maintenant une base de code maintenable et
+évolutive, parfaitement intégrée avec le backend Spring Boot via des
+APIs REST sécurisées.
+
+\hypertarget{synthuxe8se-1}{%
+\subsection{Synthèse~:}\label{synthuxe8se-1}}
+
+\hypertarget{tests-et-validation}{%
+\subparagraph{Tests et validation~:}\label{tests-et-validation}}
+
+Pour garantir la fiabilité et la robustesse de notre système, une
+stratégie de test rigoureuse a été mise en œuvre, couvrant différents
+niveaux et aspects du système.
+
+\hypertarget{tests-unitaires}{%
+\subparagraph{Tests Unitaires~:}\label{tests-unitaires}}
+
+Les tests unitaires ont été appliqués à chaque module et composant
+individuel du système. L\textquotesingle objectif était de vérifier que
+chaque unité de code fonctionne correctement de manière isolée.
+
+\begin{itemize}
+\item
+  \textbf{Backend} : JUnit 5 et Mockito ont été utilisés pour tester les
+  classes et méthodes Java. Les tests unitaires ont couvert la logique
+  métier, les interactions avec la base de données et les services REST.
+\item
+  \textbf{Frontend :} Jest a été utilisés pour tester les composants
+  React. Les tests unitaires ont vérifié le comportement des composants,
+  les interactions avec les services et l\textquotesingle affichage des
+  données.
+\end{itemize}
+
+\hypertarget{tests-dintuxe9gration}{%
+\subparagraph{Tests
+d\textquotesingle Intégration~:}\label{tests-dintuxe9gration}}
+
+Les tests d\textquotesingle intégration ont vérifié
+l\textquotesingle interaction entre différents modules et composants du
+système. L\textquotesingle objectif était de s\textquotesingle assurer
+que les différents éléments du système fonctionnent correctement
+ensemble.
+
+\begin{itemize}
+\item
+  \textbf{Spring Boot Test:} Spring Boot Test a été utilisé pour tester
+  les API REST. Les tests d\textquotesingle intégration ont vérifié que
+  les API répondent correctement aux requêtes, que les données sont
+  correctement validées et que les erreurs sont correctement gérées.
+\item
+  \textbf{Postman :} Postman a été utilisé pour tester manuellement les
+  API REST. Les tests ont vérifié que les API fonctionnent correctement
+  et que les données sont correctement renvoyées.
+\end{itemize}
+
+\hypertarget{tests-de-performance}{%
+\subparagraph{Tests de Performance~:}\label{tests-de-performance}}
+
+Les tests de performance ont été effectués pour évaluer la capacité du
+système à gérer des charges de travail importantes et à répondre aux
+exigences de performance.
+
+\begin{itemize}
+\item
+  \textbf{Temps de Réponse :} Les temps de réponse des API ont été
+  mesurés pour vérifier qu\textquotesingle ils respectent les exigences
+  de performance. Les tests ont été effectués avec différents nombres
+  d\textquotesingle utilisateurs simultanés pour simuler des charges de
+  travail réelles.
+\item
+  \textbf{Charge :} Les tests de charge ont été effectués pour évaluer
+  la capacité du système à gérer des volumes importants de données et de
+  transactions. Les tests ont été effectués avec différents nombres
+  d\textquotesingle utilisateurs simultanés et différents volumes de
+  données.
+\end{itemize}
+
+\hypertarget{tests-de-suxe9curituxe9}{%
+\subparagraph{Tests de Sécurité~:}\label{tests-de-suxe9curituxe9}}
+
+Les tests de sécurité ont été effectués pour identifier les
+vulnérabilités potentielles du système et pour s\textquotesingle assurer
+que les données sensibles sont protégées.
+
+\begin{itemize}
+\item
+  \textbf{Authentification et Autorisation :} Les tests ont vérifié que
+  seuls les utilisateurs autorisés peuvent accéder aux données sensibles
+  et aux fonctionnalités critiques. JWT a été utilisé pour gérer
+  l\textquotesingle authentification et l\textquotesingle autorisation.
+\end{itemize}
+
+\hypertarget{conclusion-3}{%
+\subsubsection{\texorpdfstring{\textbf{Conclusion}~}{Conclusion~}}\label{conclusion-3}}
+
+En conclusion, ce chapitre a offert une vision détaillée et approfondie
+des fondations technologiques qui sous-tendent notre projet. Nous avons
+exploré un large éventail d'outils logiciels, de frameworks et de
+bibliothèques, chacun jouant un rôle crucial dans le développement de
+notre plateforme artistique innovante. L'analyse des principaux concepts
+et techniques associés à ces outils nous a permis de mieux comprendre
+non seulement leur fonctionnement, mais aussi leur pertinence dans le
+contexte spécifique de notre application.
+
+Par ailleurs, l'étude de l'architecture globale du projet, avec un focus
+particulier sur les composants backend et frontend, a mis en lumière la
+complexité et la rigueur nécessaires à la conception d'une application
+moderne, sécurisée et évolutive. La fonctionnalité de planification des
+séances, en tant que module central, a été examinée en détail,
+illustrant ainsi comment l'architecture choisie répond aux besoins
+d'organisation des interventions éducatives tout en garantissant une
+expérience utilisateur fluide et fiable
+
+\hypertarget{section-7}{%
+\section{}\label{section-7}}
+
+\hypertarget{chapitre-5-ruxe9alisation-du-projet}{%
+\section{CHAPITRE 5~: Réalisation du
+projet}\label{chapitre-5-ruxe9alisation-du-projet}}
+
+Le présent chapitre a pour ambition de dévoiler les différentes
+interfaces utilisateur développées au sein de ce projet.
+L\textquotesingle objectif primordial qui a guidé leur conception visait
+à offrir une expérience d\textquotesingle interaction intuitive et
+engageante, permettant ainsi aux utilisateurs de
+s\textquotesingle approprier avec aisance les principales
+fonctionnalités de l\textquotesingle application.
+
+À travers les différentes sections qui suivront, le lecteur aura
+l\textquotesingle opportunité de découvrir dans le détail les interfaces
+clés constituant l\textquotesingle ossature de cette solution. Les
+phases de test menées auprès des utilisateurs tout au long du processus
+de développement ont également permis d\textquotesingle affiner et
+d\textquotesingle améliorer continuellement ces différentes interfaces,
+dans le but de répondre au mieux aux attentes et aux besoins exprimés.
+Ainsi, c\textquotesingle est une expérience
+d\textquotesingle interaction fluide et agréable que les utilisateurs
+sont amenés à découvrir au fil de leur navigation.
+
+\hypertarget{conception-de-lapplication-web}{%
+\subsubsection{\texorpdfstring{\hfill\break
+Conception de l'Application
+Web}{ Conception de l'Application Web}}\label{conception-de-lapplication-web}}
+
+\hypertarget{interface-de-connexion}{%
+\subsection{Interface de Connexion}\label{interface-de-connexion}}
+
+L'interface de connexion constitue la porte d'entrée de la plateforme
+Agile Quiz Master. Elle permet aux utilisateurs autorisés (formateurs,
+équipes agiles ou administrateurs) d'accéder à leur espace personnel
+dédié à la création et à la passation de quiz. Cette étape est
+essentielle pour assurer la sécurité des données et des résultats
+d'évaluation stockés sur la plateforme.
+
+Conçue pour être minimaliste et ergonomique, l'interface propose deux
+champs obligatoires : le courriel (compatible avec les adresses
+Capgemini) et le mot de passe. Le bouton "Se connecter" valide
+l'authentification. Bien que l'accent soit mis sur la simplicité,
+l'absence d'option "mot de passe oublié" ou de case "rester connecté"
+pourrait être ajoutée dans une future version pour améliorer
+l'expérience utilisateur.
+
+\includegraphics[width=6.3in,height=2.75972in]{latex_media/media/image51.png}Le
+design reflète l'univers agile, avec une palette de couleurs sobre et
+des éléments visuels évoquant la collaboration et l'itération (comme des
+flèches cycliques ou des diagrammes Kanban discrets). L'arrière-plan
+épuré et les typographies modernes renforcent le caractère professionnel
+de l'outil, tout en restant accessible.
+
+\hypertarget{interface-du-tableau-de-bord}{%
+\subsection{Interface du Tableau de Bord
+:}\label{interface-du-tableau-de-bord}}
+
+L'interface du tableau de bord~de la plateforme~Capgenvint® Agile Quiz
+Master~offre une vue centralisée et organisée des activités liées aux
+quiz agiles. Elle se compose de plusieurs sections claires :
+
+\begin{itemize}
+\item
+  Quiz récents~(ex: "QCM Agile -- 5 questions, 30 minutes"),
+\item
+  Quiz complétés~(avec accès aux historiques),
+\item
+  Résultats récents~(dates et scores),
+\item
+  Rapports~(métriques comme "60\% SCORE MOYEN" ou "80\% MEILLEUR
+  SCORE").
+\end{itemize}
+
+Une~barre latérale (sidebar)~permet une navigation intuitive entre les
+fonctionnalités principales :
+
+\begin{itemize}
+\item
+  Tableau de bord,~Quizzes,~Questions,~Résultats,~Profil,
+  et~Utilisateurs~(pour les administrateurs).
+\item
+  Le bouton~"Créer un nouveau quiz"~est mis en avant pour un accès
+  rapide, tandis qu'une option~"Mode sombre"~améliore le confort visuel.
+\end{itemize}
+
+L'interface, bien que~minimaliste, est conçue pour une~expérience
+utilisateur fluide, avec des libellés explicites et une hiérarchie
+visuelle mettant l'accent sur les données essentielles (scores, temps,
+progression). L'absence d'éléments superflus renforce son utilité pour
+les formateurs et équipes agiles, qui peuvent ainsi se concentrer sur
+l'analyse et la création de contenus.
+
+\includegraphics[width=6.3in,height=2.77986in]{latex_media/media/image52.png}
+
+\hypertarget{interface-de-gestion-des-utilisateurs}{%
+\subsection{Interface de gestion des utilisateurs
+:}\label{interface-de-gestion-des-utilisateurs}}
+
+La page de gestion des utilisateurs de Agile Quiz Master offre aux
+administrateurs un outil complet pour superviser et gérer les comptes
+des utilisateurs de la plateforme. Elle présente une liste organisée des
+utilisateurs avec les informations essentielles :
+
+\begin{itemize}
+\item
+  Nom de l\textquotesingle utilisateur
+\item
+  Email (identifiant unique)
+\item
+  Rôle (ex : ADMIN, COACH)
+\item
+  Statut (actif/inactif, indiqué par une icône de validation)
+\item
+  Actions disponibles (modification/suppression via icônes)
+\end{itemize}
+
+La page intègre des fonctionnalités clés pour une administration
+efficace :
+
+\begin{itemize}
+\item
+  Barre de recherche permettant de filtrer les utilisateurs par nom,
+  email ou rôle
+\item
+  Pagination (10 résultats par page) pour une navigation aisée
+\item
+  Bouton "Ajouter un utilisateur" pour créer facilement de nouveaux
+  comptes
+\end{itemize}
+
+L\textquotesingle interface a été conçue avec un souci de clarté et
+d\textquotesingle efficacité :
+
+\begin{itemize}
+\item
+  Design épuré avec une hiérarchie visuelle claire
+\item
+  Accès rapide aux principales actions d\textquotesingle administration
+\item
+  Navigation intuitive via la sidebar (Tableau de bord, Quizzes,
+  Utilisateurs...)
+\item
+  \includegraphics[width=6.3in,height=2.75972in]{latex_media/media/image53.png}Option
+  de mode sombre pour le confort visuel
+\end{itemize}
+
+\hypertarget{interface-de-cruxe9ation-dun-utilisateur}{%
+\subsection{Interface de Création d'un utilisateur
+:}\label{interface-de-cruxe9ation-dun-utilisateur}}
+
+L'interface d'ajout d'un utilisateur se présente sous forme d'un
+formulaire clair et structuré. Elle comprend plusieurs champs tels que
+le prénom, le nom, l'email, le mot de passe, ainsi que le rôle de
+l'utilisateur. Cette interface permet à l'administrateur de créer
+facilement un nouveau compte utilisateur. Le bouton \textbf{"Ajouter"}
+permet de valider l'ajout, tandis que le bouton \textbf{"Annuler"}
+permet d'abandonner l'action et de revenir à la liste des utilisateurs
+sans enregistrer
+\includegraphics[width=4.38217in,height=3.72241in]{latex_media/media/image54.png}les
+modifications.
+
+\hypertarget{interface-de-cruxe9ation-dune-nouvelle-question}{%
+\subsection{Interface de création d'une nouvelle question
+:}\label{interface-de-cruxe9ation-dune-nouvelle-question}}
+
+\textbf{L\textquotesingle interface de création d\textquotesingle une
+nouvelle question}~dans~\textbf{Agile Quiz Master}~est conçue pour
+guider les formateurs à travers un processus structuré et intuitif. La
+page se divise en sections claires :
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{Informations de la question}~:
+
+  \begin{itemize}
+  \item
+    Un champ obligatoire pour le~\emph{texte de la question}~(marqué
+    d\textquotesingle un astérisque)
+  \item
+    Des exemples suggérés ("Prise du capital", "Moteur de réussir")
+    inspirent les créateurs
+  \item
+    La possibilité d\textquotesingle ajouter des consignes ou contextes
+    supplémentaires
+  \end{itemize}
+\item
+  \textbf{Options de réponse}~:
+
+  \begin{itemize}
+  \item
+    Des champs dédiés pour chaque proposition (Option 1\emph{, Option
+    2}~etc.)
+  \item
+    La capacité à marquer les bonnes réponses
+  \item
+    Un espace pour ajouter des explications aux réponses si nécessaire
+  \end{itemize}
+\end{enumerate}
+
+L\textquotesingle interface présente plusieurs caractéristiques notables
+:
+
+\begin{itemize}
+\item
+  \textbf{Design épuré}~avec une hiérarchie visuelle claire
+\item
+  \textbf{Guidage pas à pas}~pour ne rien oublier
+\item
+  \textbf{Indicateurs visuels}~(comme les *) pour les champs
+  obligatoires
+\item
+  \includegraphics[width=4.15299in,height=4.78497in]{latex_media/media/image55.png}\textbf{Flexibilité}~dans
+  la formulation des questions et réponses
+\end{itemize}
+
+\hypertarget{interface-de-cruxe9ation-dun-nouveau-quiz}{%
+\subsection{Interface de création d'un nouveau quiz
+:}\label{interface-de-cruxe9ation-dun-nouveau-quiz}}
+
+\textbf{L\textquotesingle interface de création de quiz}
+dans~\textbf{Agile Quiz Master}~offre un environnement complet et
+intuitif pour élaborer des évaluations pédagogiques. Elle se compose de
+deux volets principaux :
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \emph{\textbf{Création du quiz~:}}
+\end{enumerate}
+
+\begin{itemize}
+\item
+  Un formulaire structuré permet de définir les paramètres généraux
+  (titre, description)
+\item
+  Des options de personnalisation (mélange aléatoire des questions,
+  affichage des résultats)
+\item
+  Une interface claire pour organiser la progression de création
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\item
+  Ajout des questions~:
+\end{enumerate}
+
+\begin{itemize}
+\item
+  Un système de recherche intelligent pour retrouver des questions
+  existantes
+\item
+  Une bibliothèque de questions classées par :
+\end{itemize}
+
+\begin{itemize}
+\item
+  Type~(Choix unique/multiple)
+\item
+  Difficulté~(Easy, Medium, Hard)
+\item
+  Thématique~(Agile, Scrum, Backlog...)
+\end{itemize}
+
+\begin{itemize}
+\item
+  Des indicateurs visuels clairs pour chaque paramètre
+\item
+  La possibilité de prévisualiser les questions sélectionnées
+\end{itemize}
+
+\emph{\textbf{Fonctionnalités clés~:}}
+
+\begin{itemize}
+\item
+  Filtrage avancé~par critères pédagogiques
+\item
+  Barre de recherche~pour un accès rapide
+\item
+  Code couleur~pour les niveaux de difficulté
+\item
+  Organisation thématique~des questions
+\item
+  Système de points~paramétrable
+\end{itemize}
+
+\emph{\textbf{Cette interface a été conçue pour :}}
+
+\begin{itemize}
+\item
+  Gagner du temps~dans la préparation des évaluations
+\item
+  Garantir la pertinence pédagogique~grâce aux métadonnées associées
+\item
+  Faciliter la création~de quiz équilibrés (niveaux de difficulté
+  variés)
+\item
+  \includegraphics[width=6.3in,height=2.76944in]{latex_media/media/image56.png}Promouvoir
+  la réutilisation~des questions existantes
+\end{itemize}
+
+\includegraphics[width=4.88219in,height=5.70168in]{latex_media/media/image57.png}
+
+\hypertarget{interface-de-paramuxe9trage-et-publication-de-quiz}{%
+\subsection{Interface de Paramétrage et Publication de
+Quiz~:}\label{interface-de-paramuxe9trage-et-publication-de-quiz}}
+
+L\textquotesingle interface de gestion des quiz dans Agile Quiz Master
+permet aux formateurs de finaliser et administrer leurs évaluations
+avant publication. Elle présente :
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{En-tête informatif}~:
+
+  \begin{itemize}
+  \item
+    Titre clair du quiz ("QCM Agile")
+  \item
+    Description synthétique des objectifs pédagogiques
+  \item
+    Statut visible ("Brouillon")
+  \item
+    Métriques clés (5 questions, durée 30 minutes)
+  \end{itemize}
+\item
+  \textbf{Panneau de contrôle}~:
+
+  \begin{itemize}
+  \item
+    Bouton principal~\textbf{"Publier"}~pour rendre le quiz actif
+  \item
+    Option~\textbf{"Voir les résultats"}~pour accéder aux statistiques
+  \item
+    Fonction~\textbf{"Supprimer"}~avec confirmation
+  \end{itemize}
+\item
+  \textbf{Section Détails}~:
+
+  \begin{itemize}
+  \item
+    Accès aux paramètres avancés
+  \item
+    Visualisation des questions incluses
+  \item
+    Gestion des droits d\textquotesingle accès
+  \end{itemize}
+\end{enumerate}
+
+\textbf{Particularités techniques}~:
+
+\begin{itemize}
+\item
+  Statut visuel clair (Brouillon/Public/Archivé)
+\item
+  Calcul automatique de la durée totale
+\item
+  Prévisualisation du quiz avant publication
+\item
+  Verrouillage des modifications après publication
+\end{itemize}
+
+\begin{quote}
+\includegraphics[width=2.82639in,height=2.00694in]{latex_media/media/image58.png}
+\end{quote}
+
+\textbf{Workflow typique}~:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Vérification du contenu (questions/durée)
+\item
+  Paramétrage des options de publication
+\item
+  Validation par prévisualisation
+\item
+  Publication définitive
+\item
+  Suivi des résultats post-activation
+\end{enumerate}
+
+Cette interface complète le cycle de vie du quiz en offrant les outils
+nécessaires pour :
+
+\begin{itemize}
+\item
+  \textbf{Contrôler}~la qualité pédagogique
+\item
+  \textbf{Administrer}~la disponibilité
+\item
+  \textbf{Analyser}~l\textquotesingle impact formation
+\item
+  \textbf{Archiver}~les anciennes versions
+\end{itemize}
+
+Le design minimaliste et l\textquotesingle organisation logique des
+fonctionnalités en font un outil efficace pour les administrateurs
+pédagogiques.
+
+\includegraphics[width=4.11827in,height=2.32651in]{latex_media/media/image59.png}
+
+\hypertarget{interface-de-duxe9tail-et-gestion-de-quiz}{%
+\subsection{Interface de Détail et Gestion de
+Quiz}\label{interface-de-duxe9tail-et-gestion-de-quiz}}
+
+L\textquotesingle interface de détail des quiz dans~\textbf{® Agile Quiz
+Master}~offre une vue complète et des outils avancés pour gérer les
+évaluations. Elle se structure en plusieurs sections claires :
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{En-tête informatif}~:
+
+  \begin{itemize}
+  \item
+    Chemin de navigation hiérarchique (Accueil / Quiz / Détail)
+  \item
+    Titre visible du quiz en cours de consultation
+  \end{itemize}
+\item
+  \textbf{Section de contrôle}~:
+
+  \begin{itemize}
+  \item
+    Bouton~\textbf{"Commencer le quiz"}~pour lancer
+    l\textquotesingle évaluation
+  \item
+    Option~\textbf{"Partager"}~pour diffuser le quiz
+  \item
+    Actions de gestion :
+
+    \begin{itemize}
+    \item
+      \textbf{Modifier}~le contenu
+    \item
+      \textbf{Archiver}~le quiz
+    \item
+      \textbf{Supprimer}~définitivement
+    \end{itemize}
+  \end{itemize}
+\item
+  \textbf{Description pédagogique}~:
+
+  \begin{itemize}
+  \item
+    Texte détaillé expliquant les objectifs et principes couverts
+  \item
+    Exemple concret : description complète de la méthodologie Agile
+  \item
+    Mise en valeur des bénéfices pédagogiques
+  \end{itemize}
+\item
+  \textbf{Informations techniques}~:
+
+  \begin{itemize}
+  \item
+    \textbf{Durée}~(30 minutes)
+  \item
+    \textbf{Score de réussite}~(60\%)
+  \item
+    \textbf{Type de questions}~(aléatoires)
+  \item
+    \textbf{Nombre de tentatives}~autorisées
+  \end{itemize}
+\end{enumerate}
+
+\textbf{Fonctionnalités clés}~:
+
+\begin{itemize}
+\item
+  \textbf{Design responsive}~adapté à tous devices
+\item
+  \textbf{Barre d\textquotesingle actions flottante}~pour un accès
+  rapide
+\item
+  \textbf{Indicateurs visuels}~(icônes, badges de statut)
+\item
+  \textbf{Métadonnées complètes}~sur le quiz
+\item
+  \textbf{Protection contre les modifications}~non autorisées
+\end{itemize}
+
+\textbf{Workflow d\textquotesingle utilisation}~:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Consultation des détails pédagogiques
+\item
+  Vérification des paramètres techniques
+\item
+  Lancement ou partage du quiz
+\item
+  Gestion du cycle de vie (modification/archivage)
+\item
+  Consultation ultérieure des résultats
+\end{enumerate}
+
+\textbf{Avantages pédagogiques}~:
+
+\begin{itemize}
+\item
+  Transparence complète sur les objectifs
+  d\textquotesingle apprentissage
+\item
+  Flexibilité dans la gestion des évaluations
+\item
+  Accès centralisé à toutes les fonctionnalités
+\item
+  Maintien de l\textquotesingle intégrité pédagogique des quiz
+\end{itemize}
+
+Cette interface combine parfaitement :
+
+\begin{itemize}
+\item
+  \textbf{Rigueur technique}~(paramètres précis)
+\item
+  \textbf{Clarté pédagogique}~(descriptions détaillées)
+\item
+  \textbf{Efficacité opérationnelle}~(workflow optimisé)
+\end{itemize}
+
+\includegraphics[width=6.3in,height=3.24097in]{latex_media/media/image60.png}
+
+\hypertarget{processus-daccuxe8s-et-dauthentification-pour-les-quiz}{%
+\subsection{Processus d\textquotesingle Accès et
+d\textquotesingle Authentification pour les
+Quiz}\label{processus-daccuxe8s-et-dauthentification-pour-les-quiz}}
+
+Lorsqu\textquotesingle un utilisateur reçoit un lien vers un quiz (ex:
+QCM Agile), le système implémente un processus sécurisé en 3 étapes :
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{Authentification obligatoire}~:
+
+  \begin{itemize}
+  \item
+    Redirection vers le portail \textbf{Capgemini}
+  \item
+    Formulaire d\textquotesingle identification exigeant :
+
+    \begin{itemize}
+    \item
+      Email professionnel @\textbf{Capgemini} .com
+    \item
+      Mot de passe conforme aux politiques de sécurité
+    \end{itemize}
+  \item
+    Validation des credentials via Active Directory
+  \item
+  \end{itemize}
+\item
+  \textbf{Vérifications automatiques}~:
+
+  \begin{itemize}
+  \item
+    Contrôle des droits d\textquotesingle accès au quiz
+  \item
+    Confirmation de l\textquotesingle éligibilité (service/métier/grade)
+  \item
+    Vérification de la période active du quiz
+  \end{itemize}
+\item
+  \textbf{Accès au contenu}~:
+
+  \begin{itemize}
+  \item
+    Chargement sécurisé du quiz (ex: QCM Agile)
+  \item
+    Affichage des informations clés :
+
+    \begin{itemize}
+    \item
+      Numérotation des questions (1/6)
+    \item
+      Timer visible (200 secondes ici)
+    \item
+      Type de question (struct\_choice)
+    \item
+      Interface claire VRAI/FAUX
+    \end{itemize}
+  \end{itemize}
+\end{enumerate}
+
+\textbf{Particularités techniques}~:
+
+\begin{itemize}
+\item
+  Chiffrement TLS 1.3 pour tout transfert
+\item
+  Jetons d\textquotesingle accès temporaires (JWT)
+\item
+  Session limitée à la durée du quiz
+\item
+  Verrouillage après 3 tentatives infructueuses
+\end{itemize}
+
+\textbf{Workflow utilisateur typique}~:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Clique sur le lien partagé
+\item
+  S\textquotesingle authentifie via l\textquotesingle interface
+  \textbf{Capgemini}
+\item
+  Accepte les conditions d\textquotesingle utilisation
+\item
+  Accède à l\textquotesingle écran de question (comme illustré)
+\item
+  Répond dans le temps imparti
+\end{enumerate}
+
+\textbf{Mesures de sécurité}~:
+
+\begin{itemize}
+\item
+  Prévention du copier-coller des réponses
+\item
+  Détection des onglets multiples
+\item
+  Enregistrement crypté des réponses
+\item
+  Audit trail complet
+\end{itemize}
+
+Ce système garantit :
+
+\begin{itemize}
+\item
+  \textbf{Authenticité}~des participants
+\item
+  \textbf{Intégrité}~des évaluations
+\item
+  \includegraphics[width=3.88264in,height=2.00556in]{latex_media/media/image61.png}\includegraphics[width=3.53125in,height=2.01806in]{latex_media/media/image62.png}\includegraphics[width=3.62986in,height=2.02292in]{latex_media/media/image63.png}\textbf{Confidentialité}~des
+  résultats
+\end{itemize}
+
+\hypertarget{interface-des-ruxe9sultats-de-quiz}{%
+\subsection{Interface des Résultats de
+Quiz}\label{interface-des-ruxe9sultats-de-quiz}}
+
+L\textquotesingle interface de consultation des résultats dans
+Capgenvint® Agile Quiz Master offre une vue détaillée et interactive des
+performances des participants.
+
+Voici ses principales caractéristiques :
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{Tableau des Résultats}~:
+
+  \begin{itemize}
+  \item
+    Colonnes organisées :
+
+    \begin{itemize}
+    \item
+      \textbf{Email}~du participant
+      (ex:~\href{https://mailto:med@copgermini.com/}{med@capgemini.com})
+    \item
+      \textbf{Date}~de passage (format JJ/MM/AAAA)
+    \item
+      \textbf{Score}~obtenu (pourcentage clair)
+    \item
+      \textbf{Temps}~de réalisation (format mm min ss sec)
+    \item
+      \textbf{Actions}~(bouton "Voir" pour le détail)
+    \end{itemize}
+  \end{itemize}
+\item
+  \textbf{Fonctionnalités de Filtrage}~:
+
+  \begin{itemize}
+  \item
+    Barre de~\textbf{Recherche}~rapide
+  \item
+    Filtre par~\textbf{Statut}~(Tous/En cours/Validé)
+  \item
+    Pagination claire (10 résultats/page)
+  \end{itemize}
+\item
+  \textbf{Détail des Résultats}~(accessible via "Voir") :
+
+  \begin{itemize}
+  \item
+    Correction question par question
+  \item
+    Temps passé sur chaque item
+  \item
+    Comparaison avec la moyenne du groupe
+  \end{itemize}
+\end{enumerate}
+
+\includegraphics[width=6.3in,height=2.78681in]{latex_media/media/image64.png}
+
+\hypertarget{interface-de-duxe9tail-des-ruxe9sultats-de-quiz}{%
+\subsection{Interface de Détail des Résultats de
+Quiz}\label{interface-de-duxe9tail-des-ruxe9sultats-de-quiz}}
+
+L\textquotesingle interface de détail des résultats dans~\textbf{Agile
+Quiz Master}~présente une analyse complète et structurée des
+performances d\textquotesingle un participant. L\textquotesingle écran
+se compose de :
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{En-tête d\textquotesingle identification}~:
+
+  \begin{itemize}
+  \item
+    Titre du quiz ("QCM Agile")
+  \item
+    Référence unique du résultat (Réf. 1)
+  \item
+    Option d\textquotesingle export PDF immédiat
+  \end{itemize}
+\item
+  \textbf{Informations participantes}~:
+
+  \begin{itemize}
+  \item
+    Email clairement affiché
+    (\href{https://mailto:med@copgermini.com/}{med@capgemini.com})
+  \item
+    Horodatage précis de complétion (15/07/2025 09:40:19)
+  \end{itemize}
+\item
+  \textbf{Section de synthèse}~:
+
+  \begin{itemize}
+  \item
+    Score global (80\%)
+  \item
+    Taux de réussite (4/5 réponses correctes)
+  \item
+    Durée totale (1 min 14 sec)
+  \item
+    Comparaison avec le seuil requis (60\%)
+  \end{itemize}
+\item
+  \textbf{Fonctionnalités avancées}~:
+
+  \begin{itemize}
+  \item
+    Bouton "Voir le quiz" pour rejouer l\textquotesingle évaluation
+  \item
+    Option de partage des résultats
+  \item
+    \includegraphics[width=6.3in,height=3.23681in]{latex_media/media/image65.png}Contexte
+    statistique (performance relative)
+  \end{itemize}
+\end{enumerate}
+
+\hypertarget{conclusion-4}{%
+\subsubsection{Conclusion}\label{conclusion-4}}
+
+La phase de conception et de mise en place de notre projet QUIZ AGILE a
+été essentielle pour garantir son succès. Grâce à une planification
+rigoureuse et une conception réfléchie, nous avons établi une vision
+claire de notre plateforme d'évaluation des compétences agiles,
+identifiant les étapes nécessaires à sa réalisation.
+
+L'utilisation de diagrammes de cas d'utilisation, de classes, et de
+séquences, ainsi que la mise en place d'une base de données robuste, a
+joué un rôle central dans le développement de notre application. Ces
+éléments ont servi de référence tout au long du processus, nous
+permettant de rester sur la bonne voie et d'ajuster notre plan en
+fonction des besoins spécifiques des utilisateurs.
+
+Enfin, notre plateforme QUIZ AGILE s'appuie sur des technologies
+modernes pour offrir des fonctionnalités adaptées aux besoins des
+collaborateurs et des managers. La conception solide que nous avons
+réalisée pave la voie à de futures améliorations, notamment en matière
+de reporting et d'intégration d'intelligence artificielle.
+
+En somme, cette approche méthodique nous a permis de livrer une
+application fonctionnelle qui répond aux attentes de Capgemini. Nous
+sommes impatients d'explorer de nouvelles pistes pour faire évoluer QUIZ
+AGILE et enrichir l'expérience des utilisateurs.
+
+\hypertarget{conclusion-guxe9nuxe9rale-1}{%
+\section{Conclusion Générale}\label{conclusion-guxe9nuxe9rale-1}}
+
+\protect\hypertarget{_Toc204179750}{}{}Le projet \textbf{QUIZ AGILE}
+représente une réponse innovante et concrète aux besoins actuels des
+entreprises en matière de développement des compétences agiles. Dans un
+contexte professionnel en perpétuelle mutation, il permet d'assurer une
+évaluation standardisée, objective et personnalisée des collaborateurs,
+en s'appuyant sur une plateforme moderne, intuitive et performante.
+
+Grâce à l'intégration de technologies robustes telles que \textbf{Spring
+Boot} pour le backend et \textbf{React JS} pour le frontend, ainsi qu'à
+une approche DevOps outillée par \textbf{GitLab}, \textbf{Jenkins},
+Docker et \textbf{SonarQube}, \textbf{QUIZ AGILE} offre une architecture
+solide, évolutive et sécurisée. Son adoption de la méthodologie
+\textbf{Agile Scrum} a permis une gestion efficace du projet avec des
+livraisons fréquentes et un ajustement continu selon les retours des
+utilisateurs.
+
+\textbf{QUIZ AGILE} propose ainsi un ensemble de fonctionnalités clés :
+création de quiz personnalisés, gestion des utilisateurs, analyse de
+résultats détaillée, et intégration avec la plateforme de formation
+\textbf{NEXT} de \textbf{Capgemini}. Il contribue à l'amélioration
+continue des compétences internes et à la prise de décision éclairée par
+les managers.
+
+Cette expérience a permis de développer non seulement une solution
+technique complète, mais aussi des compétences humaines et
+organisationnelles essentielles pour la conduite de projets en
+entreprise. Le projet pose aujourd'hui les bases d'une plateforme
+extensible, pouvant évoluer vers l'intégration d'analytique avancée ou
+de fonctionnalités d'IA pour la personnalisation des parcours.
+
+En somme, \textbf{QUIZ AGILE} constitue une contribution significative à
+la digitalisation des processus RH et à la valorisation des compétences
+dans un environnement agile et collaboratif.
+
+\hypertarget{webliographie}{%
+\section{Webliographie}\label{webliographie}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \href{https://angular.io/docs}{https://React.io/docs} (22 mars 2025)
+\item
+  \url{https://reactnative.dev/docs/getting-started} (15 avril 2025)
+\item
+  \url{https://spring.io/projects/spring-boot} (30 mars 2025)
+\item
+  \url{https://learn.microsoft.com/en-us/power-bi/} (10 juin 2025)
+\item
+  \url{https://www.keycloak.org/} (5 mai 2025)
+\item
+  \url{https://www.inserm.fr/dossier/autisme/} (28 mars 2025)
+\item
+  \url{https://developer.android.com/guide/topics/resources/localization}
+  (7 juin 2025)
+\item
+  \url{https://chat.openai.com/} (1er juin 2025)
+\item
+  \url{https://developer.android.com/guide/topics/resources/localization}
+  (20 mai 2025)
+\end{enumerate}
+
+\includegraphics[width=6.3in,height=3.13056in]{latex_media/media/image66.png}
+
+\end{document}
