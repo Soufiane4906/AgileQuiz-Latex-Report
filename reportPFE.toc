@@ -1,0 +1,199 @@
+\babel@toc {french}{}\relax 
+\contentsline {chapter}{Dédicaces}{iv}{chapter*.2}%
+\contentsline {chapter}{Remerciements}{v}{chapter*.3}%
+\contentsline {chapter}{Liste des Abréviations}{vi}{chapter*.4}%
+\contentsline {chapter}{Résumé}{vii}{chapter*.5}%
+\contentsline {chapter}{Abstract}{viii}{chapter*.6}%
+\contentsline {section}{Table des matières}{viii}{section*.7}%
+\contentsline {section}{Liste des figures }{xii}{section*.8}%
+\contentsline {section}{Liste des tableaux}{xiv}{section*.9}%
+\contentsline {chapter}{Introduction Générale}{1}{chapter*.10}%
+\contentsline {chapter}{Contexte Général du projet}{4}{chapter*.11}%
+\contentsline {subsubsection}{Présentation d'organisme d'accueil~:}{4}{subsubsection*.12}%
+\contentsline {subsection}{Groupe Capgemini ~}{4}{subsection*.13}%
+\contentsline {subsection}{Historique du groupe Capgemini :}{5}{subsection*.15}%
+\contentsline {subsection}{Fiche d'identité du groupe Capgemini :}{5}{subsection*.16}%
+\contentsline {subsection}{Métiers du groupe Capgemini :}{6}{subsection*.17}%
+\contentsline {subsection}{Capgemini TS Maroc~:}{7}{subsection*.18}%
+\contentsline {subsection}{Fiche d'identité de Capgemini TS Maroc~:}{7}{subsection*.19}%
+\contentsline {subsection}{Organigramme de Capgemini TS Maroc}{8}{subsection*.21}%
+\contentsline {subsubsection}{Présentation du DigiCamp~:}{9}{subsubsection*.23}%
+\contentsline {subsubsection}{Présentation du Projet~:}{9}{subsubsection*.25}%
+\contentsline {subsection}{Contexte du projet~:}{10}{subsection*.26}%
+\contentsline {subsection}{Problématique~:}{10}{subsection*.27}%
+\contentsline {subsection}{Objectif du Projet~:~}{11}{subsection*.29}%
+\contentsline {subsection}{Population concernée~:}{12}{subsection*.30}%
+\contentsline {subsection}{Solution proposée~:}{12}{subsection*.31}%
+\contentsline {subsection}{Conduite et planification du projet~:}{13}{subsection*.32}%
+\contentsline {subparagraph}{Intégration et formation continue~:}{14}{subparagraph*.33}%
+\contentsline {subsection}{Méthodologie du travail\,: Agile \& Scrum}{14}{subsection*.34}%
+\contentsline {paragraph}{Caractéristiques de notre implémentation Scrum :}{14}{paragraph*.35}%
+\contentsline {paragraph}{Principaux objectifs méthodologiques :}{14}{paragraph*.36}%
+\contentsline {subparagraph}{Sprint planning\,:}{15}{subparagraph*.38}%
+\contentsline {subparagraph}{Daily meetings\,:}{15}{subparagraph*.39}%
+\contentsline {subparagraph}{Sprint Review\,:}{16}{subparagraph*.41}%
+\contentsline {subparagraph}{Sprint Rétrospective\,:~}{16}{subparagraph*.42}%
+\contentsline {subsection}{Diagramme de GANTT~:}{16}{subsection*.43}%
+\contentsline {subsection}{Synthèse}{17}{subsection*.45}%
+\contentsline {subsection}{Conclusion}{17}{subsection*.46}%
+\contentsline {section}{}{18}{section*.47}%
+\contentsline {section}{CHAPITRE 2~: Analyse et Spécification des besoins}{18}{section*.48}%
+\contentsline {subsubsection}{Spécifications Fonctionnelles}{18}{subsubsection*.49}%
+\contentsline {subsection}{Exigences fonctionnelles}{18}{subsection*.50}%
+\contentsline {subparagraph}{Gestion des utilisateurs :}{19}{subparagraph*.51}%
+\contentsline {subparagraph}{Gestion des quiz :}{19}{subparagraph*.52}%
+\contentsline {subparagraph}{Gestion des questions :}{19}{subparagraph*.53}%
+\contentsline {subparagraph}{Passage des quiz :}{19}{subparagraph*.54}%
+\contentsline {subparagraph}{Évaluation et résultats :}{19}{subparagraph*.55}%
+\contentsline {subparagraph}{Analyse et reporting :}{19}{subparagraph*.56}%
+\contentsline {subparagraph}{Intégration avec la plateforme NEXT :}{20}{subparagraph*.57}%
+\contentsline {subsubsection}{Cartographie fonctionnelle}{20}{subsubsection*.58}%
+\contentsline {subsubsection}{Spécifications Non Fonctionnelles~:}{20}{subsubsection*.60}%
+\contentsline {subparagraph}{Performance :}{20}{subparagraph*.61}%
+\contentsline {subparagraph}{Sécurité :}{21}{subparagraph*.62}%
+\contentsline {subparagraph}{Disponibilité et fiabilité :}{21}{subparagraph*.63}%
+\contentsline {subparagraph}{Maintenabilité :}{21}{subparagraph*.64}%
+\contentsline {subparagraph}{Scalabilité :}{21}{subparagraph*.65}%
+\contentsline {subparagraph}{Utilisabilité :}{21}{subparagraph*.66}%
+\contentsline {subparagraph}{Interopérabilité :}{21}{subparagraph*.67}%
+\contentsline {subsubsection}{Analyse des Acteurs et des Cas d\textquotesingle Utilisation :}{22}{subsubsection*.69}%
+\contentsline {subsection}{Identification des acteurs~:}{22}{subsection*.70}%
+\contentsline {subparagraph}{Administrateur :}{23}{subparagraph*.72}%
+\contentsline {subparagraph}{Coach :}{23}{subparagraph*.73}%
+\contentsline {subparagraph}{Collaborateur :}{23}{subparagraph*.74}%
+\contentsline {subparagraph}{Système NEXT}{23}{subparagraph*.75}%
+\contentsline {subsection}{Diagramme de Cas d\textquotesingle Utilisation :}{23}{subsection*.76}%
+\contentsline {subparagraph}{Tableau Récapitulatif des Cas d\textquotesingle Utilisation}{25}{subparagraph*.78}%
+\contentsline {subsection}{Description Détaillée des Domaines Fonctionnels}{26}{subsection*.79}%
+\contentsline {subparagraph}{ Gestion des Utilisateurs}{26}{subparagraph*.80}%
+\contentsline {subparagraph}{ Création de Quiz}{26}{subparagraph*.81}%
+\contentsline {subparagraph}{Passage de Quiz}{26}{subparagraph*.82}%
+\contentsline {subparagraph}{Analyse des Résultats}{27}{subparagraph*.83}%
+\contentsline {subparagraph}{Architecture et Interactions}{27}{subparagraph*.84}%
+\contentsline {subsection}{Description détaillée des principaux cas d\textquotesingle utilisation :}{27}{subsection*.85}%
+\contentsline {subparagraph}{Cas d\textquotesingle utilisation : Créer un quiz}{27}{subparagraph*.86}%
+\contentsline {subparagraph}{Cas d\textquotesingle utilisation : Passer un quiz}{28}{subparagraph*.87}%
+\contentsline {subsection}{Architecture monolithique~:}{29}{subsection*.88}%
+\contentsline {subsection}{Conclusion~}{30}{subsection*.90}%
+\contentsline {section}{}{31}{section*.91}%
+\contentsline {section}{CHAPITRE 3~: Conception et Mise en place du projet}{31}{section*.92}%
+\contentsline {subsubsection}{Diagramme de classes : }{31}{subsubsection*.93}%
+\contentsline {subsection}{Package User}{33}{subsection*.95}%
+\contentsline {subsection}{Package Question}{33}{subsection*.96}%
+\contentsline {subsection}{Package Quiz}{33}{subsection*.97}%
+\contentsline {subsection}{Package Attempt}{34}{subsection*.98}%
+\contentsline {subsection}{Clé QuizResult~:}{34}{subsection*.99}%
+\contentsline {subsection}{ Package Notification}{34}{subsection*.100}%
+\contentsline {subsection}{Relations Transverses}{34}{subsection*.101}%
+\contentsline {subsubsection}{Diagrammes de Paquetages~:}{35}{subsubsection*.102}%
+\contentsline {subsection}{Détail des Packages}{36}{subsection*.104}%
+\contentsline {subparagraph}{User}{36}{subparagraph*.105}%
+\contentsline {subparagraph}{Question}{36}{subparagraph*.106}%
+\contentsline {subparagraph}{Quiz}{36}{subparagraph*.107}%
+\contentsline {subparagraph}{Attempt}{36}{subparagraph*.108}%
+\contentsline {subparagraph}{Result}{37}{subparagraph*.109}%
+\contentsline {subparagraph}{Notification}{37}{subparagraph*.110}%
+\contentsline {subsection}{Flux des Dépendances}{37}{subsection*.111}%
+\contentsline {subparagraph}{Explications~}{37}{subparagraph*.113}%
+\contentsline {paragraph}{Quiz~dépend de :}{37}{paragraph*.114}%
+\contentsline {paragraph}{Attempt~dépend de :}{38}{paragraph*.115}%
+\contentsline {paragraph}{Result~agrège les données de :}{38}{paragraph*.116}%
+\contentsline {paragraph}{Notification~utilise :}{38}{paragraph*.117}%
+\contentsline {paragraph}{Analyse Architecturale}{38}{paragraph*.118}%
+\contentsline {subsubsection}{Diagrammes de séquence~Tentative de Quiz :}{38}{subsubsection*.119}%
+\contentsline {subsubsection}{Diagrammes d'activités- Processus de Passage d\textquotesingle un Quiz}{39}{subsubsection*.121}%
+\contentsline {subsubsection}{Diagramme d\textquotesingle État - Tentative de Quiz}{41}{subsubsection*.123}%
+\contentsline {subsubsection}{Diagramme d\textquotesingle État - Statut du Quiz}{41}{subsubsection*.125}%
+\contentsline {subsubsection}{\textbf {Conclusion}~:}{42}{subsubsection*.127}%
+\contentsline {section}{}{43}{section*.128}%
+\contentsline {section}{CHAPITRE 4~: Etude Technique du projet}{43}{section*.129}%
+\contentsline {subsubsection}{Outils et technologies :}{43}{subsubsection*.130}%
+\contentsline {subsection}{Technologies et Framework utilisées~:}{43}{subsection*.131}%
+\contentsline {subparagraph}{Spring Boot~:}{43}{subparagraph*.132}%
+\contentsline {paragraph}{Configuration technique du projet :}{44}{paragraph*.134}%
+\contentsline {subparagraph}{React}{44}{subparagraph*.135}%
+\contentsline {paragraph}{\textbf {Configuration technique du projet :}}{44}{paragraph*.137}%
+\contentsline {subsection}{Authentification et Sécurité}{45}{subsection*.138}%
+\contentsline {subparagraph}{\textbf {JWT} \textbf {(JSON Web Token)}}{45}{subparagraph*.139}%
+\contentsline {paragraph}{\textbf {Configuration technique du projet :}}{45}{paragraph*.140}%
+\contentsline {subsection}{Base de données }{45}{subsection*.142}%
+\contentsline {subparagraph}{\textbf {PostgresSQL}~}{45}{subparagraph*.143}%
+\contentsline {paragraph}{\textbf {Configuration technique du projet :}}{45}{paragraph*.144}%
+\contentsline {subsection}{Système de gestion de dépendances}{46}{subsection*.146}%
+\contentsline {subparagraph}{\textbf {Maven}}{46}{subparagraph*.147}%
+\contentsline {paragraph}{. Configuration du projet :}{46}{paragraph*.149}%
+\contentsline {paragraph}{Gestion des dépendances principales :}{47}{paragraph*.150}%
+\contentsline {subparagraph}{Npm}{47}{subparagraph*.151}%
+\contentsline {paragraph}{Configuration du projet :}{47}{paragraph*.153}%
+\contentsline {paragraph}{\textbf {Dépendances de développement :}}{47}{paragraph*.154}%
+\contentsline {subsection}{Système de contrôle de version~:}{47}{subsection*.155}%
+\contentsline {subparagraph}{Git~:}{48}{subparagraph*.156}%
+\contentsline {subparagraph}{GitLab~:}{48}{subparagraph*.158}%
+\contentsline {subsection}{IDE et outils de Test~:}{49}{subsection*.160}%
+\contentsline {subparagraph}{IntelliJ IDEA :}{49}{subparagraph*.161}%
+\contentsline {subparagraph}{Visual Studio Code :}{49}{subparagraph*.162}%
+\contentsline {subparagraph}{Postman~:}{49}{subparagraph*.163}%
+\contentsline {subparagraph}{JUnit~:}{50}{subparagraph*.164}%
+\contentsline {subparagraph}{Mockito~:}{50}{subparagraph*.165}%
+\contentsline {subparagraph}{Jest~:}{50}{subparagraph*.166}%
+\contentsline {subsection}{Outils de conception~:}{51}{subsection*.167}%
+\contentsline {subparagraph}{PlantUML~}{51}{subparagraph*.168}%
+\contentsline {subsection}{Containerisation et Déploiement}{51}{subsection*.169}%
+\contentsline {subparagraph}{Docker}{51}{subparagraph*.170}%
+\contentsline {paragraph}{Architecture des conteneurs :}{51}{paragraph*.171}%
+\contentsline {subsection}{Tests et Qualité avec SonarQube}{53}{subsection*.173}%
+\contentsline {subparagraph}{Définition}{53}{subparagraph*.174}%
+\contentsline {paragraph}{ Objectifs}{53}{paragraph*.175}%
+\contentsline {subparagraph}{Flux d'analyse type (Backend + Frontend)}{53}{subparagraph*.176}%
+\contentsline {subparagraph}{Analyse de code avec SonarQube}{54}{subparagraph*.177}%
+\contentsline {paragraph}{SonarQube analyse :}{54}{paragraph*.178}%
+\contentsline {paragraph}{Métriques de qualité attendues :}{55}{paragraph*.179}%
+\contentsline {subsubsection}{Documentation et API}{55}{subsubsection*.180}%
+\contentsline {subparagraph}{SpringDoc OpenAPI}{55}{subparagraph*.181}%
+\contentsline {subparagraph}{Monitoring et Observabilité}{55}{subparagraph*.182}%
+\contentsline {paragraph}{Spring Boot Actuator}{55}{paragraph*.183}%
+\contentsline {paragraph}{Caching}{55}{paragraph*.184}%
+\contentsline {subsubsection}{Architecture technique :}{55}{subsubsection*.185}%
+\contentsline {subsubsection}{Architecture générale~:}{56}{subsubsection*.186}%
+\contentsline {subsection}{Introduction~:}{56}{subsection*.187}%
+\contentsline {subsection}{Structure et implémentation du projet Backend~:}{57}{subsection*.188}%
+\contentsline {subparagraph}{Architecture Domain-Driven Design (DDD)}{57}{subparagraph*.189}%
+\contentsline {subparagraph}{rganisation des couches}{57}{subparagraph*.190}%
+\contentsline {subsection}{Main, Tests et Ressources}{57}{subsection*.191}%
+\contentsline {subparagraph}{\textbf {Architecture Backend détaillée}}{58}{subparagraph*.192}%
+\contentsline {subparagraph}{}{59}{subparagraph*.193}%
+\contentsline {subparagraph}{Diagramme de séquence - flux de création de quiz }{59}{subparagraph*.194}%
+\contentsline {subparagraph}{Structure du backend du système}{60}{subparagraph*.195}%
+\contentsline {paragraph}{Enrichissement de l\textquotesingle architecture Backend}{61}{paragraph*.196}%
+\contentsline {paragraph}{Intégration et cohérence architecturale}{62}{paragraph*.197}%
+\contentsline {subparagraph}{Structure et implémentation du projet Frontend}{62}{subparagraph*.198}%
+\contentsline {paragraph}{Architecture React avec Material-UI}{62}{paragraph*.199}%
+\contentsline {paragraph}{ Organisation modulaire SCSS}{62}{paragraph*.200}%
+\contentsline {paragraph}{Système de thématisation avancé}{63}{paragraph*.201}%
+\contentsline {paragraph}{Responsive Design et adaptabilité}{63}{paragraph*.202}%
+\contentsline {paragraph}{Composants et Layout}{64}{paragraph*.203}%
+\contentsline {paragraph}{Optimisations et accessibilité}{64}{paragraph*.204}%
+\contentsline {subsection}{Synthèse~:}{64}{subsection*.205}%
+\contentsline {subparagraph}{Tests et validation~:}{64}{subparagraph*.206}%
+\contentsline {subparagraph}{Tests Unitaires~:}{64}{subparagraph*.207}%
+\contentsline {subparagraph}{Tests d\textquotesingle Intégration~:}{65}{subparagraph*.208}%
+\contentsline {subparagraph}{Tests de Performance~:}{65}{subparagraph*.209}%
+\contentsline {subparagraph}{Tests de Sécurité~:}{65}{subparagraph*.210}%
+\contentsline {subsubsection}{\textbf {Conclusion}~}{66}{subsubsection*.211}%
+\contentsline {section}{}{66}{section*.212}%
+\contentsline {section}{CHAPITRE 5~: Réalisation du projet}{66}{section*.213}%
+\contentsline {subsubsection}{\hfill \break Conception de l'Application Web}{66}{subsubsection*.214}%
+\contentsline {subsection}{Interface de Connexion}{66}{subsection*.215}%
+\contentsline {subsection}{Interface du Tableau de Bord :}{67}{subsection*.216}%
+\contentsline {subsection}{Interface de gestion des utilisateurs :}{68}{subsection*.217}%
+\contentsline {subsection}{Interface de Création d'un utilisateur :}{69}{subsection*.218}%
+\contentsline {subsection}{Interface de création d'une nouvelle question :}{70}{subsection*.219}%
+\contentsline {subsection}{Interface de création d'un nouveau quiz :}{71}{subsection*.220}%
+\contentsline {subsection}{Interface de Paramétrage et Publication de Quiz~:}{73}{subsection*.221}%
+\contentsline {subsection}{Interface de Détail et Gestion de Quiz}{75}{subsection*.222}%
+\contentsline {subsection}{Processus d\textquotesingle Accès et d\textquotesingle Authentification pour les Quiz}{77}{subsection*.223}%
+\contentsline {subsection}{Interface des Résultats de Quiz}{78}{subsection*.224}%
+\contentsline {subsection}{Interface de Détail des Résultats de Quiz}{79}{subsection*.225}%
+\contentsline {subsubsection}{Conclusion}{80}{subsubsection*.226}%
+\contentsline {section}{Conclusion Générale}{80}{section*.227}%
+\contentsline {section}{Webliographie}{81}{section*.228}%

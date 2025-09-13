@@ -17,8 +17,43 @@
 \usepackage{setspace}
 \onehalfspacing
 
+% Packages pour les figures et flottants
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subcaption} % Pour les sous-figures
+\usepackage{wrapfig}    % Pour l'habillage de texte
+
+% Couleurs et design
+\usepackage[dvipsnames,table]{xcolor}
+\definecolor{capgeminiblue}{RGB}{0,112,184}
+\definecolor{lightgray}{RGB}{245,245,245}
+\definecolor{darkgray}{RGB}{64,64,64}
+
+% Tableaux avancés
+\usepackage{colortbl}
+\usepackage{hhline}
+\usepackage{array}
+\usepackage{tabularx}
+
+% Espacement et marges
+\usepackage{caption}
+\captionsetup{
+    format=hang,
+    font={small,bf},
+    labelfont={color=capgeminiblue,bf},
+    margin=1cm,
+    skip=15pt,
+    position=bottom
+}
+
+% Configuration avancée pour l'espacement des figures
+\setlength{\textfloatsep}{20pt plus 2pt minus 4pt}
+\setlength{\floatsep}{15pt plus 2pt minus 2pt}
+\setlength{\intextsep}{15pt plus 2pt minus 2pt}
+
 % En-têtes et pieds de page
 \usepackage{fancyhdr}
+\setlength{\headheight}{15pt}
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[LE,RO]{\thepage}
@@ -26,11 +61,28 @@
 \fancyhead[RE]{\nouppercase{\leftmark}}
 \renewcommand{\headrulewidth}{0.4pt}
 
-% Formatage des titres
+% Formatage avancé des titres avec couleurs
 \usepackage{titlesec}
 \titleformat{\chapter}[display]
-  {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+  {\normalfont\huge\bfseries\color{capgeminiblue}}
+  {\chaptertitlename\ \thechapter}{20pt}
+  {\Huge\color{capgeminiblue}}
 \titlespacing*{\chapter}{0pt}{50pt}{40pt}
+
+\titleformat{\section}
+  {\normalfont\Large\bfseries\color{capgeminiblue}}
+  {\thesection}{1em}{}
+\titlespacing*{\section}{0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
+
+\titleformat{\subsection}
+  {\normalfont\large\bfseries\color{darkgray}}
+  {\thesubsection}{1em}{}
+\titlespacing*{\subsection}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\titleformat{\subsubsection}
+  {\normalfont\normalsize\bfseries\color{darkgray}}
+  {\thesubsubsection}{1em}{}
+\titlespacing*{\subsubsection}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
@@ -109,44 +161,46 @@
 % Page de titre personnalisée
 \begin{titlepage}
     \centering
-    
+
     % Logo EMSI
     \includegraphics[width=0.6\textwidth]{latex_media/media/image1.png}
-    
+
     \vspace{1cm}
-    
+
     {\huge\bfseries RAPPORT DE STAGE DE FIN D'ÉTUDES \par}
-    
+
     \vspace{0.5cm}
     {\Large 5ème Année en Ingénierie Informatique et Réseaux \par}
-    
+
     \vspace{0.5cm}
     {\Large\bfseries FILIÈRE : MIAGE | MBDS \par}
-    
+
     \vspace{2cm}
-    
+
     {\Large\textbf{Réalisé par :} \par}
     \vspace{0.3cm}
     {\Large ANIBA Soufiane \par}
-    
+
     \vspace{2cm}
-    
+
     {\Large\textbf{Tuteurs :} \par}
     \vspace{0.3cm}
     {\large Encadrant Professionnel : Pr. OUATIQ, Amina \par}
     \vspace{0.2cm}
     {\large Encadrant Pédagogique : Mme. ASSALI, Fatima \par}
-    
-    \vspace{2cm}
-    
+
     {\Large\textbf{Au sein de l'entreprise :} \par}
-    \vspace{0.5cm}
+    \vspace{0.2cm}
     \includegraphics[width=0.5\textwidth]{latex_media/media/image2.png}
-    
+
     \vfill
-    
+
     {\large Année universitaire 2024-2025 \par}
 \end{titlepage}
+
+% Numérotation en chiffres romains pour les pages de garde
+\pagenumbering{roman}
+\setcounter{page}{1}
 
 % Table des matières
 \tableofcontents
@@ -170,11 +224,9 @@ toujours cru en moi.
 Pour votre amitié sincère, vos sourires, votre écoute et votre soutien
 constant. Vous êtes une source précieuse de motivation et de bonheur.
 
-Remerciements
+\chapter{Remerciements}
 
-Avant toute chose, je remercie DIEU Grand et Puissant de
-m\textquotesingle avoir donné la volonté et le courage de mener ce
-travail à son terme, malgré les difficultés rencontrées.
+Avant toute chose, je remercie DIEU Grand et Puissant de m'avoir donné la volonté et le courage de mener ce travail à son terme, malgré les difficultés rencontrées.
 
 Je souhaite exprimer ma profonde gratitude à toutes les personnes qui
 ont contribué à la réalisation de ce projet. Tout
@@ -205,42 +257,50 @@ de \textbf{l\textquotesingle EMSI}, ainsi que tous ceux qui m'ont
 soutenu et me soutiennent encore. Du fond du cœur, merci, et que Dieu
 vous protège.
 
-\hypertarget{liste-des-abruxe9viations}{%
-\section{Liste des Abréviations}\label{liste-des-abruxe9viations}}
+\chapter{Liste des Abréviations}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2289}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.7711}}@{}}
 \toprule()
-\begin{minipage}[b]{\linewidth}\raggedright
-API
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Application Programming Interface
-\end{minipage} \\
+\rowcolor{capgeminiblue}
+\textcolor{white}{\textbf{Abréviation}} & \textcolor{white}{\textbf{Signification}} \\
 \midrule()
 \endhead
+\rowcolor{lightgray}
+API & Application Programming Interface \\
 CRUD & Create, Read, Update et Delete \\
+\rowcolor{lightgray}
 DAO & Data Access Object \\
 DTO & Data Transfer Object \\
+\rowcolor{lightgray}
 HTML & HyperText Markup Language \\
 IDE & Integrated development environment \\
+\rowcolor{lightgray}
 JDBC & Java Database Connectivity \\
 JSON & JavaScript Object Notation \\
+\rowcolor{lightgray}
 MVC & Model View Controller \\
 NPM & Node Package Manager \\
+\rowcolor{lightgray}
 RBAC & Role-Based Access Control \\
 REST &
 \href{https://en.wikipedia.org/wiki/Representational_state_transfer}{Representational
 state transfer} \\
+\rowcolor{lightgray}
 QUIZ MANAGER & Sexual awareness and Guidance for autistics \\
 SDLC & Software Development Life Cycle \\
+\rowcolor{lightgray}
 SGBDR & Système de gestion de bases de données relationnelles \\
 UML & Unified Modeling Language \\
 \bottomrule()
 \end{longtable}
 
-\hypertarget{ruxe9sumuxe9}{%
-\section{Résumé}\label{ruxe9sumuxe9}}
+\begin{center}
+\textcolor{capgeminiblue}{\textbf{Tableau 1 :}} Liste des principales abréviations utilisées dans ce rapport
+\end{center}
+
+\chapter{Résumé}
 
 Le présent rapport est l\textquotesingle aboutissement du travail
 effectué dans le cadre du projet de fin d\textquotesingle études au sein
@@ -285,9 +345,7 @@ d\textquotesingle adapter le développement aux retours des utilisateurs.
 agilité, formation continue, Spring Boot, React, analyse fonctionnelle,
 conception, mise en œuvre, Scrum.
 
-\hypertarget{abstract}{%
-\section{\texorpdfstring{\hfill\break
-Abstract}{ Abstract}}\label{abstract}}
+\chapter{Abstract}
 
 This report is the result of the work carried out as part of the
 end-of-study project at Capgemini, aiming to obtain the Engineering
@@ -341,8 +399,8 @@ d'organisme d'accueil~:
 \protect\hyperlink{groupe-capgemini}{1. Groupe Capgemini
 \protect\hyperlink{groupe-capgemini}{5}}
 
-\protect\hyperlink{_Toc204179669}{2. Historique du groupe Capgemini :
-\protect\hyperlink{_Toc204179669}{5}}
+\protect\hyperlink{historique-du-groupe-capgemini}{2. Historique du groupe Capgemini :
+\protect\hyperlink{historique-du-groupe-capgemini}{5}}
 
 \protect\hyperlink{fiche-didentituxe9-du-groupe-capgemini}{3. Fiche
 d'identité du groupe Capgemini :
@@ -513,11 +571,11 @@ Authentification et Sécurité
 \protect\hyperlink{base-de-donnuxe9es}{3. Base de données
 \protect\hyperlink{base-de-donnuxe9es}{52}}
 
-\protect\hyperlink{_Toc204179721}{4. Système de gestion de dépendances
-\protect\hyperlink{_Toc204179721}{53}}
+\protect\hyperlink{_Toc204179721}{4. Système de gestion de dépendances :
+\protect\hyperlink{systeme-gestion-dependances}{53}}
 
-\protect\hyperlink{_Toc204179722}{5. Système de contrôle de version~:
-\protect\hyperlink{_Toc204179722}{54}}
+\protect\hyperlink{_Toc204179722}{5. Système de contrôle de version :
+\protect\hyperlink{systeme-controle-version}{54}}
 
 \protect\hyperlink{ide-et-outils-de-test}{6. IDE et outils de Test~:
 \protect\hyperlink{ide-et-outils-de-test}{56}}
@@ -552,8 +610,8 @@ Structure et implémentation du projet Backend~:
 \protect\hyperlink{main-tests-et-ressources}{Main, Tests et Ressources
 \protect\hyperlink{main-tests-et-ressources}{66}}
 
-\protect\hyperlink{_Toc204179733}{3. Synthèse~:
-\protect\hyperlink{_Toc204179733}{74}}
+\protect\hyperlink{synthese}{3. Synthèse :
+\protect\hyperlink{synthese}{74}}
 
 \protect\hyperlink{conclusion-3}{V. Conclusion
 \protect\hyperlink{conclusion-3}{75}}
@@ -614,8 +672,8 @@ Interface de Détail des Résultats de Quiz
 \protect\hyperlink{conclusion-guxe9nuxe9rale-1}{III. Conclusion Générale
 \protect\hyperlink{conclusion-guxe9nuxe9rale-1}{94}}
 
-\protect\hyperlink{_Toc204179750}{IV. Bibliographie
-\protect\hyperlink{_Toc204179750}{94}}
+\protect\hyperlink{bibliographie}{IV. Bibliographie
+\protect\hyperlink{bibliographie}{94}}
 
 \hypertarget{liste-des-figures}{%
 \section{\texorpdfstring{Liste des figures
@@ -801,8 +859,12 @@ d\textquotesingle utilisation passer un quiz
 d\textquotesingle État - Statut du Quiz
 \protect\hyperlink{_Toc203823483}{47}}
 
-\hypertarget{introduction-guxe9nuxe9rale}{%
-\section{Introduction Générale}\label{introduction-guxe9nuxe9rale}}
+% Début de la numérotation arabe pour le contenu principal
+\newpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\chapter{Introduction Générale}
 
 Dans un contexte professionnel en constante évolution, les entreprises
 font face à un défi majeur : assurer le développement continu des
@@ -916,12 +978,7 @@ contribuer efficacement à la transformation digitale des pratiques de
 formation en entreprise, au bénéfice de la performance individuelle et
 collective.
 
-\hypertarget{section}{%
-\section{}\label{section}}
-
-\hypertarget{chapitre-1-contexte-guxe9nuxe9ral-du-projet}{%
-\section{CHAPITRE 1~: Contexte Général du
-projet}\label{chapitre-1-contexte-guxe9nuxe9ral-du-projet}}
+\chapter{Contexte Général du projet}
 
 Ce chapitre a pour objectif de présenter le cadre dans lequel notre
 projet de fin d\textquotesingle études a été effectué. Nous y trouverons
@@ -941,11 +998,14 @@ d'accueil~:}\label{pruxe9sentation-dorganisme-daccueil}}
 \hypertarget{groupe-capgemini}{%
 \subsection{Groupe Capgemini ~}\label{groupe-capgemini}}
 
-\includegraphics[width=3.37778in,height=0.75347in]{latex_media/media/image3.png}\textbf{Capgemini}
-est un leader mondial des services de conseil, de transformation
-numérique, de technologie et d'ingénierie. Le Groupe est à la pointe de
-l'innovation pour répondre à l'ensemble des opportunités des clients
-dans le monde en évolution du cloud, du numérique et des plateformes. Le
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\textwidth]{latex_media/media/image3.png}
+    \caption{Logo Capgemini}
+    \label{fig:logo-capgemini}
+\end{figure}
+
+\textbf{Capgemini} est un leader mondial des services de conseil, de transformation numérique, de technologie et d'ingénierie. Le Groupe est à la pointe de l'innovation pour répondre à l'ensemble des opportunités des clients dans le monde en évolution du cloud, du numérique et des plateformes. Le
 premier en France et le 6ème à l'échelle mondiale conduisant une
 stratégie de développement et de diversification qui a donné naissance à
 une croissance interne et externe. \textbf{Capgemini} est responsable de
@@ -962,9 +1022,6 @@ domaines en perpétuelle évolution du cloud, de la data, de
 l'Intelligence Artificielle, de la connectivité, des logiciels, de
 l'ingénierie digitale et des plateformes. Le Groupe a réalisé un chiffre
 d'affaires de 17 milliards d'euros en 2022.
-
-\hypertarget{section-1}{%
-\section{}\label{section-1}}
 
 \hypertarget{historique-du-groupe-capgemini}{%
 \subsection{Historique du groupe Capgemini
@@ -1013,22 +1070,24 @@ expertise reconnue.
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
 \toprule()
 \multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{1.0000} + 2\tabcolsep}@{}}{%
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Groupe Capgemini}
-\end{minipage}} \\
+\cellcolor{capgeminiblue}\textcolor{white}{\textbf{Groupe Capgemini}}} \\
 \midrule()
 \endhead
+\rowcolor{lightgray}
 \textbf{Année de création} & 1967 \\
 \textbf{Fondateur} & Serge KAMPFF \\
+\rowcolor{lightgray}
 \textbf{Forme juridique} & Société anonyme \\
 \textbf{PDG} & Aiman EZZAT \\
+\rowcolor{lightgray}
 \textbf{Effectif} & Plus 340 000\,(2022) \\
 \textbf{Chiffre d'affaires} & 18 Milliards d'Euros (2021) \\
 \bottomrule()
 \end{longtable}
 
-\protect\hypertarget{_Toc203823475}{}{}Tableau 1: Fiche
-d\textquotesingle identité du groupe \textbf{Capgemini}
+\begin{center}
+\textcolor{capgeminiblue}{\textbf{Tableau 2 :}} Fiche d'identité du groupe Capgemini
+\end{center}
 
 \hypertarget{muxe9tiers-du-groupe-capgemini}{%
 \subsection{Métiers du groupe Capgemini
@@ -1047,15 +1106,7 @@ Voici un aperçu des principaux services offerts par \textbf{Capgemini} :
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3107}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.6893}}@{}}
 \toprule()
-\begin{minipage}[b]{\linewidth}\raggedright
-\begin{quote}
-\textbf{Les services de Capgemini}
-\end{quote}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\begin{quote}
-\textbf{Les informations sur les services}
-\end{quote}
-\end{minipage} \\
+\cellcolor{capgeminiblue}\textcolor{white}{\textbf{Les services de Capgemini}} & \cellcolor{capgeminiblue}\textcolor{white}{\textbf{Les informations sur les services}} \\
 \midrule()
 \endhead
 \begin{minipage}[t]{\linewidth}\raggedright
@@ -1125,8 +1176,9 @@ davantage.~
 \bottomrule()
 \end{longtable}
 
-\protect\hypertarget{_Toc203823476}{}{}Tableau 2 : Les différents
-métiers de \textbf{Capgemini}
+\begin{center}
+\textbf{Tableau 3 :} Les différents métiers de Capgemini
+\end{center}
 
 \hypertarget{capgemini-ts-maroc}{%
 \subsection{Capgemini TS Maroc~:}\label{capgemini-ts-maroc}}
@@ -1150,12 +1202,14 @@ meilleures écoles et instituts supérieurs marocains.
 \subsection{Fiche d'identité de Capgemini TS
 Maroc~:}\label{fiche-didentituxe9-de-capgemini-ts-maroc}}
 
-\includegraphics[width=4.03056in,height=1.58056in]{latex_media/media/image4.png}\textbf{Capgemini
-Technology} Services Maroc est une entité spécialisée dans la fourniture
-de services technologiques et d'ingénierie. Depuis sa création,
-l'entreprise s'est imposée comme un partenaire incontournable pour de
-nombreuses organisations, grâce à son expertise et à son engagement
-envers l'innovation et la qualité des services.
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{latex_media/media/image4.png}
+    \caption{Fiche d'identité de Capgemini Technology Services Maroc}
+    \label{fig:fiche-capgemini-ts}
+\end{figure}
+
+\textbf{Capgemini Technology} Services Maroc est une entité spécialisée dans la fourniture de services technologiques et d'ingénierie. Depuis sa création, l'entreprise s'est imposée comme un partenaire incontournable pour de nombreuses organisations, grâce à son expertise et à son engagement envers l'innovation et la qualité des services.
 
 \hypertarget{organigramme-de-capgemini-ts-maroc}{%
 \subsection{Organigramme de Capgemini TS
@@ -1168,16 +1222,27 @@ et les interactions entre les différents départements, tout en
 soulignant l\textquotesingle importance de la collaboration pour
 atteindre nos objectifs.
 
-\includegraphics[width=5.4in,height=3.17361in]{latex_media/media/image5.jpeg}Chaque
-membre joue un rôle crucial dans le succès de nos projets, et cette
-représentation visuelle facilite la compréhension de notre
-organisation~:
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\textwidth]{latex_media/media/image5.jpeg}
+    \caption{Organigramme de Capgemini TS Maroc}
+    \label{fig:organigramme-capgemini}
+\end{figure}
+
+Chaque membre joue un rôle crucial dans le succès de nos projets, et cette représentation visuelle facilite la compréhension de notre organisation.
 
 \hypertarget{pruxe9sentation-du-digicamp}{%
 \subsubsection{Présentation du
 DigiCamp~:}\label{pruxe9sentation-du-digicamp}}
 
-\includegraphics[width=4.85208in,height=2.37778in]{latex_media/media/image6.png}Dans
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{latex_media/media/image6.png}
+\caption{Plateforme Coding Challenge de Capgemini}
+\label{fig:coding-challenge-capgemini}
+\end{figure}
+
+Dans
 un contexte où l'évaluation précise des compétences techniques des
 candidats est cruciale pour le recrutement efficace de talents, la
 plateforme Coding Challenge de \textbf{Capgemini} représente une réponse
@@ -1276,8 +1341,18 @@ plusieurs problématiques interconnectées :
   résultats d\textquotesingle évaluation ?} Sans lien direct entre
   évaluation et formation, il est difficile de proposer des parcours
   d\textquotesingle apprentissage véritablement personnalisés.
+\end{itemize}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{latex_media/media/image7.jpeg}
+\caption{Optimisation des parcours de formation selon les évaluations}
+\label{fig:optimisation-parcours}
+\end{figure}
+
+\begin{itemize}
 \item
-  \includegraphics[width=5.29167in,height=3.53061in]{latex_media/media/image7.jpeg}\textbf{Comment
+  \textbf{Comment
   faciliter le suivi de l\textquotesingle évolution des compétences dans
   le temps ?} L\textquotesingle absence d\textquotesingle historisation
   des résultats limite la capacité à mesurer les progrès réalisés par
@@ -1574,12 +1649,17 @@ la méthodologie Agile Scrum, permettant :
 \item
   Réduire les risques projet
 \item
-  \includegraphics[width=5.09471in,height=2.61538in]{latex_media/media/image8.png}Favoriser
-  l\textquotesingle amélioration continue
+  Favoriser l\textquotesingle amélioration continue
 \end{itemize}
 
-Du fait que notre projet suivait la méthodologie du Scrum Agile, on
-était amené à participer aux cérémonies mentionnées précédemment. En
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{latex_media/media/image8.png}
+    \caption{Méthodologie Scrum - Cycle de développement}
+    \label{fig:cycle-scrum}
+\end{figure}
+
+Du fait que notre projet suivait la méthodologie du Scrum Agile, on était amené à participer aux cérémonies mentionnées précédemment. En
 fait, pour notre cas particulier un sprint s'étalait généralement sur
 une durée de \textasciitilde2semaines, se précédait par un sprint
 planning et se suivait par un sprint review et puis une
@@ -1601,9 +1681,16 @@ de sprint. C'est un travail collaboratif de toute l'équipe Scrum.~~
 Le Daily Scrum ou Stand up meeting, est une réunion de synchronisation
 quotidienne. Elle permet de discuter de l'avancement des tâches,
 d'éventuels problèmes, de faire marcher l'entraide et résoudre les
-blocages possibles.\,~
+blocages possibles.
 
-\includegraphics[width=5.78194in,height=3.10069in]{latex_media/media/image9.png}Pour
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{latex_media/media/image9.png}
+\caption{Organisation des réunions quotidiennes (Daily Scrum)}
+\label{fig:daily-scrum}
+\end{figure}
+
+Pour
 notre équipe de développement une réunion quotidienne d'une durée 60
 minutes maximum est organisée à 15h00. La figure ci-dessous montre le
 Daily planifié quotidiennement\,:~
@@ -1635,9 +1722,16 @@ développement à savoir la conception, le cadrage fonctionnel et
 technique, le codage, les tests internes et enfin la validation avec le
 client. Le diagramme de GANTT représente les fonctionnalités développées
 ou qui restent à développer selon la demande du client dès le début du
-projet jusqu'à sa fin.~
+projet jusqu'à sa fin.
 
-\includegraphics[width=6.3in,height=4.29077in]{latex_media/media/image10.png}Le
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{latex_media/media/image10.png}
+\caption{Diagramme de GANTT du projet Quiz Agile}
+\label{fig:gantt-quiz-agile}
+\end{figure}
+
+Le
 planning général de notre projet est représenté ci-dessous par le
 diagramme de Gantt, qui fait la répartition des tâches sur la période du
 projet. La réalisation du projet suit la méthode agile Scrum.~
@@ -1859,8 +1953,15 @@ attentes des utilisateurs.
 \subsubsection{Cartographie
 fonctionnelle}\label{cartographie-fonctionnelle}}
 
-\includegraphics[width=5.17292in,height=2.56944in]{latex_media/media/image11.png}La
-cartographie fonctionnelle ci-dessous présente une vue
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{latex_media/media/image11.png}
+\caption{Cartographie fonctionnelle du système Quiz Agile}
+\label{fig:cartographie-fonctionnelle}
+\end{figure}
+
+La
+cartographie fonctionnelle ci-dessus présente une vue
 d\textquotesingle ensemble des principales fonctionnalités du système
 Quiz Agile et leurs relations :
 
@@ -1986,8 +2087,18 @@ les contraintes techniques que le système doit respecter.
   systèmes tiers
 \item
   Support des formats d\textquotesingle échange standards (JSON, XML)
+\end{itemize}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{latex_media/media/image12.png}
+\caption{Mécanismes d'import/export de données}
+\label{fig:import-export-donnees}
+\end{figure}
+
+\begin{itemize}
 \item
-  \includegraphics[width=6.72639in,height=2.88611in]{latex_media/media/image12.png}Mécanismes
+  Mécanismes
   d\textquotesingle import/export de données
 \end{itemize}
 
@@ -2013,9 +2124,16 @@ Un acteur est l\textquotesingle idéalisation d\textquotesingle un rôle
 joué par une personne, un matériel ou un logiciel qui interagit
 directement avec le système en question. Il peut consulter et / ou
 modifier directement l'état du système en émettant ou recevant des
-messages susceptibles d'être porteurs de données.~~
+messages susceptibles d'être porteurs de données.
 
-\includegraphics[width=6.3in,height=2.30477in]{latex_media/media/image13.png}Dans
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{latex_media/media/image13.png}
+\caption{Acteurs principaux du système Quiz Agile}
+\label{fig:acteurs-principaux}
+\end{figure}
+
+Dans
 le cadre du projet QUIZ AGILE, plusieurs acteurs clés interagissent avec
 l\textquotesingle application mobile et la plateforme web. Voici une
 description de chacun d\textquotesingle eux :
@@ -2090,9 +2208,14 @@ l\textquotesingle application et les fonctionnalités associées aux
 interactions avec les acteurs, offrant ainsi une compréhension globale
 des besoins des utilisateurs et des objectifs du système.
 
-\includegraphics[width=4.30069in,height=4.50069in]{latex_media/media/image14.png}Le
-diagramme de cas d\textquotesingle utilisation ci-dessous illustre les
-principales interactions entre les acteurs et le système Quiz Agile :
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\textwidth]{latex_media/media/image14.png}
+    \caption{Diagramme de cas d'utilisation du système Quiz Agile}
+    \label{fig:cas-utilisation}
+\end{figure}
+
+Le diagramme de cas d\textquotesingle utilisation ci-dessus illustre les principales interactions entre les acteurs et le système Quiz Agile.
 
 Le diagramme de cas d\textquotesingle utilisation met en évidence les
 actions principales accessibles aux différents acteurs après
@@ -2121,15 +2244,7 @@ l\textquotesingle analyse des résultats des quiz.
   >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2367}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2367}}@{}}
 \toprule()
-\begin{minipage}[b]{\linewidth}\raggedright
-Domaine
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Cas d\textquotesingle Utilisation
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Acteurs Principaux
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Description
-\end{minipage} \\
+\cellcolor{capgeminiblue}\textcolor{white}{\textbf{Domaine}} & \cellcolor{capgeminiblue}\textcolor{white}{\textbf{Cas d\textquotesingle Utilisation}} & \cellcolor{capgeminiblue}\textcolor{white}{\textbf{Acteurs Principaux}} & \cellcolor{capgeminiblue}\textcolor{white}{\textbf{Description}} \\
 \midrule()
 \endhead
 \multirow{3}{*}{Gestion des Utilisateurs} & Créer des comptes &
@@ -2157,8 +2272,9 @@ détaillées \\
 \bottomrule()
 \end{longtable}
 
-\protect\hypertarget{_Toc203823480}{}{}Tableau 6 : Tableau récapitulatif
-des cas d\textquotesingle utilisation
+\begin{center}
+\textbf{Tableau 4 :} Tableau récapitulatif des cas d'utilisation
+\end{center}
 
 \hypertarget{description-duxe9tailluxe9e-des-domaines-fonctionnels}{%
 \subsection{Description Détaillée des Domaines
@@ -2324,81 +2440,35 @@ performances post-quiz~:
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3684}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.6316}}@{}}
 \toprule()
-\begin{minipage}[b]{\linewidth}\raggedright
-Élément
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Description Détaillée
-\end{minipage} \\
+\cellcolor{capgeminiblue}\textcolor{white}{\textbf{Élément}} & \cellcolor{capgeminiblue}\textcolor{white}{\textbf{Description Détaillée}} \\
 \midrule()
 \endhead
+\rowcolor{lightgray}
 Titre & Réalisation d\textquotesingle un Quiz en Ligne \\
 Acteur Principal & Collaborateur \\
+\rowcolor{lightgray}
 Objectif & Compléter un quiz interactivement \\
-Préconditions & \begin{minipage}[t]{\linewidth}\raggedright
-- Compte utilisateur valide\\
-- Quiz accessible\\
-- Connexion internet stable\strut
-\end{minipage} \\
-Flux Principal & \begin{minipage}[t]{\linewidth}\raggedright
-1. Accès via URL partagée\\
-2. Lecture des instructions\\
-3. Démarrage du quiz\\
-4. Navigation entre questions\\
-5. Réponse aux questions\\
-6. Soumission des réponses\strut
-\end{minipage} \\
-Actions du Système & \begin{minipage}[t]{\linewidth}\raggedright
-- Authentification\\
-- Initialisation du chronomètre\\
-- Enregistrement des réponses\\
-- Calcul du score\\
-- Génération du feedback\strut
-\end{minipage} \\
-Scénarios Alternatifs & \begin{minipage}[t]{\linewidth}\raggedright
-- Expiration du temps\\
-- Soumission automatique\\
-- Feedback immédiat possible\\
-- Réponses partielles acceptées\strut
-\end{minipage} \\
-Gestion des Erreurs & \begin{minipage}[t]{\linewidth}\raggedright
-- Sauvegarde partielle en cas de déconnexion\\
-- Blocage en cas d\textquotesingle accès non autorisé\\
-- Messages explicatifs d\textquotesingle erreur\strut
-\end{minipage} \\
-Postconditions & \begin{minipage}[t]{\linewidth}\raggedright
-- Réponses enregistrées\\
-- Score calculé\\
-- Résultats disponibles\\
-- Analyse détaillée générée\strut
-\end{minipage} \\
-Règles et Contraintes & \begin{minipage}[t]{\linewidth}\raggedright
-- Temps limité\\
-- Une seule tentative\\
-- Pas de retour arrière après soumission\\
-- Vérification des droits d\textquotesingle accès\strut
-\end{minipage} \\
-Résultat Final & \begin{minipage}[t]{\linewidth}\raggedright
-- Affichage du score\\
-- Présentation du feedback\\
-- Analyse des performances\strut
-\end{minipage} \\
-Interactions Additionnelles &
-\begin{minipage}[t]{\linewidth}\raggedright
-- Possibilité de voir les détails du quiz\\
-- Consultation du rapport détaillé\\
-- Comparaison éventuelle avec d\textquotesingle autres
-participants\strut
-\end{minipage} \\
-Critères de Succès & \begin{minipage}[t]{\linewidth}\raggedright
-- Complétion du quiz\\
-- Compréhension des résultats\\
-- Expérience utilisateur fluide\strut
-\end{minipage} \\
+Préconditions & - Compte utilisateur valide \\ & - Quiz accessible \\ & - Connexion internet stable \\
+\rowcolor{lightgray}
+Flux Principal & 1. Accès via URL partagée \\ & 2. Lecture des instructions \\ & 3. Démarrage du quiz \\ & 4. Navigation entre questions \\ & 5. Réponse aux questions \\ & 6. Soumission des réponses \\
+Actions du Système & - Authentification \\ & - Initialisation du chronomètre \\ & - Enregistrement des réponses \\ & - Calcul du score \\ & - Génération du feedback \\
+\rowcolor{lightgray}
+Scénarios Alternatifs & - Expiration du temps \\ & - Soumission automatique \\ & - Feedback immédiat possible \\ & - Réponses partielles acceptées \\
+Gestion des Erreurs & - Sauvegarde partielle en cas de déconnexion \\ & - Blocage en cas d\textquotesingle accès non autorisé \\ & - Messages explicatifs d\textquotesingle erreur \\
+\rowcolor{lightgray}
+Postconditions & - Réponses enregistrées \\ & - Score calculé \\ & - Résultats disponibles \\ & - Analyse détaillée générée \\
+Règles et Contraintes & - Temps limité \\ & - Une seule tentative \\ & - Pas de retour arrière après soumission \\ & - Vérification des droits d\textquotesingle accès \\
+\rowcolor{lightgray}
+Résultat Final & - Affichage du score \\ & - Présentation du feedback \\ & - Analyse des performances \\
+Interactions Additionnelles & - Possibilité de voir les détails du quiz \\ & - Consultation du rapport détaillé \\ & - Comparaison éventuelle avec d\textquotesingle autres participants \\
+\rowcolor{lightgray}
+Critères de Succès & - Complétion du quiz \\ & - Compréhension des résultats \\ & - Expérience utilisateur fluide \\
 \bottomrule()
 \end{longtable}
 
-\protect\hypertarget{_Toc203823482}{}{}Tableau 8: Cas
-d\textquotesingle utilisation passer un quiz
+\begin{center}
+\textcolor{capgeminiblue}{\textbf{Tableau 8 :}} Cas d\textquotesingle utilisation passer un quiz
+\end{center}
 
 \hypertarget{architecture-monolithique}{%
 \subsection{Architecture
@@ -2428,7 +2498,14 @@ Cependant, cette approche nécessite une gestion plus complexe des
 communications entre services et une attention particulière à la
 sécurité et à la résilience globale du système.
 
-\includegraphics[width=5.81739in,height=2.81077in]{latex_media/media/image15.jpeg}Le
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{latex_media/media/image15.jpeg}
+\caption{Comparaison entre architecture monolithique et microservices}
+\label{fig:comparaison-architectures}
+\end{figure}
+
+Le
 choix entre ces deux architectures dépendra des besoins spécifiques du
 projet, de l\textquotesingle équipe en place et des objectifs à long
 terme.
@@ -2511,7 +2588,12 @@ les membres de l\textquotesingle équipe, favorisant une vision commune
 de l\textquotesingle architecture logicielle et réduisant les risques
 d\textquotesingle erreurs lors de l\textquotesingle implémentation :
 
-\includegraphics[width=6.3in,height=8.85764in]{latex_media/media/image16.png}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{latex_media/media/image16.png}
+\caption{Diagramme de classes du système Quiz Agile}
+\label{fig:diagramme-classes}
+\end{figure}
 
 Le diagramme représente un système de quiz en ligne avec 6 packages
 principaux organisés en cadre "\textbf{Agile Quiz} " :
@@ -2731,7 +2813,14 @@ scalable.
 \subsubsection{Diagrammes de
 Paquetages~:}\label{diagrammes-de-paquetages}}
 
-\includegraphics[width=6.3in,height=6.64399in]{latex_media/media/image17.png}Le
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{latex_media/media/image17.png}
+\caption{Diagramme de paquetages de l'architecture système}
+\label{fig:diagramme-paquetages}
+\end{figure}
+
+Le
 diagramme présente une architecture en couches avec un package
 racine~com.quizapp.domain~contenant 6 sous-packages spécialisés :
 
@@ -2860,7 +2949,14 @@ racine~com.quizapp.domain~contenant 6 sous-packages spécialisés :
 \hypertarget{flux-des-duxe9pendances}{%
 \subsection{Flux des Dépendances}\label{flux-des-duxe9pendances}}
 
-\includegraphics[width=4.20833in,height=4.90069in]{latex_media/media/image18.png}Les
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{latex_media/media/image18.png}
+\caption{Flux des dépendances entre packages}
+\label{fig:flux-dependances}
+\end{figure}
+
+Les
 relations entre packages suivent un flux logique :
 
 \hypertarget{explications}{%
@@ -2937,11 +3033,14 @@ séquence de messages.~
 
 En fait, chaque cas d'utilisation est associé à son propre diagramme de
 séquence vue qu'en général différents acteurs interagissent de manière
-différente selon le cas d'utilisation.~~
+différente selon le cas d'utilisation.
 
-\includegraphics[width=6.3in,height=5.4916in]{latex_media/media/image19.png}
-
-\protect\hypertarget{_Toc203823427}{}{}Figure 15: Diagramme de séquence
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{latex_media/media/image19.png}
+\caption{Diagramme de séquence du système Quiz Agile}
+\label{fig:diagramme-sequence}
+\end{figure}
 
 \hypertarget{diagrammes-dactivituxe9s--processus-de-passage-dun-quiz}{%
 \subsubsection{Diagrammes d'activités- Processus de Passage
@@ -2956,7 +3055,12 @@ scores et la gestion des statuts de réussite ou d'échec. Ce diagramme
 d'activité permet de visualiser clairement le flux de contrôle et les
 principales décisions prises au cours d'une session de quiz.
 
-\includegraphics[width=4.53403in,height=7.32986in]{latex_media/media/image20.png}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{latex_media/media/image20.png}
+\caption{Diagramme d'activité - Processus de passage d'un quiz}
+\label{fig:diagramme-activite-quiz}
+\end{figure}
 
 \hypertarget{diagramme-duxe9tat---tentative-de-quiz}{%
 \subsubsection{Diagramme d\textquotesingle État - Tentative de
@@ -2964,12 +3068,14 @@ Quiz}\label{diagramme-duxe9tat---tentative-de-quiz}}
 
 Le diagramme suivant représente les différents états d'une tentative de
 quiz. Il met en évidence les transitions possibles selon les actions de
-l'utilisateur et le temps imparti~:
+l'utilisateur et le temps imparti :
 
-\hypertarget{section-4}{%
-\subsubsection{}\label{section-4}}
-
-\includegraphics[width=6.82708in,height=4.57361in]{latex_media/media/image21.png}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{latex_media/media/image21.png}
+\caption{Diagramme d'état - Tentative de quiz}
+\label{fig:diagramme-etat-tentative}
+\end{figure}
 
 \hypertarget{diagramme-duxe9tat---statut-du-quiz}{%
 \subsubsection{Diagramme d\textquotesingle État - Statut du
@@ -2981,10 +3087,12 @@ actions possibles ainsi que leur impact sur la disponibilité du quiz
 pour les participants. Cette modélisation clarifie le cycle de vie
 complet d\textquotesingle un quiz au sein de la plateforme.
 
-\includegraphics[width=6.27607in,height=4.4375in]{latex_media/media/image22.png}
-
-\protect\hypertarget{_Toc203823483}{}{}Tableau 9 : Diagramme
-d\textquotesingle État - Statut du Quiz
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{latex_media/media/image22.png}
+\caption{Diagramme d'état - Statut du quiz}
+\label{fig:diagramme-etat-quiz}
+\end{figure}
 
 \hypertarget{conclusion-2}{%
 \subsubsection{\texorpdfstring{\textbf{Conclusion}~:}{Conclusion~:}}\label{conclusion-2}}
@@ -3072,7 +3180,12 @@ L\textquotesingle architecture de microservices fournit aux développeurs
 une application entièrement fermée, y compris des serveurs
 d\textquotesingle applications intégrés.
 
-\includegraphics[width=3.66042in,height=1.15069in]{latex_media/media/image23.png}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{latex_media/media/image23.png}
+\caption{Logo Spring Boot}
+\label{fig:logo-spring-boot}
+\end{figure}
 
 \hypertarget{configuration-technique-du-projet}{%
 \paragraph{Configuration technique du projet
@@ -3111,7 +3224,12 @@ des applications pour Android, Android TV, iOS, macOS, tvOS, Web,
 Windows et UWP en permettant aux développeurs d\textquotesingle utiliser
 le framework React avec les capacités de la plateforme native.
 
-\includegraphics[width=2.74792in,height=1.54583in]{latex_media/media/image24.png}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{latex_media/media/image24.png}
+\caption{Logo React}
+\label{fig:logo-react}
+\end{figure}
 
 \hypertarget{configuration-technique-du-projet-1}{%
 \paragraph{\texorpdfstring{\textbf{Configuration technique du projet
@@ -3176,7 +3294,12 @@ serveur.
   \end{itemize}
 \end{itemize}
 
-\includegraphics[width=4.44306in,height=1.30208in]{latex_media/media/image25.png}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{latex_media/media/image25.png}
+\caption{Logo JWT (JSON Web Token)}
+\label{fig:logo-jwt}
+\end{figure}
 
 \hypertarget{base-de-donnuxe9es}{%
 \subsection{\texorpdfstring{Base de données
@@ -3206,7 +3329,12 @@ ces relations aident à structurer les données.
   \textbf{Tests} : H2 Database pour les tests unitaires
 \end{itemize}
 
-\includegraphics[width=4.02153in,height=2.11597in]{latex_media/media/image26.png}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{latex_media/media/image26.png}
+\caption{Logo PostgreSQL}
+\label{fig:logo-postgresql}
+\end{figure}
 
 \hypertarget{systuxe8me-de-gestion-de-duxe9pendances}{%
 \subsection{Système de gestion de
@@ -3234,7 +3362,12 @@ la construction utilisé principalement pour les projets Java. Maven
 aborde deux aspects de la création de logiciels : la manière dont les
 logiciels sont créés et leurs dépendances.
 
-\includegraphics[width=2.16042in,height=0.94167in]{latex_media/media/image27.png}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{latex_media/media/image27.png}
+\caption{Logo Maven}
+\label{fig:logo-maven}
+\end{figure}
 
 \hypertarget{configuration-du-projet}{%
 \paragraph{. Configuration du projet :}\label{configuration-du-projet}}
@@ -3272,7 +3405,12 @@ Inc. npm est le gestionnaire de paquets par défaut pour
 l\textquotesingle environnement d\textquotesingle exécution JavaScript
 Node.js.
 
-\includegraphics[width=1.36319in,height=1.36319in]{latex_media/media/image28.png}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.3\textwidth]{latex_media/media/image28.png}
+\caption{Logo npm}
+\label{fig:logo-npm}
+\end{figure}
 
 \hypertarget{configuration-du-projet-1}{%
 \paragraph{Configuration du projet :}\label{configuration-du-projet-1}}
@@ -3327,7 +3465,12 @@ modifications apportées par plusieurs personnes en une seule source, de
 sorte que le risque d\textquotesingle écraser les modifications
 apportées par le collègue est négligeable.
 
-\includegraphics[width=2.32361in,height=0.97014in]{latex_media/media/image29.png}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{latex_media/media/image29.png}
+\caption{Logo Git}
+\label{fig:logo-git}
+\end{figure}
 
 \hypertarget{gitlab}{%
 \subparagraph{GitLab~:}\label{gitlab}}
@@ -3342,12 +3485,19 @@ différentes\,versions. Son usage est particulièrement indiqué pour les
 développeurs qui souhaitent disposer d'un outil réactif et accessible.
 GitLab revendique plus de 100\,000\,organisations utilisant sa
 plateforme à travers le monde. Ce qui représente un total de plus de
-30\,millions d\textquotesingle utilisateurs enregistrés.~~
+30\,millions d\textquotesingle utilisateurs enregistrés.
 
-\includegraphics[width=3.03542in,height=0.92639in]{latex_media/media/image30.png}Avec
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{latex_media/media/image30.png}
+\caption{Logo GitLab}
+\label{fig:logo-gitlab}
+\end{figure}
+
+Avec
 GitLab, nous avons pu simultanément créer du code, suivre les
 modifications et innover des solutions aux problèmes pouvant survenir au
-cours du processus de développement de notre application\textbf{.}~
+cours du processus de développement de notre application.
 
 \hypertarget{ide-et-outils-de-test}{%
 \subsection{IDE et outils de Test~:}\label{ide-et-outils-de-test}}
@@ -3538,11 +3688,12 @@ automatiquement les modifications du code, exécuter les tests unitaires,
 et déployer les versions de l'application dans différents environnements
 (développement, recette, production).
 
-\includegraphics[width=5.45021in,height=3.41359in]{latex_media/media/image40.png}
-
-\begin{quote}
-Figure 34: Statut des Conteneurs
-\end{quote}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{latex_media/media/image40.png}
+\caption{Statut des conteneurs Docker}
+\label{fig:statut-conteneurs}
+\end{figure}
 
 \hypertarget{tests-et-qualituxe9-avec-sonarqube}{%
 \subsection{Tests et Qualité avec
