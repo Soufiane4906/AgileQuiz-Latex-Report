@@ -1,0 +1,1409 @@
+%================= PREAMBULE =================
+\documentclass[12pt,a4paper]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{lmodern}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+\usepackage{tabularx}
+\usepackage[table]{xcolor}
+\usepackage{ragged2e}
+\usepackage{grffile}
+
+
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{array,booktabs}
+
+% Couleurs & style des titres
+\usepackage{xcolor}
+\definecolor{myblue}{RGB}{0,51,153} % bleu foncé
+\usepackage{sectsty}
+\sectionfont{\color{myblue}}
+\subsectionfont{\color{black}}
+\subsubsectionfont{\color{black}}
+
+% Hyperliens (après xcolor)
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  urlcolor=myblue,
+  citecolor=myblue
+}
+
+% Pied de page
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+\begin{document}
+\thispagestyle{empty} % Supprime le numéro de page
+
+\begin{center}
+
+% Logos en haut
+\begin{minipage}{0.45\textwidth}\centering
+  \includegraphics[height=6.5cm]{images/logoemsi.png}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}\centering
+  \includegraphics[height=3.5cm]{images/logo unica.jpg}
+\end{minipage}
+
+\vspace{1cm}
+
+{\Large \textbf{PROJET DE FIN D'ÉTUDES}}\\[0.5cm]
+
+{\Large \textbf{Développement d’une application mobile basée sur l’IA \\
+pour la détection du niveau d’aflatoxine dans les grains de maïs}}\\[1cm]
+
+{\large Filière: \textbf{Ingénierie Informatique et Réseaux (5\ieme{} année)}}\\[1.2cm]
+
+\includegraphics[height=3cm]{images/logo roquette.png}\\[0.4cm]
+
+{\large \textbf{Organisme d’accueil: ROQUETTE FRÈRES}}\\[1.5cm]
+
+\begin{tabular}{@{}>{\bfseries}r l@{}}
+  Réalisé par:& QORAICHI IBTIHAL \\
+  Encadrant(s) professionnel(s):& PIERRE-LOUIS BESCOND \\
+                                  & MATHIEU KLIMCZAK \\
+  Encadrant pédagogique:& MOHAMMED BOUSSEMAH \\
+\end{tabular}
+
+\vfill
+{\large Année universitaire: \textbf{2024/2025}}
+
+\end{center}
+% ---------------- Dédicaces (nouvelle page) ----------------
+\clearpage
+\thispagestyle{empty}
+\begin{center}
+    {\Large\bfseries Dédicaces}\par
+    \vspace{1.2cm}
+
+    \begin{minipage}{0.85\linewidth}
+    \centering
+    Je dédie ce travail, fruit de plusieurs mois d’efforts, de recherches et d’engagement,\par
+    \vspace{0.6em}
+
+    \textbf{À mes chers parents, Laila Akrout et Hammadi Qoraichi,}\par
+    pour leur amour infini, leurs sacrifices, leurs prières et leur soutien indéfectible
+    dans chaque étape de ma vie. Vous êtes ma plus grande source d’inspiration et de force.\par
+    \vspace{0.8em}
+
+    \textbf{À la mémoire de mon grand-père, Abdessalam Qoraichi,}\par
+    dont le souvenir continue d’éclairer mes pas et d’inspirer mes ambitions.\par
+    \vspace{0.8em}
+
+    \textbf{À mes frères et sœurs Wiam, Rim et Amine,}\par
+    pour leur affection, leur complicité et leurs encouragements constants,
+    qui m’ont soutenue dans les moments les plus exigeants.\par
+    \vspace{0.8em}
+
+    \textbf{À mes grands-parents et à toute ma famille,}\par
+    pour leur bienveillance, leurs prières et leur confiance en moi.\par
+    \vspace{0.8em}
+
+    \textbf{À mes amis,}\par
+    pour leur présence précieuse, leur joie et leurs encouragements qui ont rendu
+    ce parcours plus humain et plus agréable.\par
+    \vspace{0.8em}
+
+    \textbf{Enfin,}\par
+    à toutes celles et ceux qui, de près ou de loin, ont cru en moi,
+    m’ont soutenue et motivée tout au long de ce chemin.\par
+    \vspace{1.2em}
+
+    \emph{Merci à vous tous.}
+    \end{minipage}
+\end{center}
+
+\clearpage
+
+%================= PAGE 3 — REMERCIEMENTS ===============
+\cleardoublepage
+\pagenumbering{roman} % Commence la numérotation en chiffres romains
+\setcounter{page}{1}
+\addcontentsline{toc}{chapter}{Remerciements}
+\vspace*{1.5cm}
+
+\begin{center}
+    {\Large\bfseries Remerciements}\par
+    \vspace{1.2cm}
+
+    \begin{minipage}{0.85\linewidth}
+    \centering
+    J’exprime ma profonde reconnaissance à mon encadrant professionnel, \textbf{Monsieur Pierre-Louis Bescond}, Head of Data Analytics chez Roquette, pour la confiance qu’il m’a accordée, ses conseils avisés et son accompagnement tout au long de cette expérience.\par
+    \vspace{0.8em}
+
+    Mes sincères remerciements vont également à \textbf{Monsieur Mathieu Klimczak}, Head of DevOps, pour son aide précieuse, sa disponibilité et son soutien constant dans la réalisation de ce projet.\par
+    \vspace{0.8em}
+
+    Je tiens à remercier chaleureusement \textbf{toute l’équipe Data de Roquette}, pour leur accueil, leur disponibilité et leur bienveillance, qui ont largement contribué à rendre ce stage formateur et agréable.\par
+    \vspace{0.8em}
+
+    Je souhaite également remercier mon encadrant pédagogique, \textbf{Monsieur Mohammed Bousmah}, pour son suivi rigoureux, ses conseils précieux et son accompagnement tout au long de ces six mois.\par
+    \vspace{0.8em}
+
+    Enfin, j’exprime ma gratitude à l’\textbf{École Marocaine des Sciences de l’Ingénieur (EMSI)} pour la qualité de l’enseignement reçu durant ces cinq années de formation, qui m’ont permis de mener à bien ce projet.\par
+
+    \vspace{1.2em}
+    \emph{À toutes celles et ceux qui, de près ou de loin, ont contribué à cette réussite: merci infiniment.}
+    \end{minipage}
+\end{center}
+\clearpage
+
+%================= PAGE RÉSUMÉ =================
+\cleardoublepage
+\addcontentsline{toc}{chapter}{Résumé}
+\vspace*{1.5cm}
+\begin{center}
+    {\Large\bfseries Résumé}\par
+    \vspace{1.2cm}
+    \begin{minipage}{0.85\linewidth}
+    \justifying
+    Ce projet de fin d’études, mené au sein de Roquette Frères, a porté sur le développement d'une solution innovante pour la détection du niveau d'aflatoxine dans les grains de maïs. Le projet, nommé ADOM, vise à remplacer un processus d'analyse en laboratoire long et coûteux par une application mobile basée sur l'intelligence artificielle. La solution utilise un modèle de Deep Learning pour analyser des images de grains de maïs et fournir une classification instantanée, permettant d'accélérer la prise de décision d'achat et d'améliorer la sécurité alimentaire. Le développement a suivi une méthodologie agile Scrum et s'est appuyé sur un écosystème technologique moderne incluant Python, TensorFlow, Flask pour le backend, Flutter pour l'application mobile, et les services cloud de Microsoft Azure pour l'entraînement des modèles et le déploiement.
+    \vspace{2cm}
+    \par
+    \textbf{Mots clés:} Intelligence Artificielle, Deep Learning, Vision par Ordinateur, Application Mobile, Flutter, Flask, Azure, Aflatoxine, Sécurité Alimentaire, Maïs.
+    \end{minipage}
+\end{center}
+\clearpage
+
+%================= PAGE ABSTRACT =================
+\cleardoublepage
+\addcontentsline{toc}{chapter}{Abstract}
+\vspace*{1.5cm}
+\begin{center}
+    {\Large\bfseries Abstract}\par
+    \vspace{1.2cm}
+    \begin{minipage}{0.85\linewidth}
+    \justifying
+    This final year project, carried out at Roquette Frères, focused on developing an innovative solution for detecting aflatoxin levels in corn kernels. The project, named ADOM, aims to replace a lengthy and costly laboratory analysis process with a mobile application based on artificial intelligence. The solution uses a Deep Learning model to analyze images of corn kernels and provide instant classification, thereby speeding up purchasing decisions and improving food safety. The development followed an Agile Scrum methodology and relied on a modern technological ecosystem including Python, TensorFlow, Flask for the backend, Flutter for the mobile application, and Microsoft Azure cloud services for model training and deployment.
+    \vspace{2cm}
+    \par
+    \textbf{Keywords:} Artificial Intelligence, Deep Learning, Computer Vision, Mobile Application, Flutter, Flask, Azure, Aflatoxin, Food Safety, Corn.
+    \end{minipage}
+\end{center}
+\clearpage
+
+%================= LISTE DES ABRÉVIATIONS ==================
+\cleardoublepage
+\addcontentsline{toc}{chapter}{Liste des abréviations}
+\chapter*{Liste des abréviations}
+\begin{tabularx}{\textwidth}{lX}
+    \toprule
+    \textbf{Abréviation} & \textbf{Signification} \\
+    \midrule
+    IA & Intelligence Artificielle \\
+    API & Application Programming Interface \\
+    CNN & Convolutional Neural Network (Réseau de Neurones Convolutif) \\
+    CI/CD & Continuous Integration/Continuous Deployment (Intégration Continue/Déploiement Continu) \\
+    RSE & Responsabilité Sociale des Entreprises \\
+    DADS & Data Analysis \& Data Science \\
+    DS & Data Science \\
+    EDA & Exploratory Data Analysis \\
+    PPB & Parts Per Billion (Parties par milliard) \\
+    RGPD & Règlement Général sur la Protection des Données \\
+    UML & Unified Modeling Language \\
+    IDE & Integrated Development Environment (Environnement de Développement Intégré) \\
+    IoT & Internet of Things (Internet des objets) \\
+    IAM & Identity and Access Management (Gestion des identités et des accès) \\
+    \bottomrule
+\end{tabularx}
+\cleardoublepage
+
+
+%================= SOMMAIRE & LISTES ==================
+\tableofcontents
+\cleardoublepage
+\addcontentsline{toc}{chapter}{Liste des figures}
+\listoffigures
+\cleardoublepage
+
+%================= INTRODUCTION GENERALE =================
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\chapter*{Introduction générale}
+\addcontentsline{toc}{chapter}{Introduction générale}
+
+\noindent
+L’entreprise fait actuellement face à une problématique majeure lors de l’achat de grains de maïs.
+Chaque fois que ses acheteurs se rendent chez des fournisseurs, ils doivent prélever des échantillons de grains
+et les envoyer ensuite au laboratoire de l’entreprise pour analyse.
+Ce processus, bien que fiable, est long et retarde considérablement la prise de décision d’achat.
+Il vise à détecter le niveau d’\textbf{aflatoxine} présent dans les grains de maïs.
+L’aflatoxine est une toxine produite par certains champignons susceptibles de contaminer les céréales comme le maïs,
+et qui représente un risque important pour la santé humaine et animale.
+
+\medskip
+\noindent
+Dans le cadre du \textbf{projet ADOM}, nous avons successivement entrepris plusieurs étapes visant à concevoir,
+développer et déployer une solution complète de détection de l’aflatoxine dans les grains de maïs.
+La première étape a consisté à préparer l’environnement technique en récupérant et en configurant le matériel nécessaire.
+Une attention particulière a été portée à l’utilisation des ressources cloud, notamment \textbf{Azure Machine Learning},
+ainsi qu’à la mise en place des outils de développement tels que Python et Azure DevOps
+pour assurer une gestion efficace du projet.
+
+\medskip
+\noindent
+Une fois l’environnement opérationnel, nous avons développé nos premiers modèles d’intelligence artificielle en local,
+en utilisant des techniques de \textbf{Deep Learning} adaptées à la reconnaissance et à l’analyse d’images.
+La phase suivante a été la création d’une \textbf{API Flask}, permettant la communication entre nos modèles d’IA
+et une application mobile.
+Ce dispositif initial, fonctionnant en local, a constitué une étape cruciale pour valider la faisabilité du système.
+
+\medskip
+\noindent
+Par la suite, nos efforts se sont concentrés sur l’amélioration des modèles en optimisant leur précision et leur robustesse,
+afin de garantir des prédictions fiables dans des conditions variées.
+Enfin, pour assurer une gestion optimale du code et une automatisation efficace des processus,
+nous avons migré l’ensemble du développement vers \textbf{Azure DevOps}, en y intégrant des pipelines de compilation
+et de déploiement automatique.
+
+\medskip
+\noindent
+Ce processus structuré a permis de bâtir un système complet, \textbf{scalable} et prêt à être déployé dans un environnement plus large,
+tout en nous permettant d’adopter de bonnes pratiques en gestion de projet logiciel
+et en développement de solutions d’intelligence artificielle.
+
+\medskip
+\noindent
+Ce mémoire retrace l’ensemble des étapes de ce projet. Il est structuré de la manière suivante:
+\begin{itemize}
+    \item \textbf{Chapitre I:} Présente le contexte général du projet, l’organisation d’accueil, les enjeux industriels ainsi que les objectifs poursuivis.
+    \item \textbf{Chapitre II:} Détaille l’étude préliminaire, les solutions existantes et les besoins identifiés.
+    \item \textbf{Chapitre III:} Expose l’analyse fonctionnelle et conceptuelle, avec les cas d’utilisation, les user stories et les diagrammes de séquence et de classes.
+    \item \textbf{Chapitre IV:} Présente l’étude technique, les choix d’architecture, l’environnement de développement et la mise en œuvre concrète du système, illustrée par les interfaces clés de l’application.
+\end{itemize}
+%================= CHAPITRE 1 — PAGE D'OUVERTURE =========
+\cleardoublepage
+\thispagestyle{empty}
+\begin{center}
+    \vspace*{4cm}
+    {\Huge \textbf{Chapitre 1}}\\[1.5cm]
+    {\LARGE \textbf{Présentation du cadre de projet}}
+\end{center}
+\cleardoublepage
+
+%================= CHAPITRE 1 — CONTENU ==================
+% Ne PAS mettre \chapter{...} ici, sinon doublon visuel.
+% Incrémente le chapitre + ajoute au sommaire + met à jour l’en-tête
+\refstepcounter{chapter}
+\addcontentsline{toc}{chapter}{Chapitre \thechapter: Présentation du cadre de projet}
+\markboth{Chapitre \thechapter: Présentation du cadre de projet}{}
+\setcounter{section}{0}
+
+% Numérotation des pages principales
+
+
+\section{Introduction}
+
+Roquette est un leader mondial dans la transformation des végétaux, notamment du maïs, \ldots{}
+
+en ingrédients et solutions destinés aux secteurs de l’alimentation, de la nutrition et des biotechnologies.
+Soucieuse de garantir la qualité et la sécurité de ses produits, l’entreprise accorde une importance capitale
+à la détection des contaminants dans ses matières premières, en particulier l’\textbf{aflatoxine},
+une toxine naturelle pouvant affecter le maïs et représenter un risque important pour la santé humaine et animale.
+
+\medskip
+\noindent
+Cependant, le procédé actuel de contrôle, qui impose l’envoi systématique d’échantillons en laboratoire pour analyse,
+se révèle à la fois \textbf{long}, \textbf{coûteux} et peu flexible face aux besoins opérationnels du terrain.
+Ces contraintes retardent la prise de décision et limitent l’efficacité du processus d’approvisionnement.
+
+\medskip
+\noindent
+C’est dans ce contexte qu’est né le \textbf{projet ADOM}, dont l’objectif principal est de concevoir et de mettre en œuvre
+une solution innovante, basée sur l’intelligence artificielle et l’analyse d’images,
+afin de permettre une détection rapide et fiable de l’aflatoxine directement chez les fournisseurs.
+
+\medskip
+\noindent
+Ainsi, ce projet poursuit plusieurs objectifs:
+\begin{itemize}
+    \item Optimiser la chaîne d’approvisionnement;
+    \item Accélérer la prise de décision lors des achats de grains;
+    \item Renforcer le contrôle qualité;
+    \item Inscrire l’entreprise dans une démarche d’innovation technologique durable.
+\end{itemize}
+\clearpage
+
+\section{Présentation de l’entreprise}
+
+\subsection*{Historique et identité}
+Roquette Frères est une entreprise familiale fondée en 1933 par \textbf{Dominique et Germain Roquette}.
+Elle s’est spécialisée dans la transformation de matières premières d’origine végétale,
+fournissant des ingrédients de haute qualité pour l’alimentation, la pharmacie,
+la nutrition animale et l’industrie.
+Avec près d’un siècle d’expérience, Roquette s’impose aujourd’hui comme un acteur mondial de référence
+dans son domaine.
+
+\subsection*{Domaines d’activité}
+\begin{enumerate}
+  \item \textbf{Alimentation}: Roquette propose des protéines végétales, des fibres, des amidons et des polyols,
+  permettant d’enrichir la qualité nutritionnelle des produits alimentaires.
+  \item \textbf{Pharmacie et Santé}: Développement d’excipients et ingrédients actifs répondant aux normes
+  strictes de l’industrie pharmaceutique.
+  \item \textbf{Nutrition et Santé animale}: Fourniture de solutions pour le bien-être et la performance
+  des animaux d’élevage.
+  \item \textbf{Industrie}: Conception d’ingrédients pour divers usages industriels: adhésifs,
+  produits chimiques, textile, cosmétique ou fermentation.
+\end{enumerate}
+
+\subsection*{Présence internationale}
+Roquette est présente dans plus de \textbf{100 pays}, avec \textbf{30 sites industriels} et un réseau mondial
+de centres de recherche et développement.
+Cette implantation lui permet de répondre efficacement aux attentes des clients sur tous les continents,
+avec une capacité d’innovation forte.
+
+\subsection*{Engagements RSE}
+Fidèle à sa devise \og\textit{Offering the best of nature}\fg{},
+Roquette place le développement durable au cœur de sa stratégie.
+L’entreprise s’est engagée à réduire de \textbf{25\,\%} ses émissions de gaz à effet de serre d’ici 2030,
+illustrant une volonté claire de contribuer à une industrie plus responsable et respectueuse de l’environnement.
+
+\subsection*{Présence globale}
+Aujourd’hui, l’entreprise est implantée dans plus de 100 pays,
+avec un total de 30 sites répartis à travers le monde.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{images/les sites de lent.png}
+    \caption{Présence mondiale de Roquette Frères}
+    \label{fig:presence}
+\end{figure}
+
+\noindent
+Au-delà de l’excellence produit, la devise \textit{Offering the best of nature} reflète une volonté d’adopter des pratiques respectueuses de l’environnement et socialement responsables.
+
+\cleardoublepage
+\section{Présentation de l’équipe Data \& Advanced Analytics}
+
+Le rôle de l’équipe \textbf{Data \& Advanced Analytics} est d'aider l’entreprise et ses collaborateurs
+à exploiter pleinement le potentiel et la valeur de leurs données.
+Cette équipe est divisée en deux sous-équipes principales:
+\textbf{Data Analysis \& Data Science (DADS)} et \textbf{Data Governance \& Data Platform}.
+
+\vspace{0.5cm}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\linewidth]{images/organigrame le l'entreprise.png}
+    \caption{Organigramme de l’équipe Data \& Advanced Analytics}
+    \label{fig:equipe-data}
+\end{figure}
+\textbf{Équipe DADS (Data Analysis \& Data Science)}
+
+L’équipe \textbf{DADS} se concentre sur l'analyse de données et la science des données:
+\begin{itemize}
+    \item \textbf{DS Manager}: coordination, supervision des projets et appui aux décisions stratégiques;
+    \item \textbf{Data Analyst}: valorisation des données via des tableaux d’analyse et accompagnement des métiers;
+    \item \textbf{Data Scientist}: modélisation prédictive et analyses avancées.
+\end{itemize}
+\cleardoublepage
+\section{Présentation du projet} % 1.4
+
+\subsection{Étude de l’existant} % 1.4.1
+Actuellement, la détection du niveau d’\textbf{aflatoxine} dans les grains de maïs repose sur un processus manuel, long et coûteux.
+En Inde, lors de chaque transaction commerciale, les acheteurs de maïs de l’entreprise \textbf{Roquette Frères} prélèvent des échantillons directement chez les fournisseurs et les envoient dans des laboratoires spécialisés.
+Ces analyses permettent de mesurer la concentration d’aflatoxine, mais elles nécessitent plusieurs jours et entraînent des coûts logistiques importants.
+De plus, ce processus retarde les décisions d’achat et complique la traçabilité.
+
+\subsection{Problématique} % 1.4.2
+L’\textbf{aflatoxine} est une toxine produite par certaines moisissures (comme \textit{Aspergillus flavus} et \textit{Aspergillus parasiticus}) qui se développent sur les cultures de maïs et d’autres céréales.
+Elle représente un danger majeur pour la santé humaine et animale, car elle peut contaminer la chaîne alimentaire et provoquer des intoxications graves, voire des cancers en cas d’exposition chronique.
+
+Pour Roquette, la problématique est double:
+\begin{itemize}
+    \item \textbf{Assurer la qualité et la sécurité sanitaire} des matières premières (maïs) dès le point d’achat;
+    \item \textbf{Réduire les coûts et délais} liés aux analyses en laboratoire, tout en permettant aux acheteurs sur le terrain de prendre une décision immédiate (accepter ou rejeter un lot).
+\end{itemize}
+
+En l’absence de technologie simple et rapide, l’entreprise est confrontée à un risque économique, sanitaire et réglementaire.
+
+\subsection{Solution proposée} % 1.4.3
+Afin de répondre à ces enjeux, le projet vise à développer une \textbf{application mobile intégrant un modèle d’intelligence artificielle} basé sur la vision par ordinateur et le \textbf{Deep Learning}.
+L’application permettra aux acheteurs de:
+\begin{itemize}
+    \item Prendre une photo des grains de maïs directement sur le marché;
+    \item Envoyer l’image au modèle IA (intégré ou via une API);
+    \item Obtenir une \textbf{classification instantanée} du niveau d’aflatoxine (acceptable / non acceptable, ou par bande de risque);
+    \item Décider immédiatement du sort du lot (achat, rejet, ou contrôle complémentaire).
+\end{itemize}
+
+Les principaux bénéfices attendus sont:
+\begin{itemize}
+    \item \textbf{Rapidité}: un diagnostic en quelques secondes au lieu de plusieurs jours;
+    \item \textbf{Réduction des coûts}: moins d’analyses en laboratoire et de logistique;
+    \item \textbf{Accessibilité terrain}: utilisation directe par les acheteurs de maïs en Inde;
+    \item \textbf{Amélioration de la traçabilité et de la sécurité alimentaire}.
+\end{itemize}
+
+Ce projet s’inscrit dans une stratégie plus large de \textbf{digitalisation des processus qualité et achats} de Roquette Frères, et constitue une étape importante vers une chaîne d’approvisionnement plus efficace et sécurisée.
+
+\cleardoublepage
+\section{Conduite du projet}
+
+Le processus de développement constitue un facteur clé dans la réussite d’un projet logiciel, car il permet de structurer les différentes phases de travail et de suivre l’évolution de la solution dans un cadre clair et itératif. Afin de répondre efficacement aux exigences de performance, de fiabilité et de rapidité de notre système de détection d’aflatoxine, nous avons adopté une méthode de gestion de projet agile: \textbf{Scrum}.
+
+\subsection{Méthodologie Scrum adaptée au projet}
+
+Le projet a été conduit en s’inspirant de la méthodologie agile Scrum, tout en l’adaptant au cadre d’un stage de fin d’études. Cette approche a permis de structurer les différentes phases du développement de manière itérative, tout en assurant un suivi régulier avec le tuteur et l’équipe Data Science de Roquette.
+
+L’organisation du travail s’est faite sous forme de \textbf{sprints de deux semaines}, au terme desquels un ensemble de fonctionnalités était livré, testé et validé. Chaque sprint visait la construction progressive d’un composant clé de la solution (préparation du dataset, entraînement du modèle CNN, API Flask, application mobile Flutter, pipeline CI/CD).
+
+\subsection{Modalités de suivi}
+Le suivi du projet a reposé sur une organisation régulière de réunions permettant d’assurer à la fois un accompagnement technique et un pilotage global:
+
+\begin{itemize}
+    \item \textbf{Réunions hebdomadaires avec l’équipe Data} pour suivre l’avancement des projets en cours et garantir l’alignement avec les standards techniques.
+    \item \textbf{Revue ADOM hebdomadaire avec le Lead DevOps} afin de traiter les aspects techniques du projet (intégration, CI/CD, déploiement) et lever rapidement les blocages.
+    \item \textbf{Réunions bimensuelles avec le tuteur de stage} pour présenter l’avancement (réalisations, tâches à venir), discuter des difficultés rencontrées et recueillir des retours constructifs.
+
+\end{itemize}
+
+\subsection{Éléments Scrum appliqués}
+
+Même adapté à un cadre académique, plusieurs principes fondamentaux de Scrum ont été conservés:
+\begin{itemize}
+    \item \textbf{Sprint Planning}: définition des objectifs et livrables en début de chaque cycle.
+    \item \textbf{Sprint Review}: démonstration et validation en fin de sprint.
+
+\end{itemize}
+
+\subsection{Organisation des livrables}
+
+Grâce à cette approche itérative, le projet a progressé de manière structurée, avec l’intégration successive des composants suivants:
+\begin{itemize}
+    \item Préparation et nettoyage du \textbf{dataset d’images de maïs};
+    \item Entraînement du \textbf{modèle CNN} avec TensorFlow;
+    \item Développement d’une \textbf{API Flask} pour la prédiction;
+    \item Intégration du modèle dans l’\textbf{application mobile Flutter};
+    \item Mise en place des \textbf{pipelines CI/CD} avec Azure DevOps.
+\end{itemize}
+
+Cette démarche agile a permis de rester réactif face aux retours, d’intégrer progressivement les différents modules techniques et de garantir une meilleure maîtrise du cycle de développement du projet ADOM.\@
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\linewidth]{images/agile.png}
+    \caption{Cycle de la méthodologie agile Scrum appliqué au projet ADOM}
+    \label{fig:agile}
+\end{figure}
+
+\cleardoublepage
+\section{Planning prévisionnel}
+
+Le travail a été structuré en \textbf{sprints de deux semaines}, permettant une progression incrémentale et itérative.
+Chaque phase du projet a été planifiée afin de garantir une bonne répartition des tâches et une cohérence entre les livrables.
+Le planning (figure~\ref{fig:planning}) illustre les étapes principales:
+
+\begin{itemize}
+    \item \textbf{Préparation de l’environnement}: installation des outils, configuration des environnements de développement et mise en place des dépôts Git;
+    \item \textbf{Conception}: définition de l’architecture, choix des technologies, et conception des modules principaux;
+    \item \textbf{Réalisation}: développement progressif des composants (modèle CNN, API Flask, application Flutter, CI/CD) réparti sur plusieurs sprints;
+    \item \textbf{Test et Validation}: phase de tests unitaires, intégration et validation fonctionnelle;
+    \item \textbf{Déploiement}: mise en production et finalisation du livrable, incluant les ajustements nécessaires.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\linewidth]{images/planification de projet.png}
+    \caption{Planning prévisionnel du projet ADOM}
+    \label{fig:planning}
+\end{figure}
+\cleardoublepage
+\section{Conclusion}
+
+Ce premier chapitre a permis de dresser un panorama de \textbf{Roquette}, de ses activités et de ses engagements, tout en soulignant le rôle central de la \textbf{Data \& Advanced Analytics} dans ses projets d’innovation.
+
+L’analyse de l’existant a mis en évidence les limites du processus actuel de détection de l’aflatoxine dans le maïs: lenteur, coûts élevés, dépendance aux laboratoires et manque de réactivité. Ces constats révèlent la nécessité de disposer d’une solution plus rapide, fiable et accessible directement sur le terrain.
+
+Le projet \textbf{ADOM} s’inscrit dans cette perspective en proposant une application mobile intégrant un modèle de \textbf{Deep Learning}. Développée selon une approche \textbf{agile Scrum}, cette solution vise à accélérer la prise de décision, améliorer la traçabilité et réduire les coûts liés au contrôle qualité, tout en offrant une alternative innovante et opérationnelle au processus traditionnel.
+
+% =======================
+% Page d'ouverture du Chapitre 2
+% =======================
+\cleardoublepage
+\thispagestyle{empty}
+\begin{center}
+    \vspace*{4cm}
+    {\Huge \textbf{Chapitre 2}}\\[1.5cm]
+    {\LARGE \textbf{Spécification des besoins}}
+\end{center}
+\cleardoublepage
+
+%================= CHAPITRE 2 — CONTENU ==================
+% Ne PAS mettre \chapter{...} ici pour éviter le doublon
+% On incrémente le compteur de chapitre et on ajoute au sommaire
+\refstepcounter{chapter}
+\addcontentsline{toc}{chapter}{Chapitre \thechapter: Spécification des besoins}
+\markboth{Chapitre \thechapter: Spécification des besoins}{}
+\setcounter{section}{0}
+
+\section{Introduction}
+Avant d’entamer la conception et le développement de toute solution technologique,
+il est indispensable d’identifier, de formaliser et de hiérarchiser l’ensemble des besoins
+auxquels cette solution devra répondre.
+
+\medskip
+\noindent
+Dans le cadre du \textbf{projet ADOM}, cette démarche vise à doter les équipes d’achat de \textbf{Roquette}
+d’un outil mobile capable de détecter rapidement et fiablement l’aflatoxine dans les grains de maïs sur le terrain.
+Elle intègre:
+
+\begin{itemize}
+    \item les contraintes opérationnelles (conditions environnementales, connectivité, formation des utilisateurs);
+    \item les exigences techniques (temps de réponse, précision des analyses, compatibilité avec les équipements);
+    \item la sécurité et la confidentialité des données;
+    \item l’intégration fluide avec les processus existants et l’architecture SI de Roquette.
+\end{itemize}
+
+\medskip
+\noindent
+Ce chapitre définit un \textbf{référentiel} commun: besoins \textbf{fonctionnels}, \textbf{non-fonctionnels}, contraintes et hypothèses. Il sert d’appui à la conception, à la recette et au déploiement.
+
+\cleardoublepage
+\section{Spécification des besoins fonctionnels}
+
+\subsection*{Détection en temps réel}
+\begin{itemize}
+    \item Détection/quantification de l’aflatoxine à partir d’une photo terrain.
+    \item Résultats rapides (idéalement en moins de 3 minutes).
+\end{itemize}
+
+\subsection*{Catégorisation des échantillons}
+\begin{itemize}
+    \item Classement automatique en bandes: \textbf{0–30 ppb}, \textbf{31–50 ppb}, \textbf{51–75 ppb}, \textbf{76–100 ppb}, \textbf{> 101 ppb}.
+\end{itemize}
+
+\subsection*{Prise de décision immédiate}
+\begin{itemize}
+    \item Recommandation: \textit{Conforme}, \textit{À surveiller}, \textit{Non conforme}.
+\end{itemize}
+
+\subsection*{Utilisation sur appareils mobiles}
+\begin{itemize}
+    \item Installation Android \& iOS, expérience fluide sur terminaux modestes.
+\end{itemize}
+
+\subsection*{Fonctionnement offline / online}
+\begin{itemize}
+    \item Utilisable hors-ligne; synchronisation automatique quand la connexion revient.
+\end{itemize}
+
+\subsection*{Saisie et gestion des informations}
+\begin{itemize}
+    \item Saisie fournisseur, origine, lot/véhicule, géolocalisation, etc.
+\end{itemize}
+
+\subsection*{Enregistrement et traçabilité}
+\begin{itemize}
+    \item Enregistrement local; transfert vers serveur sécurisé pour archivage/traçabilité.
+\end{itemize}
+
+\subsection*{Sécurité et gestion des accès}
+\begin{itemize}
+    \item Authentification et contrôle d’accès; respect du RGPD et des lois locales.
+\end{itemize}
+
+\subsection*{Ergonomie}
+\begin{itemize}
+    \item Interface intuitive, guidage étape par étape.
+\end{itemize}
+
+\subsection*{Gestion de la montée en charge}
+\begin{itemize}
+    \item Support des pics (récoltes) et d’un nombre d’utilisateurs croissant.
+\end{itemize}
+
+\subsection*{Reporting}
+\begin{itemize}
+    \item Rapports par lot/site/période, personnalisables et exportables.
+\end{itemize}
+
+\subsection*{Formation et support}
+\begin{itemize}
+    \item Guides, tutoriels vidéo, support technique pour une prise en main rapide.
+\end{itemize}
+\cleardoublepage
+\section{Spécification des besoins non-fonctionnels}
+
+\subsection*{Performance}
+\begin{itemize}
+    \item Traitement d’un échantillon en \(\le\) 3 minutes.
+    \item Comportement fluide et stable, y compris lors de pics multi-utilisateurs.
+\end{itemize}
+
+\subsection*{Précision et fiabilité}
+\begin{itemize}
+    \item Précision du modèle IA > 80\,\%; robustesse à des prises de vue variées.
+\end{itemize}
+
+\subsection*{Disponibilité et tolérance aux pannes}
+\begin{itemize}
+    \item Mode \textit{offline} avec resynchronisation automatique.
+    \item Haute disponibilité pendant les campagnes d’achat.
+\end{itemize}
+
+\subsection*{Compatibilité et portabilité}
+\begin{itemize}
+    \item Android/iOS, multiples tailles d’écran et versions; compatible avec des terminaux d’entrée de gamme.
+\end{itemize}
+
+\subsection*{Sécurité et confidentialité}
+\begin{itemize}
+    \item Chiffrement des données en local et en transit, accès sécurisés, conformité RGPD et lois locales.
+\end{itemize}
+
+\subsection*{Scalabilité}
+\begin{itemize}
+    \item Montée en charge (utilisateurs/volumes) et ajout de modules sans refonte.
+\end{itemize}
+
+\subsection*{Maintenance et évolutivité}
+\begin{itemize}
+    \item Mises à jour aisées (modèle IA \& fonctionnalités), idéalement à distance; documentation à jour.
+\end{itemize}
+
+\subsection*{Ergonomie et accessibilité}
+\begin{itemize}
+    \item Interface claire, simple, multilingue; peu de formation requise.
+\end{itemize}
+
+\subsection*{Conformité réglementaire}
+\begin{itemize}
+    \item Respect des normes (sécurité, qualité des données, traçabilité) et alignement RSE Roquette.
+\end{itemize}
+
+% =========================
+% Présentation des cas d’utilisation
+% =========================
+
+\section{Présentation des cas d’utilisation}
+
+Cette section présente les différents cas d’utilisation liés au projet \textbf{ADOM}.
+Le diagramme UML ci-dessous illustre les interactions principales entre les acteurs (utilisateur et administrateur) et le système.
+
+\textbf{Diagramme de cas d’utilisation (Use Case Diagram)}
+
+\textbf{Acteurs principaux}:
+\begin{itemize}
+    \item \textbf{Utilisateur}: capture et envoie des images de grains de maïs via l’application mobile.
+    \item \textbf{Administrateur}: gère l’entraînement du modèle et la mise à jour de l’API.
+\end{itemize}
+
+\textbf{Cas d’utilisation}:
+\begin{itemize}
+    \item S’inscrire / Se connecter via Firebase;
+    \item Uploader une image;
+    \item Lancer une prédiction;
+    \item Recevoir le résultat (classe + niveau de confiance);
+    \item Mettre à jour et entraîner le modèle CNN (côté Administrateur).
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.1\linewidth]{images/use_case_adom.png} % mets ton image ici
+    \caption{Diagramme de cas d’utilisation du projet ADOM}
+    \label{fig:usecase-adom}
+\end{figure}
+
+% =======================
+% Page d’ouverture du Chapitre 3
+% =======================
+\cleardoublepage
+\thispagestyle{empty}
+\begin{center}
+    \vspace*{4cm}
+    {\Huge \textbf{Chapitre 3}}\\[1.5cm]
+    {\LARGE \textbf{Conception du système}}
+\end{center}
+\cleardoublepage
+
+%================= CHAPITRE 3 — CONTENU ==================
+\refstepcounter{chapter}
+\addcontentsline{toc}{chapter}{Chapitre \thechapter: Conception du système}
+\markboth{Chapitre \thechapter: Conception du système}{}
+\setcounter{section}{0}
+
+\section{Introduction}
+La conception constitue une étape clé entre la spécification des besoins et l’implémentation.
+Elle permet de représenter, sous forme de modèles, la structure et le comportement du système
+afin de garantir sa cohérence, sa robustesse et sa maintenabilité.
+
+Dans le cadre du projet \textbf{ADOM}, la conception se décline en deux volets complémentaires:
+\begin{itemize}
+    \item la \textbf{modélisation dynamique} décrivant les comportements, scénarios et flux de données (diagrammes de séquence, d’activités et de cas d’utilisation);
+    \item la \textbf{modélisation statique} mettant en avant la structure du système (diagramme de classes, dictionnaire et modèle relationnel) ainsi que les architectures logicielle et matérielle de déploiement.
+\end{itemize}
+
+\section{Modélisation dynamique}
+\subsection{Diagramme de séquence}
+Le diagramme de séquence suivant représente le scénario de prédiction,
+depuis l’authentification jusqu’à l’affichage du résultat.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{images/sequence_prediction.jpeg}
+    \caption{Diagramme de séquence — Flux de prédiction}
+\end{figure}
+
+\subsection{Diagramme d’activités}
+Ce diagramme décrit le flux d’activités de la prédiction d’aflatoxine.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\linewidth]{images/activity_prediction.jpeg}
+    \caption{Diagramme d’activités — Processus de prédiction}
+\end{figure}
+\cleardoublepage
+\section{Modélisation statique}
+
+\subsection{Diagramme de classes}
+Le diagramme de classes présente les principales entités de l’application
+(mobile, API, modèle IA et stockage) et leurs relations.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=01.0\linewidth]{images/diagrame de classe.jpeg}
+    \caption{Diagramme de classes — Application ADOM}
+\end{figure}
+\cleardoublepage
+\subsection{Modèle relationnel}
+Le modèle relationnel dérivé est représenté ci-dessous:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\linewidth]{images/diagrame de classe.jpeg}
+    \caption{Modèle relationnel de la base de données}
+\end{figure}
+\cleardoublepage
+\section{Architecture du système}
+
+\subsection{Architecture logicielle}
+L’architecture logicielle repose sur une approche modulaire intégrant:
+\begin{itemize}
+    \item \textbf{Application mobile (Flutter + Firebase)}: authentification, capture et envoi d’images;
+    \item \textbf{API Flask + TFLite}: traitement et exécution des prédictions;
+    \item \textbf{Module IA (CNN + Azure ML)}: entraînement, évaluation et export du modèle;
+    \item \textbf{CI/CD (Azure DevOps)}: automatisation des déploiements;
+    \item \textbf{Stockage (Azure Blob Storage)}: gestion des datasets et modèles.
+\end{itemize}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.62\linewidth]{images/component_architecture.png}
+    \caption{Architecture logicielle — composants principaux}
+    \label{fig:arch-logicielle}
+\end{figure}
+\cleardoublepage
+\subsection*{Vue de déploiement — Azure}
+Le déploiement cible s’appuie sur des services managés Azure:
+\textit{Azure Container Apps} pour l’API, \textit{Container Registry} pour les images,
+\textit{Azure ML} pour l’entraînement et \textit{Blob Storage} pour les données.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{images/arch_materiel_2.png}
+    \caption{Architecture matérielle — Déploiement sur Azure (entraîne\-ment, registre de modèles, images Docker, déploiement API)}
+    \label{fig:arch-azure}
+\end{figure}
+\cleardoublepage
+% -------------------- 4.3 Outils et technologies utilisés --------------------
+\section{Outils et technologies utilisés}
+
+Les choix technologiques du projet ADOM sont variés en raison de sa nature hybride
+(mobile, cloud, intelligence artificielle). Chaque outil a été sélectionné pour répondre à un besoin précis
+et garantir la performance, la sécurité et la maintenabilité de la solution.
+
+\subsection{Python}
+Python est un langage de programmation polyvalent largement utilisé en data science et
+apprentissage automatique. Dans ADOM, il a servi à écrire les scripts de prétraitement,
+l’entraînement du modèle d’IA et la logique serveur via l’API.\@
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.25\linewidth]{images/python.jpeg}
+    \caption{Logo de Python}
+\end{figure}
+
+\subsection{TensorFlow / Keras}
+TensorFlow est une bibliothèque de Deep Learning open source développée par Google.
+Keras, son API haut niveau, simplifie la création et l’entraînement de réseaux de neurones.
+Dans ADOM, TensorFlow/Keras ont servi à construire et exporter le modèle de détection d’aflatoxine.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.25\linewidth]{images/tensorlow.png} % si besoin renommer en tensorflow.png
+    \caption{Logo de TensorFlow}
+\end{figure}
+\cleardoublepage
+
+\subsection{Flask}
+Flask est un micro-framework web Python utilisé pour créer des API REST légères.
+Il a permis d’exposer l’API de classification, qui reçoit une image et retourne la prédiction
+du modèle.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.25\linewidth]{images/FlaskLogo.wine.png}
+    \caption{Logo de Flask}
+\end{figure}
+
+\subsection{Flutter et Dart}
+Flutter est un framework multiplateforme open-source développé par Google pour le
+développement mobile, utilisant Dart comme langage de programmation.
+Dans ADOM, Flutter a servi à créer l’application \texttt{adomApp} pour Android et iOS, offrant
+une interface utilisateur fluide et moderne.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.25\linewidth]{images/flutter dart.png}
+    \caption{Logo de Flutter (utilise Dart comme langage)}
+\end{figure}
+
+\subsection{Firebase Authentication}
+Firebase est une plateforme de Google offrant des services backend prêts à l’emploi.
+Dans ADOM, \textit{Firebase Auth} a été utilisé pour gérer l’authentification sécurisée des utilisateurs.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.25\linewidth]{images/firebase.png}
+    \caption{Logo de Firebase}
+\end{figure}
+\cleardoublepage
+\subsection{Pipelines CI/CD}
+Le cycle de développement et de déploiement continu a été automatisé avec \textbf{Azure DevOps}:
+\begin{itemize}
+    \item \textbf{Pipeline de build}: compilation du code, exécution des tests unitaires, création d’une image Docker de l’API.
+    \item \textbf{Pipeline de release}: push de l’image vers Azure Container Registry puis déploiement automatique sur Azure Container Apps.
+    \item \textbf{Suivi}: journaux centralisés et monitoring via Azure Monitor pour garantir disponibilité et fiabilité.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\linewidth]{images/pipelies.png}
+    \caption{Exemple de pipeline CI/CD sur Azure DevOps pour l’API ADOM}
+\end{figure}
+
+
+\subsection{Azure Machine Learning (Azure ML)}
+Azure ML est un service cloud de Microsoft permettant de gérer tout le cycle de vie
+d’un modèle IA (entraînement, suivi, versioning et déploiement).
+Dans ADOM, il a servi à entraîner le modèle, suivre les métriques et stocker les artefacts.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.50\linewidth]{images/azure ml.jpeg}
+    \caption{Logo d’Azure Machine Learning}
+\end{figure}
+
+\subsection{Azure Active Directory (Azure AD)}
+Azure AD est le service d’identité de Microsoft, assurant la gestion des accès et la sécurité.
+Il a été utilisé pour sécuriser l’accès aux ressources cloud et à l’API ADOM (Managed Identity).
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.25\linewidth]{images/aad.png}
+    \caption{Logo d’Azure Active Directory}
+\end{figure}
+
+\subsection{Azure DevOps}
+Azure DevOps est une plateforme d’intégration et déploiement continus (CI/CD).
+Elle a permis d’automatiser les pipelines, la construction d’images Docker et le déploiement
+dans Azure Container Apps.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.25\linewidth]{images/devops.png}
+    \caption{Logo d’Azure DevOps}
+\end{figure}
+
+\subsection{Docker}
+Docker est une plateforme de conteneurisation qui permet d’emballer une application
+avec toutes ses dépendances dans un environnement portable.
+Dans ADOM, Docker a été utilisé pour exécuter l’API et préparer les images pour le déploiement
+dans Azure.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.25\linewidth]{images/docker.jpeg}
+    \caption{Logo de Docker}
+\end{figure}
+
+\subsection{Visual Studio Code (VS Code)}
+VS Code est un IDE léger et extensible utilisé pour écrire le code Python, Flutter/Dart,
+et configurer les pipelines.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.25\linewidth]{images/vscode.png}
+    \caption{Logo de Visual Studio Code}
+\end{figure}
+\subsection{Jira}
+Jira est un outil de gestion de projet agile qui permet de suivre les tâches, bugs et sprints.
+Dans ADOM, Jira a servi à gérer le backlog et à organiser le suivi des développements.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.25\linewidth]{images/jira.jpeg}
+    \caption{Logo de Jira}
+\end{figure}
+
+\subsection{Microsoft Teams}
+Microsoft Teams est un outil de communication et de collaboration.
+Dans ADOM, il a servi aux réunions régulières, à la communication
+entre les équipes et au partage de documents.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.25\linewidth]{images/teams.png}
+    \caption{Logo de Microsoft Teams}
+\end{figure}
+\cleardoublepage
+% -------------------- Benchmarking fonctionnel --------------------
+% -------------------- Benchmarking fonctionnel --------------------
+\section{Benchmarking fonctionnel}
+
+Le benchmarking fonctionnel est une étape essentielle avant de retenir une pile
+technologique. L’objectif n’est pas de copier des solutions existantes, mais
+d’identifier les bonnes pratiques et de choisir les outils les plus adaptés aux besoins
+du projet ADOM.\@
+Dans ce cadre, une étude comparative a été menée sur plusieurs technologies
+de développement mobile, backend, IA et cloud.
+
+
+\noindent
+Les critères étudiés incluent:
+\begin{itemize}
+    \item \textbf{Compatibilité multi-plateformes} (Android/iOS/Web pour le mobile, support cloud pour l’IA);
+    \item \textbf{Facilité d’intégration} avec les pipelines DevOps et les services de sécurité;
+    \item \textbf{Performance et scalabilité} (entraîner et déployer des modèles IA rapidement);
+    \item \textbf{Coût et disponibilité} (open-source vs solutions propriétaires);
+    \item \textbf{Documentation et communauté} (soutien en cas de problème, rapidité de montée en compétence).
+\end{itemize}
+
+Après analyse des alternatives, les choix finaux ont été guidés par la nécessité
+d’avoir une solution complète, interopérable et alignée avec l’écosystème Microsoft
+déjà présent chez Roquette.
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{|p{3.5cm}|p{3.5cm}|p{3.5cm}|p{5.2cm}|}
+\hline
+\textbf{Domaine} & \textbf{Choix retenu} & \textbf{Alternative} & \textbf{Justification} \\
+\hline
+Dév. mobile & Flutter/Dart & React Native & Flutter offre un rendu natif homogène et une base de code unique Android/iOS. \\
+\hline
+Framework IA & TensorFlow/Keras & PyTorch & Export et déploiement plus simples, intégration native avec Azure ML. \\
+\hline
+API Backend & Flask (Python) & FastAPI & Simplicité et légèreté pour une API REST\@; suffisante pour nos besoins. \\
+\hline
+Authentification & Firebase Auth & Azure AD B2C & Mise en place rapide sur mobile, SDK Flutter officiel. \\
+\hline
+CI/CD & Azure DevOps & GitHub Actions & Alignement avec l’écosystème Azure + service connections intégrées. \\
+\hline
+Cloud IA & Azure ML & AWS SageMaker & Standard interne chez Roquette, intégration directe avec DevOps et Blob Storage. \\
+\hline
+Conteneurisation & Docker & Podman & Solution la plus mature et largement supportée dans les pipelines CI/CD. \\
+\hline
+IDE & VS Code & PyCharm & Léger, multiplateforme, support natif Python et Flutter. \\
+\hline
+Collaboration & Microsoft Teams & Slack & Déjà utilisé par l’entreprise, intégration facile avec Azure et DevOps. \\
+\hline
+Gestion projet & Jira & Trello & Plus adapté au suivi agile (sprints, backlog) et au travail en équipe. \\
+\hline
+\end{tabular}
+\caption{Tableau comparatif des technologies}
+\label{tab:benchmarking}
+\end{table}
+\cleardoublepage
+\thispagestyle{empty}
+\begin{center}
+    \vspace*{4cm}
+    {\Huge \textbf{Chapitre 4}}\\[1.5cm]
+    {\LARGE \textbf{Implémentation et résultats}}
+\end{center}
+\cleardoublepage
+
+%================= CHAPITRE 4 — CONTENU ==================
+\refstepcounter{chapter}
+\addcontentsline{toc}{chapter}{Chapitre \thechapter: Implémentation et résultats}
+\markboth{Chapitre \thechapter: Implémentation et résultats}{}
+\setcounter{section}{0}
+
+\section{Introduction}
+Ce chapitre détaille la mise en œuvre concrète du projet \textbf{ADOM}, depuis la préparation des données jusqu’au déploiement de l’application mobile, en passant par l’entraînement du modèle d’intelligence artificielle et la création de l’API.\@ Chaque étape est illustrée par des captures d’écran et des extraits de code pertinents, mettant en lumière les choix techniques et les résultats obtenus.
+
+\section{Préparation de l’environnement et des données}
+
+\subsection{Configuration de l’environnement de développement}
+La première étape a consisté à mettre en place un environnement de développement robuste et reproductible.
+\begin{itemize}
+    \item \textbf{Azure DevOps}: Création d’un nouveau projet pour centraliser la gestion du code, des pipelines et des artefacts.
+    \item \textbf{Dépôts Git}: Initialisation de deux dépôts distincts: \texttt{adom-api} pour le backend et le modèle IA, et \texttt{adom-app} pour l’application mobile Flutter.
+    \item \textbf{IDE}: Utilisation de Visual Studio Code avec des extensions spécifiques pour Python, Docker et Flutter.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{images/devops_repos_list.png}
+    \caption{Liste des dépôts sur Azure DevOps}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{images/devops_repo_tree.png}
+    \caption{Arborescence du dépôt \texttt{adom-api}}
+\end{figure}
+
+\subsection{Collecte et préparation des données}
+Le succès d’un modèle de Deep Learning dépend fortement de la qualité et de la quantité des données d’entraînement.
+\begin{itemize}
+    \item \textbf{Source}: Les images de grains de maïs ont été fournies par les équipes de Roquette en Inde.
+    \item \textbf{Volume}: Le dataset initial comprenait plusieurs milliers d’images, chacune associée à une étiquette correspondant à une plage de concentration d’aflatoxine (en ppb).
+    \item \textbf{Nettoyage et augmentation}: Les données ont été nettoyées pour supprimer les images non pertinentes. Des techniques d’augmentation de données (rotation, zoom, retournement) ont été appliquées pour enrichir le dataset et améliorer la robustesse du modèle.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\linewidth]{images/datas.png}
+    \caption{Exemples d’images du dataset}
+\end{figure}
+
+\section{Développement et entraînement du modèle d’IA}
+
+\subsection{Architecture du modèle}
+Un modèle de \textbf{Réseau de Neurones Convolutif (CNN)} a été choisi pour sa performance reconnue en classification d’images. L’architecture retenue est une version adaptée de modèles classiques comme VGG ou ResNet, optimisée pour un bon compromis entre précision et temps d’inférence.
+
+\subsection{Entraînement sur Azure Machine Learning}
+L’entraînement a été réalisé sur \textbf{Azure Machine Learning} pour bénéficier de sa puissance de calcul et de ses outils de suivi.
+\begin{itemize}
+    \item \textbf{Script d’entraînement}: Un script Python utilisant TensorFlow/Keras a été développé pour charger les données, construire le modèle et lancer l’entraînement.
+    \item \textbf{Suivi des métriques}: Azure ML a permis de suivre en temps réel des métriques clés comme la précision (\textit{accuracy}) et la perte (\textit{loss}) sur les ensembles d’entraînement et de validation.
+    \item \textbf{Versioning des modèles}: Chaque version du modèle entraîné a été enregistrée dans le registre de modèles d’Azure ML, facilitant la traçabilité et le déploiement de la meilleure version.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{images/training.png}
+    \caption{Courbes d’entraînement (précision et perte) sur Azure ML}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{images/azml_metrics.png}
+    \caption{Suivi des métriques sur Azure ML}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{images/azml_models.png}
+    \caption{Registre des modèles sur Azure ML}
+\end{figure}
+
+\section{Développement de l’API et de l’application mobile}
+
+\subsection{Création de l’API Flask}
+Une API REST a été développée avec Flask pour servir de pont entre l’application mobile et le modèle d’IA.\@
+\begin{itemize}
+    \item \textbf{Endpoint de prédiction}: Un endpoint `/predict` a été créé. Il accepte une requête POST contenant une image, la prétraite, et la passe au modèle TFLite pour obtenir une prédiction.
+    \item \textbf{Conteneurisation Docker}: L’API a été encapsulée dans une image Docker pour garantir un déploiement cohérent et reproductible.
+\end{itemize}
+
+\subsection{Développement de l’application mobile avec Flutter}
+L’application \texttt{adomApp} a été développée avec Flutter pour offrir une expérience utilisateur moderne et multiplateforme.
+\begin{itemize}
+    \item \textbf{Authentification}: Intégration de Firebase Authentication pour une connexion sécurisée.
+    \item \textbf{Interface utilisateur}: Conception d’écrans clairs et intuitifs pour la connexion, la prise de photo, et l’affichage des résultats.
+    \item \textbf{Communication avec l’API}: Implémentation de la logique pour envoyer l’image capturée à l’API Flask et afficher la prédiction retournée.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=0.8\linewidth]{images/app_login.png}
+        \caption{Écran de connexion}
+    \end{minipage}\hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=0.8\linewidth]{images/app_login_filled.png}
+        \caption{Écran de connexion rempli}
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{images/app_home.png}
+    \caption{Page d’accueil de l’application}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=0.8\linewidth]{images/app_classification_empty.png}
+        \caption{Écran de classification avant sélection}
+    \end{minipage}\hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=0.8\linewidth]{images/app_classification_selected.png}
+        \caption{Écran de classification après sélection}
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=0.8\linewidth]{images/app_result.png}
+        \caption{Affichage du résultat de la prédiction}
+    \end{minipage}\hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=0.8\linewidth]{images/app_result2.png}
+        \caption{Autre exemple de résultat}
+    \end{minipage}
+\end{figure}
+
+\section{Déploiement et intégration continue (CI/CD)}
+
+\subsection{Pipelines sur Azure DevOps}
+L’automatisation a été au cœur du processus de déploiement.
+\begin{itemize}
+    \item \textbf{Pipeline de Build (CI)}: À chaque push sur la branche principale du dépôt \texttt{adom-api}, un pipeline se déclenche automatiquement pour:
+        \begin{enumerate}
+            \item Construire l’image Docker de l’API.\@
+            \item Pousser l’image vers Azure Container Registry.
+        \end{enumerate}
+    \item \textbf{Pipeline de Release (CD)}: Une fois l’image poussée, un pipeline de déploiement prend le relais pour mettre à jour l’instance Azure Container Apps avec la nouvelle version de l’image.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{images/devops_variables_yaml.png}
+    \caption{Exemple de configuration de pipeline YAML sur Azure DevOps}
+\end{figure}
+
+\subsection{Déploiement sur Azure}
+La solution est entièrement hébergée sur des services managés Azure.
+\begin{itemize}
+    \item \textbf{Azure Container Apps}: Héberge l’API conteneurisée, offrant une scalabilité automatique et une gestion simplifiée.
+    \item \textbf{Azure Container Registry}: Stocke les images Docker de l’API.\@
+    \item \textbf{Azure Monitor}: Utilisé pour la surveillance des logs et des performances de l’API en production.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{images/azure_resource_graph.png}
+    \caption{Graphe des ressources Azure utilisées pour le projet}
+\end{figure}
+
+\section{Conclusion}
+Ce chapitre a détaillé le parcours complet de l’implémentation du projet ADOM.\@ En partant d’un besoin métier clair, nous avons mis en place une solution technologique complète, alliant intelligence artificielle, développement mobile et infrastructure cloud. L’approche agile et l’automatisation via les pipelines CI/CD ont permis de livrer une solution fonctionnelle, robuste et prête à être testée en conditions réelles. Les résultats obtenus, tant en termes de performance du modèle que de fluidité de l’application, sont prometteurs et ouvrent la voie à une transformation significative du processus de contrôle qualité chez Roquette.
+
+\cleardoublepage
+\chapter*{Conclusion générale}
+\addcontentsline{toc}{chapter}{Conclusion générale}
+
+Le projet de fin d’études, mené au sein de l’entreprise \textbf{Roquette Frères}, a permis de répondre à une problématique métier concrète: la détection rapide et fiable du niveau d’aflatoxine dans les grains de maïs. En partant d’un processus manuel, long et coûteux, nous avons conçu et développé une solution innovante, \textbf{ADOM}, qui s’appuie sur les technologies les plus récentes en matière d’intelligence artificielle, de développement mobile et de cloud computing.
+
+\medskip
+\noindent
+Sur le plan technique, ce projet a été l’occasion de maîtriser un écosystème technologique riche et varié. L’utilisation de \textbf{Python} et \textbf{TensorFlow} pour la création du modèle de Deep Learning, de \textbf{Flask} pour le développement de l’API, et de \textbf{Flutter} pour l’application mobile a permis de construire une solution modulaire et performante. L’hébergement sur \textbf{Microsoft Azure} et l’automatisation des déploiements via les pipelines \textbf{CI/CD} d’Azure DevOps ont garanti la robustesse, la scalabilité et la maintenabilité du système.
+
+\medskip
+\noindent
+Au-delà des aspects techniques, ce projet a été une expérience humaine et professionnelle enrichissante. L’immersion au sein de l’équipe Data de Roquette et l’application de la méthodologie agile \textbf{Scrum} ont permis de développer des compétences clés en gestion de projet, en communication et en travail d’équipe. Les échanges réguliers avec les tuteurs et les experts métiers ont été essentiels pour aligner la solution sur les besoins réels des utilisateurs finaux.
+
+\medskip
+\noindent
+Les résultats obtenus sont très encourageants. L’application mobile est fonctionnelle et le modèle d’IA atteint une précision prometteuse, ouvrant la voie à des tests sur le terrain à plus grande échelle. Le projet ADOM a non seulement atteint ses objectifs initiaux, mais il a également posé les bases d’une plateforme évolutive qui pourra, à l’avenir, intégrer de nouvelles fonctionnalités ou être adaptée à d’autres cas d’usage au sein de l’entreprise.
+
+\medskip
+\noindent
+En perspective, plusieurs pistes d’amélioration peuvent être envisagées pour enrichir la solution:
+\begin{itemize}
+    \item \textbf{Amélioration continue du modèle}: Intégrer davantage de données et explorer des architectures de modèles plus complexes pour augmenter encore la précision.
+    \item \textbf{Déploiement on-device}: Embarquer le modèle TFLite directement dans l’application mobile pour un fonctionnement 100\% hors-ligne.
+    \item \textbf{Tableau de bord de suivi}: Développer une interface web pour visualiser les statistiques d’utilisation et les résultats des prédictions à l’échelle de l’entreprise.
+\end{itemize}
+
+\medskip
+\noindent
+Ce projet représente ainsi un socle opérationnel pour une plateforme de détection d’aflatoxine performante, évolutive et alignée avec les enjeux actuels de la sécurité alimentaire, tout en ouvrant la voie vers des solutions intelligentes intégrant IA, mobilité et objets connectés.
+
+\appendix
+\chapter*{Annexes}
+\addcontentsline{toc}{chapter}{Annexes}
+
+\section*{Annexe A: Code source de l’API Flask}
+\begin{verbatim}
+from flask import Flask, request, jsonify
+import tensorflow as tf
+import numpy as np
+from PIL import Image
+import io
+
+app = Flask(__name__)
+
+# Charger le modèle TFLite
+interpreter = tf.lite.Interpreter(model_path="model.tflite")
+interpreter.allocate_tensors()
+input_details = interpreter.get_input_details()
+output_details = interpreter.get_output_details()
+
+# Définir les classes
+classes = ['0-30', '31-50', '51-75', '76-100', '>101']
+
+def preprocess_image(image_bytes):
+    img = Image.open(io.BytesIO(image_bytes)).convert('RGB')
+    img = img.resize((224, 224))
+    img_array = np.array(img, dtype=np.float32)
+    img_array = np.expand_dims(img_array, axis=0)
+    return img_array
+
+@app.route('/predict', methods=['POST'])
+def predict():
+    if 'file' not in request.files:
+        return jsonify({'error': 'No file part'}), 400
+    file = request.files['file']
+    if file.filename == '':
+        return jsonify({'error': 'No selected file'}), 400
+
+    try:
+        img_bytes = file.read()
+        input_data = preprocess_image(img_bytes)
+
+        interpreter.set_tensor(input_details[0]['index'], input_data)
+        interpreter.invoke()
+
+        output_data = interpreter.get_tensor(output_details[0]['index'])
+        predicted_class_index = np.argmax(output_data)
+        predicted_class = classes[predicted_class_index]
+        confidence = float(np.max(output_data))
+
+        return jsonify({
+            'prediction': predicted_class,
+            'confidence': confidence
+        })
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=8080)
+\end{verbatim}
+
+\section*{Annexe B: Code source du widget de classification (Flutter)}
+\begin{verbatim}
+import 'dart:io';
+import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
+import 'package:http/http.dart' as http;
+import 'dart:convert';
+
+class ClassificationScreen extends StatefulWidget {
+  @override
+  _ClassificationScreenState createState() => _ClassificationScreenState();
+}
+
+class _ClassificationScreenState extends State<ClassificationScreen> {
+  File? _image;
+  String _prediction = '';
+  double _confidence = 0.0;
+  bool _isLoading = false;
+
+  Future<void> _pickImage(ImageSource source) async {
+    final pickedFile = await ImagePicker().pickImage(source: source);
+    if (pickedFile != null) {
+      setState(() {
+        _image = File(pickedFile.path);
+        _prediction = '';
+        _confidence = 0.0;
+      });
+    }
+  }
+
+  Future<void> _classifyImage() async {
+    if (_image == null) return;
+
+    setState(() {
+      _isLoading = true;
+    });
+
+    var request = http.MultipartRequest(
+      'POST',
+      Uri.parse('YOUR_API_ENDPOINT/predict'), // Remplacez par votre URL
+    );
+    request.files.add(await http.MultipartFile.fromPath('file', _image!.path));
+
+    try {
+      var response = await request.send();
+      if (response.statusCode == 200) {
+        var responseData = await response.stream.bytesToString();
+        var decodedData = json.decode(responseData);
+        setState(() {
+          _prediction = decodedData['prediction'];
+          _confidence = decodedData['confidence'];
+        });
+      } else {
+        setState(() {
+          _prediction = 'Erreur de classification';
+        });
+      }
+    } catch (e) {
+      setState(() {
+        _prediction = 'Erreur de connexion';
+      });
+    } finally {
+      setState(() {
+        _isLoading = false;
+      });
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    // ... UI Code ...
+  }
+}
+\end{verbatim}
+
+\section*{Annexe C: Configuration du pipeline de build (YAML)}
+\begin{verbatim}
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  dockerRegistryServiceConnection: 'YOUR_SERVICE_CONNECTION'
+  imageRepository: 'adom-api'
+  containerRegistry: 'YOUR_CONTAINER_REGISTRY.azurecr.io'
+  tag: '$(Build.BuildId)'
+
+steps:
+- task: Docker@2
+  displayName: Build and push an image to container registry
+  inputs:
+    command: buildAndPush
+    repository: $(imageRepository)
+    dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
+    containerRegistry: $(dockerRegistryServiceConnection)
+    tags: |
+      $(tag)
+\end{verbatim}
+
+\section*{Annexe D: Bibliographie et sitographie}
+\begin{itemize}
+    \item \textbf{Ouvrages de référence}:
+        \begin{itemize}
+            \item ``Deep Learning with Python'' par François Chollet
+            \item ``Hands-On Machine Learning with Scikit-Learn, Keras \& TensorFlow'' par Aurélien Géron
+        \end{itemize}
+    \item \textbf{Documentation officielle}:
+        \begin{itemize}
+            \item Documentation de TensorFlow: \url{https://www.tensorflow.org}
+            \item Documentation de Flutter: \url{https://flutter.dev}
+            \item Documentation de Microsoft Azure: \url{https://docs.microsoft.com/azure}
+        \end{itemize}
+    \item \textbf{Articles et publications}:
+        \begin{itemize}
+            \item ``Aflatoxin contamination in maize: a review'' - Journal of Food Science
+        \end{itemize}
+\end{itemize}
+
+\end{document}

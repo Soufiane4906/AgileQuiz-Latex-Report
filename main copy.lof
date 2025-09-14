@@ -1,0 +1,40 @@
+\babel@toc {french}{}\relax 
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Présence mondiale de Roquette Frères}}{6}{figure.caption.10}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Organigramme de l’équipe Data \& Advanced Analytics}}{7}{figure.caption.11}%
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Cycle de la méthodologie agile Scrum appliqué au projet ADOM}}{12}{figure.caption.12}%
+\contentsline {figure}{\numberline {1.4}{\ignorespaces Planning prévisionnel du projet ADOM}}{14}{figure.caption.13}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Diagramme de cas d’utilisation du projet ADOM}}{22}{figure.caption.35}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Diagramme de séquence — Flux de prédiction}}{25}{figure.caption.36}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Diagramme d’activités — Processus de prédiction}}{26}{figure.caption.37}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Diagramme de classes — Application ADOM}}{27}{figure.caption.38}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Modèle relationnel de la base de données}}{28}{figure.caption.39}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Architecture logicielle — composants principaux}}{29}{figure.caption.40}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Architecture matérielle — Déploiement sur Azure (entraîne\-ment, registre de modèles, images Docker, déploiement API)}}{30}{figure.caption.42}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Logo de Python}}{31}{figure.caption.43}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Logo de TensorFlow}}{31}{figure.caption.44}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Logo de Flask}}{32}{figure.caption.45}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Logo de Flutter (utilise Dart comme langage)}}{32}{figure.caption.46}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Logo de Firebase}}{33}{figure.caption.47}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Exemple de pipeline CI/CD sur Azure DevOps pour l’API ADOM}}{34}{figure.caption.48}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Logo d’Azure Machine Learning}}{35}{figure.caption.49}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Logo d’Azure Active Directory}}{35}{figure.caption.50}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Logo d’Azure DevOps}}{36}{figure.caption.51}%
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Logo de Docker}}{36}{figure.caption.52}%
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Logo de Visual Studio Code}}{36}{figure.caption.53}%
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Logo de Jira}}{37}{figure.caption.54}%
+\contentsline {figure}{\numberline {3.19}{\ignorespaces Logo de Microsoft Teams}}{37}{figure.caption.55}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Liste des dépôts sur Azure DevOps}}{42}{figure.caption.57}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Arborescence du dépôt \texttt {adom-api}}}{43}{figure.caption.58}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Exemples d’images du dataset}}{44}{figure.caption.59}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Courbes d’entraînement (précision et perte) sur Azure ML}}{45}{figure.caption.60}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Suivi des métriques sur Azure ML}}{46}{figure.caption.61}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Registre des modèles sur Azure ML}}{47}{figure.caption.62}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Écran de connexion}}{48}{figure.caption.63}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Écran de connexion rempli}}{48}{figure.caption.63}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Page d’accueil de l’application}}{48}{figure.caption.64}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Écran de classification avant sélection}}{49}{figure.caption.65}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Écran de classification après sélection}}{49}{figure.caption.65}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Affichage du résultat de la prédiction}}{49}{figure.caption.66}%
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Autre exemple de résultat}}{49}{figure.caption.66}%
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Exemple de configuration de pipeline YAML sur Azure DevOps}}{50}{figure.caption.67}%
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Graphe des ressources Azure utilisées pour le projet}}{51}{figure.caption.68}%
