@@ -294,9 +294,6 @@ URL & Uniform Resource Locator \\
 \addcontentsline{toc}{chapter}{Liste des figures}
 \listoffigures
 \cleardoublepage
-\addcontentsline{toc}{chapter}{Liste des tableaux}
-\listoftables
-\cleardoublepage
 
 %================= INTRODUCTION GENERALE =================
 \pagenumbering{arabic}
@@ -829,19 +826,6 @@ Cette cartographie met en évidence les quatre grands modules fonctionnels du sy
 \item Module d'analyse et de reporting
 \end{itemize}
 
-\section{Planification du projet}
-
-Le planning général de notre projet est représenté ci-dessous par le diagramme de Gantt, qui fait la répartition des tâches sur la période du projet. La réalisation du projet suit la méthode agile Scrum.
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.9\textwidth]{latex_media/media/image10.png}
-\caption{Diagramme de GANTT du projet Quiz Agile}
-\label{fig:gantt-quiz-agile}
-\end{figure}
-
-Ce diagramme montre la planification détaillée des différentes phases du projet, incluant la conception, le développement, les tests et la validation client. La méthodologie agile Scrum permet une approche itérative avec des cycles de développement courts appelés "sprints", favorisant l'adaptabilité et la réactivité face aux changements de besoins.
-
 \section{Spécifications Non Fonctionnelles}
 
 Les exigences non fonctionnelles définissent les critères de qualité et les contraintes techniques que le système doit respecter.
@@ -969,30 +953,6 @@ Dans le cadre du projet QUIZ AGILE, plusieurs acteurs clés interagissent avec l
 \item Intègre les quiz dans les parcours de formation
 \item Récupère les résultats des évaluations
 \end{itemize}
-
-\section{Conception architecturale}
-
-\subsection{Diagramme de classes}
-
-Le diagramme de classes représente la structure statique du système en montrant les classes, leurs attributs, leurs méthodes et les relations entre elles. Cette modélisation UML offre une compréhension approfondie de la structure interne du code et de ses interactions complexes.
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.9\textwidth]{latex_media/media/image16.png}
-\caption{Diagramme de classes du système Quiz Agile}
-\label{fig:diagramme-classes}
-\end{figure}
-
-Le diagramme représente un système de quiz en ligne avec 6 packages principaux organisés dans le cadre "Agile Quiz" :
-
-\begin{enumerate}
-\item \textbf{Model} : Contient les entités principales (User, Quiz, Question, QuizAttempt)
-\item \textbf{Repository} : Interfaces d'accès aux données utilisant Spring Data JPA
-\item \textbf{Service} : Logique métier et traitements des données
-\item \textbf{Controller} : Endpoints REST pour l'API
-\item \textbf{DTO} : Objets de transfert de données pour les échanges API
-\item \textbf{Config} : Configuration de sécurité et JWT
-\end{enumerate}
 
 \subsection{Diagramme de Cas d'Utilisation}
 
@@ -1840,228 +1800,51 @@ Ce dernier chapitre présente les interfaces utilisateur développées et les r�
 
 \section{Interface d'authentification}
 
-L'interface d'authentification constitue le point d'entrée de l'application. Elle offre une expérience utilisateur simple et sécurisée, reflétant l'univers agile avec une palette de couleurs sobre et des éléments visuels évoquant la collaboration.
+L'interface d'authentification constitue le point d'entrée de l'application. Elle offre une expérience utilisateur simple et sécurisée.
 
 \subsection{Page de connexion}
 
-L'interface de connexion constitue la porte d'entrée de la plateforme Agile Quiz Master. Elle permet aux utilisateurs autorisés (formateurs, équipes agiles ou administrateurs) d'accéder à leur espace personnel dédié à la création et à la passation de quiz.
-
-Conçue pour être minimaliste et ergonomique, l'interface propose deux champs obligatoires : le courriel (compatible avec les adresses Capgemini) et le mot de passe. Le bouton "Se connecter" valide l'authentification.
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.9\textwidth]{latex_media/media/image51.png}
-\caption{Interface de connexion de l'application Quiz Agile}
-\label{fig:interface-connexion}
-\end{figure}
-
-Le design reflète l'univers agile, avec une palette de couleurs sobre et des éléments visuels évoquant la collaboration et l'itération. L'arrière-plan épuré et les typographies modernes renforcent le caractère professionnel de l'outil.
-
-\section{Interface du tableau de bord}
-
-L'interface du tableau de bord de la plateforme Quiz Agile offre une vue centralisée et organisée des activités liées aux quiz agiles.
-
-\subsection{Tableau de bord principal}
-
-Le tableau de bord présente plusieurs sections claires :
+La page de connexion permet aux utilisateurs de s'authentifier avec leurs identifiants. Elle inclut :
 
 \begin{itemize}
-    \item Quiz récents (ex: "QCM Agile - 5 questions, 30 minutes")
-    \item Quiz complétés (avec accès aux historiques)
-    \item Résultats récents (dates et scores)
-    \item Rapports (métriques comme "60\% SCORE MOYEN" ou "80\% MEILLEUR SCORE")
+    \item Formulaire de saisie des identifiants
+    \item Validation en temps réel des champs
+    \item Gestion des erreurs d'authentification
+    \item Option "Se souvenir de moi"
+    \item Lien vers la récupération de mot de passe
 \end{itemize}
-
-Une barre latérale (sidebar) permet une navigation intuitive entre les fonctionnalités principales : Tableau de bord, Quizzes, Questions, Résultats, Profil, et Utilisateurs (pour les administrateurs).
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.9\textwidth]{latex_media/media/image52.png}
-\caption{Interface du tableau de bord principal}
-\label{fig:tableau-bord}
-\end{figure}
-
-L'interface, bien que minimaliste, est conçue pour une expérience utilisateur fluide, avec des libellés explicites et une hiérarchie visuelle mettant l'accent sur les données essentielles.
 
 \section{Interface administrateur}
 
 L'interface administrateur offre une vue d'ensemble complète du système et des outils de gestion avancés.
 
+\subsection{Tableau de bord administrateur}
+
+Le tableau de bord présente :
+
+\begin{itemize}
+    \item Statistiques globales d'utilisation
+    \item Graphiques de performance
+    \item Alertes et notifications système
+    \item Accès rapide aux fonctions principales
+\end{itemize}
+
 \subsection{Gestion des utilisateurs}
 
-La page de gestion des utilisateurs offre aux administrateurs un outil complet pour superviser et gérer les comptes des utilisateurs de la plateforme. Elle présente une liste organisée des utilisateurs avec les informations essentielles :
+L'interface de gestion des utilisateurs permet :
 
 \begin{itemize}
-    \item Nom de l'utilisateur
-    \item Email (identifiant unique)
-    \item Rôle (ex : ADMIN, COACH)
-    \item Statut (actif/inactif, indiqué par une icône de validation)
-    \item Actions disponibles (modification/suppression via icônes)
+    \item Création et modification des comptes
+    \item Attribution des rôles et permissions
+    \item Visualisation de l'activité des utilisateurs
+    \item Suspension/réactivation de comptes
 \end{itemize}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.9\textwidth]{latex_media/media/image53.png}
-\caption{Interface de gestion des utilisateurs}
-\label{fig:gestion-utilisateurs}
-\end{figure}
-
-La page intègre des fonctionnalités clés pour une administration efficace :
-
-\begin{itemize}
-    \item Barre de recherche permettant de filtrer les utilisateurs
-    \item Pagination (10 résultats par page) pour une navigation aisée
-    \item Bouton "Ajouter un utilisateur" pour créer facilement de nouveaux comptes
-\end{itemize}
-
-\subsection{Création d'un utilisateur}
-
-L'interface d'ajout d'un utilisateur se présente sous forme d'un formulaire clair et structuré. Elle comprend plusieurs champs tels que le prénom, le nom, l'email, le mot de passe, ainsi que le rôle de l'utilisateur.
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.8\textwidth]{latex_media/media/image54.png}
-\caption{Formulaire de création d'un nouvel utilisateur}
-\label{fig:creation-utilisateur}
-\end{figure}
-
-Cette interface permet à l'administrateur de créer facilement un nouveau compte utilisateur. Le bouton "Ajouter" permet de valider l'ajout, tandis que le bouton "Annuler" permet d'abandonner l'action.
 
 \section{Interface coach}
 
 L'interface coach est optimisée pour la création et la gestion des quiz.
 
-\subsection{Création de questions}
-
-L'interface de création d'une nouvelle question dans Quiz Agile est conçue pour guider les formateurs à travers un processus structuré et intuitif. La page se divise en sections claires :
-
-\begin{enumerate}
-\item \textbf{Informations de la question} :
-   \begin{itemize}
-   \item Un champ obligatoire pour le texte de la question (marqué d'un astérisque)
-   \item Des exemples suggérés inspirent les créateurs
-   \item La possibilité d'ajouter des consignes ou contextes supplémentaires
-   \end{itemize}
-
-\item \textbf{Options de réponse} :
-   \begin{itemize}
-   \item Des champs dédiés pour chaque proposition (Option 1, Option 2 etc.)
-   \item La capacité à marquer les bonnes réponses
-   \item Un espace pour ajouter des explications aux réponses si nécessaire
-   \end{itemize}
-\end{enumerate}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.8\textwidth]{latex_media/media/image55.png}
-\caption{Interface de création d'une nouvelle question}
-\label{fig:creation-question}
-\end{figure}
-
-L'interface présente plusieurs caractéristiques notables : design épuré avec une hiérarchie visuelle claire, guidage pas à pas pour ne rien oublier, et indicateurs visuels pour les champs obligatoires.
-
-\subsection{Création d'un quiz}
-
-L'interface de création de quiz offre un environnement complet et intuitif pour élaborer des évaluations pédagogiques. Elle se compose de deux volets principaux :
-
-\begin{enumerate}
-\item \textbf{Création du quiz} :
-   \begin{itemize}
-   \item Un formulaire structuré permet de définir les paramètres généraux (titre, description)
-   \item Des options de personnalisation (mélange aléatoire des questions, affichage des résultats)
-   \item Une interface claire pour organiser la progression de création
-   \end{itemize}
-
-\item \textbf{Ajout des questions} :
-   \begin{itemize}
-   \item Un système de recherche intelligent pour retrouver des questions existantes
-   \item Une bibliothèque de questions classées par type, difficulté et thématique
-   \item Des indicateurs visuels clairs pour chaque paramètre
-   \end{itemize}
-\end{enumerate}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.9\textwidth]{latex_media/media/image56.png}
-\caption{Interface de création d'un nouveau quiz - Vue d'ensemble}
-\label{fig:creation-quiz-overview}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.8\textwidth]{latex_media/media/image57.png}
-\caption{Interface de sélection des questions pour le quiz}
-\label{fig:selection-questions}
-\end{figure}
-
-Les fonctionnalités clés incluent le filtrage avancé par critères pédagogiques, la barre de recherche pour un accès rapide, le code couleur pour les niveaux de difficulté, et l'organisation thématique des questions.
-
-\subsection{Paramétrage et publication}
-
-L'interface de gestion des quiz permet aux formateurs de finaliser et administrer leurs évaluations avant publication.
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.9\textwidth]{latex_media/media/image58.png}
-\caption{Interface de paramétrage et publication de quiz}
-\label{fig:parametrage-quiz}
-\end{figure}
-
-Cette interface permet de configurer les paramètres finaux du quiz, gérer les accès et publier l'évaluation pour les utilisateurs cibles.
-
-\section{Interface participant}
-
-L'interface participant est optimisée pour une expérience de passage de quiz fluide et intuitive.
-
-\subsection{Passage d'un quiz}
-
-L'interface de passage de quiz offre une expérience utilisateur optimale avec une navigation claire et des indicateurs de progression.
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.9\textwidth]{latex_media/media/image59.png}
-\caption{Interface de passage d'un quiz}
-\label{fig:passage-quiz}
-\end{figure}
-
-L'interface présente la question courante, les options de réponse disponibles, un indicateur de progression, et les boutons de navigation pour passer d'une question à l'autre.
-
-\subsection{Résultats d'un quiz}
-
-L'interface de résultats présente de manière claire les performances du participant après la completion d'un quiz.
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.9\textwidth]{latex_media/media/image60.png}
-\caption{Interface de présentation des résultats}
-\label{fig:resultats-quiz}
-\end{figure}
-
-Cette interface affiche le score obtenu, le temps de completion, les réponses correctes et incorrectes, ainsi que des recommandations pour l'amélioration.
-
-\section{Tableaux de bord et analyses}
-
-\subsection{Analyse des performances}
-
-L'interface d'analyse offre des vues détaillées sur les performances des participants et l'efficacité des quiz.
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.9\textwidth]{latex_media/media/image61.png}
-\caption{Tableau de bord d'analyse des performances}
-\label{fig:analyse-performances}
-\end{figure}
-
-\subsection{Rapports détaillés}
-
-Les rapports permettent aux administrateurs et coaches d'analyser les tendances et identifier les domaines d'amélioration.
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.9\textwidth]{latex_media/media/image62.png}
-\caption{Interface de génération de rapports détaillés}
-\label{fig:rapports-detailles}
-\end{figure}
+\subsection{Création de quiz}
 
 L'interface de création de quiz offre :
 
@@ -2218,94 +2001,5 @@ En perspective, plusieurs pistes d'amélioration peuvent être envisagées pour 
 \medskip
 \noindent
 Ce projet représente ainsi un socle opérationnel pour une plateforme d'évaluation des compétences performante, évolutive et alignée avec les enjeux actuels de la formation professionnelle, tout en ouvrant la voie vers des solutions intelligentes intégrant les dernières innovations technologiques.
-
-% ============================================
-% ANNEXES
-% ============================================
-
-\cleardoublepage
-\chapter*{Annexes}
-\addcontentsline{toc}{chapter}{Annexes}
-
-\section*{Annexe A : Architecture détaillée du système}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.9\textwidth]{latex_media/media/image40.png}
-\caption{Architecture technique détaillée du système Quiz Agile}
-\label{fig:architecture-detaillee}
-\end{figure}
-
-\section*{Annexe B : Modèle de données complet}
-
-Le modèle de données du système Quiz Agile comprend les entités principales suivantes :
-
-\begin{itemize}
-    \item \textbf{User} : Gestion des utilisateurs et authentification
-    \item \textbf{Role} : Définition des rôles et permissions
-    \item \textbf{Quiz} : Structure des questionnaires
-    \item \textbf{Question} : Contenu des questions
-    \item \textbf{Option} : Choix de réponse disponibles
-    \item \textbf{QuizAttempt} : Tentatives de passage de quiz
-    \item \textbf{QuestionAttempt} : Réponses aux questions individuelles
-    \item \textbf{QuizResult} : Résultats et analyses
-\end{itemize}
-
-\section*{Annexe C : Configuration DevOps}
-
-\subsection*{Pipeline CI/CD Jenkins}
-
-Le pipeline de déploiement automatisé comprend les étapes suivantes :
-
-\begin{enumerate}
-    \item Compilation et tests unitaires
-    \item Analyse de qualité de code avec SonarQube
-    \item Construction des images Docker
-    \item Déploiement en environnement de test
-    \item Tests d'intégration
-    \item Déploiement en production (manuel)
-\end{enumerate}
-
-\subsection*{Configuration Docker}
-
-Le système utilise une architecture microservices containerisée avec :
-
-\begin{itemize}
-    \item \textbf{Backend} : Spring Boot dans un conteneur Alpine
-    \item \textbf{Frontend} : React avec Nginx
-    \item \textbf{Base de données} : MySQL 8.0
-    \item \textbf{Reverse Proxy} : Nginx pour la gestion des requêtes
-\end{itemize}
-
-% ============================================
-% WEBOGRAPHIE
-% ============================================
-
-\cleardoublepage
-\chapter*{Webographie}
-\addcontentsline{toc}{chapter}{Webographie}
-
-\begin{itemize}
-\item[\textcolor{purple}{spring-boot}] \url{https://spring.io/projects/spring-boot} - Documentation officielle Spring Boot
-\item[\textcolor{purple}{react-docs}] \url{https://react.dev/} - Documentation officielle React
-\item[\textcolor{purple}{jjwt-library}] \url{https://github.com/jwtk/jjwt} - Bibliothèque Java JWT
-\item[\textcolor{purple}{mysql-ref}] \url{https://dev.mysql.com/doc/} - Documentation MySQL
-\item[\textcolor{purple}{hibernate-guide}] \url{https://hibernate.org/orm/documentation/} - Guide Hibernate ORM
-\item[\textcolor{purple}{postman-api}] \url{https://www.postman.com/} - Outil de test d'API
-\item[\textcolor{purple}{git-tutorial}] \url{https://git-scm.com/docs} - Documentation Git
-\item[\textcolor{purple}{docker-docs}] \url{https://docs.docker.com/} - Documentation Docker
-\item[\textcolor{purple}{capgemini-site}] \url{https://www.capgemini.com/} - Site officiel Capgemini
-\item[\textcolor{purple}{agile-manifesto}] \url{https://agilemanifesto.org/} - Manifeste Agile
-\item[\textcolor{purple}{scrum-guide}] \url{https://scrumguides.org/} - Guide Scrum officiel
-\item[\textcolor{purple}{material-ui}] \url{https://mui.com/} - Material-UI pour React
-\item[\textcolor{purple}{bootstrap-css}] \url{https://getbootstrap.com/} - Framework CSS Bootstrap
-\item[\textcolor{purple}{nodejs-docs}] \url{https://nodejs.org/docs/} - Documentation Node.js
-\item[\textcolor{purple}{jenkins-docs}] \url{https://www.jenkins.io/doc/} - Documentation Jenkins
-\item[\textcolor{purple}{sonarqube-docs}] \url{https://docs.sonarqube.org/} - Documentation SonarQube
-\item[\textcolor{purple}{gitlab-docs}] \url{https://docs.gitlab.com/} - Documentation GitLab
-\item[\textcolor{purple}{jwt-intro}] \url{https://jwt.io/introduction/} - Introduction aux JSON Web Tokens
-\item[\textcolor{purple}{rest-api-design}] \url{https://restfulapi.net/} - Bonnes pratiques API REST
-\item[\textcolor{purple}{microservices-patterns}] \url{https://microservices.io/} - Patterns microservices
-\end{itemize}
 
 \end{document}

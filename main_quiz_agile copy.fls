@@ -1,7 +1,7 @@
-PWD C:\Users\Soufiane\Documents\latex_PFE3
+PWD c:\Users\Soufiane\Documents\latex_PFE3
 INPUT C:\Users\Soufiane\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT main_quiz_agile.tex
-OUTPUT main_quiz_agile.log
+INPUT c:\Users\Soufiane\Documents\latex_PFE3\main_quiz_agile copy.tex
+OUTPUT main_quiz_agile copy.log
 INPUT C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\tex\latex\base\report.cls
 INPUT C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\tex\latex\base\report.cls
 INPUT C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\tex\latex\base\size12.clo
@@ -185,10 +185,10 @@ INPUT C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\tex\latex\lm\t1lmr.fd
 INPUT C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmr12.tfm
 INPUT C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
 INPUT C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
-INPUT .\main_quiz_agile.aux
-INPUT .\main_quiz_agile.aux
-INPUT main_quiz_agile.aux
-OUTPUT main_quiz_agile.aux
+INPUT .\main_quiz_agile copy.aux
+INPUT .\main_quiz_agile copy.aux
+INPUT main_quiz_agile copy.aux
+OUTPUT main_quiz_agile copy.aux
 INPUT C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\tex\latex\tools\hhline.sty
 INPUT C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
@@ -201,14 +201,14 @@ INPUT C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopd
 INPUT C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\tex\latex\microtype\mt-cmr.cfg
 INPUT C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\tex\latex\microtype\mt-cmr.cfg
 INPUT C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\tex\latex\microtype\mt-cmr.cfg
-INPUT .\main_quiz_agile.out
-INPUT .\main_quiz_agile.out
-INPUT main_quiz_agile.out
-INPUT main_quiz_agile.out
-OUTPUT main_quiz_agile.pdf
-INPUT .\main_quiz_agile.out
-INPUT .\main_quiz_agile.out
-OUTPUT main_quiz_agile.out
+INPUT .\main_quiz_agile copy.out
+INPUT .\main_quiz_agile copy.out
+INPUT main_quiz_agile copy.out
+INPUT main_quiz_agile copy.out
+OUTPUT main_quiz_agile copy.pdf
+INPUT .\main_quiz_agile copy.out
+INPUT .\main_quiz_agile copy.out
+OUTPUT main_quiz_agile copy.out
 INPUT .\latex_media\media\image1.png
 INPUT .\latex_media\media\image1.png
 INPUT .\latex_media\media\image1.png
@@ -278,18 +278,14 @@ INPUT C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-ec.e
 INPUT C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmri12.tfm
 INPUT C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmr17.tfm
 INPUT C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmbx12.tfm
-INPUT .\main_quiz_agile.toc
-INPUT .\main_quiz_agile.toc
-INPUT main_quiz_agile.toc
-OUTPUT main_quiz_agile.toc
-INPUT .\main_quiz_agile.lof
-INPUT .\main_quiz_agile.lof
-INPUT main_quiz_agile.lof
-OUTPUT main_quiz_agile.lof
-INPUT .\main_quiz_agile.lot
-INPUT .\main_quiz_agile.lot
-INPUT main_quiz_agile.lot
-OUTPUT main_quiz_agile.lot
+INPUT .\main_quiz_agile copy.toc
+INPUT .\main_quiz_agile copy.toc
+INPUT main_quiz_agile copy.toc
+OUTPUT main_quiz_agile copy.toc
+INPUT .\main_quiz_agile copy.lof
+INPUT .\main_quiz_agile copy.lof
+INPUT main_quiz_agile copy.lof
+OUTPUT main_quiz_agile copy.lof
 INPUT C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmr17.tfm
 INPUT C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmbx12.tfm
 INPUT .\latex_media\media\image3.png
@@ -335,13 +331,6 @@ INPUT .\latex_media\media\image11.png
 INPUT .\latex_media\media\image11.png
 INPUT .\latex_media\media\image11.png
 INPUT .\latex_media\media\image11.png
-INPUT .\latex_media\media\image10.png
-INPUT .\latex_media\media\image10.png
-INPUT .\latex_media\media\image10.png
-INPUT .\latex_media\media\image10.png
-INPUT .\latex_media\media\image10.png
-INPUT .\latex_media\media\image10.png
-INPUT .\latex_media\media\image10.png
 INPUT .\latex_media\media\image12.png
 INPUT .\latex_media\media\image12.png
 INPUT .\latex_media\media\image12.png
@@ -356,13 +345,6 @@ INPUT .\latex_media\media\image13.png
 INPUT .\latex_media\media\image13.png
 INPUT .\latex_media\media\image13.png
 INPUT .\latex_media\media\image13.png
-INPUT .\latex_media\media\image16.png
-INPUT .\latex_media\media\image16.png
-INPUT .\latex_media\media\image16.png
-INPUT .\latex_media\media\image16.png
-INPUT .\latex_media\media\image16.png
-INPUT .\latex_media\media\image16.png
-INPUT .\latex_media\media\image16.png
 INPUT .\latex_media\media\image14.png
 INPUT .\latex_media\media\image14.png
 INPUT .\latex_media\media\image14.png
@@ -413,104 +395,9 @@ INPUT .\latex_media\media\image26.png
 INPUT .\latex_media\media\image26.png
 INPUT .\latex_media\media\image26.png
 INPUT .\latex_media\media\image26.png
-INPUT .\latex_media\media\image51.png
-INPUT .\latex_media\media\image51.png
-INPUT .\latex_media\media\image51.png
-INPUT .\latex_media\media\image51.png
-INPUT .\latex_media\media\image51.png
-INPUT .\latex_media\media\image51.png
-INPUT .\latex_media\media\image51.png
-INPUT .\latex_media\media\image52.png
-INPUT .\latex_media\media\image52.png
-INPUT .\latex_media\media\image52.png
-INPUT .\latex_media\media\image52.png
-INPUT .\latex_media\media\image52.png
-INPUT .\latex_media\media\image52.png
-INPUT .\latex_media\media\image52.png
-INPUT .\latex_media\media\image53.png
-INPUT .\latex_media\media\image53.png
-INPUT .\latex_media\media\image53.png
-INPUT .\latex_media\media\image53.png
-INPUT .\latex_media\media\image53.png
-INPUT .\latex_media\media\image53.png
-INPUT .\latex_media\media\image53.png
-INPUT .\latex_media\media\image54.png
-INPUT .\latex_media\media\image54.png
-INPUT .\latex_media\media\image54.png
-INPUT .\latex_media\media\image54.png
-INPUT .\latex_media\media\image54.png
-INPUT .\latex_media\media\image54.png
-INPUT .\latex_media\media\image54.png
-INPUT .\latex_media\media\image55.png
-INPUT .\latex_media\media\image55.png
-INPUT .\latex_media\media\image55.png
-INPUT .\latex_media\media\image55.png
-INPUT .\latex_media\media\image55.png
-INPUT .\latex_media\media\image55.png
-INPUT .\latex_media\media\image55.png
-INPUT .\latex_media\media\image56.png
-INPUT .\latex_media\media\image56.png
-INPUT .\latex_media\media\image56.png
-INPUT .\latex_media\media\image56.png
-INPUT .\latex_media\media\image56.png
-INPUT .\latex_media\media\image56.png
-INPUT .\latex_media\media\image56.png
-INPUT .\latex_media\media\image57.png
-INPUT .\latex_media\media\image57.png
-INPUT .\latex_media\media\image57.png
-INPUT .\latex_media\media\image57.png
-INPUT .\latex_media\media\image57.png
-INPUT .\latex_media\media\image57.png
-INPUT .\latex_media\media\image57.png
-INPUT .\latex_media\media\image58.png
-INPUT .\latex_media\media\image58.png
-INPUT .\latex_media\media\image58.png
-INPUT .\latex_media\media\image58.png
-INPUT .\latex_media\media\image58.png
-INPUT .\latex_media\media\image58.png
-INPUT .\latex_media\media\image58.png
-INPUT .\latex_media\media\image59.png
-INPUT .\latex_media\media\image59.png
-INPUT .\latex_media\media\image59.png
-INPUT .\latex_media\media\image59.png
-INPUT .\latex_media\media\image59.png
-INPUT .\latex_media\media\image59.png
-INPUT .\latex_media\media\image59.png
-INPUT .\latex_media\media\image60.png
-INPUT .\latex_media\media\image60.png
-INPUT .\latex_media\media\image60.png
-INPUT .\latex_media\media\image60.png
-INPUT .\latex_media\media\image60.png
-INPUT .\latex_media\media\image60.png
-INPUT .\latex_media\media\image60.png
-INPUT .\latex_media\media\image61.png
-INPUT .\latex_media\media\image61.png
-INPUT .\latex_media\media\image61.png
-INPUT .\latex_media\media\image61.png
-INPUT .\latex_media\media\image61.png
-INPUT .\latex_media\media\image61.png
-INPUT .\latex_media\media\image61.png
-INPUT .\latex_media\media\image62.png
-INPUT .\latex_media\media\image62.png
-INPUT .\latex_media\media\image62.png
-INPUT .\latex_media\media\image62.png
-INPUT .\latex_media\media\image62.png
-INPUT .\latex_media\media\image62.png
-INPUT .\latex_media\media\image62.png
-INPUT .\latex_media\media\image40.png
-INPUT .\latex_media\media\image40.png
-INPUT .\latex_media\media\image40.png
-INPUT .\latex_media\media\image40.png
-INPUT .\latex_media\media\image40.png
-INPUT .\latex_media\media\image40.png
-INPUT .\latex_media\media\image40.png
-INPUT C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\tex\latex\lm\t1lmtt.fd
-INPUT C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\tex\latex\lm\t1lmtt.fd
-INPUT C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\tex\latex\lm\t1lmtt.fd
-INPUT C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmtt12.tfm
-INPUT main_quiz_agile.aux
-INPUT .\main_quiz_agile.out
-INPUT .\main_quiz_agile.out
+INPUT main_quiz_agile copy.aux
+INPUT .\main_quiz_agile copy.out
+INPUT .\main_quiz_agile copy.out
 INPUT C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmbx10.pfb
 INPUT C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmbx10.pfb
 INPUT C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmbx12.pfb
@@ -521,5 +408,3 @@ INPUT C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr1
 INPUT C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr12.pfb
 INPUT C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmri12.pfb
 INPUT C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmri12.pfb
-INPUT C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmtt12.pfb
-INPUT C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmtt12.pfb
