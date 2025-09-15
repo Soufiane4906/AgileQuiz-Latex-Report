@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.13)  15 SEP 2025 03:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.13)  15 SEP 2025 12:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -803,31 +803,28 @@ File: tikzlibrarybackgrounds.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ) (C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/decorations\pgflibrarydecorations.pathmorphing.code.tex)) (C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-06-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count392
-) (pres_quiz_agile.aux
-Package babel Info: 'french' activates 'french' shorthands.
-(babel)             Reported on input line 11.
 )
+No file pres_quiz_agile.aux.
 \openout1 = `pres_quiz_agile.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -881,64 +878,63 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 56.
- (pres_quiz_agile.out) (pres_quiz_agile.out)
+Package hyperref Info: Link coloring OFF on input line 83.
 \@outlinefile=\write5
 \openout5 = `pres_quiz_agile.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 56.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 83.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 56.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 83.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> T1/cmr/m/n on input line 56.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 56.
+(Font)                  OT1/cmss/m/n --> T1/cmr/m/n on input line 83.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 83.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> T1/cmss/b/n on input line 56.
+(Font)                  OT1/cmr/bx/n --> T1/cmss/b/n on input line 83.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> T1/cmss/b/n on input line 56.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 56.
+(Font)                  OT1/cmr/bx/n --> T1/cmss/b/n on input line 83.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 83.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> T1/cmss/m/n on input line 56.
+(Font)                  OT1/cmss/m/n --> T1/cmss/m/n on input line 83.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> T1/cmss/m/n on input line 56.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 56.
+(Font)                  OT1/cmss/bx/n --> T1/cmss/m/n on input line 83.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 83.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> T1/cmss/m/it on input line 56.
+(Font)                  OT1/cmr/m/it --> T1/cmss/m/it on input line 83.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> T1/cmss/m/it on input line 56.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 56.
+(Font)                  OT1/cmr/bx/it --> T1/cmss/m/it on input line 83.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 83.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 56.
+(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 83.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 56.
+(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 83.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  T1/cmss/m/n --> T1/cmss/b/n on input line 56.
+(Font)                  T1/cmss/m/n --> T1/cmss/b/n on input line 83.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  T1/cmss/m/it --> T1/cmss/b/it on input line 56.
+(Font)                  T1/cmss/m/it --> T1/cmss/b/it on input line 83.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/b/n --> T1/cmr/b/n on input line 56.
+(Font)                  OT1/cmss/b/n --> T1/cmr/b/n on input line 83.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  T1/cmss/b/n --> T1/cmss/b/n on input line 56.
+(Font)                  T1/cmss/b/n --> T1/cmss/b/n on input line 83.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  T1/cmss/m/n --> T1/cmss/b/n on input line 56.
+(Font)                  T1/cmss/m/n --> T1/cmss/b/n on input line 83.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  T1/cmss/m/it --> T1/cmss/b/it on input line 56.
+(Font)                  T1/cmss/m/it --> T1/cmss/b/it on input line 83.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  T1/cmtt/m/n --> T1/cmtt/b/n on input line 56.
-LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 56.
+(Font)                  T1/cmtt/m/n --> T1/cmtt/b/n on input line 83.
+LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 83.
 LaTeX Font Info:    Encoding `T1' has changed to `OT1' for symbol font
-(Font)              `pureletters' in the math version `normal' on input line 56.
+(Font)              `pureletters' in the math version `normal' on input line 83.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `normal'
-(Font)                  T1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 56.
+(Font)                  T1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 83.
 LaTeX Font Info:    Encoding `T1' has changed to `OT1' for symbol font
-(Font)              `pureletters' in the math version `bold' on input line 56.
+(Font)              `pureletters' in the math version `bold' on input line 83.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  T1/cmss/b/it --> OT1/mathkerncmss/m/sl on input line 56.
+(Font)                  T1/cmss/b/it --> OT1/mathkerncmss/m/sl on input line 83.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on input line 56.
+(Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on input line 83.
  (C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\tex/latex/translator\translator-basic-dictionary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
 ) (C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\tex/latex/translator\translator-bibliography-dictionary-English.dict
@@ -952,250 +948,486 @@ Dictionary: translator-numbers-dictionary, Language: English
 ) (C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\tex/latex/translator\translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-LaTeX Info: Redefining \degres on input line 56.
+Package babel Info: 'french' activates 'french' shorthands.
+(babel)             Reported on input line 83.
+LaTeX Info: Redefining \degres on input line 83.
  (pres_quiz_agile.nav)
-<latex_media/media/logoemsi.png, id=66, 225.84375pt x 225.84375pt>
-File: latex_media/media/logoemsi.png Graphic file (type png)
-<use latex_media/media/logoemsi.png>
-Package pdftex.def Info: latex_media/media/logoemsi.png  used on input line 111.
-(pdftex.def)             Requested size: 71.13081pt x 71.13188pt.
-<latex_media/media/image3.png, id=67, 2561.82094pt x 572.1375pt>
-File: latex_media/media/image3.png Graphic file (type png)
-<use latex_media/media/image3.png>
-Package pdftex.def Info: latex_media/media/image3.png  used on input line 111.
-(pdftex.def)             Requested size: 254.78986pt x 56.9055pt.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 111.
- (C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 111.
- (C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on input line 111.
- (C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\tex/latex/sansmathaccent\ot1mathkerncmss.fd
-File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/mathkerncmss.
-)
-Overfull \vbox (93.70093pt too high) detected at line 111
- []
+
+c:/Users/Soufiane/Documents/latex_PFE3/pres_quiz_agile.tex:150: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.150 \end{frame}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+c:/Users/Soufiane/Documents/latex_PFE3/pres_quiz_agile.tex:150: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.150 \end{frame}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+c:/Users/Soufiane/Documents/latex_PFE3/pres_quiz_agile.tex:150: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.150 \end{frame}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+c:/Users/Soufiane/Documents/latex_PFE3/pres_quiz_agile.tex:150: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.150 \end{frame}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
 
 
 
 [1
 
-{C:/Users/Soufiane/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./latex_media/media/logoemsi.png> <./latex_media/media/image3.png>] (pres_quiz_agile.toc)
+]
+
+c:/Users/Soufiane/Documents/latex_PFE3/pres_quiz_agile.tex:150: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.150 \end{frame}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+c:/Users/Soufiane/Documents/latex_PFE3/pres_quiz_agile.tex:150: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.150 \end{frame}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+c:/Users/Soufiane/Documents/latex_PFE3/pres_quiz_agile.tex:150: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.150 \end{frame}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+c:/Users/Soufiane/Documents/latex_PFE3/pres_quiz_agile.tex:150: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.150 \end{frame}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
 
 [2
 
 ]
-File: latex_media/media/image3.png Graphic file (type png)
-<use latex_media/media/image3.png>
-Package pdftex.def Info: latex_media/media/image3.png  used on input line 135.
-(pdftex.def)             Requested size: 159.333pt x 35.5839pt.
+<latex_media/media/logoemsi.png, id=49, 225.84375pt x 225.84375pt>
+File: latex_media/media/logoemsi.png Graphic file (type png)
+<use latex_media/media/logoemsi.png>
+Package pdftex.def Info: latex_media/media/logoemsi.png  used on input line 150.
+(pdftex.def)             Requested size: 71.13081pt x 71.13188pt.
+
+
+c:/Users/Soufiane/Documents/latex_PFE3/pres_quiz_agile.tex:150: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.150 \end{frame}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+c:/Users/Soufiane/Documents/latex_PFE3/pres_quiz_agile.tex:150: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.150 \end{frame}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+c:/Users/Soufiane/Documents/latex_PFE3/pres_quiz_agile.tex:150: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.150 \end{frame}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+c:/Users/Soufiane/Documents/latex_PFE3/pres_quiz_agile.tex:150: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.150 \end{frame}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
 
 
 [3
 
-]
+ <./latex_media/media/logoemsi.png>]
+File: latex_media/media/logoemsi.png Graphic file (type png)
+<use latex_media/media/logoemsi.png>
+Package pdftex.def Info: latex_media/media/logoemsi.png  used on input line 150.
+(pdftex.def)             Requested size: 71.13081pt x 71.13188pt.
+<latex_media/media/image3.png, id=56, 2561.82094pt x 572.1375pt>
+File: latex_media/media/image3.png Graphic file (type png)
+<use latex_media/media/image3.png>
+Package pdftex.def Info: latex_media/media/image3.png  used on input line 150.
+(pdftex.def)             Requested size: 254.78986pt x 56.9055pt.
+
+
+c:/Users/Soufiane/Documents/latex_PFE3/pres_quiz_agile.tex:150: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.150 \end{frame}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+c:/Users/Soufiane/Documents/latex_PFE3/pres_quiz_agile.tex:150: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.150 \end{frame}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+c:/Users/Soufiane/Documents/latex_PFE3/pres_quiz_agile.tex:150: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.150 \end{frame}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+c:/Users/Soufiane/Documents/latex_PFE3/pres_quiz_agile.tex:150: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.150 \end{frame}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
 
 [4
 
-]
+ <./latex_media/media/image3.png>]
+File: latex_media/media/logoemsi.png Graphic file (type png)
+<use latex_media/media/logoemsi.png>
+Package pdftex.def Info: latex_media/media/logoemsi.png  used on input line 150.
+(pdftex.def)             Requested size: 71.13081pt x 71.13188pt.
+File: latex_media/media/image3.png Graphic file (type png)
+<use latex_media/media/image3.png>
+Package pdftex.def Info: latex_media/media/image3.png  used on input line 150.
+(pdftex.def)             Requested size: 254.78986pt x 56.9055pt.
 
 
+c:/Users/Soufiane/Documents/latex_PFE3/pres_quiz_agile.tex:150: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.150 \end{frame}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
 
 
+c:/Users/Soufiane/Documents/latex_PFE3/pres_quiz_agile.tex:150: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.150 \end{frame}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+c:/Users/Soufiane/Documents/latex_PFE3/pres_quiz_agile.tex:150: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.150 \end{frame}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+c:/Users/Soufiane/Documents/latex_PFE3/pres_quiz_agile.tex:150: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.150 \end{frame}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
 
 
 
 [5
 
 ]
-<latex_media/media/Architecture_globale.png, id=228, 302.877pt x 188.8875pt>
-File: latex_media/media/Architecture_globale.png Graphic file (type png)
-<use latex_media/media/Architecture_globale.png>
-Package pdftex.def Info: latex_media/media/Architecture_globale.png  used on input line 206.
-(pdftex.def)             Requested size: 358.50229pt x 223.57703pt.
+File: latex_media/media/logoemsi.png Graphic file (type png)
+<use latex_media/media/logoemsi.png>
+Package pdftex.def Info: latex_media/media/logoemsi.png  used on input line 150.
+(pdftex.def)             Requested size: 71.13081pt x 71.13188pt.
+File: latex_media/media/image3.png Graphic file (type png)
+<use latex_media/media/image3.png>
+Package pdftex.def Info: latex_media/media/image3.png  used on input line 150.
+(pdftex.def)             Requested size: 254.78986pt x 56.9055pt.
 
-Overfull \vbox (11.21289pt too high) detected at line 206
- []
+
+c:/Users/Soufiane/Documents/latex_PFE3/pres_quiz_agile.tex:150: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.150 \end{frame}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+c:/Users/Soufiane/Documents/latex_PFE3/pres_quiz_agile.tex:150: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.150 \end{frame}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+c:/Users/Soufiane/Documents/latex_PFE3/pres_quiz_agile.tex:150: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.150 \end{frame}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
 
 
 
 [6
 
- <./latex_media/media/Architecture_globale.png>]
-<latex_media/media/Diagramme entite-relation.png, id=258, 356.83313pt x 415.5525pt>
-File: latex_media/media/Diagramme entite-relation.png Graphic file (type png)
-<use latex_media/media/Diagramme entite-relation.png>
-Package pdftex.def Info: latex_media/media/Diagramme entite-relation.png  used on input line 212.
-(pdftex.def)             Requested size: 398.3386pt x 463.91286pt.
+{C:/Users/Soufiane/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+File: latex_media/media/logoemsi.png Graphic file (type png)
+<use latex_media/media/logoemsi.png>
+Package pdftex.def Info: latex_media/media/logoemsi.png  used on input line 150.
+(pdftex.def)             Requested size: 71.13081pt x 71.13188pt.
+File: latex_media/media/image3.png Graphic file (type png)
+<use latex_media/media/image3.png>
+Package pdftex.def Info: latex_media/media/image3.png  used on input line 150.
+(pdftex.def)             Requested size: 254.78986pt x 56.9055pt.
 
-Overfull \vbox (251.54872pt too high) detected at line 212
- []
+
+c:/Users/Soufiane/Documents/latex_PFE3/pres_quiz_agile.tex:150: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.150 \end{frame}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+c:/Users/Soufiane/Documents/latex_PFE3/pres_quiz_agile.tex:150: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.150 \end{frame}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
 
 
 
 [7
 
- <./latex_media/media/Diagramme entite-relation.png>]
-<latex_media/media/architecture_technique_systeme.png, id=288, 437.9562pt x 239.9364pt>
-File: latex_media/media/architecture_technique_systeme.png Graphic file (type png)
-<use latex_media/media/architecture_technique_systeme.png>
-Package pdftex.def Info: latex_media/media/architecture_technique_systeme.png  used on input line 218.
-(pdftex.def)             Requested size: 378.42044pt x 207.32611pt.
+]
+File: latex_media/media/logoemsi.png Graphic file (type png)
+<use latex_media/media/logoemsi.png>
+Package pdftex.def Info: latex_media/media/logoemsi.png  used on input line 150.
+(pdftex.def)             Requested size: 71.13081pt x 71.13188pt.
+File: latex_media/media/image3.png Graphic file (type png)
+<use latex_media/media/image3.png>
+Package pdftex.def Info: latex_media/media/image3.png  used on input line 150.
+(pdftex.def)             Requested size: 254.78986pt x 56.9055pt.
+
+Overfull \vbox (6.75131pt too high) detected at line 150
+ []
+
 
 
 [8
 
- <./latex_media/media/architecture_technique_systeme.png>]
-<latex_media/media/Diagrammedetat-StatutduQuiz.png, id=317, 782.925pt x 512.91624pt>
-File: latex_media/media/Diagrammedetat-StatutduQuiz.png Graphic file (type png)
-<use latex_media/media/Diagrammedetat-StatutduQuiz.png>
-Package pdftex.def Info: latex_media/media/Diagrammedetat-StatutduQuiz.png  used on input line 234.
-(pdftex.def)             Requested size: 199.1693pt x 130.47493pt.
-<latex_media/media/Diagrammedetat-Tentative de Quiz.png, id=318, 493.3632pt x 330.5148pt>
-File: latex_media/media/Diagrammedetat-Tentative de Quiz.png Graphic file (type png)
-<use latex_media/media/Diagrammedetat-Tentative de Quiz.png>
-Package pdftex.def Info: latex_media/media/Diagrammedetat-Tentative de Quiz.png  used on input line 234.
-(pdftex.def)             Requested size: 199.1693pt x 133.42403pt.
+]
+File: latex_media/media/logoemsi.png Graphic file (type png)
+<use latex_media/media/logoemsi.png>
+Package pdftex.def Info: latex_media/media/logoemsi.png  used on input line 150.
+(pdftex.def)             Requested size: 71.13081pt x 71.13188pt.
+File: latex_media/media/image3.png Graphic file (type png)
+<use latex_media/media/image3.png>
+Package pdftex.def Info: latex_media/media/image3.png  used on input line 150.
+(pdftex.def)             Requested size: 254.78986pt x 56.9055pt.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 150.
+ (C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 150.
+ (C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on input line 150.
+ (C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\tex/latex/sansmathaccent\ot1mathkerncmss.fd
+File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/mathkerncmss.
+)
+Overfull \vbox (137.40826pt too high) detected at line 150
+ []
+
 
 
 [9
 
- <./latex_media/media/Diagrammedetat-StatutduQuiz.png (PNG copy)> <./latex_media/media/Diagrammedetat-Tentative de Quiz.png>]
-<latex_media/media/activity_diagramme_passer_quiz.png, id=346, 622.325pt x 1502.61375pt>
-File: latex_media/media/activity_diagramme_passer_quiz.png Graphic file (type png)
-<use latex_media/media/activity_diagramme_passer_quiz.png>
-Package pdftex.def Info: latex_media/media/activity_diagramme_passer_quiz.png  used on input line 241.
-(pdftex.def)             Requested size: 318.67209pt x 769.4411pt.
-
-Overfull \vbox (586.21739pt too high) detected at line 241
- []
-
-
+]
 
 [10
 
- <./latex_media/media/activity_diagramme_passer_quiz.png (PNG copy)>]
-
-
-
-
-
-
-
-
+]
 
 [11
 
 ]
-<latex_media/media/git.png, id=401, 685.05937pt x 286.06876pt>
-File: latex_media/media/git.png Graphic file (type png)
-<use latex_media/media/git.png>
-Package pdftex.def Info: latex_media/media/git.png  used on input line 320.
-(pdftex.def)             Requested size: 78.87227pt x 32.93431pt.
-<latex_media/media/gitlab.png, id=402, 305.64188pt x 93.34875pt>
-File: latex_media/media/gitlab.png Graphic file (type png)
-<use latex_media/media/gitlab.png>
-Package pdftex.def Info: latex_media/media/gitlab.png  used on input line 320.
-(pdftex.def)             Requested size: 78.87227pt x 24.08777pt.
-<latex_media/media/docker.png, id=403, 92.637pt x 94.608pt>
-File: latex_media/media/docker.png Graphic file (type png)
-<use latex_media/media/docker.png>
-Package pdftex.def Info: latex_media/media/docker.png  used on input line 320.
-(pdftex.def)             Requested size: 78.87227pt x 80.55286pt.
-<latex_media/media/maven.png, id=404, 1284.8pt x 722.7pt>
-File: latex_media/media/maven.png Graphic file (type png)
-<use latex_media/media/maven.png>
-Package pdftex.def Info: latex_media/media/maven.png  used on input line 320.
-(pdftex.def)             Requested size: 79.66801pt x 44.80472pt.
-<latex_media/media/npm.png, id=405, 103.806pt x 103.806pt>
-File: latex_media/media/npm.png Graphic file (type png)
-<use latex_media/media/npm.png>
-Package pdftex.def Info: latex_media/media/npm.png  used on input line 320.
-(pdftex.def)             Requested size: 79.66801pt x 79.66791pt.
-<latex_media/media/jenkins.png, id=406, 166.878pt x 87.0525pt>
-File: latex_media/media/jenkins.png Graphic file (type png)
-<use latex_media/media/jenkins.png>
-Package pdftex.def Info: latex_media/media/jenkins.png  used on input line 320.
-(pdftex.def)             Requested size: 79.66801pt x 41.55891pt.
-<latex_media/media/postman.png, id=407, 317.5062pt x 96.36pt>
-File: latex_media/media/postman.png Graphic file (type png)
-<use latex_media/media/postman.png>
-Package pdftex.def Info: latex_media/media/postman.png  used on input line 320.
-(pdftex.def)             Requested size: 79.66801pt x 24.17815pt.
-
-Overfull \vbox (41.13574pt too high) detected at line 320
- []
-
-
 
 [12
 
- <./latex_media/media/git.png> <./latex_media/media/gitlab.png> <./latex_media/media/docker.png> <./latex_media/media/maven.png (PNG copy)> <./latex_media/media/npm.png> <./latex_media/media/jenkins.png> <./latex_media/media/postman.png>]
-<latex_media/media/image1.png, id=441, 216.4815pt x 47.6325pt>
-File: latex_media/media/image1.png Graphic file (type png)
-<use latex_media/media/image1.png>
-Package pdftex.def Info: latex_media/media/image1.png  used on input line 336.
-(pdftex.def)             Requested size: 199.1693pt x 43.82533pt.
-<latex_media/media/image2.png, id=442, 114.318pt x 26.6085pt>
-File: latex_media/media/image2.png Graphic file (type png)
-<use latex_media/media/image2.png>
-Package pdftex.def Info: latex_media/media/image2.png  used on input line 336.
-(pdftex.def)             Requested size: 199.1693pt x 46.36009pt.
-
+]
 
 [13
 
- <./latex_media/media/image1.png> <./latex_media/media/image2.png>]
-<latex_media/media/Analyse de code avec SonarQube.png, id=472, 445.1175pt x 213.525pt>
-File: latex_media/media/Analyse de code avec SonarQube.png Graphic file (type png)
-<use latex_media/media/Analyse de code avec SonarQube.png>
-Package pdftex.def Info: latex_media/media/Analyse de code avec SonarQube.png  used on input line 363.
-(pdftex.def)             Requested size: 318.67209pt x 152.87447pt.
-
-Overfull \vbox (29.86905pt too high) detected at line 363
- []
-
-
+]
 
 [14
 
- <./latex_media/media/Analyse de code avec SonarQube.png>]
-<latex_media/media/junit.png, id=502, 152.0955pt x 46.647pt>
-File: latex_media/media/junit.png Graphic file (type png)
-<use latex_media/media/junit.png>
-Package pdftex.def Info: latex_media/media/junit.png  used on input line 395.
-(pdftex.def)             Requested size: 79.66801pt x 24.4338pt.
-<latex_media/media/mockito.png, id=503, 401.5pt x 200.75pt>
-File: latex_media/media/mockito.png Graphic file (type png)
-<use latex_media/media/mockito.png>
-Package pdftex.def Info: latex_media/media/mockito.png  used on input line 395.
-(pdftex.def)             Requested size: 79.66801pt x 39.83377pt.
-<latex_media/media/jest_react_test.png, id=504, 126.801pt x 78.84pt>
-File: latex_media/media/jest_react_test.png Graphic file (type png)
-<use latex_media/media/jest_react_test.png>
-Package pdftex.def Info: latex_media/media/jest_react_test.png  used on input line 395.
-(pdftex.def)             Requested size: 79.66801pt x 49.53592pt.
-<latex_media/media/sonarqube.png, id=505, 103.4775pt x 65.043pt>
-File: latex_media/media/sonarqube.png Graphic file (type png)
-<use latex_media/media/sonarqube.png>
-Package pdftex.def Info: latex_media/media/sonarqube.png  used on input line 395.
-(pdftex.def)             Requested size: 79.66801pt x 50.0773pt.
-
+]
 
 [15
 
- <./latex_media/media/junit.png> <./latex_media/media/mockito.png> <./latex_media/media/jest_react_test.png> <./latex_media/media/sonarqube.png>]
+]
 
 [16
 
 ]
-Overfull \vbox (44.61847pt too high) detected at line 443
- []
-
-
 
 [17
 
@@ -1204,46 +1436,683 @@ Overfull \vbox (44.61847pt too high) detected at line 443
 [18
 
 ]
-<latex_media/media/image10.png, id=618, 1322.69156pt x 648.92438pt>
-File: latex_media/media/image10.png Graphic file (type png)
-<use latex_media/media/image10.png>
-Package pdftex.def Info: latex_media/media/image10.png  used on input line 482.
-(pdftex.def)             Requested size: 199.1693pt x 97.71072pt.
-<latex_media/media/image11.png, id=619, 1224.575pt x 608.2725pt>
-File: latex_media/media/image11.png Graphic file (type png)
-<use latex_media/media/image11.png>
-Package pdftex.def Info: latex_media/media/image11.png  used on input line 482.
-(pdftex.def)             Requested size: 199.1693pt x 98.93127pt.
-
 
 [19
 
- <./latex_media/media/image10.png> <./latex_media/media/image11.png (PNG copy)>]
-<latex_media/media/image12.png, id=649, 1493.58pt x 581.17125pt>
-File: latex_media/media/image12.png Graphic file (type png)
-<use latex_media/media/image12.png>
-Package pdftex.def Info: latex_media/media/image12.png  used on input line 498.
-(pdftex.def)             Requested size: 199.1693pt x 77.497pt.
-<latex_media/media/image13.png, id=650, 867.24pt x 317.185pt>
-File: latex_media/media/image13.png Graphic file (type png)
-<use latex_media/media/image13.png>
-Package pdftex.def Info: latex_media/media/image13.png  used on input line 498.
-(pdftex.def)             Requested size: 199.1693pt x 72.84453pt.
-
+]
 
 [20
 
- <./latex_media/media/image12.png (PNG copy)> <./latex_media/media/image13.png (PNG copy)>]
+]
 
 [21
 
 ]
-Overfull \vbox (8.32967pt too high) detected at line 540
+
+[22
+
+]
+
+[23
+
+]
+
+[24
+
+]
+
+[25
+
+]
+
+[26
+
+]
+
+[27
+
+]
+File: latex_media/media/image3.png Graphic file (type png)
+<use latex_media/media/image3.png>
+Package pdftex.def Info: latex_media/media/image3.png  used on input line 217.
+(pdftex.def)             Requested size: 159.333pt x 35.5839pt.
+
+
+[28
+
+]
+File: latex_media/media/image3.png Graphic file (type png)
+<use latex_media/media/image3.png>
+Package pdftex.def Info: latex_media/media/image3.png  used on input line 217.
+(pdftex.def)             Requested size: 159.333pt x 35.5839pt.
+
+
+[29
+
+]
+File: latex_media/media/image3.png Graphic file (type png)
+<use latex_media/media/image3.png>
+Package pdftex.def Info: latex_media/media/image3.png  used on input line 217.
+(pdftex.def)             Requested size: 159.333pt x 35.5839pt.
+
+
+[30
+
+]
+File: latex_media/media/image3.png Graphic file (type png)
+<use latex_media/media/image3.png>
+Package pdftex.def Info: latex_media/media/image3.png  used on input line 217.
+(pdftex.def)             Requested size: 159.333pt x 35.5839pt.
+
+
+[31
+
+]
+File: latex_media/media/image3.png Graphic file (type png)
+<use latex_media/media/image3.png>
+Package pdftex.def Info: latex_media/media/image3.png  used on input line 217.
+(pdftex.def)             Requested size: 159.333pt x 35.5839pt.
+
+
+[32
+
+]
+File: latex_media/media/image3.png Graphic file (type png)
+<use latex_media/media/image3.png>
+Package pdftex.def Info: latex_media/media/image3.png  used on input line 217.
+(pdftex.def)             Requested size: 159.333pt x 35.5839pt.
+
+
+[33
+
+]
+
+[34
+
+]
+
+[35
+
+]
+
+[36
+
+]
+
+[37
+
+]
+
+[38
+
+]
+
+[39
+
+]
+
+[40
+
+]
+
+[41
+
+]
+
+[42
+
+]
+
+[43
+
+]
+
+[44
+
+]
+
+[45
+
+]
+
+[46
+
+]
+
+[47
+
+]
+
+[48
+
+]
+
+[49
+
+]
+
+[50
+
+]
+
+[51
+
+]
+
+[52
+
+]
+
+[53
+
+]
+
+[54
+
+]
+
+[55
+
+]
+
+[56
+
+]
+
+[57
+
+]
+
+[58
+
+]
+
+[59
+
+]
+
+[60
+
+]
+
+[61
+
+]
+
+[62
+
+]
+
+[63
+
+]
+
+[64
+
+]
+
+[65
+
+]
+
+[66
+
+]
+
+[67
+
+]
+
+[68
+
+]
+
+c:/Users/Soufiane/Documents/latex_PFE3/pres_quiz_agile.tex:330: LaTeX Error: \begin{document} ended by \end{multicols}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.330     \end{multicols}
+                         
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+c:/Users/Soufiane/Documents/latex_PFE3/pres_quiz_agile.tex:330: Extra \endgroup.
+\endmulticols ... \@checkend {multicols}\endgroup 
+                                                  \global \c@unbalance \z@ \...
+l.330     \end{multicols}
+                         
+Things are pretty mixed up, but I think the worst is over.
+
+
+c:/Users/Soufiane/Documents/latex_PFE3/pres_quiz_agile.tex:330: LaTeX Error: \begin{document} ended by \end{multicols}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.330     \end{multicols}
+                         
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+c:/Users/Soufiane/Documents/latex_PFE3/pres_quiz_agile.tex:330: Extra \endgroup.
+\end  ...end#1\endcsname \@checkend {#1}\endgroup 
+                                                  \UseHook {env/#1/after}\if...
+l.330     \end{multicols}
+                         
+Things are pretty mixed up, but I think the worst is over.
+
+c:/Users/Soufiane/Documents/latex_PFE3/pres_quiz_agile.tex:331: Too many }'s.
+\endframe ->\egroup 
+                    \begingroup \def \@currenvir {frame}
+l.331 \end{frame}
+                 
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+
+
+[69]
+<latex_media/media/Architecture_globale.png, id=470, 302.877pt x 188.8875pt>
+File: latex_media/media/Architecture_globale.png Graphic file (type png)
+<use latex_media/media/Architecture_globale.png>
+Package pdftex.def Info: latex_media/media/Architecture_globale.png  used on input line 339.
+(pdftex.def)             Requested size: 358.50229pt x 223.57703pt.
+
+Overfull \vbox (11.21289pt too high) detected at line 339
  []
 
 
 
-[22
+[70
+
+ <./latex_media/media/Architecture_globale.png>]
+<latex_media/media/Diagramme entite-relation.png, id=479, 356.83313pt x 415.5525pt>
+File: latex_media/media/Diagramme entite-relation.png Graphic file (type png)
+<use latex_media/media/Diagramme entite-relation.png>
+Package pdftex.def Info: latex_media/media/Diagramme entite-relation.png  used on input line 345.
+(pdftex.def)             Requested size: 398.3386pt x 463.91286pt.
+
+Overfull \vbox (251.54872pt too high) detected at line 345
+ []
+
+
+
+[71
+
+ <./latex_media/media/Diagramme entite-relation.png>]
+<latex_media/media/architecture_technique_systeme.png, id=488, 437.9562pt x 239.9364pt>
+File: latex_media/media/architecture_technique_systeme.png Graphic file (type png)
+<use latex_media/media/architecture_technique_systeme.png>
+Package pdftex.def Info: latex_media/media/architecture_technique_systeme.png  used on input line 351.
+(pdftex.def)             Requested size: 378.42044pt x 207.32611pt.
+
+
+[72
+
+ <./latex_media/media/architecture_technique_systeme.png>]
+<latex_media/media/Diagrammedetat-StatutduQuiz.png, id=497, 782.925pt x 512.91624pt>
+File: latex_media/media/Diagrammedetat-StatutduQuiz.png Graphic file (type png)
+<use latex_media/media/Diagrammedetat-StatutduQuiz.png>
+Package pdftex.def Info: latex_media/media/Diagrammedetat-StatutduQuiz.png  used on input line 367.
+(pdftex.def)             Requested size: 199.1693pt x 130.47493pt.
+<latex_media/media/Diagrammedetat-Tentative de Quiz.png, id=498, 493.3632pt x 330.5148pt>
+File: latex_media/media/Diagrammedetat-Tentative de Quiz.png Graphic file (type png)
+<use latex_media/media/Diagrammedetat-Tentative de Quiz.png>
+Package pdftex.def Info: latex_media/media/Diagrammedetat-Tentative de Quiz.png  used on input line 367.
+(pdftex.def)             Requested size: 199.1693pt x 133.42403pt.
+
+
+[73
+
+ <./latex_media/media/Diagrammedetat-StatutduQuiz.png (PNG copy)> <./latex_media/media/Diagrammedetat-Tentative de Quiz.png>]
+<latex_media/media/activity_diagramme_passer_quiz.png, id=508, 622.325pt x 1502.61375pt>
+File: latex_media/media/activity_diagramme_passer_quiz.png Graphic file (type png)
+<use latex_media/media/activity_diagramme_passer_quiz.png>
+Package pdftex.def Info: latex_media/media/activity_diagramme_passer_quiz.png  used on input line 374.
+(pdftex.def)             Requested size: 318.67209pt x 769.4411pt.
+
+Overfull \vbox (586.21739pt too high) detected at line 374
+ []
+
+
+
+[74
+
+ <./latex_media/media/activity_diagramme_passer_quiz.png (PNG copy)>]
+
+[75
+
+]
+
+[76
+
+]
+
+[77
+
+]
+
+[78
+
+]
+
+[79
+
+]
+
+[80
+
+]
+
+[81
+
+]
+
+[82
+
+]
+
+[83
+
+]
+
+[84
+
+]
+
+[85
+
+]
+
+[86
+
+]
+
+[87
+
+]
+
+[88
+
+]
+
+[89
+
+]
+
+[90
+
+]
+
+[91
+
+]
+<latex_media/media/git.png, id=624, 685.05937pt x 286.06876pt>
+File: latex_media/media/git.png Graphic file (type png)
+<use latex_media/media/git.png>
+Package pdftex.def Info: latex_media/media/git.png  used on input line 487.
+(pdftex.def)             Requested size: 79.66801pt x 33.26605pt.
+<latex_media/media/maven.png, id=625, 1284.8pt x 722.7pt>
+File: latex_media/media/maven.png Graphic file (type png)
+<use latex_media/media/maven.png>
+Package pdftex.def Info: latex_media/media/maven.png  used on input line 487.
+(pdftex.def)             Requested size: 79.66801pt x 44.80472pt.
+<latex_media/media/npm.png, id=626, 103.806pt x 103.806pt>
+File: latex_media/media/npm.png Graphic file (type png)
+<use latex_media/media/npm.png>
+Package pdftex.def Info: latex_media/media/npm.png  used on input line 487.
+(pdftex.def)             Requested size: 79.66801pt x 79.66791pt.
+<latex_media/media/jenkins.png, id=627, 166.878pt x 87.0525pt>
+File: latex_media/media/jenkins.png Graphic file (type png)
+<use latex_media/media/jenkins.png>
+Package pdftex.def Info: latex_media/media/jenkins.png  used on input line 487.
+(pdftex.def)             Requested size: 79.66801pt x 41.55891pt.
+<latex_media/media/postman.png, id=628, 317.5062pt x 96.36pt>
+File: latex_media/media/postman.png Graphic file (type png)
+<use latex_media/media/postman.png>
+Package pdftex.def Info: latex_media/media/postman.png  used on input line 487.
+(pdftex.def)             Requested size: 79.66801pt x 24.17815pt.
+
+
+[92
+
+ <./latex_media/media/git.png> <./latex_media/media/maven.png (PNG copy)> <./latex_media/media/npm.png> <./latex_media/media/jenkins.png> <./latex_media/media/postman.png>]
+File: latex_media/media/git.png Graphic file (type png)
+<use latex_media/media/git.png>
+Package pdftex.def Info: latex_media/media/git.png  used on input line 487.
+(pdftex.def)             Requested size: 79.66801pt x 33.26605pt.
+<latex_media/media/gitlab.png, id=640, 305.64188pt x 93.34875pt>
+File: latex_media/media/gitlab.png Graphic file (type png)
+<use latex_media/media/gitlab.png>
+Package pdftex.def Info: latex_media/media/gitlab.png  used on input line 487.
+(pdftex.def)             Requested size: 79.66801pt x 24.33134pt.
+File: latex_media/media/maven.png Graphic file (type png)
+<use latex_media/media/maven.png>
+Package pdftex.def Info: latex_media/media/maven.png  used on input line 487.
+(pdftex.def)             Requested size: 79.66801pt x 44.80472pt.
+File: latex_media/media/npm.png Graphic file (type png)
+<use latex_media/media/npm.png>
+Package pdftex.def Info: latex_media/media/npm.png  used on input line 487.
+(pdftex.def)             Requested size: 79.66801pt x 79.66791pt.
+File: latex_media/media/jenkins.png Graphic file (type png)
+<use latex_media/media/jenkins.png>
+Package pdftex.def Info: latex_media/media/jenkins.png  used on input line 487.
+(pdftex.def)             Requested size: 79.66801pt x 41.55891pt.
+File: latex_media/media/postman.png Graphic file (type png)
+<use latex_media/media/postman.png>
+Package pdftex.def Info: latex_media/media/postman.png  used on input line 487.
+(pdftex.def)             Requested size: 79.66801pt x 24.17815pt.
+
+
+[93
+
+ <./latex_media/media/gitlab.png>]
+File: latex_media/media/git.png Graphic file (type png)
+<use latex_media/media/git.png>
+Package pdftex.def Info: latex_media/media/git.png  used on input line 487.
+(pdftex.def)             Requested size: 79.66801pt x 33.26605pt.
+File: latex_media/media/gitlab.png Graphic file (type png)
+<use latex_media/media/gitlab.png>
+Package pdftex.def Info: latex_media/media/gitlab.png  used on input line 487.
+(pdftex.def)             Requested size: 79.66801pt x 24.33134pt.
+<latex_media/media/docker.png, id=648, 92.637pt x 94.608pt>
+File: latex_media/media/docker.png Graphic file (type png)
+<use latex_media/media/docker.png>
+Package pdftex.def Info: latex_media/media/docker.png  used on input line 487.
+(pdftex.def)             Requested size: 79.66801pt x 81.36562pt.
+File: latex_media/media/maven.png Graphic file (type png)
+<use latex_media/media/maven.png>
+Package pdftex.def Info: latex_media/media/maven.png  used on input line 487.
+(pdftex.def)             Requested size: 79.66801pt x 44.80472pt.
+File: latex_media/media/npm.png Graphic file (type png)
+<use latex_media/media/npm.png>
+Package pdftex.def Info: latex_media/media/npm.png  used on input line 487.
+(pdftex.def)             Requested size: 79.66801pt x 79.66791pt.
+File: latex_media/media/jenkins.png Graphic file (type png)
+<use latex_media/media/jenkins.png>
+Package pdftex.def Info: latex_media/media/jenkins.png  used on input line 487.
+(pdftex.def)             Requested size: 79.66801pt x 41.55891pt.
+File: latex_media/media/postman.png Graphic file (type png)
+<use latex_media/media/postman.png>
+Package pdftex.def Info: latex_media/media/postman.png  used on input line 487.
+(pdftex.def)             Requested size: 79.66801pt x 24.17815pt.
+
+Overfull \vbox (41.9485pt too high) detected at line 487
+ []
+
+
+
+[94
+
+ <./latex_media/media/docker.png>]
+File: latex_media/media/git.png Graphic file (type png)
+<use latex_media/media/git.png>
+Package pdftex.def Info: latex_media/media/git.png  used on input line 487.
+(pdftex.def)             Requested size: 79.66801pt x 33.26605pt.
+File: latex_media/media/gitlab.png Graphic file (type png)
+<use latex_media/media/gitlab.png>
+Package pdftex.def Info: latex_media/media/gitlab.png  used on input line 487.
+(pdftex.def)             Requested size: 79.66801pt x 24.33134pt.
+File: latex_media/media/docker.png Graphic file (type png)
+<use latex_media/media/docker.png>
+Package pdftex.def Info: latex_media/media/docker.png  used on input line 487.
+(pdftex.def)             Requested size: 79.66801pt x 81.36562pt.
+File: latex_media/media/maven.png Graphic file (type png)
+<use latex_media/media/maven.png>
+Package pdftex.def Info: latex_media/media/maven.png  used on input line 487.
+(pdftex.def)             Requested size: 79.66801pt x 44.80472pt.
+File: latex_media/media/maven.png Graphic file (type png)
+<use latex_media/media/maven.png>
+Package pdftex.def Info: latex_media/media/maven.png  used on input line 487.
+(pdftex.def)             Requested size: 79.66801pt x 44.80472pt.
+File: latex_media/media/npm.png Graphic file (type png)
+<use latex_media/media/npm.png>
+Package pdftex.def Info: latex_media/media/npm.png  used on input line 487.
+(pdftex.def)             Requested size: 79.66801pt x 79.66791pt.
+File: latex_media/media/jenkins.png Graphic file (type png)
+<use latex_media/media/jenkins.png>
+Package pdftex.def Info: latex_media/media/jenkins.png  used on input line 487.
+(pdftex.def)             Requested size: 79.66801pt x 41.55891pt.
+File: latex_media/media/postman.png Graphic file (type png)
+<use latex_media/media/postman.png>
+Package pdftex.def Info: latex_media/media/postman.png  used on input line 487.
+(pdftex.def)             Requested size: 79.66801pt x 24.17815pt.
+
+Overfull \vbox (41.9485pt too high) detected at line 487
+ []
+
+
+
+[95
+
+]
+<latex_media/media/image1.png, id=663, 216.4815pt x 47.6325pt>
+File: latex_media/media/image1.png Graphic file (type png)
+<use latex_media/media/image1.png>
+Package pdftex.def Info: latex_media/media/image1.png  used on input line 503.
+(pdftex.def)             Requested size: 199.1693pt x 43.82533pt.
+<latex_media/media/image2.png, id=664, 114.318pt x 26.6085pt>
+File: latex_media/media/image2.png Graphic file (type png)
+<use latex_media/media/image2.png>
+Package pdftex.def Info: latex_media/media/image2.png  used on input line 503.
+(pdftex.def)             Requested size: 199.1693pt x 46.36009pt.
+
+
+[96
+
+ <./latex_media/media/image1.png> <./latex_media/media/image2.png>]
+
+[97
+
+]
+<latex_media/media/Analyse de code avec SonarQube.png, id=683, 445.1175pt x 213.525pt>
+File: latex_media/media/Analyse de code avec SonarQube.png Graphic file (type png)
+<use latex_media/media/Analyse de code avec SonarQube.png>
+Package pdftex.def Info: latex_media/media/Analyse de code avec SonarQube.png  used on input line 530.
+(pdftex.def)             Requested size: 318.67209pt x 152.87447pt.
+
+Overfull \vbox (29.86905pt too high) detected at line 530
+ []
+
+
+
+[98
+
+ <./latex_media/media/Analyse de code avec SonarQube.png>]
+<latex_media/media/junit.png, id=692, 152.0955pt x 46.647pt>
+File: latex_media/media/junit.png Graphic file (type png)
+<use latex_media/media/junit.png>
+Package pdftex.def Info: latex_media/media/junit.png  used on input line 562.
+(pdftex.def)             Requested size: 79.66801pt x 24.4338pt.
+<latex_media/media/mockito.png, id=693, 401.5pt x 200.75pt>
+File: latex_media/media/mockito.png Graphic file (type png)
+<use latex_media/media/mockito.png>
+Package pdftex.def Info: latex_media/media/mockito.png  used on input line 562.
+(pdftex.def)             Requested size: 79.66801pt x 39.83377pt.
+<latex_media/media/jest_react_test.png, id=694, 126.801pt x 78.84pt>
+File: latex_media/media/jest_react_test.png Graphic file (type png)
+<use latex_media/media/jest_react_test.png>
+Package pdftex.def Info: latex_media/media/jest_react_test.png  used on input line 562.
+(pdftex.def)             Requested size: 79.66801pt x 49.53592pt.
+<latex_media/media/sonarqube.png, id=695, 103.4775pt x 65.043pt>
+File: latex_media/media/sonarqube.png Graphic file (type png)
+<use latex_media/media/sonarqube.png>
+Package pdftex.def Info: latex_media/media/sonarqube.png  used on input line 562.
+(pdftex.def)             Requested size: 79.66801pt x 50.0773pt.
+
+
+[99
+
+ <./latex_media/media/junit.png> <./latex_media/media/mockito.png> <./latex_media/media/jest_react_test.png> <./latex_media/media/sonarqube.png>]
+
+[100
+
+]
+
+[101
+
+]
+Overfull \vbox (44.61847pt too high) detected at line 610
+ []
+
+
+
+[102
+
+]
+
+[103
+
+]
+
+[104
+
+]
+<latex_media/media/image10.png, id=748, 1322.69156pt x 648.92438pt>
+File: latex_media/media/image10.png Graphic file (type png)
+<use latex_media/media/image10.png>
+Package pdftex.def Info: latex_media/media/image10.png  used on input line 649.
+(pdftex.def)             Requested size: 199.1693pt x 97.71072pt.
+<latex_media/media/image11.png, id=749, 1224.575pt x 608.2725pt>
+File: latex_media/media/image11.png Graphic file (type png)
+<use latex_media/media/image11.png>
+Package pdftex.def Info: latex_media/media/image11.png  used on input line 649.
+(pdftex.def)             Requested size: 199.1693pt x 98.93127pt.
+
+
+[105
+
+ <./latex_media/media/image10.png> <./latex_media/media/image11.png (PNG copy)>]
+<latex_media/media/image12.png, id=758, 1493.58pt x 581.17125pt>
+File: latex_media/media/image12.png Graphic file (type png)
+<use latex_media/media/image12.png>
+Package pdftex.def Info: latex_media/media/image12.png  used on input line 665.
+(pdftex.def)             Requested size: 199.1693pt x 77.497pt.
+<latex_media/media/image13.png, id=759, 867.24pt x 317.185pt>
+File: latex_media/media/image13.png Graphic file (type png)
+<use latex_media/media/image13.png>
+Package pdftex.def Info: latex_media/media/image13.png  used on input line 665.
+(pdftex.def)             Requested size: 199.1693pt x 72.84453pt.
+
+
+[106
+
+ <./latex_media/media/image12.png (PNG copy)> <./latex_media/media/image13.png (PNG copy)>]
+
+[107
+
+]
+Overfull \vbox (8.32967pt too high) detected at line 707
+ []
+
+
+
+[108
 
 ]
 \tf@nav=\write6
@@ -1260,21 +2129,31 @@ Overfull \vbox (8.32967pt too high) detected at line 540
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-08-13>
  ***********
-Package rerunfilecheck Info: File `pres_quiz_agile.out' has not changed.
-(rerunfilecheck)             Checksum: 7B866BB78235657E02C2E262A8372A93;847.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `pres_quiz_agile.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `pres_quiz_agile.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  7B866BB78235657E02C2E262A8372A93;847.
  ) 
 Here is how much of TeX's memory you used:
- 30282 strings out of 468133
- 636935 string characters out of 5429260
- 1026537 words of memory out of 5000000
- 58240 multiletter control sequences out of 15000+600000
- 646423 words of font info for 81 fonts, out of 8000000 for 9000
+ 30791 strings out of 468133
+ 645497 string characters out of 5429260
+ 1028719 words of memory out of 5000000
+ 58581 multiletter control sequences out of 15000+600000
+ 651607 words of font info for 98 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,17n,123p,429b,824s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\Soufiane\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsi0900.pk> <C:\Users\Soufiane\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcss1095.pk> <C:\Users\Soufiane\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1440.pk> <C:\Users\Soufiane\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss1000.pk> <C:\Users\Soufiane\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcsx1095.pk> <C:\Users\Soufiane\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1095.pk> <C:\Users\Soufiane\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss1200.pk> <C:\Users\Soufiane\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss0900.pk> <C:\Users\Soufiane\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsi1000.pk> <C:\Users\Soufiane\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss1095.pk> <C:\Users\Soufiane\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1200.pk> <C:\Users\Soufiane\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss1440.pk> <C:\Users\Soufiane\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcss2074.pk> <C:\Users\Soufiane\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx2488.pk><C:/Users/Soufiane/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on pres_quiz_agile.pdf (22 pages, 1613352 bytes).
+ 128i,17n,123p,429b,839s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\Soufiane\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsi0900.pk> <C:\Users\Soufiane\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcss1095.pk> <C:\Users\Soufiane\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1440.pk> <C:\Users\Soufiane\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss1000.pk> <C:\Users\Soufiane\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcsx1095.pk> <C:\Users\Soufiane\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss2488.pk> <C:\Users\Soufiane\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1095.pk> <C:\Users\Soufiane\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss0900.pk> <C:\Users\Soufiane\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss1200.pk> <C:\Users\Soufiane\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsi1000.pk> <C:\Users\Soufiane\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss1095.pk> <C:\Users\Soufiane\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1200.pk> <C:\Users\Soufiane\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss1440.pk> <C:\Users\Soufiane\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcss2074.pk> <C:\Users\Soufiane\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx2488.pk><C:/Users/Soufiane/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on pres_quiz_agile.pdf (108 pages, 1725121 bytes).
 PDF statistics:
- 1164 PDF objects out of 1200 (max. 8388607)
- 52 named destinations out of 1000 (max. 500000)
- 343 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1301 PDF objects out of 1440 (max. 8388607)
+ 224 named destinations out of 1000 (max. 500000)
+ 287 words of extra memory for PDF output out of 10000 (max. 10000000)
 

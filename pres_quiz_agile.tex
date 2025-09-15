@@ -13,6 +13,33 @@
 % Libraries TikZ
 \usetikzlibrary{shadows,shapes,arrows,positioning,backgrounds,decorations.pathmorphing}
 
+% Configuration des transitions
+\setbeamertemplate{navigation symbols}{}
+\setbeamercolor{background canvas}{bg=white}
+
+% Effets magiques
+\newcommand{\magicappear}[2]{\only<#1->{\color{capgeminiblue}#2}}
+\newcommand{\magichighlight}[2]{\only<#1->{\colorbox{orangecap!20}{#2}}}
+\newcommand{\magicfade}[2]{\only<#1->{\color{gray!60}#2}}
+
+% Animation de sections
+\AtBeginSection[]{
+    \begin{frame}[plain]
+        \begin{center}
+            \begin{tikzpicture}
+                \node[rectangle, fill=capgeminiblue!90, text=white,
+                      rounded corners=20pt, inner sep=20pt, font=\Huge] {
+                    \insertsection
+                };
+                \draw[orangecap, line width=4pt, rounded corners=20pt]
+                    ([xshift=-5pt,yshift=-5pt]current bounding box.south west)
+                    rectangle
+                    ([xshift=5pt,yshift=5pt]current bounding box.north east);
+            \end{tikzpicture}
+        \end{center}
+    \end{frame}
+}
+
 % Couleurs Capgemini
 \definecolor{capgeminiblue}{RGB}{40,128,186}
 \definecolor{orangecap}{RGB}{240,144,64}
@@ -55,49 +82,60 @@
 
 \begin{document}
 
-% Page de titre magique
+% Page de titre magique avec animations
 \begin{frame}[plain]
     \begin{tikzpicture}[remember picture,overlay]
         % Dégradé de fond
         \shade[top color=capgeminiblue!20, bottom color=white]
             (current page.south west) rectangle (current page.north east);
 
-        % Décoration géométrique
-        \fill[orangecap, opacity=0.1]
-            ([xshift=8cm,yshift=-2cm]current page.north west)
-            -- ([xshift=12cm,yshift=-2cm]current page.north west)
-            -- ([xshift=10cm,yshift=-4cm]current page.north west)
-            -- cycle;
+        % Décoration géométrique avec animations
+        \only<1->{
+            \fill[orangecap, opacity=0.1]
+                ([xshift=8cm,yshift=-2cm]current page.north west)
+                -- ([xshift=12cm,yshift=-2cm]current page.north west)
+                -- ([xshift=10cm,yshift=-4cm]current page.north west)
+                -- cycle;
+        }
 
-        \fill[greencap, opacity=0.1]
-            ([xshift=-8cm,yshift=2cm]current page.south east)
-            -- ([xshift=-12cm,yshift=2cm]current page.south east)
-            -- ([xshift=-10cm,yshift=4cm]current page.south east)
-            -- cycle;
+        \only<2->{
+            \fill[greencap, opacity=0.1]
+                ([xshift=-8cm,yshift=2cm]current page.south east)
+                -- ([xshift=-12cm,yshift=2cm]current page.south east)
+                -- ([xshift=-10cm,yshift=4cm]current page.south east)
+                -- cycle;
+        }
 
-        % Logos
-        \node[anchor=north west, xshift=1cm, yshift=-1cm] at (current page.north west) {
-            \includegraphics[height=2.5cm]{latex_media/media/logoemsi.png}
-        };
-        \node[anchor=north east, xshift=-1cm, yshift=-1cm] at (current page.north east) {
-            \includegraphics[height=2cm]{latex_media/media/image3.png}
-        };
+        % Logos avec apparition progressive
+        \only<3->{
+            \node[anchor=north west, xshift=1cm, yshift=-1cm] at (current page.north west) {
+                \includegraphics[height=2.5cm]{latex_media/media/logoemsi.png}
+            };
+        }
+        \only<4->{
+            \node[anchor=north east, xshift=-1cm, yshift=-1cm] at (current page.north east) {
+                \includegraphics[height=2cm]{latex_media/media/image3.png}
+            };
+        }
 
-        % Ligne décorative
-        \draw[capgeminiblue, line width=3pt]
-            ([xshift=2cm,yshift=-4cm]current page.north west)
-            -- ([xshift=-2cm,yshift=-4cm]current page.north east);
+        % Ligne décorative avec animation
+        \only<5->{
+            \draw[capgeminiblue, line width=3pt]
+                ([xshift=2cm,yshift=-4cm]current page.north west)
+                -- ([xshift=-2cm,yshift=-4cm]current page.north east);
+        }
     \end{tikzpicture}
 
     \vspace{3cm}
     \begin{center}
-        {\Huge\color{capgeminiblue}\textbf{Quiz Agile}}\\[0.3cm]
-        {\huge\color{orangecap}•••}\\[0.5cm]
-        {\Large Développement d'une Plateforme d'Évaluation}\\
-        {\Large des Compétences en Agilité}\\[2cm]
+        \only<6->{\Huge\color{capgeminiblue}\textbf{Quiz Agile}}\\[0.3cm]
+        \only<7->{\huge\color{orangecap}•••}\\[0.5cm]
+        \only<8->{\Large Développement d'une Plateforme d'Évaluation}\\
+        \only<8->{\Large des Compétences en Agilité}\\[2cm]
 
-        \begin{tikzpicture}
-            \node[rectangle, fill=capgeminiblue!10, rounded corners=15pt, inner sep=15pt] {
+        \only<9->{
+            \begin{tikzpicture}
+                \node[rectangle, fill=capgeminiblue!10, rounded corners=15pt, inner sep=15pt] {
                 \begin{minipage}{10cm}
                     \centering
                     {\large\color{orangecap}\textbf{Projet de Fin d'Études}}\\[0.5cm]
@@ -107,10 +145,41 @@
                 \end{minipage}
             };
         \end{tikzpicture}
+        }
     \end{center}
-\end{frame}% Plan
+\end{frame}
+
+% Plan avec animations
 \begin{frame}{Plan de Présentation}
-    \tableofcontents
+    \begin{columns}[T]
+        \column{0.5\textwidth}
+        \begin{block}{Sommaire}
+            \begin{enumerate}
+                \item<2-> Contexte Général
+                \item<3-> Analyse des Besoins
+                \item<4-> Conception et Architecture
+                \item<5-> Diagrammes Techniques
+                \item<6-> Implémentation
+            \end{enumerate}
+        \end{block}
+
+        \column{0.5\textwidth}
+        \begin{block}<7->{Suite du Sommaire}
+            \begin{enumerate}
+                \setcounter{enumi}{5}
+                \item<8-> Tests et Qualité
+                \item<9-> Démonstration
+                \item<10-> Résultats et Métriques
+                \item<11-> Conclusion et Perspectives
+            \end{enumerate}
+        \end{block}
+    \end{columns}
+
+    \only<12->{
+        \begin{center}
+            \textcolor{orangecap}{\textbf{Présentation interactive - Naviguez avec les flèches}}
+        \end{center}
+    }
 \end{frame}
 
 \section{Contexte Général}
@@ -118,55 +187,119 @@
 \begin{frame}{Présentation de Capgemini}
     \begin{columns}
         \column{0.6\textwidth}
-        \begin{block}{Capgemini en chiffres}
+        \begin{block}<1->{Capgemini en chiffres}
             \begin{itemize}
-                \item Leader mondial des services informatiques
-                \item \textbf{340 000+} collaborateurs dans 50 pays
-                \item \textbf{18 milliards d'€} de chiffre d'affaires
-                \item Créé en 1967 par Serge Kampf
+                \item<2-> Leader mondial des services informatiques
+                \item<3-> \textbf{340 000+} collaborateurs dans 50 pays
+                \item<4-> \textbf{18 milliards d'€} de chiffre d'affaires
+                \item<5-> Créé en 1967 par Serge Kampf
             \end{itemize}
         \end{block}
 
         \column{0.4\textwidth}
         \begin{center}
-            \includegraphics[width=\textwidth]{latex_media/media/image3.png}
+            \only<6->{
+                \includegraphics[width=\textwidth]{latex_media/media/image3.png}
+            }
         \end{center}
     \end{columns}
+
+    \only<7->{
+        \begin{block}{Domaines d'expertise}
+            \begin{itemize}
+                \item<8-> Transformation digitale
+                \item<9-> Intelligence artificielle
+                \item<10-> Cloud computing
+                \item<11-> Cybersécurité
+            \end{itemize}
+        \end{block}
+    }
 \end{frame}
 
 \begin{frame}{Problématique}
-    \begin{block}{Enjeux de l'évaluation des compétences Agiles}
+    \begin{block}<1->{Enjeux de l'évaluation des compétences Agiles}
         \begin{itemize}
-            \item Méthodes d'évaluation non standardisées
-            \item Difficultés à identifier les lacunes précises
-            \item Manque de liaison entre évaluation et formation
-            \item Besoin de mesurer l'efficacité des formations
+            \item<2-> Méthodes d'évaluation non standardisées
+            \item<3-> Difficultés à identifier les lacunes précises
+            \item<4-> Manque de liaison entre évaluation et formation
+            \item<5-> Besoin de mesurer l'efficacité des formations
         \end{itemize}
     \end{block}
 
     \begin{columns}
         \column{0.5\textwidth}
-        \textbf{Problèmes identifiés :}
-        \begin{itemize}
-            \item Évaluations subjectives
-            \item Processus chronophages
-            \item Analyses limitées
-        \end{itemize}
+        \begin{block}<6->{Problèmes identifiés}
+            \begin{itemize}
+                \item<7-> \textcolor{red}{Évaluations subjectives}
+                \item<8-> \textcolor{red}{Processus chronophages}
+                \item<9-> \textcolor{red}{Analyses limitées}
+            \end{itemize}
+        \end{block}
 
         \column{0.5\textwidth}
-        \textbf{Solutions apportées :}
-        \begin{itemize}
-            \item Standardisation
-            \item Automatisation
-            \item Analytics avancées
-        \end{itemize}
+        \begin{block}<10->{Solutions apportées}
+            \begin{itemize}
+                \item<11-> \textcolor{greencap}{Standardisation}
+                \item<12-> \textcolor{greencap}{Automatisation}
+                \item<13-> \textcolor{greencap}{Analytics avancées}
+            \end{itemize}
+        \end{block}
     \end{columns}
+
+    \only<14->{
+        \begin{center}
+            \begin{tikzpicture}
+                \node[rectangle, fill=orangecap!20, rounded corners, inner sep=5pt] {
+                    \textbf{Objectif : Créer une plateforme moderne et efficace}
+                };
+            \end{tikzpicture}
+        \end{center}
+    }
 \end{frame}
 
 \section{Analyse des Besoins}
 
 \begin{frame}{Besoins Fonctionnels}
-    \begin{multicols}{2}
+    \begin{columns}[T]
+        \column{0.5\textwidth}
+        \begin{block}<1->{Gestion des utilisateurs}
+            \begin{itemize}
+                \item<2-> Inscription/Connexion sécurisée
+                \item<3-> Profils utilisateurs personnalisés
+                \item<4-> Système de rôles (Admin, User, Guest)
+                \item<5-> Gestion des sessions
+            \end{itemize}
+        \end{block}
+
+        \begin{block}<6->{Gestion des Quiz}
+            \begin{itemize}
+                \item<7-> Création de quiz dynamiques
+                \item<8-> Questions à choix multiples
+                \item<9-> Timer configurable
+                \item<10-> Sauvegarde automatique
+            \end{itemize}
+        \end{block}
+
+        \column{0.5\textwidth}
+        \begin{block}<11->{Évaluation et Analytics}
+            \begin{itemize}
+                \item<12-> Notation automatisée
+                \item<13-> Statistiques détaillées
+                \item<14-> Rapports personnalisés
+                \item<15-> Recommandations d'amélioration
+            \end{itemize}
+        \end{block}
+
+        \begin{block}<16->{Interface et Expérience}
+            \begin{itemize}
+                \item<17-> Design responsive
+                \item<18-> Navigation intuitive
+                \item<19-> Feedback temps réel
+                \item<20-> Accessibilité optimisée
+            \end{itemize}
+        \end{block}
+    \end{columns}
+\end{frame}
         \textbf{Gestion des utilisateurs :}
         \begin{itemize}
             \item Inscription/Connexion
@@ -243,52 +376,86 @@
 \section{Implémentation}
 
 \begin{frame}{Technologies Utilisées}
-    \begin{multicols}{3}
-        \textbf{Frontend :}
-        \begin{itemize}
-            \item React.js
-            \item HTML5/CSS3
-            \item Bootstrap
-        \end{itemize}
+    \begin{columns}[T]
+        \column{0.33\textwidth}
+        \begin{block}<1->{Frontend}
+            \begin{itemize}
+                \item<2-> \textcolor{capgeminiblue}{React.js}
+                \item<3-> HTML5/CSS3
+                \item<4-> Bootstrap
+                \item<5-> TypeScript
+            \end{itemize}
+        \end{block}
 
-        \textbf{Backend :}
-        \begin{itemize}
-            \item Spring Boot
-            \item Java 11
-            \item JPA/Hibernate
-        \end{itemize}
+        \column{0.33\textwidth}
+        \begin{block}<6->{Backend}
+            \begin{itemize}
+                \item<7-> \textcolor{greencap}{Spring Boot}
+                \item<8-> Java 11
+                \item<9-> JPA/Hibernate
+                \item<10-> MySQL
+            \end{itemize}
+        \end{block}
 
-        \textbf{DevOps :}
-        \begin{itemize}
-            \item Docker
-            \item GitLab CI/CD
-            \item SonarQube
-        \end{itemize}
-    \end{multicols}
+        \column{0.33\textwidth}
+        \begin{block}<11->{DevOps}
+            \begin{itemize}
+                \item<12-> \textcolor{orangecap}{Docker}
+                \item<13-> GitLab CI/CD
+                \item<14-> SonarQube
+                \item<15-> Jenkins
+            \end{itemize}
+        \end{block}
+    \end{columns}
+
+    \only<16->{
+        \begin{center}
+            \begin{tikzpicture}
+                \node[rectangle, fill=capgeminiblue!20, rounded corners, inner sep=8pt] {
+                    \textbf{Architecture microservices moderne et scalable}
+                };
+            \end{tikzpicture}
+        \end{center}
+    }
 \end{frame}
 
 \begin{frame}{Outils de Développement}
-    \begin{columns}
-        \column{0.33\textwidth}
-        \begin{center}
-            \textbf{Contrôle de Version}\\[0.5cm]
-            \includegraphics[width=0.6\textwidth]{latex_media/media/git.png}\\
-            \small Git
-        \end{center}
+    \begin{columns}[c]
+        \column{0.25\textwidth}
+        \only<1->{
+            \begin{center}
+                \textbf{Contrôle de Version}\\[0.5cm]
+                \includegraphics[width=0.8\textwidth]{latex_media/media/git.png}\\
+                \small \textcolor{capgeminiblue}{Git}
+            \end{center}
+        }
 
-        \column{0.33\textwidth}
-        \begin{center}
-            \textbf{CI/CD}\\[0.5cm]
-            \includegraphics[width=0.6\textwidth]{latex_media/media/gitlab.png}\\
-            \small GitLab
-        \end{center}
+        \column{0.25\textwidth}
+        \only<2->{
+            \begin{center}
+                \textbf{CI/CD}\\[0.5cm]
+                \includegraphics[width=0.8\textwidth]{latex_media/media/gitlab.png}\\
+                \small \textcolor{orangecap}{GitLab}
+            \end{center}
+        }
 
-        \column{0.33\textwidth}
-        \begin{center}
-            \textbf{Containerisation}\\[0.5cm]
-            \includegraphics[width=0.6\textwidth]{latex_media/media/docker.png}\\
-            \small Docker
-        \end{center}
+        \column{0.25\textwidth}
+        \only<3->{
+            \begin{center}
+                \textbf{Containerisation}\\[0.5cm]
+                \includegraphics[width=0.8\textwidth]{latex_media/media/docker.png}\\
+                \small \textcolor{capgeminiblue}{Docker}
+            \end{center}
+        }
+
+        \column{0.25\textwidth}
+        \only<4->{
+            \begin{center}
+                \textbf{Build Tool}\\[0.5cm]
+                \includegraphics[width=0.8\textwidth]{latex_media/media/maven.png}\\
+                \small \textcolor{greencap}{Maven}
+            \end{center}
+        }
     \end{columns}
 
     \vspace{1cm}
