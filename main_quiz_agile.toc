@@ -4,7 +4,7 @@
 \contentsline {chapter}{Abstract}{iii}{chapter*.1}%
 \contentsline {chapter}{Liste des Abréviations}{iv}{chapter*.2}%
 \contentsline {chapter}{Liste des figures}{xi}{chapter*.4}%
-\contentsline {chapter}{Liste des tableaux}{xii}{chapter*.5}%
+\contentsline {chapter}{Liste des tableaux}{xiii}{chapter*.5}%
 \contentsline {chapter}{Introduction générale}{1}{chapter*.7}%
 \contentsline {chapter}{Chapitre 1: Contexte Général du projet}{4}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Introduction}{4}{section.1.1}%
@@ -53,124 +53,141 @@
 \contentsline {subsection}{\numberline {2.5.7}Interopérabilité}{20}{subsection.2.5.7}%
 \contentsline {section}{\numberline {2.6}Analyse des Acteurs et des Cas d'Utilisation}{21}{section.2.6}%
 \contentsline {subsection}{\numberline {2.6.1}Identification des acteurs}{21}{subsection.2.6.1}%
-\contentsline {subsubsection}{Administrateur}{22}{section*.22}%
-\contentsline {subsubsection}{Coach}{22}{section*.23}%
-\contentsline {subsubsection}{Collaborateur}{22}{section*.24}%
-\contentsline {subsubsection}{Système NEXT}{22}{section*.25}%
-\contentsline {section}{\numberline {2.7}Conception architecturale}{22}{section.2.7}%
-\contentsline {subsection}{\numberline {2.7.1}Diagramme de classes}{22}{subsection.2.7.1}%
-\contentsline {subsection}{\numberline {2.7.2}Diagramme de Cas d'Utilisation}{24}{subsection.2.7.2}%
-\contentsline {subsection}{\numberline {2.7.3}Tableau Récapitulatif des Cas d'Utilisation}{25}{subsection.2.7.3}%
-\contentsline {section}{\numberline {2.8}Description détaillée des principaux cas d'utilisation}{26}{section.2.8}%
-\contentsline {subsection}{\numberline {2.8.1}Cas d'utilisation : Créer un quiz}{26}{subsection.2.8.1}%
-\contentsline {subsection}{\numberline {2.8.2}Cas d'utilisation : Passer un quiz}{27}{subsection.2.8.2}%
-\contentsline {section}{\numberline {2.9}Architecture monolithique}{28}{section.2.9}%
-\contentsline {subsection}{\numberline {2.9.1}Conclusion}{30}{subsection.2.9.1}%
-\contentsline {subsection}{\numberline {2.9.2}Évaluation et résultats}{30}{subsection.2.9.2}%
-\contentsline {subsection}{\numberline {2.9.3}Analyse et reporting}{30}{subsection.2.9.3}%
-\contentsline {subsection}{\numberline {2.9.4}Intégration avec la plateforme NEXT}{30}{subsection.2.9.4}%
-\contentsline {section}{\numberline {2.10}Spécifications non fonctionnelles}{30}{section.2.10}%
-\contentsline {subsection}{\numberline {2.10.1}Performance}{30}{subsection.2.10.1}%
-\contentsline {subsection}{\numberline {2.10.2}Sécurité}{31}{subsection.2.10.2}%
-\contentsline {subsection}{\numberline {2.10.3}Disponibilité et fiabilité}{31}{subsection.2.10.3}%
-\contentsline {subsection}{\numberline {2.10.4}Maintenabilité}{31}{subsection.2.10.4}%
-\contentsline {subsection}{\numberline {2.10.5}Utilisabilité}{31}{subsection.2.10.5}%
-\contentsline {section}{\numberline {2.11}Identification des acteurs}{31}{section.2.11}%
-\contentsline {subsection}{\numberline {2.11.1}Administrateur}{31}{subsection.2.11.1}%
-\contentsline {subsection}{\numberline {2.11.2}Coach}{32}{subsection.2.11.2}%
-\contentsline {subsection}{\numberline {2.11.3}Collaborateur}{32}{subsection.2.11.3}%
-\contentsline {subsection}{\numberline {2.11.4}Système NEXT}{32}{subsection.2.11.4}%
-\contentsline {section}{\numberline {2.12}Diagramme de cas d'utilisation}{32}{section.2.12}%
-\contentsline {section}{\numberline {2.13}Conclusion}{32}{section.2.13}%
-\contentsline {chapter}{Chapitre 3: Conception et Mise en place du système}{35}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Introduction}{35}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Architecture du système}{35}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Architecture logicielle}{35}{subsection.3.2.1}%
-\contentsline {subsubsection}{Architecture 3-tiers}{35}{section*.30}%
-\contentsline {subsubsection}{Patron d'architecture MVC}{35}{section*.31}%
-\contentsline {subsection}{\numberline {3.2.2}Architecture de déploiement}{35}{subsection.3.2.2}%
-\contentsline {section}{\numberline {3.3}Modélisation UML}{36}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Diagramme de classes}{36}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Diagramme de séquence}{36}{subsection.3.3.2}%
-\contentsline {section}{\numberline {3.4}Modèle de données}{36}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Modèle conceptuel}{36}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Modèle relationnel}{36}{subsection.3.4.2}%
-\contentsline {section}{\numberline {3.5}Technologies et outils utilisés}{36}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Backend - Spring Boot}{36}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}Frontend - React}{37}{subsection.3.5.2}%
-\contentsline {subsection}{\numberline {3.5.3}Base de données - MySQL}{37}{subsection.3.5.3}%
-\contentsline {section}{\numberline {3.6}Conclusion}{37}{section.3.6}%
-\contentsline {chapter}{Chapitre 4: Réalisation, Tests et Étude Technique}{39}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Introduction}{39}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Environnement de développement}{39}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Configuration de l'environnement}{39}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Structure du projet}{39}{subsection.4.2.2}%
-\contentsline {section}{\numberline {4.3}Implémentation du backend}{39}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Configuration Spring Boot}{39}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Modèle de données}{39}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Services métier}{40}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}API REST}{40}{subsection.4.3.4}%
-\contentsline {section}{\numberline {4.4}Implémentation du frontend}{40}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Architecture React}{40}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Gestion d'état}{40}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}Composants principaux}{40}{subsection.4.4.3}%
-\contentsline {section}{\numberline {4.5}Tests et validation}{41}{section.4.5}%
-\contentsline {subsection}{\numberline {4.5.1}Tests unitaires}{41}{subsection.4.5.1}%
-\contentsline {subsection}{\numberline {4.5.2}Tests d'intégration}{41}{subsection.4.5.2}%
-\contentsline {subsection}{\numberline {4.5.3}Tests de performance}{41}{subsection.4.5.3}%
-\contentsline {section}{\numberline {4.6}Déploiement}{41}{section.4.6}%
-\contentsline {subsection}{\numberline {4.6.1}Conteneurisation}{41}{subsection.4.6.1}%
-\contentsline {subsection}{\numberline {4.6.2}Pipeline CI/CD}{41}{subsection.4.6.2}%
-\contentsline {section}{\numberline {4.7}Conclusion}{42}{section.4.7}%
-\contentsline {section}{\numberline {4.8}Architecture technique et choix technologiques}{42}{section.4.8}%
-\contentsline {section}{\numberline {4.9}Architecture du Système}{42}{section.4.9}%
-\contentsline {subsection}{\numberline {4.9.1}Choix de l'Architecture Monolithique}{42}{subsection.4.9.1}%
-\contentsline {section}{\numberline {4.10}Technologies et Framework utilisées}{43}{section.4.10}%
-\contentsline {subsection}{\numberline {4.10.1}Spring Boot}{43}{subsection.4.10.1}%
-\contentsline {subsubsection}{Configuration technique du projet}{44}{section*.34}%
-\contentsline {subsection}{\numberline {4.10.2}React}{44}{subsection.4.10.2}%
-\contentsline {subsubsection}{Configuration technique du projet}{44}{section*.36}%
-\contentsline {subsection}{\numberline {4.10.3}Authentification et Sécurité}{45}{subsection.4.10.3}%
-\contentsline {subsubsection}{JWT (JSON Web Token)}{45}{section*.37}%
-\contentsline {subsubsection}{Configuration technique du projet}{45}{section*.38}%
-\contentsline {subsection}{\numberline {4.10.4}Base de données}{45}{subsection.4.10.4}%
-\contentsline {subsubsection}{PostgreSQL}{45}{section*.40}%
-\contentsline {subsubsection}{Configuration technique du projet}{46}{section*.41}%
-\contentsline {subsection}{\numberline {4.10.5}Système de gestion de dépendances}{46}{subsection.4.10.5}%
-\contentsline {subsubsection}{Maven}{46}{section*.43}%
-\contentsline {section}{\numberline {4.11}Conclusion}{46}{section.4.11}%
-\contentsline {chapter}{Chapitre 5: Présentation des interfaces et résultats}{49}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Introduction}{49}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Interface d'authentification}{49}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Page de connexion}{49}{subsection.5.2.1}%
-\contentsline {section}{\numberline {5.3}Interface du tableau de bord}{50}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Tableau de bord principal}{50}{subsection.5.3.1}%
-\contentsline {section}{\numberline {5.4}Interface administrateur}{50}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}Gestion des utilisateurs}{50}{subsection.5.4.1}%
-\contentsline {subsection}{\numberline {5.4.2}Création d'un utilisateur}{51}{subsection.5.4.2}%
-\contentsline {section}{\numberline {5.5}Interface coach}{52}{section.5.5}%
-\contentsline {subsection}{\numberline {5.5.1}Création de questions}{52}{subsection.5.5.1}%
-\contentsline {subsection}{\numberline {5.5.2}Création d'un quiz}{53}{subsection.5.5.2}%
-\contentsline {subsection}{\numberline {5.5.3}Paramétrage et publication}{55}{subsection.5.5.3}%
-\contentsline {section}{\numberline {5.6}Interface participant}{56}{section.5.6}%
-\contentsline {subsection}{\numberline {5.6.1}Passage d'un quiz}{56}{subsection.5.6.1}%
-\contentsline {subsection}{\numberline {5.6.2}Résultats d'un quiz}{57}{subsection.5.6.2}%
-\contentsline {section}{\numberline {5.7}Tableaux de bord et analyses}{58}{section.5.7}%
-\contentsline {subsection}{\numberline {5.7.1}Analyse des performances}{58}{subsection.5.7.1}%
-\contentsline {subsection}{\numberline {5.7.2}Rapports détaillés}{58}{subsection.5.7.2}%
-\contentsline {subsection}{\numberline {5.7.3}Gestion des questions}{59}{subsection.5.7.3}%
-\contentsline {subsection}{\numberline {5.7.4}Analyse des résultats}{59}{subsection.5.7.4}%
-\contentsline {section}{\numberline {5.8}Interface collaborateur}{60}{section.5.8}%
-\contentsline {subsection}{\numberline {5.8.1}Accueil collaborateur}{60}{subsection.5.8.1}%
-\contentsline {subsection}{\numberline {5.8.2}Passage de quiz}{60}{subsection.5.8.2}%
-\contentsline {subsection}{\numberline {5.8.3}Résultats personnels}{60}{subsection.5.8.3}%
-\contentsline {section}{\numberline {5.9}Fonctionnalités transversales}{60}{section.5.9}%
-\contentsline {subsection}{\numberline {5.9.1}Responsivité}{60}{subsection.5.9.1}%
-\contentsline {subsection}{\numberline {5.9.2}Accessibilité}{60}{subsection.5.9.2}%
-\contentsline {section}{\numberline {5.10}Résultats et performances}{61}{section.5.10}%
-\contentsline {subsection}{\numberline {5.10.1}Métriques de performance}{61}{subsection.5.10.1}%
-\contentsline {subsection}{\numberline {5.10.2}Adoption utilisateur}{61}{subsection.5.10.2}%
-\contentsline {section}{\numberline {5.11}Conclusion}{61}{section.5.11}%
-\contentsline {chapter}{Conclusion générale}{62}{chapter*.56}%
-\contentsline {chapter}{Annexes}{64}{chapter*.57}%
-\contentsline {chapter}{Webographie}{66}{chapter*.64}%
+\contentsline {subsubsection}{Administrateur}{22}{section*.23}%
+\contentsline {subsubsection}{Coach}{22}{section*.24}%
+\contentsline {subsubsection}{Collaborateur}{22}{section*.25}%
+\contentsline {subsubsection}{Système NEXT}{22}{section*.26}%
+\contentsline {subsection}{\numberline {2.6.2}Diagramme de Cas d'Utilisation}{22}{subsection.2.6.2}%
+\contentsline {section}{\numberline {2.7}Conception architecturale}{24}{section.2.7}%
+\contentsline {subsection}{\numberline {2.7.1}Diagramme de classes}{24}{subsection.2.7.1}%
+\contentsline {subsection}{\numberline {2.7.2}Diagramme de paquetages}{26}{subsection.2.7.2}%
+\contentsline {subsection}{\numberline {2.7.3}Diagramme de séquence}{27}{subsection.2.7.3}%
+\contentsline {subsection}{\numberline {2.7.4}Diagramme d'activité}{27}{subsection.2.7.4}%
+\contentsline {subsection}{\numberline {2.7.5}Diagrammes d'état}{29}{subsection.2.7.5}%
+\contentsline {subsubsection}{Diagramme d'état : Statut du Quiz}{29}{section*.32}%
+\contentsline {subsubsection}{Diagramme d'état : Tentative de Quiz}{29}{section*.34}%
+\contentsline {subsection}{\numberline {2.7.6}Tableau Récapitulatif des Cas d'Utilisation}{29}{subsection.2.7.6}%
+\contentsline {section}{\numberline {2.8}Description détaillée des principaux cas d'utilisation}{31}{section.2.8}%
+\contentsline {subsection}{\numberline {2.8.1}Cas d'utilisation : Créer un quiz}{31}{subsection.2.8.1}%
+\contentsline {subsection}{\numberline {2.8.2}Cas d'utilisation : Passer un quiz}{33}{subsection.2.8.2}%
+\contentsline {section}{\numberline {2.9}Architecture monolithique}{34}{section.2.9}%
+\contentsline {subsection}{\numberline {2.9.1}Conclusion}{35}{subsection.2.9.1}%
+\contentsline {subsection}{\numberline {2.9.2}Évaluation et résultats}{35}{subsection.2.9.2}%
+\contentsline {subsection}{\numberline {2.9.3}Analyse et reporting}{36}{subsection.2.9.3}%
+\contentsline {subsection}{\numberline {2.9.4}Intégration avec la plateforme NEXT}{36}{subsection.2.9.4}%
+\contentsline {section}{\numberline {2.10}Spécifications non fonctionnelles}{36}{section.2.10}%
+\contentsline {subsection}{\numberline {2.10.1}Performance}{36}{subsection.2.10.1}%
+\contentsline {subsection}{\numberline {2.10.2}Sécurité}{36}{subsection.2.10.2}%
+\contentsline {subsection}{\numberline {2.10.3}Disponibilité et fiabilité}{36}{subsection.2.10.3}%
+\contentsline {subsection}{\numberline {2.10.4}Maintenabilité}{37}{subsection.2.10.4}%
+\contentsline {subsection}{\numberline {2.10.5}Utilisabilité}{37}{subsection.2.10.5}%
+\contentsline {section}{\numberline {2.11}Identification des acteurs}{37}{section.2.11}%
+\contentsline {subsection}{\numberline {2.11.1}Administrateur}{37}{subsection.2.11.1}%
+\contentsline {subsection}{\numberline {2.11.2}Coach}{37}{subsection.2.11.2}%
+\contentsline {subsection}{\numberline {2.11.3}Collaborateur}{38}{subsection.2.11.3}%
+\contentsline {subsection}{\numberline {2.11.4}Système NEXT}{38}{subsection.2.11.4}%
+\contentsline {section}{\numberline {2.12}Diagramme de cas d'utilisation}{38}{section.2.12}%
+\contentsline {section}{\numberline {2.13}Conclusion}{38}{section.2.13}%
+\contentsline {chapter}{Chapitre 3: Conception et Mise en place du système}{41}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Introduction}{41}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Architecture du système}{41}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Architecture logicielle}{42}{subsection.3.2.1}%
+\contentsline {subsubsection}{Architecture 3-tiers}{42}{section*.39}%
+\contentsline {subsubsection}{Patron d'architecture MVC}{42}{section*.40}%
+\contentsline {subsection}{\numberline {3.2.2}Architecture de déploiement}{42}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3}Modélisation UML}{42}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Diagramme de classes}{42}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Diagramme de séquence}{42}{subsection.3.3.2}%
+\contentsline {section}{\numberline {3.4}Modèle de données}{43}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Modèle conceptuel}{43}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Modèle relationnel}{43}{subsection.3.4.2}%
+\contentsline {section}{\numberline {3.5}Technologies et outils utilisés}{43}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Backend - Spring Boot}{43}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Frontend - React}{43}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}Base de données - MySQL}{44}{subsection.3.5.3}%
+\contentsline {section}{\numberline {3.6}Conclusion}{44}{section.3.6}%
+\contentsline {chapter}{Chapitre 4: Réalisation, Tests et Étude Technique}{46}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Introduction}{46}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Environnement de développement}{46}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Configuration de l'environnement}{46}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Structure du projet}{46}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}Implémentation du backend}{46}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Configuration Spring Boot}{46}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Modèle de données}{46}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Services métier}{47}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}API REST}{47}{subsection.4.3.4}%
+\contentsline {section}{\numberline {4.4}Implémentation du frontend}{47}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Architecture React}{47}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Gestion d'état}{47}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Composants principaux}{47}{subsection.4.4.3}%
+\contentsline {section}{\numberline {4.5}Tests et validation}{48}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Tests unitaires}{48}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Tests d'intégration}{48}{subsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.5.3}Tests de performance}{48}{subsection.4.5.3}%
+\contentsline {section}{\numberline {4.6}Déploiement}{48}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Conteneurisation}{48}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}Pipeline CI/CD}{48}{subsection.4.6.2}%
+\contentsline {section}{\numberline {4.7}Conclusion}{49}{section.4.7}%
+\contentsline {section}{\numberline {4.8}Architecture technique et choix technologiques}{49}{section.4.8}%
+\contentsline {section}{\numberline {4.9}Architecture du Système}{49}{section.4.9}%
+\contentsline {subsection}{\numberline {4.9.1}Choix de l'Architecture Monolithique}{49}{subsection.4.9.1}%
+\contentsline {section}{\numberline {4.10}Technologies et Framework utilisées}{50}{section.4.10}%
+\contentsline {subsection}{\numberline {4.10.1}Spring Boot}{50}{subsection.4.10.1}%
+\contentsline {subsubsection}{Configuration technique du projet}{51}{section*.43}%
+\contentsline {subsection}{\numberline {4.10.2}React}{51}{subsection.4.10.2}%
+\contentsline {subsubsection}{Configuration technique du projet}{51}{section*.45}%
+\contentsline {subsection}{\numberline {4.10.3}Authentification et Sécurité}{52}{subsection.4.10.3}%
+\contentsline {subsubsection}{JWT (JSON Web Token)}{52}{section*.46}%
+\contentsline {subsubsection}{Configuration technique du projet}{52}{section*.47}%
+\contentsline {subsection}{\numberline {4.10.4}Base de données}{52}{subsection.4.10.4}%
+\contentsline {subsubsection}{PostgreSQL}{52}{section*.49}%
+\contentsline {subsubsection}{Configuration technique du projet}{53}{section*.50}%
+\contentsline {subsection}{\numberline {4.10.5}Système de gestion de dépendances}{53}{subsection.4.10.5}%
+\contentsline {subsubsection}{Maven}{53}{section*.52}%
+\contentsline {section}{\numberline {4.11}Outils de développement et de test}{54}{section.4.11}%
+\contentsline {subsection}{\numberline {4.11.1}Outils de test}{54}{subsection.4.11.1}%
+\contentsline {subsubsection}{JUnit 5}{54}{section*.54}%
+\contentsline {subsubsection}{Mockito}{55}{section*.56}%
+\contentsline {subsubsection}{Jest}{55}{section*.58}%
+\contentsline {subsection}{\numberline {4.11.2}Outils de documentation et modélisation}{56}{subsection.4.11.2}%
+\contentsline {subsubsection}{PlantUML}{56}{section*.60}%
+\contentsline {subsection}{\numberline {4.11.3}Outils de test API et intégration}{57}{subsection.4.11.3}%
+\contentsline {subsubsection}{Postman}{57}{section*.62}%
+\contentsline {subsection}{\numberline {4.11.4}Intégration continue et déploiement}{57}{subsection.4.11.4}%
+\contentsline {subsubsection}{Jenkins}{57}{section*.64}%
+\contentsline {section}{\numberline {4.12}Conclusion}{58}{section.4.12}%
+\contentsline {chapter}{Chapitre 5: Présentation des interfaces et résultats}{60}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Introduction}{60}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Interface d'authentification}{60}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Page de connexion}{60}{subsection.5.2.1}%
+\contentsline {section}{\numberline {5.3}Interface du tableau de bord}{61}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Tableau de bord principal}{61}{subsection.5.3.1}%
+\contentsline {section}{\numberline {5.4}Interface administrateur}{61}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Gestion des utilisateurs}{61}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Création d'un utilisateur}{62}{subsection.5.4.2}%
+\contentsline {section}{\numberline {5.5}Interface coach}{63}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Création de questions}{63}{subsection.5.5.1}%
+\contentsline {subsection}{\numberline {5.5.2}Création d'un quiz}{64}{subsection.5.5.2}%
+\contentsline {subsection}{\numberline {5.5.3}Paramétrage et publication}{66}{subsection.5.5.3}%
+\contentsline {section}{\numberline {5.6}Interface participant}{67}{section.5.6}%
+\contentsline {subsection}{\numberline {5.6.1}Passage d'un quiz}{67}{subsection.5.6.1}%
+\contentsline {subsection}{\numberline {5.6.2}Résultats d'un quiz}{68}{subsection.5.6.2}%
+\contentsline {section}{\numberline {5.7}Tableaux de bord et analyses}{69}{section.5.7}%
+\contentsline {subsection}{\numberline {5.7.1}Analyse des performances}{69}{subsection.5.7.1}%
+\contentsline {subsection}{\numberline {5.7.2}Rapports détaillés}{69}{subsection.5.7.2}%
+\contentsline {subsection}{\numberline {5.7.3}Gestion des questions}{70}{subsection.5.7.3}%
+\contentsline {subsection}{\numberline {5.7.4}Analyse des résultats}{70}{subsection.5.7.4}%
+\contentsline {section}{\numberline {5.8}Interface collaborateur}{71}{section.5.8}%
+\contentsline {subsection}{\numberline {5.8.1}Accueil collaborateur}{71}{subsection.5.8.1}%
+\contentsline {subsection}{\numberline {5.8.2}Passage de quiz}{71}{subsection.5.8.2}%
+\contentsline {subsection}{\numberline {5.8.3}Résultats personnels}{71}{subsection.5.8.3}%
+\contentsline {section}{\numberline {5.9}Fonctionnalités transversales}{71}{section.5.9}%
+\contentsline {subsection}{\numberline {5.9.1}Responsivité}{71}{subsection.5.9.1}%
+\contentsline {subsection}{\numberline {5.9.2}Accessibilité}{71}{subsection.5.9.2}%
+\contentsline {section}{\numberline {5.10}Résultats et performances}{72}{section.5.10}%
+\contentsline {subsection}{\numberline {5.10.1}Métriques de performance}{72}{subsection.5.10.1}%
+\contentsline {subsection}{\numberline {5.10.2}Adoption utilisateur}{72}{subsection.5.10.2}%
+\contentsline {section}{\numberline {5.11}Conclusion}{72}{section.5.11}%
+\contentsline {chapter}{Conclusion générale}{73}{chapter*.78}%
+\contentsline {chapter}{Annexes}{75}{chapter*.79}%
+\contentsline {chapter}{Webographie}{77}{chapter*.86}%

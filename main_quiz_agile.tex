@@ -61,12 +61,14 @@
   citecolor=myblue
 }
 
-% Pied de page
+% Pied de page et en-têtes
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyfoot[C]{\thepage}
-\renewcommand{\headrulewidth}{0pt}
+\fancyhead[L]{\leftmark}  % Titre du chapitre à gauche
+\fancyfoot[C]{\thepage}   % Numéro de page au centre
+\renewcommand{\headrulewidth}{0.4pt}  % Ligne sous l'en-tête
+\renewcommand{\footrulewidth}{0pt}    % Pas de ligne au-dessus du pied de page
 
 % Ajustement pour headheight
 \setlength{\headheight}{25pt}
@@ -78,10 +80,10 @@
 
 % Logos en haut
 \begin{minipage}{0.45\textwidth}\centering
-  \includegraphics[height=6.5cm]{latex_media/media/image1.png}
+  \includegraphics[height=6.5cm]{latex_media/media/logoemsi.png}
 \end{minipage}\hfill
 \begin{minipage}{0.45\textwidth}\centering
-  \includegraphics[height=3.5cm]{latex_media/media/image3.png}
+  \includegraphics[height=3.5cm]{latex_media/media/logo unica.jpg}
 \end{minipage}
 
 \vspace{1cm}
@@ -97,10 +99,11 @@ pour l'évaluation des compétences en agilité}}\\[1cm]
 
 {\large \textbf{Organisme d'accueil: CAPGEMINI}}\\[1.5cm]
 
+
 \begin{tabular}{@{}>{\bfseries}r l@{}}
   Réalisé par:& ANIBA SOUFIANE \\
-  Encadrant(s) professionnel(s):& [NOM ENCADRANT] \\
-  Encadrant pédagogique:& [NOM ENCADRANT] \\
+  Encadrant professionnel:& Mme ASSALI FATIMA \\
+  Encadrant pédagogique:& Pr OUATIQ AMINA \\
 \end{tabular}
 
 \vfill
@@ -225,10 +228,11 @@ To ensure agility in the development process, the \textbf{Scrum} methodology was
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.25}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.75}}@{}}
-\toprule
-\rowcolor{capgeminiblue}
-\textcolor{white}{\textbf{Abréviation}} & \textcolor{white}{\textbf{Signification}} \\
-\midrule
+\caption{Liste des principales abréviations utilisées dans ce rapport}
+\label{tab:abreviations}\\
+\toprule()
+\cellcolor{capgeminiblue}\textcolor{white}{\textbf{Abréviation}} & \cellcolor{capgeminiblue}\textcolor{white}{\textbf{Signification}} \\
+\midrule()
 \endhead
 \rowcolor{lightgray}
 AJAX & Asynchronous JavaScript and XML (JavaScript et XML Asynchrones) \\
@@ -280,11 +284,11 @@ UI/UX & User Interface/User Experience (Interface/Expérience Utilisateur) \\
 UML & Unified Modeling Language (Langage de Modélisation Unifié) \\
 \rowcolor{lightgray}
 URL & Uniform Resource Locator \\
-\bottomrule
+\bottomrule()
 \end{longtable}
 
 \begin{center}
-\textit{Tableau 1~: Liste des principales abréviations utilisées dans ce rapport}
+\textbf{Tableau 1 :} Liste des principales abréviations utilisées dans ce rapport
 \end{center}
 \cleardoublepage
 
@@ -444,6 +448,8 @@ mondiaux de son secteur d'activité.
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{1.0}}@{}}
+\caption{Fiche d'identité du groupe Capgemini}
+\label{tab:capgemini-fiche}\\
 \toprule
 \multicolumn{1}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{1.0000} + 2\tabcolsep}@{}}{%
 \cellcolor{capgeminiblue}\textcolor{white}{\textbf{Groupe Capgemini}}} \\
@@ -458,11 +464,11 @@ mondiaux de son secteur d'activité.
 \rowcolor{lightgray}
 \textbf{Effectif} : Plus de 340\,000 (2022) \\
 \textbf{Chiffre d'affaires} : 18 Milliards d'Euros (2021) \\
-\bottomrule
+\bottomrule()
 \end{longtable}
 
 \begin{center}
-\textit{Tableau 2~: Fiche d'identité du groupe Capgemini}
+\textbf{Tableau 2 :} Fiche d'identité du groupe Capgemini
 \end{center}
 
 \subsection{Métiers du groupe Capgemini}
@@ -474,10 +480,13 @@ Voici un aperçu des principaux services offerts par \textbf{Capgemini} :
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.35}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.65}}@{}}
+\caption{Les différents métiers de Capgemini}
+\label{tab:capgemini-metiers}\\
 \toprule
 \cellcolor{capgeminiblue}\textcolor{white}{\textbf{Services de Capgemini}} &
 \cellcolor{capgeminiblue}\textcolor{white}{\textbf{Informations sur les services}} \\
 \midrule
+\endhead
 \endhead
 \rowcolor{lightgray}
 \textbf{Consulting Services} & Aide à améliorer la performance des organisations, en s'appuyant sur une connaissance approfondie des industries et des processus clients. \\
@@ -487,11 +496,11 @@ Voici un aperçu des principaux services offerts par \textbf{Capgemini} :
 \textbf{L'intégration de systèmes} (Technology Services) & Le pôle comprend l'architecture des systèmes d'information (conception/design), l'intégration de systèmes, les développements applicatifs, le pilotage et l'optimisation des systèmes, des réseaux et des données. \\
 \rowcolor{lightgray}
 \textbf{L'Infogérance} (Outsourcing Services) & Il s'agit de la prise en charge totale ou partielle du système d'information d'un client (ou d'un regroupement de plusieurs clients) et des activités métiers s'y rattachant pour une durée moyenne de cinq ans, mais qui peut aller jusqu'à dix ans, voire davantage. \\
-\bottomrule
+\bottomrule()
 \end{longtable}
 
 \begin{center}
-\textit{Tableau 3~: Les différents métiers de Capgemini}
+\textbf{Tableau 3 :} Les différents métiers de Capgemini
 \end{center}
 
 \subsection{Capgemini TS Maroc}
@@ -693,6 +702,17 @@ Le projet \textbf{Quiz Agile} a été développé en suivant rigoureusement la m
 \item Une adaptation continue aux besoins
 \item Une livraison rapide de valeur métier
 \end{itemize}
+
+Les réunions quotidiennes (Daily Scrum) jouent un rôle central dans cette méthodologie, favorisant la communication et la coordination de l'équipe.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{latex_media/media/image9.png}
+\caption{Organisation des réunions quotidiennes (Daily Scrum)}
+\label{fig:daily-scrum}
+\end{figure}
+
+Ces réunions quotidiennes de synchronisation permettent à l'équipe de partager les avancées, identifier les blocages et coordonner les efforts pour atteindre les objectifs du sprint.
 
 \cleardoublepage
 \section{Conclusion}
@@ -970,6 +990,67 @@ Dans le cadre du projet QUIZ AGILE, plusieurs acteurs clés interagissent avec l
 \item Récupère les résultats des évaluations
 \end{itemize}
 
+\subsection{Diagramme de Cas d'Utilisation}
+
+Le diagramme de cas d'utilisation est un outil d'analyse puissant qui permet de visualiser les différents cas d'utilisation de l'application et les fonctionnalités associées aux interactions avec les acteurs, offrant ainsi une compréhension globale des besoins des utilisateurs et des objectifs du système.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\textwidth]{latex_media/media/image14.png}
+    \caption{Diagramme de cas d'utilisation du système Quiz Agile}
+    \label{fig:cas-utilisation}
+\end{figure}
+
+Le diagramme de cas d'utilisation ci-dessus illustre les principales interactions entre les acteurs et le système Quiz Agile. Le diagramme met en évidence les actions principales accessibles aux différents acteurs après authentification. Cette modélisation permet de comprendre les interactions et les périmètres de responsabilité au sein de l'application Quiz Agile.
+
+\subsection{Diagramme entité-relation}
+
+Le diagramme entité-relation illustre la structure de la base de données et les relations entre les différentes entités du système Quiz Agile. Il représente l'organisation logique des données et les contraintes relationnelles.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\textwidth]{latex_media/media/Diagramme entite-relation.png}
+    \caption{Diagramme entité-relation du système Quiz Agile}
+    \label{fig:diagramme-entite-relation}
+\end{figure}
+
+\subsubsection{Explications des dépendances}
+
+\textbf{Quiz dépend de :}
+\begin{itemize}
+    \item \textbf{User} (pour le créateur du quiz)
+    \item \textbf{Question} (pour les questions incluses)
+\end{itemize}
+
+\textbf{Attempt dépend de :}
+\begin{itemize}
+    \item \textbf{Quiz} (quel quiz est tenté)
+    \item \textbf{User} (qui tente)
+    \item \textbf{Question} (pour validation)
+\end{itemize}
+
+\textbf{Result agrège les données de :}
+\begin{itemize}
+    \item \textbf{Quiz} (paramètres)
+    \item \textbf{User} (participant)
+    \item \textbf{Attempt} (détails)
+\end{itemize}
+
+\textbf{Notification utilise :}
+\begin{itemize}
+    \item \textbf{User} (destinataire)
+    \item \textbf{Result} (contenu)
+\end{itemize}
+
+\subsubsection{Analyse Architecturale}
+
+\begin{itemize}
+    \item \textbf{Architecture} : Hexagonale (Domain-Centric)
+    \item \textbf{Niveau de couplage} : Modulaire
+\end{itemize}
+
+Cette approche architecturale garantit une séparation claire entre la logique métier et les détails techniques, facilitant la maintenabilité et l'évolutivité du système.
+
 \section{Conception architecturale}
 
 \subsection{Diagramme de classes}
@@ -994,28 +1075,82 @@ Le diagramme représente un système de quiz en ligne avec 6 packages principaux
 \item \textbf{Config} : Configuration de sécurité et JWT
 \end{enumerate}
 
-\subsection{Diagramme de Cas d'Utilisation}
+\subsection{Diagramme de paquetages}
 
-Le diagramme de cas d'utilisation est un outil d'analyse puissant qui permet de visualiser les différents cas d'utilisation de l'application et les fonctionnalités associées aux interactions avec les acteurs, offrant ainsi une compréhension globale des besoins des utilisateurs et des objectifs du système.
+Le diagramme de paquetages offre une vue d'ensemble de l'organisation structurelle du système Quiz Agile. Il présente les différents modules et leurs relations, facilitant la compréhension de l'architecture globale.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{latex_media/media/image17.png}
+\caption{Diagramme de paquetages de l'architecture système}
+\label{fig:diagramme-paquetages}
+\end{figure}
+
+Cette représentation modulaire favorise une approche de développement claire et maintient une séparation logique entre les différentes responsabilités du système.
+
+\subsection{Diagramme de séquence}
+
+Le diagramme de séquence est un diagramme d'interaction qui détaille le déroulement temporel des échanges entre les différents objets du système. Il représente la chronologie des appels de méthodes et des interactions pour un scénario d'usage particulier.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{latex_media/media/image19.png}
+\caption{Diagramme de séquence du système Quiz Agile}
+\label{fig:diagramme-sequence}
+\end{figure}
+
+Ce diagramme illustre les interactions principales lors du processus de création et de passage d'un quiz, mettant en évidence la communication entre les couches de l'architecture.
+
+\subsection{Diagramme d'activité}
+
+Le diagramme d'activité représente le flux de processus et les décisions dans le système. Il modélise les activités, les transitions et les points de décision pour illustrer le comportement dynamique du système.
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.7\textwidth]{latex_media/media/image14.png}
-    \caption{Diagramme de cas d'utilisation du système Quiz Agile}
-    \label{fig:cas-utilisation}
+    \includegraphics[width=0.8\textwidth]{latex_media/media/activity_diagramme_passer_quiz.png}
+    \caption{Diagramme d'activité : Processus de passage d'un quiz}
+    \label{fig:activite-passer-quiz}
 \end{figure}
 
-Le diagramme de cas d'utilisation ci-dessus illustre les principales interactions entre les acteurs et le système Quiz Agile. Le diagramme met en évidence les actions principales accessibles aux différents acteurs après authentification. Cette modélisation permet de comprendre les interactions et les périmètres de responsabilité au sein de l'application Quiz Agile.
+Ce diagramme détaille le processus complet de passage d'un quiz, depuis la sélection du quiz par l'utilisateur jusqu'à l'affichage des résultats finaux. Il met en évidence les points de décision critiques, les boucles de traitement des questions, et les différents chemins possibles selon les actions de l'utilisateur.
+
+\subsection{Diagrammes d'état}
+
+Les diagrammes d'état modélisent les différents états que peuvent prendre les objets du système et les transitions entre ces états en réponse aux événements.
+
+\subsubsection{Diagramme d'état : Statut du Quiz}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{latex_media/media/Diagrammedetat-StatutduQuiz.png}
+    \caption{Diagramme d'état : Cycle de vie d'un quiz}
+    \label{fig:etat-statut-quiz}
+\end{figure}
+
+Ce diagramme illustre les différents états par lesquels passe un quiz durant son cycle de vie : depuis sa création en mode "Brouillon", sa publication, jusqu'à son archivage final.
+
+\subsubsection{Diagramme d'état : Tentative de Quiz}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{latex_media/media/Diagrammedetat-Tentative de Quiz.png}
+    \caption{Diagramme d'état : États d'une tentative de quiz}
+    \label{fig:etat-tentative-quiz}
+\end{figure}
+
+Ce diagramme modélise les états d'une tentative de quiz, de sa création jusqu'à son état final (soumise ou expirée), en passant par l'état "en cours" où l'utilisateur répond aux questions.
 
 \subsection{Tableau Récapitulatif des Cas d'Utilisation}
 
-Ce tableau récapitulatif présente les principaux cas d'utilisation du système \textbf{Quiz Agile}, organisés par domaine fonctionnel. Il détaille les actions clés, les acteurs impliqués (Administrateur, Coach, Collaborateur), et une brève description de chaque fonctionnalité.
+Ce tableau récapitulatif présente les principaux cas d'utilisation du système Quiz Agile, organisés par domaine fonctionnel. Il détaille les actions clés, les acteurs impliqués (Administrateur, Coach, Collaborateur), et une brève description de chaque fonctionnalité.
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2898}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2367}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2367}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2367}}@{}}
+\caption{Tableau récapitulatif des cas d'utilisation}
+\label{tab:cas-utilisation-recapitulatif}\\
 \toprule()
 \cellcolor{capgeminiblue}\textcolor{white}{\textbf{Domaine}} & \cellcolor{capgeminiblue}\textcolor{white}{\textbf{Cas d'Utilisation}} & \cellcolor{capgeminiblue}\textcolor{white}{\textbf{Acteurs Principaux}} & \cellcolor{capgeminiblue}\textcolor{white}{\textbf{Description}} \\
 \midrule()
@@ -1036,7 +1171,7 @@ Ce tableau récapitulatif présente les principaux cas d'utilisation du système
 \end{longtable}
 
 \begin{center}
-\textbf{Tableau 4 :} Tableau récapitulatif des cas d'utilisation
+\textbf{Table 2.1 –} Tableau récapitulatif des cas d'utilisation
 \end{center}
 
 \section{Description détaillée des principaux cas d'utilisation}
@@ -1048,11 +1183,15 @@ Le tableau ci-dessous détaille le processus complet de création d'un quiz, dep
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3329}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.6671}}@{}}
+\caption{Cas d'utilisation : Créer un quiz}
+\label{tab:cas-utilisation-creer-quiz}\\
 \toprule()
 \begin{minipage}[b]{\linewidth}\raggedright
-Élément
+\cellcolor{capgeminiblue}
+\textbf{Élément}
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Description Détaillée
+\cellcolor{capgeminiblue}
+\textbf{Description Détaillée}
 \end{minipage} \\
 \midrule()
 \endhead
@@ -1089,7 +1228,7 @@ Critères de Succès & \textbf{- Quiz créé avec succès} \\
 \end{longtable}
 
 \begin{center}
-\textbf{Tableau 5 :} Cas d'utilisation : Créer un quiz
+\textbf{Table 2.2 –} Cas d'utilisation : Créer un quiz
 \end{center}
 
 \subsection{Cas d'utilisation : Passer un quiz}
@@ -1099,11 +1238,15 @@ Le tableau ci-dessous présente le déroulement optimisé pour le passage d'un q
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3684}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.6316}}@{}}
+\caption{Cas d'utilisation : Passer un quiz}
+\label{tab:cas-utilisation-passer-quiz}\\
 \toprule()
 \begin{minipage}[b]{\linewidth}\raggedright
-Élément
+\cellcolor{capgeminiblue}
+\textbf{Élément}
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Description Détaillée
+\cellcolor{capgeminiblue}
+\textbf{Description Détaillée}
 \end{minipage} \\
 \midrule()
 \endhead
@@ -1173,7 +1316,7 @@ Critères de Succès & \begin{minipage}[t]{\linewidth}\raggedright
 \end{longtable}
 
 \begin{center}
-\textbf{Tableau 6 :} Cas d'utilisation : Passer un quiz
+\textbf{Table 2.3 –} Cas d'utilisation : Passer un quiz
 \end{center}
 
 \section{Architecture monolithique}
@@ -1369,6 +1512,15 @@ Dans le cadre du projet \textbf{QUIZ AGILE}, la conception se décline en deux v
 \end{itemize}
 
 \section{Architecture du système}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\textwidth]{latex_media/media/Architecture_globale.png}
+    \caption{Architecture globale du système Quiz Agile}
+    \label{fig:architecture-globale}
+\end{figure}
+
+L'architecture globale du système Quiz Agile illustre l'organisation complète des composants techniques, depuis l'interface utilisateur frontend jusqu'à la base de données, en passant par la couche d'authentification, les services backend et les outils de déploiement et de test.
 
 \subsection{Architecture logicielle}
 
@@ -1811,6 +1963,155 @@ C'est pourquoi on fait recours à des outils de gestion de paquets/dépendances 
 \subsubsection{Maven}
 
 Maven est un outil de gestion et de compréhension de projet open source principalement utilisé pour les projets Java. Maven peut également être utilisé pour construire et gérer des projets écrits en C\#, Ruby, Scala et d'autres langages.
+
+Maven utilise un modèle d'objet de projet (POM) et un ensemble de plugins pour gérer la construction, la génération de rapports et la documentation d'un projet à partir d'une information centrale.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{latex_media/media/maven.png}
+    \caption{Logo et architecture Maven}
+    \label{fig:maven-logo}
+\end{figure}
+
+Les principales fonctionnalités de Maven incluent :
+
+\begin{itemize}
+    \item \textbf{Gestion des dépendances} : Téléchargement automatique des bibliothèques requises
+    \item \textbf{Construction standardisée} : Structure de projet uniforme
+    \item \textbf{Cycle de vie} : Phases de construction prédéfinies (compile, test, package, install, deploy)
+    \item \textbf{Plugins} : Extensions pour des fonctionnalités spécifiques
+    \item \textbf{Repositories} : Stockage centralisé des artefacts
+\end{itemize}
+
+
+
+Le fichier POM.xml (Project Object Model) est le cœur de tout projet Maven. Il contient les informations sur le projet et les détails de configuration utilisés par Maven pour construire le projet, incluant les dépendances, les plugins, les objectifs, les profils de build, la version du projet, la description, et bien plus encore.
+
+\section{Outils de développement et de test}
+
+Cette section présente l'écosystème d'outils de développement, de test et d'intégration continue utilisés dans le projet Quiz Agile. Ces outils garantissent la qualité du code, l'automatisation des tests et la fiabilité du processus de déploiement.
+
+\subsection{Outils de test}
+
+\subsubsection{JUnit 5}
+
+JUnit 5 est le framework de test standard pour Java. Il fournit une approche moderne et flexible pour écrire et exécuter des tests unitaires et d'intégration.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.6\textwidth]{latex_media/media/junit.png}
+    \caption{Logo JUnit 5 - Framework de test Java}
+    \label{fig:junit-logo}
+\end{figure}
+
+JUnit 5 apporte plusieurs améliorations par rapport aux versions précédentes :
+\begin{itemize}
+    \item \textbf{Architecture modulaire} : Séparation claire entre JUnit Platform, Jupiter et Vintage
+    \item \textbf{Annotations nouvelles} : @DisplayName, @ParameterizedTest, @RepeatedTest
+    \item \textbf{Assertions améliorées} : Messages d'erreur plus expressifs
+    \item \textbf{Tests dynamiques} : Génération de tests à l'exécution
+\end{itemize}
+
+\subsubsection{Mockito}
+
+Mockito est un framework de mocking pour Java qui permet de créer des objets simulés (mocks) pour isoler les unités de code lors des tests.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.6\textwidth]{latex_media/media/mockito.png}
+    \caption{Logo Mockito - Framework de mocking Java}
+    \label{fig:mockito-logo}
+\end{figure}
+
+Les principales fonctionnalités de Mockito incluent :
+\begin{itemize}
+    \item \textbf{Création de mocks} : Simulation d'objets complexes
+    \item \textbf{Stubbing} : Définition du comportement des mocks
+    \item \textbf{Vérification} : Contrôle des interactions avec les mocks
+    \item \textbf{Spy objects} : Objets partiellement mockés
+\end{itemize}
+
+\subsubsection{Jest}
+
+Jest est un framework de test JavaScript développé par Meta, optimisé pour tester les applications React et Node.js.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.6\textwidth]{latex_media/media/jest_react_test.png}
+    \caption{Jest - Framework de test JavaScript pour React}
+    \label{fig:jest-logo}
+\end{figure}
+
+Jest offre une expérience de test complète avec :
+\begin{itemize}
+    \item \textbf{Zero configuration} : Fonctionne out-of-the-box
+    \item \textbf{Snapshot testing} : Tests de régression UI
+    \item \textbf{Code coverage} : Couverture de code intégrée
+    \item \textbf{Mocking puissant} : Système de mocks avancé
+\end{itemize}
+
+\subsection{Outils de documentation et modélisation}
+
+\subsubsection{PlantUML}
+
+PlantUML est un outil permettant de créer des diagrammes UML à partir de descriptions textuelles simples.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.6\textwidth]{latex_media/media/plantUML.png}
+    \caption{Logo PlantUML - Outil de génération de diagrammes UML}
+    \label{fig:plantuml-logo}
+\end{figure}
+
+PlantUML facilite la création de :
+\begin{itemize}
+    \item \textbf{Diagrammes de séquence} : Interactions entre objets
+    \item \textbf{Diagrammes de cas d'utilisation} : Modélisation fonctionnelle
+    \item \textbf{Diagrammes de classes} : Structure du système
+    \item \textbf{Diagrammes d'activité} : Flux de processus
+\end{itemize}
+
+\subsection{Outils de test API et intégration}
+
+\subsubsection{Postman}
+
+Postman est une plateforme collaborative pour le développement et le test d'APIs REST.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.6\textwidth]{latex_media/media/postman.png}
+    \caption{Logo Postman - Plateforme de test d'API}
+    \label{fig:postman-logo}
+\end{figure}
+
+Postman permet de :
+\begin{itemize}
+    \item \textbf{Tester les APIs} : Envoi de requêtes HTTP et validation des réponses
+    \item \textbf{Automatisation} : Collections de tests automatisés
+    \item \textbf{Documentation} : Génération automatique de documentation API
+    \item \textbf{Monitoring} : Surveillance continue des APIs
+\end{itemize}
+
+\subsection{Intégration continue et déploiement}
+
+\subsubsection{Jenkins}
+
+Jenkins est un serveur d'automatisation open source qui facilite l'intégration continue et le déploiement continu (CI/CD).
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.6\textwidth]{latex_media/media/jenkins.png}
+    \caption{Logo Jenkins - Serveur d'intégration continue}
+    \label{fig:jenkins-logo}
+\end{figure}
+
+Jenkins offre :
+\begin{itemize}
+    \item \textbf{Automatisation des builds} : Compilation et packaging automatiques
+    \item \textbf{Exécution des tests} : Tests automatisés à chaque commit
+    \item \textbf{Déploiement automatique} : Pipeline de livraison continue
+    \item \textbf{Notifications} : Alertes en cas d'échec ou de succès
+\end{itemize}
 
 \section{Conclusion}
 

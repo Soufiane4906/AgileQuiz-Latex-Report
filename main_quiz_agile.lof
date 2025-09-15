@@ -4,29 +4,43 @@
 \contentsline {figure}{\numberline {1.3}{\ignorespaces Organigramme de Capgemini TS Maroc}}{7}{figure.caption.10}%
 \contentsline {figure}{\numberline {1.4}{\ignorespaces Plateforme Coding Challenge de Capgemini}}{8}{figure.caption.11}%
 \contentsline {figure}{\numberline {1.5}{\ignorespaces Optimisation des parcours de formation selon les évaluations}}{10}{figure.caption.12}%
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Cartographie fonctionnelle du système Quiz Agile}}{18}{figure.caption.18}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Diagramme de GANTT du projet Quiz Agile}}{19}{figure.caption.19}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Mécanismes d'import/export de données}}{21}{figure.caption.20}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Acteurs principaux du système Quiz Agile}}{21}{figure.caption.21}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Diagramme de classes du système Quiz Agile}}{23}{figure.caption.26}%
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Diagramme de cas d'utilisation du système Quiz Agile}}{24}{figure.caption.27}%
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Comparaison entre architecture monolithique et microservices}}{29}{figure.caption.28}%
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Diagramme de cas d'utilisation du système Quiz Agile}}{33}{figure.caption.29}%
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Comparaison entre architecture monolithique et microservices}}{43}{figure.caption.32}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Logo Spring Boot}}{44}{figure.caption.33}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Logo React}}{44}{figure.caption.35}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Logo JWT (JSON Web Token)}}{45}{figure.caption.39}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Logo PostgreSQL}}{46}{figure.caption.42}%
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Interface de connexion de l'application Quiz Agile}}{49}{figure.caption.44}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Interface du tableau de bord principal}}{50}{figure.caption.45}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Interface de gestion des utilisateurs}}{51}{figure.caption.46}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Formulaire de création d'un nouvel utilisateur}}{52}{figure.caption.47}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Interface de création d'une nouvelle question}}{53}{figure.caption.48}%
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Interface de création d'un nouveau quiz - Vue d'ensemble}}{54}{figure.caption.49}%
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Interface de sélection des questions pour le quiz}}{55}{figure.caption.50}%
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Interface de paramétrage et publication de quiz}}{56}{figure.caption.51}%
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Interface de passage d'un quiz}}{57}{figure.caption.52}%
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Interface de présentation des résultats}}{57}{figure.caption.53}%
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Tableau de bord d'analyse des performances}}{58}{figure.caption.54}%
-\contentsline {figure}{\numberline {5.12}{\ignorespaces Interface de génération de rapports détaillés}}{59}{figure.caption.55}%
-\contentsline {figure}{\numberline {5.13}{\ignorespaces Architecture technique détaillée du système Quiz Agile}}{64}{figure.caption.59}%
+\contentsline {figure}{\numberline {1.6}{\ignorespaces Organisation des réunions quotidiennes (Daily Scrum)}}{13}{figure.caption.18}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Cartographie fonctionnelle du système Quiz Agile}}{18}{figure.caption.19}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Diagramme de GANTT du projet Quiz Agile}}{19}{figure.caption.20}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Mécanismes d'import/export de données}}{21}{figure.caption.21}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Acteurs principaux du système Quiz Agile}}{21}{figure.caption.22}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Diagramme de cas d'utilisation du système Quiz Agile}}{23}{figure.caption.27}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Diagramme de classes du système Quiz Agile}}{25}{figure.caption.28}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Diagramme de paquetages de l'architecture système}}{26}{figure.caption.29}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Diagramme de séquence du système Quiz Agile}}{27}{figure.caption.30}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Diagramme d'activité : Processus de passage d'un quiz}}{28}{figure.caption.31}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Diagramme d'état : Cycle de vie d'un quiz}}{29}{figure.caption.33}%
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Diagramme d'état : États d'une tentative de quiz}}{30}{figure.caption.35}%
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Comparaison entre architecture monolithique et microservices}}{35}{figure.caption.36}%
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Diagramme de cas d'utilisation du système Quiz Agile}}{39}{figure.caption.37}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Architecture globale du système Quiz Agile}}{41}{figure.caption.38}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Comparaison entre architecture monolithique et microservices}}{50}{figure.caption.41}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Logo Spring Boot}}{51}{figure.caption.42}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Logo React}}{51}{figure.caption.44}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Logo JWT (JSON Web Token)}}{52}{figure.caption.48}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Logo PostgreSQL}}{53}{figure.caption.51}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Logo et architecture Maven}}{54}{figure.caption.53}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Logo JUnit 5 - Framework de test Java}}{55}{figure.caption.55}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Logo Mockito - Framework de mocking Java}}{55}{figure.caption.57}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Jest - Framework de test JavaScript pour React}}{56}{figure.caption.59}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Logo PlantUML - Outil de génération de diagrammes UML}}{56}{figure.caption.61}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Logo Postman - Plateforme de test d'API}}{57}{figure.caption.63}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Logo Jenkins - Serveur d'intégration continue}}{57}{figure.caption.65}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Interface de connexion de l'application Quiz Agile}}{60}{figure.caption.66}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Interface du tableau de bord principal}}{61}{figure.caption.67}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Interface de gestion des utilisateurs}}{62}{figure.caption.68}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Formulaire de création d'un nouvel utilisateur}}{63}{figure.caption.69}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Interface de création d'une nouvelle question}}{64}{figure.caption.70}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Interface de création d'un nouveau quiz - Vue d'ensemble}}{65}{figure.caption.71}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Interface de sélection des questions pour le quiz}}{66}{figure.caption.72}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Interface de paramétrage et publication de quiz}}{67}{figure.caption.73}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Interface de passage d'un quiz}}{68}{figure.caption.74}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Interface de présentation des résultats}}{68}{figure.caption.75}%
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Tableau de bord d'analyse des performances}}{69}{figure.caption.76}%
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Interface de génération de rapports détaillés}}{70}{figure.caption.77}%
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Architecture technique détaillée du système Quiz Agile}}{75}{figure.caption.81}%

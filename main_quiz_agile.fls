@@ -1,6 +1,6 @@
-PWD C:\Users\Soufiane\Documents\latex_PFE3
+PWD c:\Users\Soufiane\Documents\latex_PFE3
 INPUT C:\Users\Soufiane\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT main_quiz_agile.tex
+INPUT c:\Users\Soufiane\Documents\latex_PFE3\main_quiz_agile.tex
 OUTPUT main_quiz_agile.log
 INPUT C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\tex\latex\base\report.cls
 INPUT C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\tex\latex\base\report.cls
@@ -209,13 +209,13 @@ OUTPUT main_quiz_agile.pdf
 INPUT .\main_quiz_agile.out
 INPUT .\main_quiz_agile.out
 OUTPUT main_quiz_agile.out
-INPUT .\latex_media\media\image1.png
-INPUT .\latex_media\media\image1.png
-INPUT .\latex_media\media\image1.png
-INPUT .\latex_media\media\image1.png
-INPUT .\latex_media\media\image1.png
-INPUT .\latex_media\media\image1.png
-INPUT .\latex_media\media\image1.png
+INPUT .\latex_media\media\logoemsi.png
+INPUT .\latex_media\media\logoemsi.png
+INPUT .\latex_media\media\logoemsi.png
+INPUT .\latex_media\media\logoemsi.png
+INPUT .\latex_media\media\logoemsi.png
+INPUT .\latex_media\media\logoemsi.png
+INPUT .\latex_media\media\logoemsi.png
 INPUT C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\tex\latex\lm\ot1lmr.fd
 INPUT C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\tex\latex\lm\ot1lmr.fd
 INPUT C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\tex\latex\lm\ot1lmr.fd
@@ -256,18 +256,21 @@ INPUT C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\tex\latex\microtype\mt-msb
 INPUT C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\tex\latex\microtype\mt-msb.cfg
 INPUT C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
-INPUT .\latex_media\media\image3.png
-INPUT .\latex_media\media\image3.png
-INPUT .\latex_media\media\image3.png
-INPUT .\latex_media\media\image3.png
-INPUT .\latex_media\media\image3.png
-INPUT .\latex_media\media\image3.png
-INPUT .\latex_media\media\image3.png
+INPUT .\latex_media\media\logo unica.jpg
+INPUT .\latex_media\media\logo unica.jpg
+INPUT .\latex_media\media\logo unica.jpg
+INPUT .\latex_media\media\logo unica.jpg
+INPUT .\latex_media\media\logo unica.jpg
+INPUT .\latex_media\media\logo unica.jpg
+INPUT .\latex_media\media\logo unica.jpg
 INPUT C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmr17.tfm
 INPUT C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmbx12.tfm
 INPUT C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmr12.tfm
 INPUT C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmbx12.tfm
 INPUT C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmbx9.tfm
+INPUT .\latex_media\media\image3.png
+INPUT .\latex_media\media\image3.png
+INPUT .\latex_media\media\image3.png
 INPUT .\latex_media\media\image3.png
 INPUT .\latex_media\media\image3.png
 INPUT .\latex_media\media\image3.png
@@ -278,6 +281,10 @@ INPUT C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-ec.e
 INPUT C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmri12.tfm
 INPUT C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmr17.tfm
 INPUT C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmbx12.tfm
+INPUT C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmcsc10.tfm
+INPUT C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmr10.tfm
+INPUT C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmbx10.tfm
+INPUT C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmbx10.tfm
 INPUT .\main_quiz_agile.toc
 INPUT .\main_quiz_agile.toc
 INPUT main_quiz_agile.toc
@@ -296,10 +303,6 @@ INPUT .\latex_media\media\image3.png
 INPUT .\latex_media\media\image3.png
 INPUT .\latex_media\media\image3.png
 INPUT .\latex_media\media\image3.png
-INPUT C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmcsc10.tfm
-INPUT C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmr10.tfm
-INPUT C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmbx10.tfm
-INPUT C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmbx10.tfm
 INPUT .\latex_media\media\image4.png
 INPUT .\latex_media\media\image4.png
 INPUT .\latex_media\media\image4.png
@@ -328,6 +331,13 @@ INPUT .\latex_media\media\image7.jpeg
 INPUT .\latex_media\media\image7.jpeg
 INPUT .\latex_media\media\image7.jpeg
 INPUT .\latex_media\media\image7.jpeg
+INPUT .\latex_media\media\image9.png
+INPUT .\latex_media\media\image9.png
+INPUT .\latex_media\media\image9.png
+INPUT .\latex_media\media\image9.png
+INPUT .\latex_media\media\image9.png
+INPUT .\latex_media\media\image9.png
+INPUT .\latex_media\media\image9.png
 INPUT .\latex_media\media\image11.png
 INPUT .\latex_media\media\image11.png
 INPUT .\latex_media\media\image11.png
@@ -356,13 +366,6 @@ INPUT .\latex_media\media\image13.png
 INPUT .\latex_media\media\image13.png
 INPUT .\latex_media\media\image13.png
 INPUT .\latex_media\media\image13.png
-INPUT .\latex_media\media\image16.png
-INPUT .\latex_media\media\image16.png
-INPUT .\latex_media\media\image16.png
-INPUT .\latex_media\media\image16.png
-INPUT .\latex_media\media\image16.png
-INPUT .\latex_media\media\image16.png
-INPUT .\latex_media\media\image16.png
 INPUT .\latex_media\media\image14.png
 INPUT .\latex_media\media\image14.png
 INPUT .\latex_media\media\image14.png
@@ -370,6 +373,48 @@ INPUT .\latex_media\media\image14.png
 INPUT .\latex_media\media\image14.png
 INPUT .\latex_media\media\image14.png
 INPUT .\latex_media\media\image14.png
+INPUT .\latex_media\media\image16.png
+INPUT .\latex_media\media\image16.png
+INPUT .\latex_media\media\image16.png
+INPUT .\latex_media\media\image16.png
+INPUT .\latex_media\media\image16.png
+INPUT .\latex_media\media\image16.png
+INPUT .\latex_media\media\image16.png
+INPUT .\latex_media\media\image17.png
+INPUT .\latex_media\media\image17.png
+INPUT .\latex_media\media\image17.png
+INPUT .\latex_media\media\image17.png
+INPUT .\latex_media\media\image17.png
+INPUT .\latex_media\media\image17.png
+INPUT .\latex_media\media\image17.png
+INPUT .\latex_media\media\image19.png
+INPUT .\latex_media\media\image19.png
+INPUT .\latex_media\media\image19.png
+INPUT .\latex_media\media\image19.png
+INPUT .\latex_media\media\image19.png
+INPUT .\latex_media\media\image19.png
+INPUT .\latex_media\media\image19.png
+INPUT .\latex_media\media\activity_diagramme_passer_quiz.png
+INPUT .\latex_media\media\activity_diagramme_passer_quiz.png
+INPUT .\latex_media\media\activity_diagramme_passer_quiz.png
+INPUT .\latex_media\media\activity_diagramme_passer_quiz.png
+INPUT .\latex_media\media\activity_diagramme_passer_quiz.png
+INPUT .\latex_media\media\activity_diagramme_passer_quiz.png
+INPUT .\latex_media\media\activity_diagramme_passer_quiz.png
+INPUT .\latex_media\media\Diagrammedetat-StatutduQuiz.png
+INPUT .\latex_media\media\Diagrammedetat-StatutduQuiz.png
+INPUT .\latex_media\media\Diagrammedetat-StatutduQuiz.png
+INPUT .\latex_media\media\Diagrammedetat-StatutduQuiz.png
+INPUT .\latex_media\media\Diagrammedetat-StatutduQuiz.png
+INPUT .\latex_media\media\Diagrammedetat-StatutduQuiz.png
+INPUT .\latex_media\media\Diagrammedetat-StatutduQuiz.png
+INPUT .\latex_media\media\Diagrammedetat-Tentative de Quiz.png
+INPUT .\latex_media\media\Diagrammedetat-Tentative de Quiz.png
+INPUT .\latex_media\media\Diagrammedetat-Tentative de Quiz.png
+INPUT .\latex_media\media\Diagrammedetat-Tentative de Quiz.png
+INPUT .\latex_media\media\Diagrammedetat-Tentative de Quiz.png
+INPUT .\latex_media\media\Diagrammedetat-Tentative de Quiz.png
+INPUT .\latex_media\media\Diagrammedetat-Tentative de Quiz.png
 INPUT .\latex_media\media\image15.jpeg
 INPUT .\latex_media\media\image15.jpeg
 INPUT .\latex_media\media\image15.jpeg
@@ -381,6 +426,13 @@ INPUT .\latex_media\media\image14.png
 INPUT .\latex_media\media\image14.png
 INPUT .\latex_media\media\image14.png
 INPUT .\latex_media\media\image14.png
+INPUT .\latex_media\media\Architecture_globale.png
+INPUT .\latex_media\media\Architecture_globale.png
+INPUT .\latex_media\media\Architecture_globale.png
+INPUT .\latex_media\media\Architecture_globale.png
+INPUT .\latex_media\media\Architecture_globale.png
+INPUT .\latex_media\media\Architecture_globale.png
+INPUT .\latex_media\media\Architecture_globale.png
 INPUT .\latex_media\media\image15.jpeg
 INPUT .\latex_media\media\image15.jpeg
 INPUT .\latex_media\media\image15.jpeg
@@ -413,6 +465,55 @@ INPUT .\latex_media\media\image26.png
 INPUT .\latex_media\media\image26.png
 INPUT .\latex_media\media\image26.png
 INPUT .\latex_media\media\image26.png
+INPUT .\latex_media\media\maven.png
+INPUT .\latex_media\media\maven.png
+INPUT .\latex_media\media\maven.png
+INPUT .\latex_media\media\maven.png
+INPUT .\latex_media\media\maven.png
+INPUT .\latex_media\media\maven.png
+INPUT .\latex_media\media\maven.png
+INPUT .\latex_media\media\junit.png
+INPUT .\latex_media\media\junit.png
+INPUT .\latex_media\media\junit.png
+INPUT .\latex_media\media\junit.png
+INPUT .\latex_media\media\junit.png
+INPUT .\latex_media\media\junit.png
+INPUT .\latex_media\media\junit.png
+INPUT .\latex_media\media\mockito.png
+INPUT .\latex_media\media\mockito.png
+INPUT .\latex_media\media\mockito.png
+INPUT .\latex_media\media\mockito.png
+INPUT .\latex_media\media\mockito.png
+INPUT .\latex_media\media\mockito.png
+INPUT .\latex_media\media\mockito.png
+INPUT .\latex_media\media\jest_react_test.png
+INPUT .\latex_media\media\jest_react_test.png
+INPUT .\latex_media\media\jest_react_test.png
+INPUT .\latex_media\media\jest_react_test.png
+INPUT .\latex_media\media\jest_react_test.png
+INPUT .\latex_media\media\jest_react_test.png
+INPUT .\latex_media\media\jest_react_test.png
+INPUT .\latex_media\media\plantUML.png
+INPUT .\latex_media\media\plantUML.png
+INPUT .\latex_media\media\plantUML.png
+INPUT .\latex_media\media\plantUML.png
+INPUT .\latex_media\media\plantUML.png
+INPUT .\latex_media\media\plantUML.png
+INPUT .\latex_media\media\plantUML.png
+INPUT .\latex_media\media\postman.png
+INPUT .\latex_media\media\postman.png
+INPUT .\latex_media\media\postman.png
+INPUT .\latex_media\media\postman.png
+INPUT .\latex_media\media\postman.png
+INPUT .\latex_media\media\postman.png
+INPUT .\latex_media\media\postman.png
+INPUT .\latex_media\media\jenkins.png
+INPUT .\latex_media\media\jenkins.png
+INPUT .\latex_media\media\jenkins.png
+INPUT .\latex_media\media\jenkins.png
+INPUT .\latex_media\media\jenkins.png
+INPUT .\latex_media\media\jenkins.png
+INPUT .\latex_media\media\jenkins.png
 INPUT .\latex_media\media\image51.png
 INPUT .\latex_media\media\image51.png
 INPUT .\latex_media\media\image51.png
