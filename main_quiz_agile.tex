@@ -830,38 +830,6 @@ Les exigences fonctionnelles du projet Quiz Agile ont été établies à partir 
 \item Partage des résultats avec la plateforme NEXT
 \end{itemize}
 
-\section{Cartographie fonctionnelle}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.8\textwidth]{latex_media/media/image11.png}
-\caption{Cartographie fonctionnelle du système Quiz Agile}
-\label{fig:cartographie-fonctionnelle}
-\end{figure}
-
-La cartographie fonctionnelle ci-dessus présente une vue d'ensemble des principales fonctionnalités du système Quiz Agile et leurs relations.
-
-Cette cartographie met en évidence les quatre grands modules fonctionnels du système :
-\begin{itemize}
-\item Module de gestion des utilisateurs et des droits
-\item Module de création et gestion des quiz
-\item Module de passage des quiz et évaluation
-\item Module d'analyse et de reporting
-\end{itemize}
-
-\section{Planification du projet}
-
-Le planning général de notre projet est représenté ci-dessous par le diagramme de Gantt, qui fait la répartition des tâches sur la période du projet. La réalisation du projet suit la méthode agile Scrum.
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.9\textwidth]{latex_media/media/image10.png}
-\caption{Diagramme de GANTT du projet Quiz Agile}
-\label{fig:gantt-quiz-agile}
-\end{figure}
-
-Ce diagramme montre la planification détaillée des différentes phases du projet, incluant la conception, le développement, les tests et la validation client. La méthodologie agile Scrum permet une approche itérative avec des cycles de développement courts appelés "sprints", favorisant l'adaptabilité et la réactivité face aux changements de besoins.
-
 \section{Spécifications Non Fonctionnelles}
 
 Les exigences non fonctionnelles définissent les critères de qualité et les contraintes techniques que le système doit respecter.
@@ -926,15 +894,7 @@ Les exigences non fonctionnelles définissent les critères de qualité et les c
 \begin{itemize}
 \item API RESTful documentée pour l'intégration avec des systèmes tiers
 \item Support des formats d'échange standards (JSON, XML)
-\item Mécanismes d'import/export de données
 \end{itemize}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.9\textwidth]{latex_media/media/image12.png}
-\caption{Mécanismes d'import/export de données}
-\label{fig:import-export-donnees}
-\end{figure}
 
 \section{Analyse des Acteurs et des Cas d'Utilisation}
 
@@ -1002,482 +962,6 @@ Le diagramme de cas d'utilisation est un outil d'analyse puissant qui permet de 
 \end{figure}
 
 Le diagramme de cas d'utilisation ci-dessus illustre les principales interactions entre les acteurs et le système Quiz Agile. Le diagramme met en évidence les actions principales accessibles aux différents acteurs après authentification. Cette modélisation permet de comprendre les interactions et les périmètres de responsabilité au sein de l'application Quiz Agile.
-
-\subsection{Diagramme entité-relation}
-
-Le diagramme entité-relation illustre la structure de la base de données et les relations entre les différentes entités du système Quiz Agile. Il représente l'organisation logique des données et les contraintes relationnelles.
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.9\textwidth]{latex_media/media/Diagramme entite-relation.png}
-    \caption{Diagramme entité-relation du système Quiz Agile}
-    \label{fig:diagramme-entite-relation}
-\end{figure}
-
-\subsubsection{Explications des dépendances}
-
-\textbf{Quiz dépend de :}
-\begin{itemize}
-    \item \textbf{User} (pour le créateur du quiz)
-    \item \textbf{Question} (pour les questions incluses)
-\end{itemize}
-
-\textbf{Attempt dépend de :}
-\begin{itemize}
-    \item \textbf{Quiz} (quel quiz est tenté)
-    \item \textbf{User} (qui tente)
-    \item \textbf{Question} (pour validation)
-\end{itemize}
-
-\textbf{Result agrège les données de :}
-\begin{itemize}
-    \item \textbf{Quiz} (paramètres)
-    \item \textbf{User} (participant)
-    \item \textbf{Attempt} (détails)
-\end{itemize}
-
-\textbf{Notification utilise :}
-\begin{itemize}
-    \item \textbf{User} (destinataire)
-    \item \textbf{Result} (contenu)
-\end{itemize}
-
-\subsubsection{Analyse Architecturale}
-
-\begin{itemize}
-    \item \textbf{Architecture} : Hexagonale (Domain-Centric)
-    \item \textbf{Niveau de couplage} : Modulaire
-\end{itemize}
-
-Cette approche architecturale garantit une séparation claire entre la logique métier et les détails techniques, facilitant la maintenabilité et l'évolutivité du système.
-
-\section{Conception architecturale}
-
-\subsection{Diagramme de classes}
-
-Le diagramme de classes représente la structure statique du système en montrant les classes, leurs attributs, leurs méthodes et les relations entre elles. Cette modélisation UML offre une compréhension approfondie de la structure interne du code et de ses interactions complexes.
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.9\textwidth]{latex_media/media/image16.png}
-\caption{Diagramme de classes du système Quiz Agile}
-\label{fig:diagramme-classes}
-\end{figure}
-
-Le diagramme représente un système de quiz en ligne avec 6 packages principaux organisés dans le cadre "Agile Quiz" :
-
-\begin{enumerate}
-\item \textbf{Model} : Contient les entités principales (User, Quiz, Question, QuizAttempt)
-\item \textbf{Repository} : Interfaces d'accès aux données utilisant Spring Data JPA
-\item \textbf{Service} : Logique métier et traitements des données
-\item \textbf{Controller} : Endpoints REST pour l'API
-\item \textbf{DTO} : Objets de transfert de données pour les échanges API
-\item \textbf{Config} : Configuration de sécurité et JWT
-\end{enumerate}
-
-\subsection{Diagramme de paquetages}
-
-Le diagramme de paquetages offre une vue d'ensemble de l'organisation structurelle du système Quiz Agile. Il présente les différents modules et leurs relations, facilitant la compréhension de l'architecture globale.
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.9\textwidth]{latex_media/media/image17.png}
-\caption{Diagramme de paquetages de l'architecture système}
-\label{fig:diagramme-paquetages}
-\end{figure}
-
-Cette représentation modulaire favorise une approche de développement claire et maintient une séparation logique entre les différentes responsabilités du système.
-
-\subsection{Diagramme de séquence}
-
-Le diagramme de séquence est un diagramme d'interaction qui détaille le déroulement temporel des échanges entre les différents objets du système. Il représente la chronologie des appels de méthodes et des interactions pour un scénario d'usage particulier.
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.9\textwidth]{latex_media/media/image19.png}
-\caption{Diagramme de séquence du système Quiz Agile}
-\label{fig:diagramme-sequence}
-\end{figure}
-
-Ce diagramme illustre les interactions principales lors du processus de création et de passage d'un quiz, mettant en évidence la communication entre les couches de l'architecture.
-
-\subsection{Diagramme d'activité}
-
-Le diagramme d'activité représente le flux de processus et les décisions dans le système. Il modélise les activités, les transitions et les points de décision pour illustrer le comportement dynamique du système.
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.8\textwidth]{latex_media/media/activity_diagramme_passer_quiz.png}
-    \caption{Diagramme d'activité : Processus de passage d'un quiz}
-    \label{fig:activite-passer-quiz}
-\end{figure}
-
-Ce diagramme détaille le processus complet de passage d'un quiz, depuis la sélection du quiz par l'utilisateur jusqu'à l'affichage des résultats finaux. Il met en évidence les points de décision critiques, les boucles de traitement des questions, et les différents chemins possibles selon les actions de l'utilisateur.
-
-\subsection{Diagrammes d'état}
-
-Les diagrammes d'état modélisent les différents états que peuvent prendre les objets du système et les transitions entre ces états en réponse aux événements.
-
-\subsubsection{Diagramme d'état : Statut du Quiz}
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.8\textwidth]{latex_media/media/Diagrammedetat-StatutduQuiz.png}
-    \caption{Diagramme d'état : Cycle de vie d'un quiz}
-    \label{fig:etat-statut-quiz}
-\end{figure}
-
-Ce diagramme illustre les différents états par lesquels passe un quiz durant son cycle de vie : depuis sa création en mode "Brouillon", sa publication, jusqu'à son archivage final.
-
-\subsubsection{Diagramme d'état : Tentative de Quiz}
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.8\textwidth]{latex_media/media/Diagrammedetat-Tentative de Quiz.png}
-    \caption{Diagramme d'état : États d'une tentative de quiz}
-    \label{fig:etat-tentative-quiz}
-\end{figure}
-
-Ce diagramme modélise les états d'une tentative de quiz, de sa création jusqu'à son état final (soumise ou expirée), en passant par l'état "en cours" où l'utilisateur répond aux questions.
-
-\subsection{Tableau Récapitulatif des Cas d'Utilisation}
-
-Ce tableau récapitulatif présente les principaux cas d'utilisation du système Quiz Agile, organisés par domaine fonctionnel. Il détaille les actions clés, les acteurs impliqués (Administrateur, Coach, Collaborateur), et une brève description de chaque fonctionnalité.
-
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2898}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2367}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2367}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2367}}@{}}
-\caption{Tableau récapitulatif des cas d'utilisation}
-\label{tab:cas-utilisation-recapitulatif}\\
-\toprule()
-\cellcolor{capgeminiblue}\textcolor{white}{\textbf{Domaine}} & \cellcolor{capgeminiblue}\textcolor{white}{\textbf{Cas d'Utilisation}} & \cellcolor{capgeminiblue}\textcolor{white}{\textbf{Acteurs Principaux}} & \cellcolor{capgeminiblue}\textcolor{white}{\textbf{Description}} \\
-\midrule()
-\endhead
-\multirow{3}{*}{Gestion des Utilisateurs} & Créer des comptes & Administrateur & Permettre la création et l'initialisation de nouveaux comptes utilisateurs \\
-& Gérer les rôles & Administrateur & Attribuer et modifier les permissions des utilisateurs \\
-& Désactiver des comptes & Administrateur & Gérer l'accès et la sécurité du système \\
-\multirow{4}{*}{Création de Quiz} & Créer un quiz & Coach & Développer de nouveaux questionnaires \\
-& Modifier un quiz & Coach & Mettre à jour le contenu existant \\
-& Supprimer un quiz & Coach & Retirer des questionnaires obsolètes \\
-& Publier un quiz & Coach & Rendre un quiz accessible aux collaborateurs \\
-\multirow{3}{*}{Passage de Quiz} & Passer un quiz & Collaborateur & Réaliser un questionnaire \\
-& Répondre aux questions & Collaborateur & Compléter les différentes étapes du quiz \\
-& Consulter ses scores & Collaborateur & Visualiser ses performances \\
-\multirow{2}{*}{Analyse des Résultats} & Analyser les résultats & Coach/Administrateur & Examiner les performances globales \\
-& Générer des rapports & Coach/Administrateur & Produire des analyses détaillées \\
-\bottomrule()
-\end{longtable}
-
-\begin{center}
-\textbf{Table 2.1 –} Tableau récapitulatif des cas d'utilisation
-\end{center}
-
-\section{Description détaillée des principaux cas d'utilisation}
-
-\subsection{Cas d'utilisation : Créer un quiz}
-
-Le tableau ci-dessous détaille le processus complet de création d'un quiz, depuis l'initiation par l'administrateur jusqu'à la génération de l'URL partageable, en incluant les scénarios d'erreur et les contraintes techniques :
-
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3329}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.6671}}@{}}
-\caption{Cas d'utilisation : Créer un quiz}
-\label{tab:cas-utilisation-creer-quiz}\\
-\toprule()
-\begin{minipage}[b]{\linewidth}\raggedright
-\cellcolor{capgeminiblue}
-\textbf{Élément}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\cellcolor{capgeminiblue}
-\textbf{Description Détaillée}
-\end{minipage} \\
-\midrule()
-\endhead
-Titre & \textbf{Création d'un Quiz en Ligne} \\
-Acteur Principal & \textbf{Administrateur/Créateur de Quiz} \\
-Objectif & \textbf{Créer un quiz interactif} \\
-Préconditions & \textbf{- Compte administrateur valide} \\
-& \textbf{- Accès à l'outil de création de quiz} \\
-Flux Principal & \textbf{1. Initiation de la création de quiz} \\
-& \textbf{2. Remplissage des détails de base (titre, description)} \\
-& \textbf{3. Sélection de la méthode de question} \\
-& \textbf{4. Définition des paramètres du quiz} \\
-& \textbf{5. Validation du quiz} \\
-& \textbf{6. Création d'une URL partageable} \\
-Actions du Système & \textbf{- Authentification} \\
-& \textbf{- Enregistrement des détails du quiz} \\
-& \textbf{- Génération des questions selon la méthode choisie} \\
-& \textbf{- Validation des questions et des options} \\
-& \textbf{- Création de l'URL de partage} \\
-Scénarios Alternatifs & \textbf{- Échec de validation du quiz} \\
-& \textbf{- Modification des questions après validation} \\
-Gestion des Erreurs & \textbf{- Messages d'erreur en cas de problèmes} \\
-& \textbf{- Sauvegarde des données en cas de déconnexion} \\
-Postconditions & \textbf{- Quiz créé et prêt à être partagé} \\
-Règles et Contraintes & \textbf{- Vérification des droits d'accès} \\
-& \textbf{- Respect des délais de création} \\
-Résultat Final & \textbf{- Quiz enregistré dans la base de données} \\
-& \textbf{- Notification de création réussie} \\
-Interactions Additionnelles & \textbf{- Possibilité de prévisualiser le quiz} \\
-& \textbf{- Consultation des statistiques de création} \\
-Critères de Succès & \textbf{- Quiz créé avec succès} \\
-& \textbf{- Validation des paramètres du quiz} \\
-\bottomrule()
-\end{longtable}
-
-\begin{center}
-\textbf{Table 2.2 –} Cas d'utilisation : Créer un quiz
-\end{center}
-
-\subsection{Cas d'utilisation : Passer un quiz}
-
-Le tableau ci-dessous présente le déroulement optimisé pour le passage d'un quiz par un collaborateur, mettant l'accent sur l'expérience utilisateur, les mécanismes de sauvegarde et l'analyse des performances post-quiz :
-
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3684}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.6316}}@{}}
-\caption{Cas d'utilisation : Passer un quiz}
-\label{tab:cas-utilisation-passer-quiz}\\
-\toprule()
-\begin{minipage}[b]{\linewidth}\raggedright
-\cellcolor{capgeminiblue}
-\textbf{Élément}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\cellcolor{capgeminiblue}
-\textbf{Description Détaillée}
-\end{minipage} \\
-\midrule()
-\endhead
-Titre & Réalisation d'un Quiz en Ligne \\
-Acteur Principal & Collaborateur \\
-Objectif & Compléter un quiz interactivement \\
-Préconditions & \begin{minipage}[t]{\linewidth}\raggedright
-- Compte utilisateur valide\\
-- Quiz accessible\\
-- Connexion internet stable\strut
-\end{minipage} \\
-Flux Principal & \begin{minipage}[t]{\linewidth}\raggedright
-1. Accès via URL partagée\\
-2. Lecture des instructions\\
-3. Démarrage du quiz\\
-4. Navigation entre questions\\
-5. Réponse aux questions\\
-6. Soumission des réponses\strut
-\end{minipage} \\
-Actions du Système & \begin{minipage}[t]{\linewidth}\raggedright
-- Authentification\\
-- Initialisation du chronomètre\\
-- Enregistrement des réponses\\
-- Calcul du score\\
-- Génération du feedback\strut
-\end{minipage} \\
-Scénarios Alternatifs & \begin{minipage}[t]{\linewidth}\raggedright
-- Expiration du temps\\
-- Soumission automatique\\
-- Feedback immédiat possible\\
-- Réponses partielles acceptées\strut
-\end{minipage} \\
-Gestion des Erreurs & \begin{minipage}[t]{\linewidth}\raggedright
-- Sauvegarde partielle en cas de déconnexion\\
-- Blocage en cas d'accès non autorisé\\
-- Messages explicatifs d'erreur\strut
-\end{minipage} \\
-Postconditions & \begin{minipage}[t]{\linewidth}\raggedright
-- Réponses enregistrées\\
-- Score calculé\\
-- Résultats disponibles\\
-- Analyse détaillée générée\strut
-\end{minipage} \\
-Règles et Contraintes & \begin{minipage}[t]{\linewidth}\raggedright
-- Temps limité\\
-- Une seule tentative\\
-- Pas de retour arrière après soumission\\
-- Vérification des droits d'accès\strut
-\end{minipage} \\
-Résultat Final & \begin{minipage}[t]{\linewidth}\raggedright
-- Affichage du score\\
-- Présentation du feedback\\
-- Analyse des performances\strut
-\end{minipage} \\
-Interactions Additionnelles &
-\begin{minipage}[t]{\linewidth}\raggedright
-- Possibilité de voir les détails du quiz\\
-- Consultation du rapport détaillé\\
-- Comparaison éventuelle avec d'autres participants\strut
-\end{minipage} \\
-Critères de Succès & \begin{minipage}[t]{\linewidth}\raggedright
-- Complétion du quiz\\
-- Compréhension des résultats\\
-- Expérience utilisateur fluide\strut
-\end{minipage} \\
-\bottomrule()
-\end{longtable}
-
-\begin{center}
-\textbf{Table 2.3 –} Cas d'utilisation : Passer un quiz
-\end{center}
-
-\section{Architecture monolithique}
-
-Dans les projets informatiques, une des premières grandes étapes techniques est de faire des choix architecturaux : « Comment organiser l'application ? » Deux solutions architecturales principales se présentent : l'architecture monolithique et l'architecture micro-services.
-
-L'architecture monolithique consiste à développer l'application comme une unité unique, où tous les composants sont interconnectés et déployés ensemble. Cette approche peut simplifier le développement initial et la gestion des déploiements, mais elle peut devenir difficile à maintenir et à faire évoluer à mesure que l'application croît.
-
-En revanche, l'architecture micro-services divise l'application en services indépendants, chacun responsable d'une fonctionnalité spécifique. Cela permet une plus grande flexibilité, une scalabilité améliorée et une meilleure gestion des équipes, car chaque service peut être développé, déployé et mis à jour indépendamment.
-
-Cependant, cette approche nécessite une gestion plus complexe des communications entre services et une attention particulière à la sécurité et à la résilience globale du système.
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.8\textwidth]{latex_media/media/image15.jpeg}
-\caption{Comparaison entre architecture monolithique et microservices}
-\label{fig:comparaison-architectures}
-\end{figure}
-
-Le choix entre ces deux architectures dépendra des besoins spécifiques du projet, de l'équipe en place et des objectifs à long terme.
-
-Pour le cas de la solution QUIZ AGILE, nous avons opté pour l'architecture monolithique. Ce choix nous permet, durant les premières phases du projet, de simplifier la charge cognitive liée à la gestion du code et au déploiement. En structurant l'application comme une unité unique, nous pouvons livrer tout le contenu du monolithe à la fois, ce qui facilite le processus de développement et réduit les complexités associées à l'intégration continue.
-
-Cette approche initiale nous offre également une vue d'ensemble cohérente du projet, permettant aux équipes de se concentrer sur l'implémentation des fonctionnalités sans se soucier des défis d'architecture distribuée. À mesure que le projet évolue et que les besoins se précisent, nous pourrons envisager une transition vers une architecture micro-services, si nécessaire, pour répondre à des exigences de scalabilité ou de maintenance plus stricte.
-
-\subsection{Conclusion}
-
-Le choix d'une architecture monolithique pour cette première phase du projet se justifie par sa simplicité de déploiement et de maintenance, tout en restant compatible avec une éventuelle migration vers une architecture micro-services si les besoins évoluent (scalabilité, modularité accrue).
-
-\subsection{Évaluation et résultats}
-
-\begin{itemize}
-\item Calcul automatique des scores
-\item Affichage des réponses correctes et des explications après soumission
-\item Génération de rapports détaillés pour les participants
-\item Attribution de badges et récompenses selon les performances
-\item Historique des tentatives et progression dans le temps
-\end{itemize}
-
-\subsection{Analyse et reporting}
-
-\begin{itemize}
-\item Tableau de bord pour les coachs avec statistiques globales
-\item Analyse des performances par équipe, thématique ou question
-\item Identification des points forts et des axes d'amélioration
-\item Exportation des résultats pour analyse externe
-\item Recommandations personnalisées de formation
-\end{itemize}
-
-\subsection{Intégration avec la plateforme NEXT}
-
-\begin{itemize}
-\item Authentification unique (SSO) entre Quiz Agile et NEXT
-\item Synchronisation des données utilisateurs
-\item Intégration des quiz dans les parcours de formation NEXT
-\item Partage des résultats avec la plateforme NEXT
-\end{itemize}
-
-\section{Spécifications non fonctionnelles}
-
-Les exigences non fonctionnelles définissent les critères de qualité et
-les contraintes techniques que le système doit respecter.
-
-\subsection{Performance}
-
-\begin{itemize}
-\item Temps de réponse inférieur à 2 secondes pour les opérations courantes
-\item Capacité à gérer simultanément jusqu'à 200 utilisateurs actifs
-\item Optimisation des requêtes de base de données pour minimiser la latence
-\item Mise en cache des données fréquemment accédées
-\end{itemize}
-
-\subsection{Sécurité}
-
-\begin{itemize}
-\item Protection des données personnelles conformément au RGPD
-\item Authentification sécurisée avec support de l'authentification à deux facteurs
-\item Chiffrement des données sensibles en transit et au repos
-\item Journalisation des actions critiques pour audit
-\item Protection contre les attaques courantes (injection SQL, XSS, CSRF)
-\end{itemize}
-
-\subsection{Disponibilité et fiabilité}
-
-\begin{itemize}
-\item Disponibilité du système 99,9\% du temps (hors maintenance planifiée)
-\item Sauvegarde quotidienne des données avec rétention de 30 jours
-\item Plan de reprise d'activité avec un RTO (Recovery Time Objective) de 4 heures
-\item Mécanismes de détection et de notification des erreurs
-\end{itemize}
-
-\subsection{Maintenabilité}
-
-\begin{itemize}
-\item Architecture modulaire facilitant l'évolution du système
-\item Documentation complète du code et de l'architecture
-\item Tests automatisés couvrant au moins 80\% du code
-\item Respect des standards de codage et des bonnes pratiques
-\end{itemize}
-
-\subsection{Utilisabilité}
-
-\begin{itemize}
-\item Interface utilisateur intuitive et responsive
-\item Support multilingue (français et anglais dans un premier temps)
-\item Accessibilité conforme aux normes WCAG 2.1 niveau AA
-\item Compatibilité avec les principaux navigateurs (Chrome, Firefox, Safari, Edge)
-\item Support des appareils mobiles et tablettes
-\end{itemize}
-
-\section{Identification des acteurs}
-
-Dans le cadre du projet QUIZ AGILE, plusieurs acteurs clés interagissent avec l'application. Voici une description de chacun d'eux :
-
-\subsection{Administrateur}
-
-\begin{itemize}
-\item Responsable de la configuration globale du système
-\item Gère les utilisateurs et leurs droits
-\item Supervise l'ensemble des activités sur la plateforme
-\item Accède aux statistiques globales et aux journaux d'audit
-\end{itemize}
-
-\subsection{Coach}
-
-\begin{itemize}
-\item Crée et gère les quiz et les questions
-\item Configure les paramètres des évaluations
-\item Analyse les résultats des collaborateurs
-\item Identifie les besoins en formation
-\item Génère des rapports d'analyse
-\end{itemize}
-
-\subsection{Collaborateur}
-
-\begin{itemize}
-\item Passe les quiz d'évaluation
-\item Consulte ses résultats et son historique
-\item Suit sa progression dans le temps
-\item Reçoit des recommandations personnalisées
-\end{itemize}
-
-\subsection{Système NEXT}
-
-\begin{itemize}
-\item Échange des données avec Quiz Agile
-\item Authentifie les utilisateurs via SSO
-\item Intègre les quiz dans les parcours de formation
-\item Récupère les résultats des évaluations
-\end{itemize}
-
-\section{Diagramme de cas d'utilisation}
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.9\textwidth]{latex_media/media/image14.png}
-    \caption{Diagramme de cas d'utilisation du système Quiz Agile}
-    \label{fig:cas-utilisation-systeme}
-\end{figure}
-
-Le diagramme de cas d'utilisation ci-dessus illustre les principales interactions entre les acteurs et le système Quiz Agile. Cette modélisation permet de comprendre les interactions et les périmètres de responsabilité au sein de l'application Quiz Agile.
 
 \section{Conclusion}
 
@@ -1552,27 +1036,219 @@ L'architecture de déploiement prévoit une séparation entre l'environnement de
 
 \section{Modélisation UML}
 
+La modélisation UML (Unified Modeling Language) constitue une étape essentielle de la conception du système Quiz Agile. Elle permet de représenter visuellement la structure, le comportement et les interactions du système à travers différents types de diagrammes.
+
 \subsection{Diagramme de classes}
 
-Le diagramme de classes présente les principales entités du système et leurs relations. Les entités principales sont :
+Le diagramme de classes représente la structure statique du système en montrant les classes, leurs attributs, leurs méthodes et les relations entre elles. Cette modélisation UML offre une compréhension approfondie de la structure interne du code et de ses interactions complexes.
 
-\begin{itemize}
-    \item \textbf{User} : Représente les utilisateurs du système
-    \item \textbf{Quiz} : Modélise les questionnaires
-    \item \textbf{Question} : Représente les questions individuelles
-    \item \textbf{Answer} : Modélise les réponses possibles
-    \item \textbf{Result} : Stocke les résultats des quiz
-\end{itemize}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{latex_media/media/image16.png}
+\caption{Diagramme de classes du système Quiz Agile}
+\label{fig:diagramme-classes}
+\end{figure}
+
+Le diagramme représente un système de quiz en ligne avec 6 packages principaux organisés dans le cadre "Agile Quiz" :
+
+\begin{enumerate}
+\item \textbf{Model} : Contient les entités principales (User, Quiz, Question, QuizAttempt)
+\item \textbf{Repository} : Interfaces d'accès aux données utilisant Spring Data JPA
+\item \textbf{Service} : Logique métier et traitements des données
+\item \textbf{Controller} : Endpoints REST pour l'API
+\item \textbf{DTO} : Objets de transfert de données pour les échanges API
+\item \textbf{Config} : Configuration de sécurité et JWT
+\end{enumerate}
+
+\subsection{Diagramme de paquetages}
+
+Le diagramme de paquetages offre une vue d'ensemble de l'organisation structurelle du système Quiz Agile. Il présente les différents modules et leurs relations, facilitant la compréhension de l'architecture globale.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{latex_media/media/image17.png}
+\caption{Diagramme de paquetages de l'architecture système}
+\label{fig:diagramme-paquetages}
+\end{figure}
+
+Cette représentation modulaire favorise une approche de développement claire et maintient une séparation logique entre les différentes responsabilités du système.
 
 \subsection{Diagramme de séquence}
 
-Les diagrammes de séquence illustrent les interactions entre les différents composants du système pour les cas d'utilisation principaux :
+Le diagramme de séquence est un diagramme d'interaction qui détaille le déroulement temporel des échanges entre les différents objets du système. Il représente la chronologie des appels de méthodes et des interactions pour un scénario d'usage particulier.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{latex_media/media/image19.png}
+\caption{Diagramme de séquence du système Quiz Agile}
+\label{fig:diagramme-sequence}
+\end{figure}
+
+Ce diagramme illustre les interactions principales lors du processus de création et de passage d'un quiz, mettant en évidence la communication entre les couches de l'architecture.
+
+\subsubsection{Diagramme de séquence - Flux de création et export de quiz}
+
+Ce diagramme de séquence détaillé illustre spécifiquement le flux de création d'un quiz et le processus d'export PDF, mettant en évidence les différents composants de notre solution fondée sur l'architecture hexagonale.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.0\textwidth]{latex_media/media/sequence_diagram_quiz_creation.png}
+\caption{Diagramme de séquence - Flux de création de quiz et export PDF}
+\label{fig:sequence-creation-quiz}
+\end{figure}
+
+Ce diagramme montre les interactions entre :
+\begin{itemize}
+\item \textbf{React Frontend} : Interface utilisateur pour la création de quiz
+\item \textbf{QuizController} : Point d'entrée REST pour les requêtes de création
+\item \textbf{QuizService} : Logique métier pour la gestion des quiz
+\item \textbf{QuizMapper} : Conversion entre entités et DTOs
+\item \textbf{Quiz Entity} : Modèle de données principal
+\item \textbf{QuizRepository} : Accès aux données PostgreSQL
+\item \textbf{PdfExportService} : Service d'export en format PDF
+\end{itemize}
+
+Le flux illustre les étapes depuis la soumission d'un nouveau quiz jusqu'à la génération du fichier PDF de résultats, démontrant la séparation claire des responsabilités dans notre architecture hexagonale.
+
+\subsection{Diagramme d'activité}
+
+Le diagramme d'activité représente le flux de processus et les décisions dans le système. Il modélise les activités, les transitions et les points de décision pour illustrer le comportement dynamique du système.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{latex_media/media/activity_diagramme_passer_quiz.png}
+    \caption{Diagramme d'activité : Processus de passage d'un quiz}
+    \label{fig:activite-passer-quiz}
+\end{figure}
+
+Ce diagramme détaille le processus complet de passage d'un quiz, depuis la sélection du quiz par l'utilisateur jusqu'à l'affichage des résultats finaux. Il met en évidence les points de décision critiques, les boucles de traitement des questions, et les différents chemins possibles selon les actions de l'utilisateur.
+
+\subsection{Diagrammes d'état}
+
+Les diagrammes d'état modélisent les différents états que peuvent prendre les objets du système et les transitions entre ces états en réponse aux événements.
+
+\subsubsection{Diagramme d'état : Statut du Quiz}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{latex_media/media/Diagrammedetat-StatutduQuiz.png}
+    \caption{Diagramme d'état : Cycle de vie d'un quiz}
+    \label{fig:etat-statut-quiz}
+\end{figure}
+
+Ce diagramme illustre les différents états par lesquels passe un quiz durant son cycle de vie : depuis sa création en mode "Brouillon", sa publication, jusqu'à son archivage final.
+
+\subsubsection{Diagramme d'état : Tentative de Quiz}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{latex_media/media/Diagrammedetat-Tentative de Quiz.png}
+    \caption{Diagramme d'état : États d'une tentative de quiz}
+    \label{fig:etat-tentative-quiz}
+\end{figure}
+
+Ce diagramme modélise les états d'une tentative de quiz, de sa création jusqu'à son état final (soumise ou expirée), en passant par l'état "en cours" où l'utilisateur répond aux questions.
+
+\subsection{Cartographie fonctionnelle}
+
+La cartographie fonctionnelle présente une vue d'ensemble des principales fonctionnalités du système Quiz Agile et leurs relations dans une perspective de conception.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{latex_media/media/image11.png}
+\caption{Cartographie fonctionnelle du système Quiz Agile}
+\label{fig:cartographie-fonctionnelle}
+\end{figure}
+
+Cette cartographie met en évidence les quatre grands modules fonctionnels du système :
+\begin{itemize}
+\item Module de gestion des utilisateurs et des droits
+\item Module de création et gestion des quiz
+\item Module de passage des quiz et évaluation
+\item Module d'analyse et de reporting
+\end{itemize}
+
+\section{Modèle de données}
+
+\subsection{Modèle conceptuel - Diagramme entité-relation}
+
+Le diagramme entité-relation (ERD) présente la structure de données de notre système Quiz Agile, illustrant les entités principales, leurs attributs et les relations qui les lient. Cette modélisation conceptuelle constitue le fondement de notre base de données et assure la cohérence des informations stockées.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.85\textwidth]{latex_media/media/Diagramme entite-relation.png}
+    \caption{Diagramme entité-relation du système Quiz Agile}
+    \label{fig:erd-quiz-agile}
+\end{figure}
+
+\subsubsection{Explications des dépendances}
+
+\textbf{Quiz dépend de :}
+\begin{itemize}
+    \item \textbf{User} (pour le créateur du quiz) - Chaque quiz est créé par un utilisateur spécifique
+    \item \textbf{Question} (pour les questions incluses) - Un quiz contient une collection de questions
+\end{itemize}
+
+\textbf{Attempt dépend de :}
+\begin{itemize}
+    \item \textbf{Quiz} (quel quiz est tenté) - Chaque tentative est liée à un quiz spécifique
+    \item \textbf{User} (qui tente) - Identifie l'utilisateur qui passe le quiz
+    \item \textbf{Question} (pour validation) - Permet de valider les réponses données
+\end{itemize}
+
+\textbf{Result agrège les données de :}
+\begin{itemize}
+    \item \textbf{Quiz} (paramètres) - Récupère les paramètres de notation du quiz
+    \item \textbf{User} (participant) - Identifie le participant pour lequel le résultat est généré
+    \item \textbf{Attempt} (détails) - Compile les détails de la tentative pour calculer le score
+\end{itemize}
+
+\textbf{Notification utilise :}
+\begin{itemize}
+    \item \textbf{User} (destinataire) - Définit qui recevra la notification
+    \item \textbf{Result} (contenu) - Utilise les résultats pour personnaliser le contenu de la notification
+\end{itemize}
+
+\subsubsection{Analyse Architecturale}
 
 \begin{itemize}
-    \item Création d'un quiz
-    \item Passage d'un quiz
-    \item Consultation des résultats
+    \item \textbf{Architecture :} Hexagonale (Domain-Centric) - Cette approche place le domaine métier au centre, isolant la logique business des détails techniques
+    \item \textbf{Niveau de couplage :} Modulaire - Les composants sont faiblement couplés, facilitant la maintenance et l'évolution du système
 \end{itemize}
+
+Cette architecture garantit une séparation claire des responsabilités et facilite l'évolutivité du système, permettant d'ajouter de nouvelles fonctionnalités sans impacter l'architecture existante.
+
+\subsection{Mécanismes d'import/export}
+
+La conception du système intègre des mécanismes sophistiqués pour l'import et l'export de données, facilitant l'interopérabilité avec d'autres systèmes.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{latex_media/media/image12.png}
+\caption{Mécanismes d'import/export de données}
+\label{fig:import-export-donnees}
+\end{figure}
+
+Ces mécanismes permettent :
+\begin{itemize}
+\item Import de questions en lot depuis des fichiers CSV ou JSON
+\item Export des résultats dans différents formats (PDF, Excel, JSON)
+\item Synchronisation avec des systèmes externes via API REST
+\item Sauvegarde et restauration de données complètes
+\end{itemize}
+
+\subsection{Diagramme de planification du projet}
+
+La planification du projet est représentée par le diagramme de Gantt, qui fait la répartition des tâches sur la période du projet et guide l'implémentation de la conception.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{latex_media/media/image10.png}
+\caption{Diagramme de GANTT du projet Quiz Agile}
+\label{fig:gantt-quiz-agile}
+\end{figure}
+
+Ce diagramme montre la planification détaillée des différentes phases du projet, incluant la conception, le développement, les tests et la validation client. La méthodologie agile Scrum permet une approche itérative avec des cycles de développement courts appelés "sprints", favorisant l'adaptabilité et la réactivité face aux changements de besoins.
 
 \section{Modèle de données}
 
@@ -1628,6 +1304,27 @@ MySQL a été choisi comme SGBD relationnel :
     \item Compatibilité avec Spring Data JPA
 \end{itemize}
 
+\section{Architecture monolithique}
+
+Dans les projets informatiques, une des premières grandes étapes techniques consiste à faire des choix architecturaux : « Comment organiser l'application ? » Deux solutions architecturales principales se présentent : l'architecture monolithique et l'architecture micro-services.
+
+L'architecture monolithique consiste à développer l'application comme une unité unique, où tous les composants sont interconnectés et déployés ensemble. Cette approche peut simplifier le développement initial et la gestion des déploiements, mais elle peut devenir difficile à maintenir et à faire évoluer à mesure que l'application croît.
+
+En revanche, l'architecture micro-services divise l'application en services indépendants, chacun responsable d'une fonctionnalité spécifique. Cela permet une plus grande flexibilité, une scalabilité améliorée et une meilleure gestion des équipes, car chaque service peut être développé, déployé et mis à jour indépendamment.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{latex_media/media/image15.jpeg}
+\caption{Comparaison entre architecture monolithique et microservices}
+\label{fig:comparaison-architectures}
+\end{figure}
+
+Pour le cas de la solution QUIZ AGILE, nous avons opté pour l'architecture monolithique. Ce choix nous permet, durant les premières phases du projet, de simplifier la charge cognitive liée à la gestion du code et au déploiement. En structurant l'application comme une unité unique, nous pouvons livrer tout le contenu du monolithe à la fois, ce qui facilite le processus de développement et réduit les complexités associées à l'intégration continue.
+
+Cette approche initiale nous offre également une vue d'ensemble cohérente du projet, permettant aux équipes de se concentrer sur l'implémentation des fonctionnalités sans se soucier des défis d'architecture distribuée. À mesure que le projet évolue et que les besoins se précisent, nous pourrons envisager une transition vers une architecture micro-services si nécessaire.
+
+Le choix d'une architecture monolithique pour cette première phase du projet se justifie par sa simplicité de déploiement et de maintenance, tout en restant compatible avec une éventuelle migration vers une architecture micro-services si les besoins évoluent (scalabilité, modularité accrue).
+
 \section{Conclusion}
 
 Ce chapitre a présenté la conception détaillée du système Quiz Agile, depuis l'architecture générale jusqu'aux choix technologiques. Cette approche structurée garantit un système cohérent, maintenable et évolutif, répondant aux exigences fonctionnelles et non-fonctionnelles identifiées.
@@ -1652,7 +1349,42 @@ Ce chapitre a présenté la conception détaillée du système Quiz Agile, depui
 
 \section{Introduction}
 
-Ce chapitre détaille la mise en œuvre concrète du projet \textbf{QUIZ AGILE}, depuis la configuration de l'environnement de développement jusqu'aux tests de validation, en passant par l'implémentation des différents modules du système. Chaque étape est illustrée par des exemples de code et des captures d'écran des interfaces développées.
+Ce chapitre présente la réalisation concrète du projet \textbf{QUIZ AGILE}, en commençant par l'architecture technique adoptée et les choix technologiques qui en découlent. Nous détaillerons ensuite l'implémentation des différents modules, l'environnement de développement mis en place, ainsi que les tests effectués pour valider la solution.
+
+\section{Architecture technique du système}
+
+\subsection{Vue d'ensemble de l'architecture}
+
+L'architecture technique de notre solution Quiz Agile repose sur une approche moderne et structurée qui sépare clairement les responsabilités entre le frontend et le backend. Cette architecture en couches garantit une maintenabilité optimale et facilite les évolutions futures du système.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{latex_media/media/architecture_technique_systeme.png}
+\caption{Architecture technique du système Quiz Agile}
+\label{fig:architecture-technique}
+\end{figure}
+
+Le système s'articule autour de trois couches principales :
+
+\begin{itemize}
+    \item \textbf{Couche présentation} : Interface utilisateur développée en React avec Material-UI
+    \item \textbf{Couche logique métier} : API REST développée avec Spring Boot
+    \item \textbf{Couche données} : Base de données PostgreSQL avec Spring Data JPA
+\end{itemize}
+
+\subsection{Justification des choix architecturaux}
+
+Le choix d'une architecture monolithique modulaire se justifie par plusieurs facteurs :
+
+\begin{itemize}
+    \item \textbf{Simplicité de développement} : Une base de code unifiée facilite la compréhension globale du système
+    \item \textbf{Déploiement simplifié} : Une seule application à déployer et monitorer
+    \item \textbf{Performance optimale} : Absence de latence réseau entre les modules
+    \item \textbf{Cohérence transactionnelle} : Gestion native des transactions ACID
+    \item \textbf{Équipe de développement réduite} : Adapté au contexte d'un projet de stage avec ressources limitées
+\end{itemize}
+
+Cette approche nous permet de nous concentrer sur la logique métier tout en gardant la flexibilité d'évoluer vers une architecture microservices si les besoins futurs l'exigent.
 
 \section{Environnement de développement}
 
@@ -1817,69 +1549,24 @@ Un pipeline CI/CD a été mis en place avec :
 
 Ce chapitre a détaillé l'implémentation complète du système Quiz Agile. L'approche méthodique adoptée, combinée aux bonnes pratiques de développement et aux tests rigoureux, a permis de livrer une solution robuste et fonctionnelle répondant aux exigences définies.
 
-\section{Architecture technique et choix technologiques}
+\section{Technologies et outils utilisés}
 
-Cette section se concentre sur l'architecture technique et les technologies utilisées pour développer notre solution \textbf{QUIZ AGILE}. Nous présenterons l'architecture générale choisie, puis nous détaillerons les outils et bibliothèques essentiels qui sous-tendent le projet.
+Cette section présente les principales technologies utilisées pour développer la solution Quiz Agile, tant du côté backend que frontend.
 
-\section{Architecture du Système}
+\subsection{Backend - Spring Boot}
 
-\subsection{Choix de l'Architecture Monolithique}
-
-Dans les projets informatiques, une des premières grandes étapes techniques est de faire des choix architecturaux : « Comment organiser l'application ? » Deux solutions architecturales principales se présentent : l'architecture monolithique et l'architecture micro-services.
-
-L'architecture monolithique consiste à développer l'application comme une unité unique, où tous les composants sont interconnectés et déployés ensemble. Pour le cas de la solution \textbf{QUIZ AGILE}, nous avons opté pour cette approche pour plusieurs raisons :
+Spring Boot constitue le cœur de notre architecture backend. Ce framework Java simplifie considérablement le développement d'applications d'entreprise en fournissant une configuration automatique et des modules prêts à l'emploi.
 
 \begin{itemize}
-\item \textbf{Simplicité de développement} : Un seul projet à gérer avec une base de code unifiée
-\item \textbf{Déploiement simplifié} : Une seule application à déployer et monitorer
-\item \textbf{Performance} : Pas de latence réseau entre les composants
-\item \textbf{Cohérence des données} : Transactions ACID natives
-\item \textbf{Équipe réduite} : Adapté au contexte d'un développeur unique
+    \item Spring Boot Starter Web : Développement d'API REST
+    \item Spring Boot Starter Data JPA : Accès aux données
+    \item Spring Boot Starter Security : Sécurité et authentification
+    \item Spring Boot Starter Validation : Validation des données
+    \item Spring Boot Starter Actuator : Monitoring et santé applicative
+    \item Spring Boot Starter Cache : Mise en cache
 \end{itemize}
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.8\textwidth]{latex_media/media/image15.jpeg}
-\caption{Comparaison entre architecture monolithique et microservices}
-\label{fig:comparaison-architectures-tech}
-\end{figure}
-
-Ce choix architectural permet de concentrer nos efforts sur la logique métier plutôt que sur les problématiques de communication inter-services, tout en restant compatible avec une éventuelle migration vers une architecture micro-services si les besoins évoluent.
-
-\section{Technologies et Framework utilisées}
-
-En parallèle, nous plongerons dans l'architecture générale de notre projet, en mettant en lumière la structure et les composants clés des parties backend et frontend. Une attention particulière sera portée à l'architecture de la fonctionnalité de gestion des quiz, un module central dans l'organisation des évaluations éducatives. Cette analyse détaillée nous permettra de mieux comprendre la manière dont notre application est conçue et organisée, ainsi que les technologies mobilisées pour garantir son bon fonctionnement, sa sécurité et son évolutivité.
-
-\subsection{Spring Boot}
-
-Le « Spring » Framework est un cadre d'application et un conteneur d'inversion de contrôle pour la plate-forme Java. Les fonctionnalités de base du framework peuvent être utilisées par n'importe quelle application Java, mais il existe des extensions pour la création d'applications Web au-dessus de la plate-forme Java EE (Enterprise Edition).
-
-Plus particulièrement, Spring Boot est un framework web Java open source, basé sur les microservices. Le framework Spring Boot crée un environnement entièrement prêt pour la production et entièrement configurable grâce à son code préconstruit au sein de sa base de code. L'architecture de microservices fournit aux développeurs une application entièrement fermée, y compris des serveurs d'applications intégrés.
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.6\textwidth]{latex_media/media/image23.png}
-\caption{Logo Spring Boot}
-\label{fig:logo-spring-boot}
-\end{figure}
-
-\subsubsection{Configuration technique du projet}
-
-\begin{itemize}
-\item \textbf{Version} : Spring Boot 3.2.4
-\item \textbf{Java} : Version 17
-\item \textbf{Modules principaux} :
-  \begin{itemize}
-  \item Spring Boot Starter Web : API REST
-  \item Spring Boot Starter Data JPA : Persistance des données
-  \item Spring Boot Starter Security : Sécurité et authentification
-  \item Spring Boot Starter Validation : Validation des données
-  \item Spring Boot Starter Actuator : Monitoring et santé applicative
-  \item Spring Boot Starter Cache : Mise en cache
-  \end{itemize}
-\end{itemize}
-
-\subsection{React}
+\subsection{Frontend - React}
 
 React est un cadre logiciel d'interface utilisateur open-source créé par Meta Platforms, Inc. Il est utilisé pour développer des applications pour Android, Android TV, iOS, macOS, tvOS, Web, Windows et UWP en permettant aux développeurs d'utiliser le framework React avec les capacités de la plateforme native.
 
@@ -1931,6 +1618,51 @@ Le JWT (JSON Web Token) est un jeton sécurisé utilisé pour authentifier un ut
 \caption{Logo JWT (JSON Web Token)}
 \label{fig:logo-jwt}
 \end{figure}
+
+\subsection{Documentation et API}
+
+\subsubsection{SpringDoc OpenAPI}
+
+SpringDoc OpenAPI est une bibliothèque Java qui automatise la génération de documentation API pour les applications Spring Boot. Elle simplifie grandement la documentation des API REST en générant automatiquement des spécifications OpenAPI 3.0 à partir du code source.
+
+\begin{itemize}
+\item \textbf{Version} : 2.4.0
+\item \textbf{Fonctionnalités} :
+  \begin{itemize}
+  \item Documentation API automatique basée sur les annotations
+  \item Interface Swagger UI interactive pour tester les endpoints
+  \item Génération de schémas OpenAPI 3.0 complets
+  \item Tests d'API intégrés avec interface utilisateur intuitive
+  \item Support des modèles de données complexes et des validations
+  \end{itemize}
+\end{itemize}
+
+SpringDoc OpenAPI analyse automatiquement les contrôleurs REST et génère une documentation complète incluant les paramètres, les types de retour, les codes de statut HTTP et les exemples de requêtes/réponses. Cette approche garantit que la documentation reste toujours synchronisée avec le code source.
+
+\subsubsection{Monitoring et Observabilité}
+
+\paragraph{Spring Boot Actuator}
+
+Spring Boot Actuator fournit des fonctionnalités de production prêtes à l'emploi pour surveiller et gérer notre application Quiz Agile. Il expose des endpoints de gestion qui permettent de monitorer l'état de santé de l'application et de collecter des métriques importantes.
+
+Les principales fonctionnalités incluent :
+\begin{itemize}
+    \item \textbf{Health checks} : Vérification automatique de l'état de l'application, de la base de données et des services externes
+    \item \textbf{Métriques} : Monitoring des performances avec des métriques détaillées sur les requêtes, la mémoire, les threads et les connexions
+    \item \textbf{Endpoints} : Points d'accès REST pour le monitoring externe (/actuator/health, /actuator/metrics, /actuator/info)
+    \item \textbf{Info} : Informations détaillées sur l'application, la version, l'environnement et la configuration
+\end{itemize}
+
+\paragraph{Système de mise en cache}
+
+Notre architecture intègre un système de cache sophistiqué pour optimiser les performances :
+
+\begin{itemize}
+    \item \textbf{Spring Cache} : Mise en cache transparente des données fréquemment accédées avec des annotations déclaratives
+    \item \textbf{Amélioration des performances} : Réduction significative des accès à la base de données pour les opérations de lecture fréquentes
+    \item \textbf{Cache intelligent} : Invalidation automatique du cache lors des modifications de données
+    \item \textbf{Stratégies de cache} : Support de différentes stratégies (LRU, FIFO) adaptées aux besoins spécifiques
+\end{itemize}
 
 \subsection{Base de données}
 
@@ -2092,6 +1824,84 @@ Postman permet de :
     \item \textbf{Monitoring} : Surveillance continue des APIs
 \end{itemize}
 
+\subsection{Outils DevOps et gestion de version}
+
+\subsubsection{Git}
+
+Git est un système de contrôle de version distribué qui permet de gérer l'historique des modifications du code source de manière efficace et collaborative.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.6\textwidth]{latex_media/media/git.png}
+    \caption{Logo Git - Système de contrôle de version distribué}
+    \label{fig:git-logo}
+\end{figure}
+
+Git offre les fonctionnalités suivantes :
+\begin{itemize}
+    \item \textbf{Versionning distribué} : Chaque développeur possède une copie complète de l'historique
+    \item \textbf{Branches et merges} : Développement parallèle et fusion intelligente
+    \item \textbf{Historique complet} : Traçabilité complète des modifications
+    \item \textbf{Performance} : Opérations rapides même sur de gros projets
+\end{itemize}
+
+\subsubsection{GitLab}
+
+GitLab est une plateforme DevOps complète qui intègre la gestion de code source, l'intégration continue, et le déploiement dans une solution unifiée.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.6\textwidth]{latex_media/media/gitlab.png}
+    \caption{Logo GitLab - Plateforme DevOps complète}
+    \label{fig:gitlab-logo}
+\end{figure}
+
+GitLab propose :
+\begin{itemize}
+    \item \textbf{Repositories Git} : Gestion centralisée du code source
+    \item \textbf{CI/CD intégré} : Pipelines d'intégration et déploiement automatisés
+    \item \textbf{Issue tracking} : Gestion des tâches et bugs
+    \item \textbf{Code review} : Processus de révision de code avec merge requests
+\end{itemize}
+
+\subsubsection{npm}
+
+npm (Node Package Manager) est le gestionnaire de paquets par défaut pour Node.js et l'écosystème JavaScript, utilisé pour gérer les dépendances du frontend React.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.6\textwidth]{latex_media/media/npm.png}
+    \caption{Logo npm - Gestionnaire de paquets Node.js}
+    \label{fig:npm-logo}
+\end{figure}
+
+npm facilite :
+\begin{itemize}
+    \item \textbf{Gestion des dépendances} : Installation et mise à jour automatique des packages
+    \item \textbf{Scripts de build} : Automatisation des tâches de développement
+    \item \textbf{Registry central} : Accès à des millions de packages open source
+    \item \textbf{Versioning sémantique} : Gestion fine des versions des dépendances
+\end{itemize}
+
+\subsubsection{Docker}
+
+Docker est une plateforme de conteneurisation qui permet d'empaqueter les applications et leurs dépendances dans des conteneurs légers et portables.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.6\textwidth]{latex_media/media/docker.png}
+    \caption{Logo Docker - Plateforme de conteneurisation}
+    \label{fig:docker-logo}
+\end{figure}
+
+Docker apporte :
+\begin{itemize}
+    \item \textbf{Conteneurisation} : Isolation des applications dans des environnements reproductibles
+    \item \textbf{Portabilité} : Déploiement identique sur différents environnements
+    \item \textbf{Scalabilité} : Orchestration et mise à l'échelle automatique
+    \item \textbf{Efficacité} : Utilisation optimisée des ressources système
+\end{itemize}
+
 \subsection{Intégration continue et déploiement}
 
 \subsubsection{Jenkins}
@@ -2113,9 +1923,322 @@ Jenkins offre :
     \item \textbf{Notifications} : Alertes en cas d'échec ou de succès
 \end{itemize}
 
+\subsection{Outils d'analyse de qualité de code}
+
+\subsubsection{SonarQube}
+
+SonarQube est un outil d'analyse statique de code qui évalue automatiquement la qualité, la fiabilité, la sécurité, et la maintenabilité d'un projet. Il prend en charge de nombreux langages (Java, JavaScript, TypeScript, C\#, etc.) et s'intègre dans la chaîne CI/CD pour fournir des rapports en temps réel à chaque build ou pull request.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.6\textwidth]{latex_media/media/sonarqube.png}
+    \caption{Logo SonarQube - Plateforme d'analyse de qualité de code}
+    \label{fig:sonarqube-logo}
+\end{figure}
+
+\textbf{Objectifs de SonarQube :}
+
+SonarQube vise à améliorer continuellement la qualité du code source en identifiant automatiquement les problèmes potentiels et en proposant des recommandations d'amélioration :
+
+\begin{itemize}
+    \item \textbf{Détecter les bugs} : Identification automatique des erreurs potentielles et des code smells qui peuvent affecter la maintenabilité
+    \item \textbf{Analyser les duplications} : Détection du code dupliqué pour promouvoir la réutilisabilité et réduire la maintenance
+    \item \textbf{Identifier les vulnérabilités} : Scan de sécurité pour détecter les failles de sécurité communes (OWASP Top 10)
+    \item \textbf{Suivre la couverture de tests} : Intégration avec les outils de test (JaCoCo, Jest...) pour mesurer l'efficacité des tests unitaires
+    \item \textbf{Définir des Quality Gates} : Établissement de seuils de qualité minimum à respecter avant toute mise en production
+    \item \textbf{Renforcer les bonnes pratiques} : Promotion des standards de développement et amélioration continue des compétences de l'équipe
+\end{itemize}
+
+\textbf{Intégration dans le projet Quiz Agile :}
+
+Dans notre projet, SonarQube s'intègre parfaitement dans notre pipeline CI/CD Jenkins pour assurer une qualité de code continue :
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.85\textwidth]{latex_media/media/Analyse de code avec SonarQube.png}
+    \caption{Analyse de code avec SonarQube - Dashboard de qualité du projet Quiz Agile}
+    \label{fig:sonarqube-analysis}
+\end{figure}
+
+L'analyse SonarQube de notre projet Quiz Agile révèle :
+\begin{itemize}
+    \item \textbf{Couverture de tests} : Maintien d'un taux de couverture supérieur à 80\% pour le backend Java et 75\% pour le frontend React
+    \item \textbf{Complexité cyclomatique} : Respect des seuils recommandés pour maintenir un code lisible et maintenable
+    \item \textbf{Vulnérabilités} : Zéro vulnérabilité critique détectée grâce aux bonnes pratiques de sécurité Spring Security et validation des entrées
+    \item \textbf{Code smells} : Nombre minimal de code smells maintenus par des revues de code régulières et des refactorings continus
+    \item \textbf{Technical debt} : Ratio de dette technique maintenu sous les seuils acceptables définis par l'équipe
+\end{itemize}
+
+Cette approche garantit une base de code robuste et facilite la maintenance à long terme du système Quiz Agile.
+
+\section{Architecture technique globale}
+
+\subsection{Vue d'ensemble de la stack technologique}
+
+L'architecture technique de notre solution Quiz Agile repose sur une stack technologique moderne et bien structurée qui couvre l'ensemble du cycle de développement et de déploiement.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.0\textwidth]{latex_media/media/stack_technologique_quiz_agile.png}
+\caption{Stack technologique complète du projet Quiz Agile}
+\label{fig:stack-technologique}
+\end{figure}
+
+Cette vue d'ensemble illustre la répartition des technologies selon les domaines fonctionnels :
+
+\begin{itemize}
+\item \textbf{Frontend Web} : React JSX + Material UI, Redux Toolkit + Vite pour un développement moderne et performant
+\item \textbf{Backend API} : Spring Boot 3.2.4 + Java 17 avec JWT Auth + Maven pour une architecture robuste et sécurisée
+\item \textbf{Base de Données} : PostgreSQL 16 avec Flyway Migration pour une gestion efficace des données
+\item \textbf{DevOps \& CI/CD} : GitLab CI/CD, Docker Compose pour l'automatisation des déploiements
+\item \textbf{Tests \& Qualité} : JUnit + Mockito, Jest + SonarQube pour garantir la qualité du code
+\item \textbf{Outils Dev} : IntelliJ IDEA, VS Code + Figma pour un environnement de développement optimal
+\end{itemize}
+
+\subsection{Architecture technique détaillée}
+
+En guise de conclusion à cette analyse technique, cette section présente globalement l'architecture technique que nous avons adoptée pour mettre en œuvre notre projet QUIZ AGILE. Nous avons choisi une architecture moderne et flexible qui répond aux exigences de performance, de scalabilité et de sécurité.
+
+Cette architecture repose sur des technologies éprouvées, intégrant des composants robustes pour le développement de notre backend avec Spring Boot, et un frontend dynamique grâce à React. L'utilisation de PostgreSQL comme base de données assure une gestion efficace et sécurisée des données, tandis que JWT est intégré pour gérer l'authentification et les autorisations, renforçant ainsi la sécurité globale de la plateforme.
+
+Grâce à ces choix technologiques, nous sommes en mesure de créer une solution cohérente et performante, facilitant la collaboration entre les équipes et améliorant l'expérience utilisateur.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.0\textwidth]{latex_media/media/architecture_technique_systeme.png}
+\caption{Architecture technique de l'application Quiz Agile}
+\label{fig:architecture-technique}
+\end{figure}
+
+\section{Architecture générale du système}
+
+\subsection{Vue d'ensemble architecturale}
+
+La figure ci-dessous présente l'architecture générale de l'application QUIZ AGILE, mettant en lumière les interactions entre les différentes couches, notamment le front-end, le serveur d'authentification JWT, ainsi que le back-end et la base de données. Cette architecture vise à garantir une communication fluide et sécurisée entre les différentes parties, tout en optimisant les performances globales de l'application.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.0\textwidth]{latex_media/media/Architecture_globale.png}
+\caption{Architecture globale de l'application Quiz Agile}
+\label{fig:architecture-globale}
+\end{figure}
+
+\subsection{Architecture Backend détaillée}
+
+La figure suivante représente l'architecture logicielle du projet Agile Quiz, conçue selon les principes de la Clean Architecture et du modèle DDD (Domain-Driven Design). L'application est organisée en plusieurs couches bien distinctes : la couche de présentation (controllers REST, sécurité, validation), la couche d'application (services, DTOs, mappers), la couche d'infrastructure (repositories JPA, configurations, services externes), et le cœur du domaine (entités, objets de valeur, règles métiers, interfaces).
+
+Cette séparation permet de garantir la modularité, la testabilité, ainsi qu'une meilleure maintenabilité du code. Le backend est développé avec Spring Boot et utilise PostgreSQL comme base de données, tandis que le frontend est construit avec React et Material UI.
+
+\subsection{Structure et implémentation du projet Backend}
+
+\subsubsection{Architecture Domain-Driven Design (DDD)}
+
+Notre backend QUIZ AGILE suit rigoureusement les principes du Domain-Driven Design avec une architecture Clean. Cette approche nous permet de maintenir une séparation claire des responsabilités et une forte cohésion métier.
+
+\paragraph{Organisation des couches}
+
+La partie backend de notre projet QUIZ AGILE est structurée en quatre couches principales, chacune ayant un rôle spécifique dans l'architecture :
+
+\begin{itemize}
+\item \textbf{Couche de Sécurité} : Cette couche est responsable de la gestion des authentifications et des autorisations. En intégrant Spring Security avec JWT, elle assure la protection des ressources et le contrôle d'accès, garantissant que seuls les utilisateurs autorisés peuvent interagir avec le système. Elle gère également les rôles utilisateur (ADMIN, COACH, MODERATOR, USER) et les permissions associées.
+
+\item \textbf{Couche DAO (Data Access Object)} : La couche DAO est chargée de l'accès aux données. Elle encapsule la logique nécessaire pour interagir avec la base de données PostgreSQL, facilitant ainsi les opérations de création, lecture, mise à jour et suppression (CRUD). Cette abstraction permet de séparer la logique d'accès aux données de la logique métier et utilise Spring Data JPA pour simplifier les opérations de persistance.
+
+\item \textbf{Couche Service} : La couche service contient la logique métier de l'application. Elle traite les requêtes provenant des contrôleurs, exécute les opérations nécessaires en utilisant les DAOs, et renvoie les résultats. Cette couche assure également la validation des données, la gestion des règles métier, et l'orchestration des différents composants pour répondre aux cas d'usage fonctionnels.
+
+\item \textbf{Couche Contrôleur} : La couche contrôleur agit comme un intermédiaire entre le frontend React et le backend Spring Boot. Elle reçoit les requêtes HTTP REST, les dirige vers les services appropriés, et retourne les réponses au format JSON. Cette couche est essentielle pour gérer le flux des données et assurer une communication fluide entre les différentes parties de l'application.
+\end{itemize}
+
+\paragraph{Enrichissement de l'architecture Backend}
+
+Notre architecture backend est enrichie par l'intégration des couches et éléments supplémentaires suivants :
+
+\begin{itemize}
+\item \textbf{Configs} : Cette couche contient des fichiers de configuration pour l'application Spring Boot. Elle définit les paramètres globaux comme les connexions à la base de données PostgreSQL, les configurations de sécurité JWT, les propriétés de l'application, et les beans de configuration nécessaires au bon fonctionnement du système.
+
+\item \textbf{DTO (Data Transfer Object)} : Les DTO sont utilisés pour transporter des données entre les différentes couches de l'application et avec le frontend React. Ils permettent de réduire le nombre d'appels entre le frontend et le backend en regroupant plusieurs attributs en un seul objet, tout en offrant une couche d'abstraction pour protéger les entités internes.
+
+\item \textbf{Entities} : Cette couche définit les entités JPA qui correspondent aux tables de la base de données PostgreSQL. Chaque entité (Quiz, User, Question, QuizAttempt, etc.) représente un modèle de données et inclut des annotations JPA pour la validation et la gestion des relations entre les entités.
+
+\item \textbf{Exceptions} : La gestion des exceptions est cruciale pour le traitement des erreurs dans l'application. Cette couche définit des classes d'exception personnalisées pour gérer des cas d'erreurs spécifiques (QuizNotFoundException, UserAlreadyExistsException, etc.), permettant une gestion plus claire et centralisée des erreurs avec des messages appropriés.
+
+\item \textbf{Handlers} : Les handlers traitent des requêtes spécifiques ou des événements de l'application. Ils incluent les gestionnaires d'exceptions globaux (@ControllerAdvice), les handlers d'authentification, et les gestionnaires d'événements pour des flux de travail complexes comme la génération de rapports PDF.
+
+\item \textbf{Mappers} : Les mappers, implémentés avec MapStruct, sont responsables de la conversion entre les entités JPA, les DTO et d'autres représentations de données. Ils facilitent le passage des données entre les différentes couches en s'assurant que les structures de données sont compatibles et en automatisant les conversions.
+
+\item \textbf{Repositories} : Les repositories encapsulent la logique d'accès aux données et interagissent directement avec la base de données PostgreSQL via Spring Data JPA. Ils fournissent une interface pour des opérations CRUD sur les entités, séparant ainsi la logique de persistance de la logique métier et offrant des requêtes personnalisées.
+
+\item \textbf{Responses} : Les objets de réponse contiennent les données que le serveur renvoie au client React. Ils structurent les informations pour une communication claire et efficace, incluant les codes de statut HTTP, les messages d'erreur, et les données de réponse formatées.
+\end{itemize}
+
+\paragraph{Intégration et cohérence architecturale}
+
+Ces couches et éléments travaillent ensemble pour créer une architecture backend robuste et maintenable. L'utilisation de Spring Boot comme framework principal assure une intégration fluide entre tous les composants, tandis que les annotations Spring facilitent la configuration et l'injection de dépendances.
+
+L'architecture suit les principes de séparation des responsabilités et de faible couplage, permettant une évolution et une maintenance aisées du système. Les tests unitaires et d'intégration sont intégrés à chaque couche pour garantir la qualité et la fiabilité du code.
+
+Cette structure facilite également la collaboration en équipe, chaque développeur pouvant travailler sur une couche spécifique sans impacter les autres, tout en maintenant une cohérence globale grâce aux interfaces bien définies entre les couches.
+
+\paragraph{Structure physique du projet Backend}
+
+La structure physique de notre projet backend Spring Boot reflète parfaitement l'organisation architecturale décrite ci-dessus :
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{latex_media/media/structure_backend_quizapp.png}
+\caption{Structure physique du projet Backend - Arborescence des packages Java}
+\label{fig:structure-backend}
+\end{figure}
+
+Cette capture montre l'organisation du code source du backend avec :
+\begin{itemize}
+\item \textbf{Package main} : Point d'entrée de l'application Spring Boot
+\item \textbf{Package application.service} : Contient la logique métier (AnalyticsService, ExportService, QuestionService, QuizService, etc.)
+\item \textbf{Package domain} : Entités métier et règles business (attempt, notification, question, quiz, result, user)
+\item \textbf{Package infrastructure} : Couche d'infrastructure technique (config, integration, persistence, repository, security)
+\item \textbf{Package presentation} : Couche de présentation avec les contrôleurs REST et DTOs
+\item \textbf{Resources} : Fichiers de configuration et scripts de migration de base de données
+\end{itemize}
+
+\subsection{Structure et implémentation du projet Frontend}
+
+\subsubsection{Architecture React avec Material-UI}
+
+Le frontend de notre application QUIZ AGILE est développé avec React 18 et utilise Material-UI (MUI) comme bibliothèque de composants UI. Cette combinaison offre une interface utilisateur moderne, responsive et accessible, parfaitement adaptée aux besoins de notre application de gestion de quiz.
+
+\paragraph{Structure physique du projet Frontend}
+
+La structure de notre projet frontend React illustre parfaitement l'organisation modulaire et la séparation des responsabilités :
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{latex_media/media/structure_frontend_react.png}
+\caption{Structure physique du projet Frontend - Arborescence React avec SCSS modulaire}
+\label{fig:structure-frontend}
+\end{figure}
+
+Cette structure montre l'organisation du frontend avec :
+\begin{itemize}
+\item \textbf{src/pages} : Pages principales de l'application (admin, attempt, auth, dashboard, etc.)
+\item \textbf{src/components} : Composants réutilisables et modulaires
+\item \textbf{src/context} : Contextes React pour la gestion d'état globale
+\item \textbf{src/hooks} : Hooks personnalisés pour la logique réutilisable
+\item \textbf{src/routes} : Configuration du routage de l'application
+\item \textbf{src/services} : Services pour les appels API et la logique métier
+\item \textbf{src/slices} : Redux slices pour la gestion d'état avec Redux Toolkit
+\item \textbf{src/styles} : Styles SCSS modulaires avec variables globales et mixins
+\item \textbf{src/utils} : Utilitaires et fonctions helper
+\end{itemize}
+
+\subsubsection{Organisation modulaire SCSS}
+
+Notre frontend adopte une approche modulaire avec SCSS pour la gestion des styles. Cette architecture permet une maintenance facilitée et une réutilisabilité optimale des composants de style :
+
+\begin{itemize}
+\item \textbf{Variables globales} : Le système de variables SCSS centralise toutes les valeurs de design (couleurs, espacements, tailles de police, breakpoints responsive) dans des fichiers dédiés, assurant une cohérence visuelle à travers toute l'application.
+
+\item \textbf{Mixins utilitaires} : Les mixins SCSS encapsulent les logiques de style complexes comme les media queries responsive, les transitions, et les effets visuels, permettant une réutilisation efficace dans tous les composants.
+
+\item \textbf{Architecture en Grid CSS} : Le layout principal utilise CSS Grid pour créer une structure flexible et responsive avec des zones définies (drawer, header, main, footer) qui s'adaptent automatiquement aux différentes tailles d'écran.
+\end{itemize}
+
+\subsubsection{Système de thématisation avancé}
+
+L'application intègre un système de thématisation complet supportant les modes clair et sombre :
+
+\begin{itemize}
+\item \textbf{Thème clair} : Utilise des gradients subtils et des couleurs douces pour créer une interface moderne et professionnelle, avec des effets de blur et des ombres portées pour la profondeur visuelle.
+
+\item \textbf{Thème sombre} : Propose une alternative sombre avec des couleurs adaptées pour réduire la fatigue visuelle, tout en maintenant une excellente lisibilité et un contraste approprié.
+
+\item \textbf{Transitions fluides} : Toutes les transitions entre les thèmes sont animées avec des courbes de Bézier personnalisées pour une expérience utilisateur fluide et professionnelle.
+\end{itemize}
+
+\subsubsection{Responsive Design et adaptabilité}
+
+Le frontend est conçu avec une approche "mobile-first" et s'adapte parfaitement à tous les types d'appareils :
+
+\begin{itemize}
+\item \textbf{Breakpoints personnalisés} : Définis dans les variables SCSS, ils permettent une adaptation précise aux écrans small (mobile), medium (tablette), large (desktop) et xl (grand écran).
+
+\item \textbf{Navigation adaptative} : Le drawer de navigation se transforme automatiquement en menu mobile sur les petits écrans, avec des animations de transition fluides et une expérience utilisateur optimisée.
+
+\item \textbf{Composants flexibles} : Tous les composants sont conçus pour s'adapter dynamiquement à l'espace disponible, avec des grilles CSS flexibles et des tailles relatives.
+\end{itemize}
+
+\subsubsection{Composants et Layout}
+
+\begin{itemize}
+\item \textbf{Layout principal} : Le composant Layout utilise une grille CSS avec des zones nommées pour organiser l'interface en sections distinctes. Cette approche permet une flexibilité maximale et une maintenance simplifiée.
+
+\item \textbf{Drawer de navigation} : Le drawer intègre des informations utilisateur, une navigation hiérarchique avec icônes, et des effets visuels avancés comme le backdrop-filter pour un rendu moderne.
+
+\item \textbf{Header dynamique} : L'AppBar inclut un système de breadcrumbs, des actions utilisateur (notifications, changement de thème), et s'adapte automatiquement à l'état du drawer.
+
+\item \textbf{Gestion d'état} : Utilisation de Redux Toolkit pour la gestion centralisée de l'état de l'application, avec des slices dédiés pour les différents domaines (auth, quiz, theme, notifications).
+\end{itemize}
+
+\subsubsection{Optimisations et accessibilité}
+
+\begin{itemize}
+\item \textbf{Performance} : Le code SCSS est optimisé avec des sélecteurs efficaces, des animations hardware-accelerated, et une gestion intelligente des re-renders.
+
+\item \textbf{Accessibilité} : Support complet des technologies d'assistance avec des focus visibles, des contrastes respectant les standards WCAG, et une navigation au clavier optimisée.
+
+\item \textbf{Responsive Media Queries} : Adaptation automatique aux préférences système (prefers-reduced-motion, prefers-contrast) pour une expérience utilisateur inclusive.
+\end{itemize}
+
+Cette architecture frontend moderne assure une expérience utilisateur exceptionnelle tout en maintenant une base de code maintenable et évolutive, parfaitement intégrée avec le backend Spring Boot via des APIs REST sécurisées.
+
+\subsection{Tests et validation}
+
+Pour garantir la fiabilité et la robustesse de notre système, une stratégie de test rigoureuse a été mise en œuvre, couvrant différents niveaux et aspects du système.
+
+\subsubsection{Tests Unitaires}
+
+Les tests unitaires ont été appliqués à chaque module et composant individuel du système. L'objectif était de vérifier que chaque unité de code fonctionne correctement de manière isolée.
+
+\begin{itemize}
+\item \textbf{Backend} : JUnit 5 et Mockito ont été utilisés pour tester les classes et méthodes Java. Les tests unitaires ont couvert la logique métier, les interactions avec la base de données et les services REST.
+
+\item \textbf{Frontend} : Jest a été utilisé pour tester les composants React. Les tests unitaires ont vérifié le comportement des composants, les interactions avec les services et l'affichage des données.
+\end{itemize}
+
+\subsubsection{Tests d'Intégration}
+
+Les tests d'intégration ont vérifié l'interaction entre différents modules et composants du système. L'objectif était de s'assurer que les différents éléments du système fonctionnent correctement ensemble.
+
+\begin{itemize}
+\item \textbf{Spring Boot Test} : Spring Boot Test a été utilisé pour tester les API REST. Les tests d'intégration ont vérifié que les API répondent correctement aux requêtes, que les données sont correctement validées et que les erreurs sont correctement gérées.
+
+\item \textbf{Postman} : Postman a été utilisé pour tester manuellement les API REST. Les tests ont vérifié que les API fonctionnent correctement et que les données sont correctement renvoyées.
+\end{itemize}
+
+\subsubsection{Tests de Performance}
+
+Les tests de performance ont été effectués pour évaluer la capacité du système à gérer des charges de travail importantes et à répondre aux exigences de performance.
+
+\begin{itemize}
+\item \textbf{Temps de Réponse} : Les temps de réponse des API ont été mesurés pour vérifier qu'ils respectent les exigences de performance. Les tests ont été effectués avec différents nombres d'utilisateurs simultanés pour simuler des charges de travail réelles.
+
+\item \textbf{Charge} : Les tests de charge ont été effectués pour évaluer la capacité du système à gérer des volumes importants de données et de transactions. Les tests ont été effectués avec différents nombres d'utilisateurs simultanés et différents volumes de données.
+\end{itemize}
+
+\subsubsection{Tests de Sécurité}
+
+Les tests de sécurité ont été effectués pour identifier les vulnérabilités potentielles du système et pour s'assurer que les données sensibles sont protégées.
+
+\begin{itemize}
+\item \textbf{Authentification et Autorisation} : Les tests ont vérifié que seuls les utilisateurs autorisés peuvent accéder aux données sensibles et aux fonctionnalités critiques. JWT a été utilisé pour gérer l'authentification et l'autorisation.
+\end{itemize}
+
 \section{Conclusion}
 
-Ce chapitre a présenté l'étude technique complète du projet Quiz Agile. Les choix architecturaux et technologiques réalisés permettent de garantir une solution robuste, performante et évolutive. L'architecture monolithique, bien que plus simple, répond parfaitement aux besoins actuels tout en gardant la possibilité d'évoluer vers une architecture distribuée si nécessaire.
+Ce chapitre a offert une vision détaillée et approfondie des fondations technologiques qui sous-tendent notre projet. Nous avons exploré un large éventail d'outils logiciels, de frameworks et de bibliothèques, chacun jouant un rôle crucial dans le développement de notre plateforme Quiz Agile innovante.
+
+L'analyse des principaux concepts et techniques associés à ces outils nous a permis de mieux comprendre non seulement leur fonctionnement, mais aussi leur pertinence dans le contexte spécifique de notre application. Par ailleurs, l'étude de l'architecture globale du projet, avec un focus particulier sur les composants backend et frontend, a mis en lumière la complexité et la rigueur nécessaires à la conception d'une application moderne, sécurisée et évolutive.
+
+L'architecture choisie répond aux besoins de gestion de quiz tout en garantissant une expérience utilisateur fluide et fiable. Les choix technologiques réalisés permettent de garantir une solution robuste, performante et évolutive, parfaitement adaptée aux exigences du projet Quiz Agile.
 
 % ============================================
 % CHAPITRE 5 - Présentation des interfaces et résultats
@@ -2141,13 +2264,11 @@ Ce dernier chapitre présente les interfaces utilisateur développées et les r�
 
 \section{Interface d'authentification}
 
-L'interface d'authentification constitue le point d'entrée de l'application. Elle offre une expérience utilisateur simple et sécurisée, reflétant l'univers agile avec une palette de couleurs sobre et des éléments visuels évoquant la collaboration.
+La page de connexion représente le premier contact des utilisateurs avec l'application Quiz Agile. Nous avons opté pour une approche simple et épurée qui facilite l'accès tout en maintenant un niveau de sécurité approprié.
 
 \subsection{Page de connexion}
 
-L'interface de connexion constitue la porte d'entrée de la plateforme Agile Quiz Master. Elle permet aux utilisateurs autorisés (formateurs, équipes agiles ou administrateurs) d'accéder à leur espace personnel dédié à la création et à la passation de quiz.
-
-Conçue pour être minimaliste et ergonomique, l'interface propose deux champs obligatoires : le courriel (compatible avec les adresses Capgemini) et le mot de passe. Le bouton "Se connecter" valide l'authentification.
+La page de connexion a été conçue avec deux objectifs principaux : la simplicité d'utilisation et la sécurité. Les utilisateurs doivent saisir leur adresse email et leur mot de passe pour accéder à l'application.
 
 \begin{figure}[H]
 \centering
@@ -2156,24 +2277,22 @@ Conçue pour être minimaliste et ergonomique, l'interface propose deux champs o
 \label{fig:interface-connexion}
 \end{figure}
 
-Le design reflète l'univers agile, avec une palette de couleurs sobre et des éléments visuels évoquant la collaboration et l'itération. L'arrière-plan épuré et les typographies modernes renforcent le caractère professionnel de l'outil.
+Cette interface utilise les couleurs de Capgemini pour maintenir une cohérence visuelle avec l'identité de l'entreprise. Le formulaire est centré sur la page et les champs sont clairement identifiés. Un message d'erreur s'affiche en cas d'identifiants incorrects.
 
 \section{Interface du tableau de bord}
 
-L'interface du tableau de bord de la plateforme Quiz Agile offre une vue centralisée et organisée des activités liées aux quiz agiles.
+Après connexion, les utilisateurs arrivent sur le tableau de bord qui centralise l'ensemble des informations importantes et des actions disponibles.
 
 \subsection{Tableau de bord principal}
 
-Le tableau de bord présente plusieurs sections claires :
+Le tableau de bord affiche les informations essentielles en un coup d'œil :
 
 \begin{itemize}
-    \item Quiz récents (ex: "QCM Agile - 5 questions, 30 minutes")
-    \item Quiz complétés (avec accès aux historiques)
-    \item Résultats récents (dates et scores)
-    \item Rapports (métriques comme "60\% SCORE MOYEN" ou "80\% MEILLEUR SCORE")
+    \item Les quiz récemment créés ou modifiés
+    \item L'historique des quiz passés par l'utilisateur
+    \item Les résultats et statistiques personnelles
+    \item Les métriques globales de performance
 \end{itemize}
-
-Une barre latérale (sidebar) permet une navigation intuitive entre les fonctionnalités principales : Tableau de bord, Quizzes, Questions, Résultats, Profil, et Utilisateurs (pour les administrateurs).
 
 \begin{figure}[H]
 \centering
@@ -2182,22 +2301,22 @@ Une barre latérale (sidebar) permet une navigation intuitive entre les fonction
 \label{fig:tableau-bord}
 \end{figure}
 
-L'interface, bien que minimaliste, est conçue pour une expérience utilisateur fluide, avec des libellés explicites et une hiérarchie visuelle mettant l'accent sur les données essentielles.
+La navigation s'effectue via un menu latéral qui donne accès aux différentes sections de l'application. L'organisation de l'information permet aux utilisateurs de rapidement identifier les quiz disponibles et suivre leur progression.
 
 \section{Interface administrateur}
 
-L'interface administrateur offre une vue d'ensemble complète du système et des outils de gestion avancés.
+Les administrateurs disposent d'interfaces spécialisées pour gérer l'ensemble de la plateforme et superviser les activités des utilisateurs.
 
 \subsection{Gestion des utilisateurs}
 
-La page de gestion des utilisateurs offre aux administrateurs un outil complet pour superviser et gérer les comptes des utilisateurs de la plateforme. Elle présente une liste organisée des utilisateurs avec les informations essentielles :
+La page de gestion des utilisateurs permet aux administrateurs de superviser tous les comptes de la plateforme. Elle affiche un tableau avec les informations importantes de chaque utilisateur :
 
 \begin{itemize}
-    \item Nom de l'utilisateur
-    \item Email (identifiant unique)
-    \item Rôle (ex : ADMIN, COACH)
-    \item Statut (actif/inactif, indiqué par une icône de validation)
-    \item Actions disponibles (modification/suppression via icônes)
+    \item Nom et prénom de l'utilisateur
+    \item Adresse email (qui sert d'identifiant de connexion)
+    \item Rôle attribué (Administrateur, Coach ou Collaborateur)
+    \item Statut du compte (actif ou inactif)
+    \item Boutons d'action pour modifier ou supprimer le compte
 \end{itemize}
 
 \begin{figure}[H]
@@ -2207,13 +2326,7 @@ La page de gestion des utilisateurs offre aux administrateurs un outil complet p
 \label{fig:gestion-utilisateurs}
 \end{figure}
 
-La page intègre des fonctionnalités clés pour une administration efficace :
-
-\begin{itemize}
-    \item Barre de recherche permettant de filtrer les utilisateurs
-    \item Pagination (10 résultats par page) pour une navigation aisée
-    \item Bouton "Ajouter un utilisateur" pour créer facilement de nouveaux comptes
-\end{itemize}
+L'interface inclut une barre de recherche en haut pour filtrer les utilisateurs et un système de pagination pour naviguer entre les pages (10 utilisateurs par page). Le bouton "Ajouter un utilisateur" permet de créer rapidement de nouveaux comptes.
 
 \subsection{Création d'un utilisateur}
 

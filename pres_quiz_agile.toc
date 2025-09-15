@@ -1,0 +1,8 @@
+\babel@toc {french}{}\relax 
+\beamer@sectionintoc {1}{Contexte Général}{3}{0}{1}
+\beamer@sectionintoc {2}{Analyse des Besoins}{5}{0}{2}
+\beamer@sectionintoc {3}{Conception}{6}{0}{3}
+\beamer@sectionintoc {4}{Implémentation}{11}{0}{4}
+\beamer@sectionintoc {5}{Tests et Qualité}{14}{0}{5}
+\beamer@sectionintoc {6}{Démonstration Live}{17}{0}{6}
+\beamer@sectionintoc {7}{Résultats}{18}{0}{7}

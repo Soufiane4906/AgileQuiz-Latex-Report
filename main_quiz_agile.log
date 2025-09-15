@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.13)  15 SEP 2025 00:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.13)  15 SEP 2025 02:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -566,10 +566,10 @@ Package babel Info: 'french' activates 'french' shorthands.
 LaTeX Warning: Label `tab:abreviations' multiply defined.
 
 
-LaTeX Warning: Label `tab:cas-utilisation-recapitulatif' multiply defined.
+LaTeX Warning: Label `fig:architecture-technique' multiply defined.
 
 
-LaTeX Warning: Label `tab:cas-utilisation-passer-quiz' multiply defined.
+LaTeX Warning: Label `fig:architecture-globale' multiply defined.
 
 )
 \openout1 = `main_quiz_agile.aux'.
@@ -679,7 +679,7 @@ Package hyperref Info: Link coloring ON on input line 76.
 \@outlinefile=\write3
 \openout3 = `main_quiz_agile.out'.
 
-<latex_media/media/logoemsi.png, id=666, 225.84375pt x 225.84375pt>
+<latex_media/media/logoemsi.png, id=634, 225.84375pt x 225.84375pt>
 File: latex_media/media/logoemsi.png Graphic file (type png)
 <use latex_media/media/logoemsi.png>
 Package pdftex.def Info: latex_media/media/logoemsi.png  used on input line 83.
@@ -718,7 +718,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-<latex_media/media/logo unica.jpg, id=667, 360.3645pt x 117.9315pt>
+<latex_media/media/logo unica.jpg, id=635, 360.3645pt x 117.9315pt>
 File: latex_media/media/logo unica.jpg Graphic file (type jpg)
 <use latex_media/media/logo unica.jpg>
 Package pdftex.def Info: latex_media/media/logo unica.jpg  used on input line 86.
@@ -728,7 +728,7 @@ Overfull \hbox (99.44577pt too wide) in paragraph at lines 86--87
  [][] 
  []
 
-<latex_media/media/image3.png, id=668, 2561.82094pt x 572.1375pt>
+<latex_media/media/image3.png, id=636, 2561.82094pt x 572.1375pt>
 File: latex_media/media/image3.png Graphic file (type png)
 <use latex_media/media/image3.png>
 Package pdftex.def Info: latex_media/media/image3.png  used on input line 98.
@@ -779,7 +779,7 @@ LaTeX Font Warning: Font shape `T1/lmr/bx/sc' undefined
 ]
 
 Package babel Info: 'french' activates 'french' shorthands.
-(babel)             Reported on input line 78.
+(babel)             Reported on input line 83.
 [7]
 
 [8]
@@ -841,12 +841,12 @@ Package pdftex.def Info: latex_media/media/image3.png  used on input line 415.
 [4
 
 ] [5]
-<latex_media/media/image4.png, id=1030, 520.19344pt x 204.01219pt>
+<latex_media/media/image4.png, id=1005, 520.19344pt x 204.01219pt>
 File: latex_media/media/image4.png Graphic file (type png)
 <use latex_media/media/image4.png>
 Package pdftex.def Info: latex_media/media/image4.png  used on input line 514.
 (pdftex.def)             Requested size: 364.19667pt x 142.83246pt.
-<latex_media/media/image5.jpeg, id=1031, 539.01375pt x 316.93407pt>
+<latex_media/media/image5.jpeg, id=1006, 539.01375pt x 316.93407pt>
 File: latex_media/media/image5.jpeg Graphic file (type jpg)
 <use latex_media/media/image5.jpeg>
 Package pdftex.def Info: latex_media/media/image5.jpeg  used on input line 527.
@@ -854,7 +854,7 @@ Package pdftex.def Info: latex_media/media/image5.jpeg  used on input line 527.
 
 
 [6]
-<latex_media/media/image6.png, id=1036, 673.76718pt x 330.48468pt>
+<latex_media/media/image6.png, id=1011, 673.76718pt x 330.48468pt>
 File: latex_media/media/image6.png Graphic file (type png)
 <use latex_media/media/image6.png>
 Package pdftex.def Info: latex_media/media/image6.png  used on input line 538.
@@ -864,7 +864,7 @@ Package pdftex.def Info: latex_media/media/image6.png  used on input line 538.
 [7 <./latex_media/media/image4.png> <./latex_media/media/image5.jpeg>]
 
 [8 <./latex_media/media/image6.png>]
-<latex_media/media/image7.jpeg, id=1045, 624.3325pt x 416.55624pt>
+<latex_media/media/image7.jpeg, id=1020, 624.3325pt x 416.55624pt>
 File: latex_media/media/image7.jpeg Graphic file (type jpg)
 <use latex_media/media/image7.jpeg>
 Package pdftex.def Info: latex_media/media/image7.jpeg  used on input line 580.
@@ -878,7 +878,7 @@ Package pdftex.def Info: latex_media/media/image7.jpeg  used on input line 580.
 [11]
 
 [12]
-<latex_media/media/image9.png, id=1068, 417.852pt x 224.037pt>
+<latex_media/media/image9.png, id=1043, 417.852pt x 224.037pt>
 File: latex_media/media/image9.png Graphic file (type png)
 <use latex_media/media/image9.png>
 Package pdftex.def Info: latex_media/media/image9.png  used on input line 710.
@@ -898,384 +898,450 @@ Package pdftex.def Info: latex_media/media/image9.png  used on input line 710.
 [16
 
 ]
-<latex_media/media/image11.png, id=1087, 1224.575pt x 608.2725pt>
-File: latex_media/media/image11.png Graphic file (type png)
-<use latex_media/media/image11.png>
-Package pdftex.def Info: latex_media/media/image11.png  used on input line 837.
-(pdftex.def)             Requested size: 364.19667pt x 180.9053pt.
-
 
 [17]
-<latex_media/media/image10.png, id=1092, 1322.69156pt x 648.92438pt>
-File: latex_media/media/image10.png Graphic file (type png)
-<use latex_media/media/image10.png>
-Package pdftex.def Info: latex_media/media/image10.png  used on input line 858.
-(pdftex.def)             Requested size: 409.71692pt x 201.00604pt.
 
-
-[18 <./latex_media/media/image11.png (PNG copy)>]
-
-[19 <./latex_media/media/image10.png>]
-<latex_media/media/image12.png, id=1102, 1493.58pt x 581.17125pt>
-File: latex_media/media/image12.png Graphic file (type png)
-<use latex_media/media/image12.png>
-Package pdftex.def Info: latex_media/media/image12.png  used on input line 934.
-(pdftex.def)             Requested size: 409.71692pt x 159.4191pt.
-
-
-[20]
-<latex_media/media/image13.png, id=1107, 867.24pt x 317.185pt>
+[18]
+<latex_media/media/image13.png, id=1070, 867.24pt x 317.185pt>
 File: latex_media/media/image13.png Graphic file (type png)
 <use latex_media/media/image13.png>
-Package pdftex.def Info: latex_media/media/image13.png  used on input line 949.
+Package pdftex.def Info: latex_media/media/image13.png  used on input line 909.
 (pdftex.def)             Requested size: 409.71692pt x 149.85133pt.
 
 
-[21 <./latex_media/media/image12.png (PNG copy)> <./latex_media/media/image13.png (PNG copy)>]
-<latex_media/media/image14.png, id=1112, 310.761pt x 325.5435pt>
+[19 <./latex_media/media/image13.png (PNG copy)>]
+<latex_media/media/image14.png, id=1076, 310.761pt x 325.5435pt>
 File: latex_media/media/image14.png Graphic file (type png)
 <use latex_media/media/image14.png>
-Package pdftex.def Info: latex_media/media/image14.png  used on input line 999.
+Package pdftex.def Info: latex_media/media/image14.png  used on input line 959.
 (pdftex.def)             Requested size: 318.66948pt x 333.83823pt.
 
 
+[20]
+
+[21 <./latex_media/media/image14.png>]
+
 [22]
 
-[23 <./latex_media/media/image14.png>]
-<latex_media/media/image16.png, id=1126, 529.2135pt x 743.724pt>
-File: latex_media/media/image16.png Graphic file (type png)
-<use latex_media/media/image16.png>
-Package pdftex.def Info: latex_media/media/image16.png  used on input line 1014.
-(pdftex.def)             Requested size: 409.71692pt x 575.81273pt.
-
-
-[24]
-
-[25 <./latex_media/media/image16.png>]
-<latex_media/media/image17.png, id=1137, 1116.17pt x 1177.39874pt>
-File: latex_media/media/image17.png Graphic file (type png)
-<use latex_media/media/image17.png>
-Package pdftex.def Info: latex_media/media/image17.png  used on input line 1036.
-(pdftex.def)             Requested size: 409.71692pt x 432.18132pt.
-
-
-[26 <./latex_media/media/image17.png (PNG copy)>]
-<latex_media/media/image19.png, id=1146, 1447.4075pt x 1261.71375pt>
-File: latex_media/media/image19.png Graphic file (type png)
-<use latex_media/media/image19.png>
-Package pdftex.def Info: latex_media/media/image19.png  used on input line 1049.
-(pdftex.def)             Requested size: 409.71692pt x 357.14713pt.
-<latex_media/media/activity_diagramme_passer_quiz.png, id=1147, 622.325pt x 1502.61375pt>
-File: latex_media/media/activity_diagramme_passer_quiz.png Graphic file (type png)
-<use latex_media/media/activity_diagramme_passer_quiz.png>
-Package pdftex.def Info: latex_media/media/activity_diagramme_passer_quiz.png  used on input line 1062.
-(pdftex.def)             Requested size: 364.19667pt x 879.35797pt.
-
-
-LaTeX Warning: Float too large for page by 210.17488pt on input line 1065.
-
-
-
-[27 <./latex_media/media/image19.png (PNG copy)>]
-
-[28 <./latex_media/media/activity_diagramme_passer_quiz.png (PNG copy)>]
-<latex_media/media/Diagrammedetat-StatutduQuiz.png, id=1157, 782.925pt x 512.91624pt>
-File: latex_media/media/Diagrammedetat-StatutduQuiz.png Graphic file (type png)
-<use latex_media/media/Diagrammedetat-StatutduQuiz.png>
-Package pdftex.def Info: latex_media/media/Diagrammedetat-StatutduQuiz.png  used on input line 1077.
-(pdftex.def)             Requested size: 364.19667pt x 238.5975pt.
-<latex_media/media/Diagrammedetat-Tentative de Quiz.png, id=1158, 493.3632pt x 330.5148pt>
-File: latex_media/media/Diagrammedetat-Tentative de Quiz.png Graphic file (type png)
-<use latex_media/media/Diagrammedetat-Tentative de Quiz.png>
-Package pdftex.def Info: latex_media/media/Diagrammedetat-Tentative de Quiz.png  used on input line 1088.
-(pdftex.def)             Requested size: 364.19667pt x 243.9921pt.
-
-Overfull \hbox (1.23729pt too wide) in paragraph at lines 1110--1110
-[]|[]|  
- []
-
-
-Overfull \hbox (14.36473pt too wide) in paragraph at lines 1120--1120
-[]|\T1/lmr/m/n/12 (-20) Coach/Administrateur|  
- []
-
-
-Overfull \hbox (14.36473pt too wide) in paragraph at lines 1121--1121
-[]|\T1/lmr/m/n/12 (-20) Coach/Administrateur|  
- []
-
-
-
-[29 <./latex_media/media/Diagrammedetat-StatutduQuiz.png (PNG copy)>] [30 <./latex_media/media/Diagrammedetat-Tentative de Quiz.png>]
-
-[31]
-
-[32] [33]
-<latex_media/media/image15.jpeg, id=1182, 448.4025pt x 216.81pt>
-File: latex_media/media/image15.jpeg Graphic file (type jpg)
-<use latex_media/media/image15.jpeg>
-Package pdftex.def Info: latex_media/media/image15.jpeg  used on input line 1286.
-(pdftex.def)             Requested size: 364.19667pt x 176.10475pt.
-
-
-[34]
-
-[35 <./latex_media/media/image15.jpeg>]
-
-[36]
-
-[37]
-File: latex_media/media/image14.png Graphic file (type png)
-<use latex_media/media/image14.png>
-Package pdftex.def Info: latex_media/media/image14.png  used on input line 1427.
-(pdftex.def)             Requested size: 409.71692pt x 429.21703pt.
-
-
-[38]
-
-[39]
-
-[40
+[23
 
 ]
-<latex_media/media/Architecture_globale.png, id=1213, 302.877pt x 188.8875pt>
+<latex_media/media/Architecture_globale.png, id=1097, 302.877pt x 188.8875pt>
 File: latex_media/media/Architecture_globale.png Graphic file (type png)
 <use latex_media/media/Architecture_globale.png>
-Package pdftex.def Info: latex_media/media/Architecture_globale.png  used on input line 1470.
+Package pdftex.def Info: latex_media/media/Architecture_globale.png  used on input line 1002.
 (pdftex.def)             Requested size: 409.71692pt x 255.51743pt.
 
 
-[41
+[24
 
  <./latex_media/media/Architecture_globale.png>]
+<latex_media/media/image16.png, id=1103, 529.2135pt x 743.724pt>
+File: latex_media/media/image16.png Graphic file (type png)
+<use latex_media/media/image16.png>
+Package pdftex.def Info: latex_media/media/image16.png  used on input line 1047.
+(pdftex.def)             Requested size: 409.71692pt x 575.81273pt.
+
+
+[25]
+
+[26 <./latex_media/media/image16.png>]
+<latex_media/media/image17.png, id=1116, 1116.17pt x 1177.39874pt>
+File: latex_media/media/image17.png Graphic file (type png)
+<use latex_media/media/image17.png>
+Package pdftex.def Info: latex_media/media/image17.png  used on input line 1069.
+(pdftex.def)             Requested size: 409.71692pt x 432.18132pt.
+
+
+[27 <./latex_media/media/image17.png (PNG copy)>]
+<latex_media/media/image19.png, id=1125, 1447.4075pt x 1261.71375pt>
+File: latex_media/media/image19.png Graphic file (type png)
+<use latex_media/media/image19.png>
+Package pdftex.def Info: latex_media/media/image19.png  used on input line 1082.
+(pdftex.def)             Requested size: 409.71692pt x 357.14713pt.
+<latex_media/media/sequence_diagram_quiz_creation.png, id=1126, 1447.4075pt x 1261.71375pt>
+File: latex_media/media/sequence_diagram_quiz_creation.png Graphic file (type png)
+<use latex_media/media/sequence_diagram_quiz_creation.png>
+Package pdftex.def Info: latex_media/media/sequence_diagram_quiz_creation.png  used on input line 1095.
+(pdftex.def)             Requested size: 455.24411pt x 396.84512pt.
+
+
+[28 <./latex_media/media/image19.png (PNG copy)>]
+
+[29 <./latex_media/media/sequence_diagram_quiz_creation.png (PNG copy)>]
+<latex_media/media/activity_diagramme_passer_quiz.png, id=1137, 622.325pt x 1502.61375pt>
+File: latex_media/media/activity_diagramme_passer_quiz.png Graphic file (type png)
+<use latex_media/media/activity_diagramme_passer_quiz.png>
+Package pdftex.def Info: latex_media/media/activity_diagramme_passer_quiz.png  used on input line 1119.
+(pdftex.def)             Requested size: 364.19667pt x 879.35797pt.
+
+
+LaTeX Warning: Float too large for page by 210.17488pt on input line 1122.
+
+<latex_media/media/Diagrammedetat-StatutduQuiz.png, id=1138, 782.925pt x 512.91624pt>
+File: latex_media/media/Diagrammedetat-StatutduQuiz.png Graphic file (type png)
+<use latex_media/media/Diagrammedetat-StatutduQuiz.png>
+Package pdftex.def Info: latex_media/media/Diagrammedetat-StatutduQuiz.png  used on input line 1134.
+(pdftex.def)             Requested size: 364.19667pt x 238.5975pt.
+<latex_media/media/Diagrammedetat-Tentative de Quiz.png, id=1139, 493.3632pt x 330.5148pt>
+File: latex_media/media/Diagrammedetat-Tentative de Quiz.png Graphic file (type png)
+<use latex_media/media/Diagrammedetat-Tentative de Quiz.png>
+Package pdftex.def Info: latex_media/media/Diagrammedetat-Tentative de Quiz.png  used on input line 1145.
+(pdftex.def)             Requested size: 364.19667pt x 243.9921pt.
+<latex_media/media/image11.png, id=1140, 1224.575pt x 608.2725pt>
+File: latex_media/media/image11.png Graphic file (type png)
+<use latex_media/media/image11.png>
+Package pdftex.def Info: latex_media/media/image11.png  used on input line 1158.
+(pdftex.def)             Requested size: 364.19667pt x 180.9053pt.
+
+
+[30]
+
+[31 <./latex_media/media/activity_diagramme_passer_quiz.png (PNG copy)>]
+
+[32 <./latex_media/media/Diagrammedetat-StatutduQuiz.png (PNG copy)> <./latex_media/media/Diagrammedetat-Tentative de Quiz.png>]
+<latex_media/media/Diagramme entite-relation.png, id=1156, 356.83313pt x 415.5525pt>
+File: latex_media/media/Diagramme entite-relation.png Graphic file (type png)
+<use latex_media/media/Diagramme entite-relation.png>
+Package pdftex.def Info: latex_media/media/Diagramme entite-relation.png  used on input line 1179.
+(pdftex.def)             Requested size: 386.96027pt x 450.66055pt.
+
+
+[33 <./latex_media/media/image11.png (PNG copy)>]
+
+[34 <./latex_media/media/Diagramme entite-relation.png>]
+<latex_media/media/image12.png, id=1168, 1493.58pt x 581.17125pt>
+File: latex_media/media/image12.png Graphic file (type png)
+<use latex_media/media/image12.png>
+Package pdftex.def Info: latex_media/media/image12.png  used on input line 1227.
+(pdftex.def)             Requested size: 409.71692pt x 159.4191pt.
+<latex_media/media/image10.png, id=1169, 1322.69156pt x 648.92438pt>
+File: latex_media/media/image10.png Graphic file (type png)
+<use latex_media/media/image10.png>
+Package pdftex.def Info: latex_media/media/image10.png  used on input line 1246.
+(pdftex.def)             Requested size: 409.71692pt x 201.00604pt.
+
+
+[35 <./latex_media/media/image12.png (PNG copy)>]
+
+[36 <./latex_media/media/image10.png>]
+<latex_media/media/image15.jpeg, id=1180, 448.4025pt x 216.81pt>
+File: latex_media/media/image15.jpeg Graphic file (type jpg)
+<use latex_media/media/image15.jpeg>
+Package pdftex.def Info: latex_media/media/image15.jpeg  used on input line 1317.
+(pdftex.def)             Requested size: 364.19667pt x 176.10475pt.
+
+
+[37]
+
+[38 <./latex_media/media/image15.jpeg>]
+
+[39
+
+]
+<latex_media/media/architecture_technique_systeme.png, id=1193, 437.9562pt x 239.9364pt>
+File: latex_media/media/architecture_technique_systeme.png Graphic file (type png)
+<use latex_media/media/architecture_technique_systeme.png>
+Package pdftex.def Info: latex_media/media/architecture_technique_systeme.png  used on input line 1362.
+(pdftex.def)             Requested size: 409.71692pt x 224.47119pt.
+
+
+[40
+
+ <./latex_media/media/architecture_technique_systeme.png>]
+
+[41]
 
 [42]
 
 [43]
-
-[44]
-
-[45
-
-]
-
-[46
-
-]
-
-[47]
-
-[48]
-File: latex_media/media/image15.jpeg Graphic file (type jpg)
-<use latex_media/media/image15.jpeg>
-Package pdftex.def Info: latex_media/media/image15.jpeg  used on input line 1794.
-(pdftex.def)             Requested size: 364.19667pt x 176.10475pt.
-
-
-[49]
-<latex_media/media/image23.png, id=1254, 154.32657pt x 41.4047pt>
-File: latex_media/media/image23.png Graphic file (type png)
-<use latex_media/media/image23.png>
-Package pdftex.def Info: latex_media/media/image23.png  used on input line 1813.
-(pdftex.def)             Requested size: 273.14923pt x 73.29005pt.
-
-
-[50]
-<latex_media/media/image24.png, id=1259, 1405.25pt x 790.955pt>
+<latex_media/media/image24.png, id=1212, 1405.25pt x 790.955pt>
 File: latex_media/media/image24.png Graphic file (type png)
 <use latex_media/media/image24.png>
-Package pdftex.def Info: latex_media/media/image24.png  used on input line 1840.
+Package pdftex.def Info: latex_media/media/image24.png  used on input line 1575.
 (pdftex.def)             Requested size: 227.62206pt x 128.11227pt.
 
 
-[51 <./latex_media/media/image23.png> <./latex_media/media/image24.png>]
-<latex_media/media/image25.png, id=1268, 188.559pt x 55.188pt>
+[44]
+<latex_media/media/image25.png, id=1217, 188.559pt x 55.188pt>
 File: latex_media/media/image25.png Graphic file (type png)
 <use latex_media/media/image25.png>
-Package pdftex.def Info: latex_media/media/image25.png  used on input line 1882.
+Package pdftex.def Info: latex_media/media/image25.png  used on input line 1617.
 (pdftex.def)             Requested size: 318.66948pt x 93.2819pt.
 
 
-[52 <./latex_media/media/image25.png>]
-<latex_media/media/image26.png, id=1277, 311.1625pt x 163.61125pt>
+[45 <./latex_media/media/image24.png>]
+
+[46 <./latex_media/media/image25.png>]
+<latex_media/media/image26.png, id=1234, 311.1625pt x 163.61125pt>
 File: latex_media/media/image26.png Graphic file (type png)
 <use latex_media/media/image26.png>
-Package pdftex.def Info: latex_media/media/image26.png  used on input line 1904.
+Package pdftex.def Info: latex_media/media/image26.png  used on input line 1684.
 (pdftex.def)             Requested size: 273.14923pt x 143.62383pt.
-<latex_media/media/maven.png, id=1278, 1284.8pt x 722.7pt>
+
+
+[47]
+<latex_media/media/maven.png, id=1242, 1284.8pt x 722.7pt>
 File: latex_media/media/maven.png Graphic file (type png)
 <use latex_media/media/maven.png>
-Package pdftex.def Info: latex_media/media/maven.png  used on input line 1923.
+Package pdftex.def Info: latex_media/media/maven.png  used on input line 1703.
 (pdftex.def)             Requested size: 364.19667pt x 204.85785pt.
 
 
-[53 <./latex_media/media/image26.png>]
-<latex_media/media/junit.png, id=1286, 152.0955pt x 46.647pt>
+[48 <./latex_media/media/image26.png>]
+<latex_media/media/junit.png, id=1249, 152.0955pt x 46.647pt>
 File: latex_media/media/junit.png Graphic file (type png)
 <use latex_media/media/junit.png>
-Package pdftex.def Info: latex_media/media/junit.png  used on input line 1954.
+Package pdftex.def Info: latex_media/media/junit.png  used on input line 1734.
 (pdftex.def)             Requested size: 273.14923pt x 83.77376pt.
 
 
-[54 <./latex_media/media/maven.png (PNG copy)>]
-<latex_media/media/mockito.png, id=1292, 401.5pt x 200.75pt>
+[49 <./latex_media/media/maven.png (PNG copy)> <./latex_media/media/junit.png>]
+<latex_media/media/mockito.png, id=1256, 401.5pt x 200.75pt>
 File: latex_media/media/mockito.png Graphic file (type png)
 <use latex_media/media/mockito.png>
-Package pdftex.def Info: latex_media/media/mockito.png  used on input line 1973.
+Package pdftex.def Info: latex_media/media/mockito.png  used on input line 1753.
 (pdftex.def)             Requested size: 273.14923pt x 136.58476pt.
-<latex_media/media/jest_react_test.png, id=1293, 126.801pt x 78.84pt>
+<latex_media/media/jest_react_test.png, id=1257, 126.801pt x 78.84pt>
 File: latex_media/media/jest_react_test.png Graphic file (type png)
 <use latex_media/media/jest_react_test.png>
-Package pdftex.def Info: latex_media/media/jest_react_test.png  used on input line 1992.
+Package pdftex.def Info: latex_media/media/jest_react_test.png  used on input line 1772.
 (pdftex.def)             Requested size: 273.14923pt x 169.85876pt.
-
-
-[55 <./latex_media/media/junit.png> <./latex_media/media/mockito.png>]
-<latex_media/media/plantUML.png, id=1302, 124.5015pt x 80.4825pt>
+<latex_media/media/plantUML.png, id=1258, 124.5015pt x 80.4825pt>
 File: latex_media/media/plantUML.png Graphic file (type png)
 <use latex_media/media/plantUML.png>
-Package pdftex.def Info: latex_media/media/plantUML.png  used on input line 2013.
+Package pdftex.def Info: latex_media/media/plantUML.png  used on input line 1793.
 (pdftex.def)             Requested size: 273.14923pt x 176.57568pt.
 
 
-[56 <./latex_media/media/jest_react_test.png> <./latex_media/media/plantUML.png>]
-<latex_media/media/postman.png, id=1309, 317.5062pt x 96.36pt>
+[50 <./latex_media/media/mockito.png>]
+<latex_media/media/postman.png, id=1266, 317.5062pt x 96.36pt>
 File: latex_media/media/postman.png Graphic file (type png)
 <use latex_media/media/postman.png>
-Package pdftex.def Info: latex_media/media/postman.png  used on input line 2034.
+Package pdftex.def Info: latex_media/media/postman.png  used on input line 1814.
 (pdftex.def)             Requested size: 273.14923pt x 82.89883pt.
-<latex_media/media/jenkins.png, id=1310, 166.878pt x 87.0525pt>
+
+
+[51 <./latex_media/media/jest_react_test.png> <./latex_media/media/plantUML.png>]
+<latex_media/media/git.png, id=1273, 685.05937pt x 286.06876pt>
+File: latex_media/media/git.png Graphic file (type png)
+<use latex_media/media/git.png>
+Package pdftex.def Info: latex_media/media/git.png  used on input line 1835.
+(pdftex.def)             Requested size: 273.14923pt x 114.06317pt.
+<latex_media/media/gitlab.png, id=1274, 305.64188pt x 93.34875pt>
+File: latex_media/media/gitlab.png Graphic file (type png)
+<use latex_media/media/gitlab.png>
+Package pdftex.def Info: latex_media/media/gitlab.png  used on input line 1854.
+(pdftex.def)             Requested size: 273.14923pt x 83.42908pt.
+
+
+[52 <./latex_media/media/postman.png> <./latex_media/media/git.png>]
+<latex_media/media/npm.png, id=1284, 103.806pt x 103.806pt>
+File: latex_media/media/npm.png Graphic file (type png)
+<use latex_media/media/npm.png>
+Package pdftex.def Info: latex_media/media/npm.png  used on input line 1873.
+(pdftex.def)             Requested size: 273.14923pt x 273.2123pt.
+
+
+[53 <./latex_media/media/gitlab.png> <./latex_media/media/npm.png>]
+<latex_media/media/docker.png, id=1293, 92.637pt x 94.608pt>
+File: latex_media/media/docker.png Graphic file (type png)
+<use latex_media/media/docker.png>
+Package pdftex.def Info: latex_media/media/docker.png  used on input line 1892.
+(pdftex.def)             Requested size: 273.14923pt x 278.99586pt.
+<latex_media/media/jenkins.png, id=1294, 166.878pt x 87.0525pt>
 File: latex_media/media/jenkins.png Graphic file (type png)
 <use latex_media/media/jenkins.png>
-Package pdftex.def Info: latex_media/media/jenkins.png  used on input line 2055.
+Package pdftex.def Info: latex_media/media/jenkins.png  used on input line 1913.
 (pdftex.def)             Requested size: 273.14923pt x 142.49074pt.
 
 
-[57 <./latex_media/media/postman.png> <./latex_media/media/jenkins.png>]
+[54 <./latex_media/media/docker.png>]
+<latex_media/media/sonarqube.png, id=1301, 103.4775pt x 65.043pt>
+File: latex_media/media/sonarqube.png Graphic file (type png)
+<use latex_media/media/sonarqube.png>
+Package pdftex.def Info: latex_media/media/sonarqube.png  used on input line 1934.
+(pdftex.def)             Requested size: 273.14923pt x 171.70708pt.
+
+
+[55 <./latex_media/media/jenkins.png>]
+<latex_media/media/Analyse de code avec SonarQube.png, id=1309, 445.1175pt x 213.525pt>
+File: latex_media/media/Analyse de code avec SonarQube.png Graphic file (type png)
+<use latex_media/media/Analyse de code avec SonarQube.png>
+Package pdftex.def Info: latex_media/media/Analyse de code avec SonarQube.png  used on input line 1958.
+(pdftex.def)             Requested size: 386.96027pt x 185.6349pt.
+
+
+[56 <./latex_media/media/sonarqube.png> <./latex_media/media/Analyse de code avec SonarQube.png>]
+<latex_media/media/stack_technologique_quiz_agile.png, id=1316, 216.4815pt x 47.6325pt>
+File: latex_media/media/stack_technologique_quiz_agile.png Graphic file (type png)
+<use latex_media/media/stack_technologique_quiz_agile.png>
+Package pdftex.def Info: latex_media/media/stack_technologique_quiz_agile.png  used on input line 1982.
+(pdftex.def)             Requested size: 455.24411pt x 100.17293pt.
+
+
+[57 <./latex_media/media/stack_technologique_quiz_agile.png>]
+File: latex_media/media/architecture_technique_systeme.png Graphic file (type png)
+<use latex_media/media/architecture_technique_systeme.png>
+Package pdftex.def Info: latex_media/media/architecture_technique_systeme.png  used on input line 2008.
+(pdftex.def)             Requested size: 455.24411pt x 249.41446pt.
+File: latex_media/media/Architecture_globale.png Graphic file (type png)
+<use latex_media/media/Architecture_globale.png>
+Package pdftex.def Info: latex_media/media/Architecture_globale.png  used on input line 2021.
+(pdftex.def)             Requested size: 455.24411pt x 283.90985pt.
+
 
 [58]
 
-[59
+[59]
+
+[60]
+<latex_media/media/structure_backend_quizapp.png, id=1338, 867.24pt x 317.185pt>
+File: latex_media/media/structure_backend_quizapp.png Graphic file (type png)
+<use latex_media/media/structure_backend_quizapp.png>
+Package pdftex.def Info: latex_media/media/structure_backend_quizapp.png  used on input line 2088.
+(pdftex.def)             Requested size: 364.19667pt x 133.20226pt.
+
+
+[61]
+<latex_media/media/structure_frontend_react.png, id=1345, 216.4815pt x 47.6325pt>
+File: latex_media/media/structure_frontend_react.png Graphic file (type png)
+<use latex_media/media/structure_frontend_react.png>
+Package pdftex.def Info: latex_media/media/structure_frontend_react.png  used on input line 2115.
+(pdftex.def)             Requested size: 364.19667pt x 80.13834pt.
+
+
+[62 <./latex_media/media/structure_backend_quizapp.png (PNG copy)>]
+
+[63 <./latex_media/media/structure_frontend_react.png>]
+
+[64]
+
+[65]
+
+[66]
+
+[67
 
 ]
-<latex_media/media/image51.png, id=1328, 455.301pt x 199.3995pt>
+<latex_media/media/image51.png, id=1383, 455.301pt x 199.3995pt>
 File: latex_media/media/image51.png Graphic file (type png)
 <use latex_media/media/image51.png>
-Package pdftex.def Info: latex_media/media/image51.png  used on input line 2106.
+Package pdftex.def Info: latex_media/media/image51.png  used on input line 2275.
 (pdftex.def)             Requested size: 409.71692pt x 179.44267pt.
 
 
-[60
+[68
 
  <./latex_media/media/image51.png>]
-<latex_media/media/image52.png, id=1334, 455.301pt x 201.042pt>
+<latex_media/media/image52.png, id=1389, 455.301pt x 201.042pt>
 File: latex_media/media/image52.png Graphic file (type png)
 <use latex_media/media/image52.png>
-Package pdftex.def Info: latex_media/media/image52.png  used on input line 2132.
+Package pdftex.def Info: latex_media/media/image52.png  used on input line 2299.
 (pdftex.def)             Requested size: 409.71692pt x 180.92078pt.
-
-
-[61 <./latex_media/media/image52.png>]
-<latex_media/media/image53.png, id=1340, 455.301pt x 199.3995pt>
+<latex_media/media/image53.png, id=1390, 455.301pt x 199.3995pt>
 File: latex_media/media/image53.png Graphic file (type png)
 <use latex_media/media/image53.png>
-Package pdftex.def Info: latex_media/media/image53.png  used on input line 2157.
+Package pdftex.def Info: latex_media/media/image53.png  used on input line 2324.
 (pdftex.def)             Requested size: 409.71692pt x 179.44267pt.
-<latex_media/media/image54.png, id=1341, 316.68312pt x 269.005pt>
+
+
+[69 <./latex_media/media/image52.png>]
+<latex_media/media/image54.png, id=1396, 316.68312pt x 269.005pt>
 File: latex_media/media/image54.png Graphic file (type png)
 <use latex_media/media/image54.png>
-Package pdftex.def Info: latex_media/media/image54.png  used on input line 2176.
+Package pdftex.def Info: latex_media/media/image54.png  used on input line 2337.
 (pdftex.def)             Requested size: 364.19667pt x 309.39027pt.
 
 
-[62 <./latex_media/media/image53.png>]
+[70 <./latex_media/media/image53.png>]
 
-[63 <./latex_media/media/image54.png>]
-<latex_media/media/image55.png, id=1354, 300.12125pt x 345.79187pt>
+[71 <./latex_media/media/image54.png>]
+<latex_media/media/image55.png, id=1410, 300.12125pt x 345.79187pt>
 File: latex_media/media/image55.png Graphic file (type png)
 <use latex_media/media/image55.png>
-Package pdftex.def Info: latex_media/media/image55.png  used on input line 2209.
+Package pdftex.def Info: latex_media/media/image55.png  used on input line 2370.
 (pdftex.def)             Requested size: 364.19667pt x 419.65466pt.
 
 
-[64 <./latex_media/media/image55.png>]
-<latex_media/media/image56.png, id=1362, 455.301pt x 200.385pt>
+[72 <./latex_media/media/image55.png>]
+<latex_media/media/image56.png, id=1417, 455.301pt x 200.385pt>
 File: latex_media/media/image56.png Graphic file (type png)
 <use latex_media/media/image56.png>
-Package pdftex.def Info: latex_media/media/image56.png  used on input line 2238.
+Package pdftex.def Info: latex_media/media/image56.png  used on input line 2399.
 (pdftex.def)             Requested size: 409.71692pt x 180.32953pt.
-<latex_media/media/image57.png, id=1363, 352.81813pt x 412.03937pt>
+<latex_media/media/image57.png, id=1418, 352.81813pt x 412.03937pt>
 File: latex_media/media/image57.png Graphic file (type png)
 <use latex_media/media/image57.png>
-Package pdftex.def Info: latex_media/media/image57.png  used on input line 2245.
+Package pdftex.def Info: latex_media/media/image57.png  used on input line 2406.
 (pdftex.def)             Requested size: 364.19667pt x 425.32951pt.
 
 
-[65 <./latex_media/media/image56.png>]
-<latex_media/media/image58.png, id=1370, 204.26312pt x 145.04187pt>
+[73 <./latex_media/media/image56.png>]
+<latex_media/media/image58.png, id=1425, 204.26312pt x 145.04187pt>
 File: latex_media/media/image58.png Graphic file (type png)
 <use latex_media/media/image58.png>
-Package pdftex.def Info: latex_media/media/image58.png  used on input line 2258.
+Package pdftex.def Info: latex_media/media/image58.png  used on input line 2419.
 (pdftex.def)             Requested size: 409.71692pt x 290.94614pt.
 
 
-[66 <./latex_media/media/image57.png>]
-<latex_media/media/image59.png, id=1376, 297.61188pt x 168.12813pt>
+[74 <./latex_media/media/image57.png>]
+<latex_media/media/image59.png, id=1431, 297.61188pt x 168.12813pt>
 File: latex_media/media/image59.png Graphic file (type png)
 <use latex_media/media/image59.png>
-Package pdftex.def Info: latex_media/media/image59.png  used on input line 2275.
+Package pdftex.def Info: latex_media/media/image59.png  used on input line 2436.
 (pdftex.def)             Requested size: 409.71692pt x 231.47061pt.
 
 
-[67 <./latex_media/media/image58.png>]
-<latex_media/media/image60.png, id=1382, 818.55812pt x 421.07312pt>
+[75 <./latex_media/media/image58.png>]
+<latex_media/media/image60.png, id=1437, 818.55812pt x 421.07312pt>
 File: latex_media/media/image60.png Graphic file (type png)
 <use latex_media/media/image60.png>
-Package pdftex.def Info: latex_media/media/image60.png  used on input line 2288.
+Package pdftex.def Info: latex_media/media/image60.png  used on input line 2449.
 (pdftex.def)             Requested size: 409.71692pt x 210.76735pt.
 
 
-[68 <./latex_media/media/image59.png> <./latex_media/media/image60.png>]
-<latex_media/media/image61.png, id=1389, 280.539pt x 144.8685pt>
+[76 <./latex_media/media/image59.png> <./latex_media/media/image60.png>]
+<latex_media/media/image61.png, id=1445, 280.539pt x 144.8685pt>
 File: latex_media/media/image61.png Graphic file (type png)
 <use latex_media/media/image61.png>
-Package pdftex.def Info: latex_media/media/image61.png  used on input line 2303.
+Package pdftex.def Info: latex_media/media/image61.png  used on input line 2464.
 (pdftex.def)             Requested size: 409.71692pt x 211.57918pt.
-<latex_media/media/image62.png, id=1390, 255.2445pt x 145.854pt>
+<latex_media/media/image62.png, id=1446, 255.2445pt x 145.854pt>
 File: latex_media/media/image62.png Graphic file (type png)
 <use latex_media/media/image62.png>
-Package pdftex.def Info: latex_media/media/image62.png  used on input line 2314.
+Package pdftex.def Info: latex_media/media/image62.png  used on input line 2475.
 (pdftex.def)             Requested size: 409.71692pt x 234.14565pt.
 
 
-[69 <./latex_media/media/image61.png>]
+[77 <./latex_media/media/image61.png>]
 
-[70 <./latex_media/media/image62.png>]
+[78 <./latex_media/media/image62.png>]
 
-[71]
+[79]
 
-[72]
+[80]
 
-[73
+[81
 
 
 ]
 
-[74]
-<latex_media/media/image40.png, id=1418, 697.10437pt x 436.63126pt>
+[82]
+<latex_media/media/image40.png, id=1474, 697.10437pt x 436.63126pt>
 File: latex_media/media/image40.png Graphic file (type png)
 <use latex_media/media/image40.png>
-Package pdftex.def Info: latex_media/media/image40.png  used on input line 2487.
+Package pdftex.def Info: latex_media/media/image40.png  used on input line 2648.
 (pdftex.def)             Requested size: 409.71692pt x 256.62416pt.
 
 
-[75
+[83
 
 
  <./latex_media/media/image40.png>]
 
-[76]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2542.
+[84]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2703.
  (C:\Users\Soufiane\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1285,7 +1351,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 
 
-[77
+[85
 
 
 ] (main_quiz_agile.aux)
@@ -1301,20 +1367,20 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main_quiz_agile.out' has not changed.
-(rerunfilecheck)             Checksum: CB9B40C87A1C0E2760FA593EFD5E1045;29386.
+(rerunfilecheck)             Checksum: 466511395B509551D0151EC9CFF71032;28867.
  ) 
 Here is how much of TeX's memory you used:
- 18811 strings out of 468133
- 316888 string characters out of 5429260
- 763265 words of memory out of 5000000
- 46602 multiletter control sequences out of 15000+600000
- 698379 words of font info for 169 fonts, out of 8000000 for 9000
+ 18946 strings out of 468133
+ 321284 string characters out of 5429260
+ 760821 words of memory out of 5000000
+ 46674 multiletter control sequences out of 15000+600000
+ 699731 words of font info for 183 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,12n,79p,1082b,736s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Soufiane/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/Soufiane/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Soufiane/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx9.pfb><C:/Users/Soufiane/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Soufiane/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/Soufiane/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on main_quiz_agile.pdf (92 pages, 3566406 bytes).
+Output written on main_quiz_agile.pdf (100 pages, 4166090 bytes).
 PDF statistics:
- 1570 PDF objects out of 1728 (max. 8388607)
- 355 named destinations out of 1000 (max. 500000)
- 40978 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 1631 PDF objects out of 1728 (max. 8388607)
+ 390 named destinations out of 1000 (max. 500000)
+ 40969 words of extra memory for PDF output out of 42996 (max. 10000000)
 

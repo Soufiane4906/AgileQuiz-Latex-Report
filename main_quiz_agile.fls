@@ -338,27 +338,6 @@ INPUT .\latex_media\media\image9.png
 INPUT .\latex_media\media\image9.png
 INPUT .\latex_media\media\image9.png
 INPUT .\latex_media\media\image9.png
-INPUT .\latex_media\media\image11.png
-INPUT .\latex_media\media\image11.png
-INPUT .\latex_media\media\image11.png
-INPUT .\latex_media\media\image11.png
-INPUT .\latex_media\media\image11.png
-INPUT .\latex_media\media\image11.png
-INPUT .\latex_media\media\image11.png
-INPUT .\latex_media\media\image10.png
-INPUT .\latex_media\media\image10.png
-INPUT .\latex_media\media\image10.png
-INPUT .\latex_media\media\image10.png
-INPUT .\latex_media\media\image10.png
-INPUT .\latex_media\media\image10.png
-INPUT .\latex_media\media\image10.png
-INPUT .\latex_media\media\image12.png
-INPUT .\latex_media\media\image12.png
-INPUT .\latex_media\media\image12.png
-INPUT .\latex_media\media\image12.png
-INPUT .\latex_media\media\image12.png
-INPUT .\latex_media\media\image12.png
-INPUT .\latex_media\media\image12.png
 INPUT .\latex_media\media\image13.png
 INPUT .\latex_media\media\image13.png
 INPUT .\latex_media\media\image13.png
@@ -373,6 +352,13 @@ INPUT .\latex_media\media\image14.png
 INPUT .\latex_media\media\image14.png
 INPUT .\latex_media\media\image14.png
 INPUT .\latex_media\media\image14.png
+INPUT .\latex_media\media\Architecture_globale.png
+INPUT .\latex_media\media\Architecture_globale.png
+INPUT .\latex_media\media\Architecture_globale.png
+INPUT .\latex_media\media\Architecture_globale.png
+INPUT .\latex_media\media\Architecture_globale.png
+INPUT .\latex_media\media\Architecture_globale.png
+INPUT .\latex_media\media\Architecture_globale.png
 INPUT .\latex_media\media\image16.png
 INPUT .\latex_media\media\image16.png
 INPUT .\latex_media\media\image16.png
@@ -394,6 +380,13 @@ INPUT .\latex_media\media\image19.png
 INPUT .\latex_media\media\image19.png
 INPUT .\latex_media\media\image19.png
 INPUT .\latex_media\media\image19.png
+INPUT .\latex_media\media\sequence_diagram_quiz_creation.png
+INPUT .\latex_media\media\sequence_diagram_quiz_creation.png
+INPUT .\latex_media\media\sequence_diagram_quiz_creation.png
+INPUT .\latex_media\media\sequence_diagram_quiz_creation.png
+INPUT .\latex_media\media\sequence_diagram_quiz_creation.png
+INPUT .\latex_media\media\sequence_diagram_quiz_creation.png
+INPUT .\latex_media\media\sequence_diagram_quiz_creation.png
 INPUT .\latex_media\media\activity_diagramme_passer_quiz.png
 INPUT .\latex_media\media\activity_diagramme_passer_quiz.png
 INPUT .\latex_media\media\activity_diagramme_passer_quiz.png
@@ -415,6 +408,34 @@ INPUT .\latex_media\media\Diagrammedetat-Tentative de Quiz.png
 INPUT .\latex_media\media\Diagrammedetat-Tentative de Quiz.png
 INPUT .\latex_media\media\Diagrammedetat-Tentative de Quiz.png
 INPUT .\latex_media\media\Diagrammedetat-Tentative de Quiz.png
+INPUT .\latex_media\media\image11.png
+INPUT .\latex_media\media\image11.png
+INPUT .\latex_media\media\image11.png
+INPUT .\latex_media\media\image11.png
+INPUT .\latex_media\media\image11.png
+INPUT .\latex_media\media\image11.png
+INPUT .\latex_media\media\image11.png
+INPUT .\latex_media\media\Diagramme entite-relation.png
+INPUT .\latex_media\media\Diagramme entite-relation.png
+INPUT .\latex_media\media\Diagramme entite-relation.png
+INPUT .\latex_media\media\Diagramme entite-relation.png
+INPUT .\latex_media\media\Diagramme entite-relation.png
+INPUT .\latex_media\media\Diagramme entite-relation.png
+INPUT .\latex_media\media\Diagramme entite-relation.png
+INPUT .\latex_media\media\image12.png
+INPUT .\latex_media\media\image12.png
+INPUT .\latex_media\media\image12.png
+INPUT .\latex_media\media\image12.png
+INPUT .\latex_media\media\image12.png
+INPUT .\latex_media\media\image12.png
+INPUT .\latex_media\media\image12.png
+INPUT .\latex_media\media\image10.png
+INPUT .\latex_media\media\image10.png
+INPUT .\latex_media\media\image10.png
+INPUT .\latex_media\media\image10.png
+INPUT .\latex_media\media\image10.png
+INPUT .\latex_media\media\image10.png
+INPUT .\latex_media\media\image10.png
 INPUT .\latex_media\media\image15.jpeg
 INPUT .\latex_media\media\image15.jpeg
 INPUT .\latex_media\media\image15.jpeg
@@ -422,28 +443,13 @@ INPUT .\latex_media\media\image15.jpeg
 INPUT .\latex_media\media\image15.jpeg
 INPUT .\latex_media\media\image15.jpeg
 INPUT .\latex_media\media\image15.jpeg
-INPUT .\latex_media\media\image14.png
-INPUT .\latex_media\media\image14.png
-INPUT .\latex_media\media\image14.png
-INPUT .\latex_media\media\image14.png
-INPUT .\latex_media\media\Architecture_globale.png
-INPUT .\latex_media\media\Architecture_globale.png
-INPUT .\latex_media\media\Architecture_globale.png
-INPUT .\latex_media\media\Architecture_globale.png
-INPUT .\latex_media\media\Architecture_globale.png
-INPUT .\latex_media\media\Architecture_globale.png
-INPUT .\latex_media\media\Architecture_globale.png
-INPUT .\latex_media\media\image15.jpeg
-INPUT .\latex_media\media\image15.jpeg
-INPUT .\latex_media\media\image15.jpeg
-INPUT .\latex_media\media\image15.jpeg
-INPUT .\latex_media\media\image23.png
-INPUT .\latex_media\media\image23.png
-INPUT .\latex_media\media\image23.png
-INPUT .\latex_media\media\image23.png
-INPUT .\latex_media\media\image23.png
-INPUT .\latex_media\media\image23.png
-INPUT .\latex_media\media\image23.png
+INPUT .\latex_media\media\architecture_technique_systeme.png
+INPUT .\latex_media\media\architecture_technique_systeme.png
+INPUT .\latex_media\media\architecture_technique_systeme.png
+INPUT .\latex_media\media\architecture_technique_systeme.png
+INPUT .\latex_media\media\architecture_technique_systeme.png
+INPUT .\latex_media\media\architecture_technique_systeme.png
+INPUT .\latex_media\media\architecture_technique_systeme.png
 INPUT .\latex_media\media\image24.png
 INPUT .\latex_media\media\image24.png
 INPUT .\latex_media\media\image24.png
@@ -507,6 +513,34 @@ INPUT .\latex_media\media\postman.png
 INPUT .\latex_media\media\postman.png
 INPUT .\latex_media\media\postman.png
 INPUT .\latex_media\media\postman.png
+INPUT .\latex_media\media\git.png
+INPUT .\latex_media\media\git.png
+INPUT .\latex_media\media\git.png
+INPUT .\latex_media\media\git.png
+INPUT .\latex_media\media\git.png
+INPUT .\latex_media\media\git.png
+INPUT .\latex_media\media\git.png
+INPUT .\latex_media\media\gitlab.png
+INPUT .\latex_media\media\gitlab.png
+INPUT .\latex_media\media\gitlab.png
+INPUT .\latex_media\media\gitlab.png
+INPUT .\latex_media\media\gitlab.png
+INPUT .\latex_media\media\gitlab.png
+INPUT .\latex_media\media\gitlab.png
+INPUT .\latex_media\media\npm.png
+INPUT .\latex_media\media\npm.png
+INPUT .\latex_media\media\npm.png
+INPUT .\latex_media\media\npm.png
+INPUT .\latex_media\media\npm.png
+INPUT .\latex_media\media\npm.png
+INPUT .\latex_media\media\npm.png
+INPUT .\latex_media\media\docker.png
+INPUT .\latex_media\media\docker.png
+INPUT .\latex_media\media\docker.png
+INPUT .\latex_media\media\docker.png
+INPUT .\latex_media\media\docker.png
+INPUT .\latex_media\media\docker.png
+INPUT .\latex_media\media\docker.png
 INPUT .\latex_media\media\jenkins.png
 INPUT .\latex_media\media\jenkins.png
 INPUT .\latex_media\media\jenkins.png
@@ -514,6 +548,49 @@ INPUT .\latex_media\media\jenkins.png
 INPUT .\latex_media\media\jenkins.png
 INPUT .\latex_media\media\jenkins.png
 INPUT .\latex_media\media\jenkins.png
+INPUT .\latex_media\media\sonarqube.png
+INPUT .\latex_media\media\sonarqube.png
+INPUT .\latex_media\media\sonarqube.png
+INPUT .\latex_media\media\sonarqube.png
+INPUT .\latex_media\media\sonarqube.png
+INPUT .\latex_media\media\sonarqube.png
+INPUT .\latex_media\media\sonarqube.png
+INPUT .\latex_media\media\Analyse de code avec SonarQube.png
+INPUT .\latex_media\media\Analyse de code avec SonarQube.png
+INPUT .\latex_media\media\Analyse de code avec SonarQube.png
+INPUT .\latex_media\media\Analyse de code avec SonarQube.png
+INPUT .\latex_media\media\Analyse de code avec SonarQube.png
+INPUT .\latex_media\media\Analyse de code avec SonarQube.png
+INPUT .\latex_media\media\Analyse de code avec SonarQube.png
+INPUT .\latex_media\media\stack_technologique_quiz_agile.png
+INPUT .\latex_media\media\stack_technologique_quiz_agile.png
+INPUT .\latex_media\media\stack_technologique_quiz_agile.png
+INPUT .\latex_media\media\stack_technologique_quiz_agile.png
+INPUT .\latex_media\media\stack_technologique_quiz_agile.png
+INPUT .\latex_media\media\stack_technologique_quiz_agile.png
+INPUT .\latex_media\media\stack_technologique_quiz_agile.png
+INPUT .\latex_media\media\architecture_technique_systeme.png
+INPUT .\latex_media\media\architecture_technique_systeme.png
+INPUT .\latex_media\media\architecture_technique_systeme.png
+INPUT .\latex_media\media\architecture_technique_systeme.png
+INPUT .\latex_media\media\Architecture_globale.png
+INPUT .\latex_media\media\Architecture_globale.png
+INPUT .\latex_media\media\Architecture_globale.png
+INPUT .\latex_media\media\Architecture_globale.png
+INPUT .\latex_media\media\structure_backend_quizapp.png
+INPUT .\latex_media\media\structure_backend_quizapp.png
+INPUT .\latex_media\media\structure_backend_quizapp.png
+INPUT .\latex_media\media\structure_backend_quizapp.png
+INPUT .\latex_media\media\structure_backend_quizapp.png
+INPUT .\latex_media\media\structure_backend_quizapp.png
+INPUT .\latex_media\media\structure_backend_quizapp.png
+INPUT .\latex_media\media\structure_frontend_react.png
+INPUT .\latex_media\media\structure_frontend_react.png
+INPUT .\latex_media\media\structure_frontend_react.png
+INPUT .\latex_media\media\structure_frontend_react.png
+INPUT .\latex_media\media\structure_frontend_react.png
+INPUT .\latex_media\media\structure_frontend_react.png
+INPUT .\latex_media\media\structure_frontend_react.png
 INPUT .\latex_media\media\image51.png
 INPUT .\latex_media\media\image51.png
 INPUT .\latex_media\media\image51.png
